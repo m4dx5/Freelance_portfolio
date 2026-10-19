@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Мезон Бьюти — клиника красоты на Максима Горького, 247 · Ростов-на-Дону</title>
+<meta name="description" content="Клиника красоты «Мезон Бьюти»: инъекционная и аппаратная косметология, Ultraformer, HydraFacial, лазер Aerolase, массаж и остеопатия, волосы, брови, эпиляция. Ростов-на-Дону, ул. Максима Горького, 247.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Marck+Script&family=Commissioner:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--white:#fff;--wall:#f6f6f4;--mold:#e3e3df;--mold2:#cfcfca;--graph:#3c3e41;--ink:#232426;--box:#2f4a35;--box2:#e7eee8;--muted:#6c6e70}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:300 17px/1.7 Commissioner,system-ui,sans-serif;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--box);outline-offset:3px}
+h1,h2,h3{font-family:Prata,serif;font-weight:400;line-height:1.12}
+h2{font-size:clamp(30px,4.4vw,50px);margin-bottom:20px}
+h3{font-size:22px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+section{padding:84px 0}
+.lead{font-size:18px;color:var(--muted);max-width:58ch}
+/* molding frame: the wall panels from the clinic */
+.mold{position:relative;border:1px solid var(--mold2);padding:34px;background:var(--white)}
+.mold:before{content:"";position:absolute;inset:9px;border:1px solid var(--mold);pointer-events:none}
+.script{font-family:"Marck Script",cursive}
+
+header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--mold)}
+.hd{display:flex;align-items:center;gap:22px;height:68px}
+.logo{text-decoration:none;display:flex;align-items:baseline;gap:8px}
+.logo .script{font-size:34px;line-height:1;color:var(--ink)}
+.logo small{font:500 12px Commissioner;color:var(--muted);letter-spacing:.06em}
+nav{display:flex;gap:2px;margin-left:auto}
+nav a{text-decoration:none;padding:8px 12px;font-size:15px;font-weight:400;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+nav a.on{color:var(--box);box-shadow:inset 0 -1px 0 var(--box)}
+.hd .cta{text-decoration:none;font-weight:500;font-size:15px;background:var(--box);color:#fff;padding:10px 18px;white-space:nowrap}
+.burger{display:none;margin-left:auto;background:none;border:1px solid var(--ink);font:500 14px Commissioner;padding:6px 14px;cursor:pointer}
+.page{display:none}.page.on{display:block}
+
+.hero{background:var(--wall);padding:56px 0 70px}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.hero .mold{text-align:center;padding:64px 40px}
+.hero .script{font-size:clamp(78px,11vw,140px);line-height:.9;display:block}
+.hero h1{font-size:clamp(20px,2.4vw,28px);margin:14px 0 18px;color:var(--muted)}
+.hero p{max-width:34ch;margin:0 auto 26px;font-size:18px}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.hero .btns{justify-content:center}
+.btn{display:inline-block;text-decoration:none;padding:14px 24px;font-weight:500;font-size:16px;border:1px solid var(--ink)}
+.btn.g{background:var(--box);border-color:var(--box);color:#fff}
+.btn.g:hover{background:#243a29}
+.btn.o:hover{background:var(--wall)}
+.hero .pic img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.facts{display:flex;justify-content:center;flex-wrap:wrap;gap:6px 26px;margin-top:22px;font-size:14px;color:var(--muted)}
+
+.dirs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:30px}
+.dirs a{text-decoration:none;display:block}
+.dirs .mold{padding:30px 28px;height:100%;transition:background .2s}
+.dirs a:hover .mold{background:var(--box2)}
+.dirs h3{margin-bottom:8px}
+.dirs p{font-size:15px;color:var(--muted)}
+.dirs .from{margin-top:14px;font-family:Prata;font-size:18px;color:var(--box)}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.split img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.team{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:28px}
+.team .mold{padding:26px 22px}
+.team b{display:block;font:400 21px Prata;margin-bottom:4px}
+.team span{font-size:15px;color:var(--muted)}
+
+/* prices */
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:24px 0 10px;position:sticky;top:68px;background:var(--white);padding:12px 0;z-index:5}
+.tab{border:1px solid var(--mold2);background:#fff;padding:8px 15px;font:400 15px Commissioner;cursor:pointer;color:var(--ink)}
+.tab.on{background:var(--box);color:#fff;border-color:var(--box)}
+.pcat{margin:30px 0 46px}
+.pcat h3{font-size:30px;padding-bottom:10px;border-bottom:1px solid var(--ink)}
+.prow{display:grid;grid-template-columns:1fr auto;gap:2px 24px;padding:15px 0;border-bottom:1px solid var(--mold)}
+.prow .p{font:400 20px Prata;white-space:nowrap;text-align:right}
+.prow .d{grid-column:1;color:var(--muted);font-size:15px}
+.legend{font-size:15px;color:var(--muted);max-width:780px}
+
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+.gal img{width:100%;aspect-ratio:4/5;object-fit:cover;cursor:zoom-in}
+.lb{position:fixed;inset:0;background:rgba(35,36,38,.95);display:none;align-items:center;justify-content:center;z-index:90;padding:20px}
+.lb.on{display:flex}
+.lb img{max-height:88vh;max-width:94vw}
+.lb button{position:absolute;top:12px;right:20px;background:none;border:0;color:#fff;font-size:36px;cursor:pointer}
+
+.revs{columns:3 300px;column-gap:22px;margin-top:26px}
+.rev{break-inside:avoid;margin-bottom:22px}
+.rev .mold{padding:28px 26px}
+.rev p{margin-bottom:12px}
+.rev .who{font-size:14px;color:var(--muted)}
+.scores{display:flex;gap:44px;flex-wrap:wrap}
+.scores a{text-decoration:none}
+.scores b{display:block;font:400 64px/1 Prata}
+.scores span{font-size:15px;color:var(--muted)}
+
+.contacts{display:grid;grid-template-columns:1fr 1.3fr;gap:30px;margin-top:26px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:12px 22px;margin-bottom:24px}
+.kv dt{color:var(--muted)}
+.kv a{font-weight:500;text-decoration:none}
+.map{min-height:420px;background:var(--wall)}
+.map iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+
+footer{background:var(--graph);color:#c9cacb;padding:42px 0 100px;font-size:15px}
+.ft{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer .script{font-size:36px;color:#fff;line-height:1}
+footer a{text-decoration:none;color:#fff}
+.credit{margin-top:22px;font-size:12px;color:#9a9b9c}
+.callbar{display:none}
+
+@media (max-width:960px){
+ nav{display:none;position:absolute;top:68px;left:0;right:0;background:#fff;flex-direction:column;padding:8px 18px 18px;border-bottom:1px solid var(--mold)}
+ nav.open{display:flex}
+ nav a{padding:12px}
+ .hd .cta{display:none}
+ .burger{display:block}
+ .hero .wrap,.split,.contacts{grid-template-columns:1fr}
+ .dirs{grid-template-columns:1fr 1fr}
+ .team{grid-template-columns:1fr 1fr}
+ .gal{grid-template-columns:1fr 1fr}
+ .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50}
+ .callbar a{flex:1;text-align:center;text-decoration:none;padding:15px 6px;font-weight:500;background:var(--graph);color:#fff}
+ .callbar a:first-child{background:var(--box)}
+}
+@media (max-width:560px){
+ .wrap{padding:0 16px}
+ section{padding:60px 0}
+ .dirs,.team{grid-template-columns:1fr}
+ .hero .mold{padding:46px 22px}
+ .tabs{flex-wrap:nowrap;overflow-x:auto;margin-left:-16px;margin-right:-16px;padding-left:16px;padding-right:16px}
+ .tab{white-space:nowrap}
+}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap hd">
+  <a class="logo" href="#/"><span class="script">Мезон</span><small>BEAUTY</small></a>
+  <button class="burger" aria-expanded="false" aria-controls="nav">Меню</button>
+  <nav id="nav">
+   <a href="#/" data-r="">Главная</a>
+   <a href="#/prices" data-r="prices">Процедуры и цены</a>
+   <a href="#/clinic" data-r="clinic">Клиника</a>
+   <a href="#/reviews" data-r="reviews">Отзывы</a>
+   <a href="#/contacts" data-r="contacts">Контакты</a>
+  </nav>
+  <a class="cta" href="https://wa.me/79185593951" target="_blank" rel="noopener">Записаться</a>
+ </div>
+</header>
+
+<main>
+<div class="page" id="p-">
+ <div class="hero">
+  <div class="wrap">
+   <div class="mold">
+    <span class="script">Мезон</span>
+    <h1>клиника красоты на Максима Горького</h1>
+    <p>Косметология, лазер и аппаратные методики, массаж и остеопатия, волосы, брови и эпиляция — в одном доме.</p>
+    <div class="btns"><a class="btn g" href="https://wa.me/79185593951" target="_blank" rel="noopener">Записаться на консультацию</a><a class="btn o" href="tel:+79185593951">Позвонить</a></div>
+    <div class="facts"><span>Пн–сб 9:00–21:00, вс 9:00–19:00</span><span>5,0 в 2ГИС</span></div>
+   </div>
+   <div class="pic"><img src="https://i1.photo.2gis.com/photo-gallery/d9a6571f-0b71-4898-ae97-60b81cf7ab9a.jpg" alt="Ресепшен клиники Мезон с лепниной и надписью"></div>
+  </div>
+ </div>
+
+ <section>
+  <div class="wrap">
+   <h2>Направления</h2>
+   <div class="dirs">
+    <a href="#/prices?c=inj"><div class="mold"><h3>Инъекции</h3><p>Биоревитализация, мезотерапия, контурная пластика, губы, ботулинотерапия, коллагеностимуляция, экзосомы.</p><div class="from">от 5 000 ₽</div></div></a>
+    <a href="#/prices?c=hw"><div class="mold"><h3>Аппаратная косметология</h3><p>Ultraformer III, игольчатый RF Infini и Venus Viva, Oligio, неодимовый лазер Aerolase, HydraFacial, JetPeel.</p><div class="from">от 2 500 ₽</div></div></a>
+    <a href="#/prices?c=care"><div class="mold"><h3>Уход и чистки</h3><p>Чистки, пилинги, уходы Maria Galland и Anubis, маски, удаление папиллом.</p><div class="from">от 500 ₽</div></div></a>
+    <a href="#/prices?c=body"><div class="mold"><h3>Массаж и остеопатия</h3><p>Остеопат, массаж лица, аппаратный массаж RSL, тейпирование.</p><div class="from">от 500 ₽</div></div></a>
+    <a href="#/prices?c=hair"><div class="mold"><h3>Волосы</h3><p>Стрижки, сложное окрашивание, кератин, ботокс и нанопластика, реконструкция, причёски.</p><div class="from">от 2 000 ₽</div></div></a>
+    <a href="#/prices?c=other"><div class="mold"><h3>Эпиляция, брови, ногти</h3><p>Лазерная эпиляция LightSheer Duet, воск и шугаринг, брови и ресницы, ногтевой сервис.</p><div class="from">от 500 ₽</div></div></a>
+   </div>
+  </div>
+ </section>
+
+ <section style="background:var(--wall)">
+  <div class="wrap split">
+   <img src="https://i6.photo.2gis.com/photo-gallery/6cb15f97-57c2-410a-bfff-fde8665083ac.jpg" alt="Холл клиники с люстрой" loading="lazy">
+   <div>
+    <h2>Сначала консультация</h2>
+    <p class="lead">В отзывах пишут: косметолог подробно расспрашивает о коже, объясняет, как пройдёт процедура, какие есть противопоказания и какой уход нужен после. К специалистам ходят годами — и приводят дочерей.</p>
+    <p style="margin-top:22px"><a class="btn g" href="https://wa.me/79185593951" target="_blank" rel="noopener">Записаться в WhatsApp</a></p>
+   </div>
+  </div>
+ </section>
+
+ <section>
+  <div class="wrap">
+   <h2>Специалисты из отзывов</h2>
+   <div class="team">
+    <div class="mold"><b>Илона Юрьевна</b><span>косметолог: ботокс, чистки, биоревитализация</span></div>
+    <div class="mold"><b>Виктория Васильевна</b><span>доктор: губы, процедуры против отёков</span></div>
+    <div class="mold"><b>Мила</b><span>косметолог, в том числе для подростков</span></div>
+    <div class="mold"><b>Ольга Александровна</b><span>остеопат, массаж лица</span></div>
+   </div>
+  </div>
+ </section>
+</div>
+
+<div class="page" id="p-prices">
+ <section>
+  <div class="wrap">
+   <h2 style="font-size:clamp(38px,6vw,72px)">Процедуры и цены</h2>
+   <p class="legend">Цены из прайса клиники в 2ГИС. Стоимость инъекционных процедур зависит от препарата и объёма, аппаратных — от зоны: точную сумму назовут на консультации.</p>
+   <div class="tabs" id="tabs"></div>
+   <div id="plist"></div>
+  </div>
+ </section>
+</div>
+
+<div class="page" id="p-clinic">
+ <section>
+  <div class="wrap">
+   <h2 style="font-size:clamp(38px,6vw,72px)">Клиника</h2>
+   <p class="lead">Белые стены с лепниной, люстра, живые растения — и кабинеты с современными аппаратами. На первом этаже здания — бутик «Мезон».</p>
+   <div class="gal" id="gal">
+    <img src="https://i1.photo.2gis.com/photo-gallery/d9a6571f-0b71-4898-ae97-60b81cf7ab9a.jpg" alt="Ресепшен" loading="lazy">
+    <img src="https://i7.photo.2gis.com/photo-gallery/d0ff8b92-63eb-4c1a-b978-3569babb8b82.jpg" alt="Лепнина и логотип" loading="lazy">
+    <img src="https://i6.photo.2gis.com/photo-gallery/6cb15f97-57c2-410a-bfff-fde8665083ac.jpg" alt="Холл с люстрой" loading="lazy">
+    <img src="https://i9.photo.2gis.com/photo-gallery/1f196ca3-619d-4a23-8275-4ff8f395eb5c.jpg" alt="Кабинет с аппаратами" loading="lazy">
+    <img src="https://i3.photo.2gis.com/photo-gallery/e6bd07e9-fc17-46ce-82a5-96259fb412d1.jpg" alt="В клинике" loading="lazy">
+   </div>
+  </div>
+ </section>
+</div>
+
+<div class="page" id="p-reviews">
+ <section>
+  <div class="wrap">
+   <h2 style="font-size:clamp(38px,6vw,72px)">Отзывы</h2>
+   <div class="scores">
+    <a href="https://2gis.ru/rostov-on-don/firm/70000001076495268/tab/reviews" target="_blank" rel="noopener"><b>5,0</b><span>2ГИС · 16 оценок</span></a>
+    <a href="https://yandex.ru/maps/39/rostov-na-donu/search/Мезон%20Beauty/" target="_blank" rel="noopener"><b>4,5</b><span>Яндекс Карты · 13 оценок</span></a>
+   </div>
+   <div class="revs">
+    <div class="rev"><div class="mold"><p>Делала игольчатый RF-лифтинг. Косметолог подробно расспросила о состоянии кожи, объяснила, как проходит процедура, какие есть противопоказания и какой уход нужен после.</p><div class="who">Елена Мурая · 2ГИС</div></div></div>
+    <div class="rev"><div class="mold"><p>Была у Виктории Васильевны, делала процедуру по уменьшению отёков под глазами. А ранее делала увеличение губ — прошёл год, губы так же натурально выглядят.</p><div class="who">Екатерина Бородаева · 2ГИС</div></div></div>
+    <div class="rev"><div class="mold"><p>Последние пару лет регулярно обращаюсь к Илоне на косметологические процедуры: ботокс, чистка, биоревитализация. Процедуры проходят качественно, безболезненно, результативно.</p><div class="who">Наталья Раевская · 2ГИС</div></div></div>
+    <div class="rev"><div class="mold"><p>Была проблема с гипергидрозом. Специалисты клиники провели грамотную консультацию. Прошла курс. Всем довольна.</p><div class="who">Олеся Васильченко · 2ГИС</div></div></div>
+    <div class="rev"><div class="mold"><p>Не первый год пользуемся с дочерью услугами специалистов. Дочь-подросток благодаря косметологу Миле может своевременно решать проблемы с кожей, а у меня сложился еженедельный ритуал — двухчасовой массаж.</p><div class="who">Татьяна Мартынова · 2ГИС</div></div></div>
+    <div class="rev"><div class="mold"><p>Около 6 лет пользуюсь услугами этого салона. У остеопата Ольги золотые руки, профессионал своего дела.</p><div class="who">Ирина Маласаева · 2ГИС</div></div></div>
+   </div>
+  </div>
+ </section>
+</div>
+
+<div class="page" id="p-contacts">
+ <section>
+  <div class="wrap">
+   <h2 style="font-size:clamp(38px,6vw,72px)">Контакты</h2>
+   <div class="contacts">
+    <div>
+     <dl class="kv">
+      <dt>Адрес</dt><dd>Ростов-на-Дону, ул. Максима Горького, 247</dd>
+      <dt>Часы</dt><dd>Пн–сб 9:00–21:00<br>Вс 9:00–19:00</dd>
+      <dt>Телефон</dt><dd><a href="tel:+79185593951">+7 918 559-39-51</a></dd>
+      <dt>Оплата</dt><dd>Карта, наличные, QR-код</dd>
+     </dl>
+     <div class="btns">
+      <a class="btn g" href="https://wa.me/79185593951" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn o" href="https://t.me/+79185593951" target="_blank" rel="noopener">Telegram</a>
+      <a class="btn o" href="https://vk.com/maison_beauty" target="_blank" rel="noopener">ВКонтакте</a>
+     </div>
+     <p style="margin-top:20px"><a href="https://yandex.ru/maps/?rtext=~47.230829,39.732896" target="_blank" rel="noopener">Построить маршрут</a></p>
+    </div>
+    <div class="map"><iframe title="Мезон Бьюти на карте" loading="lazy" src="https://yandex.ru/map-widget/v1/?ll=39.732896%2C47.230829&z=17&pt=39.732896%2C47.230829%2Cpm2rdm"></iframe></div>
+   </div>
+  </div>
+ </section>
+</div>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="ft">
+   <div><span class="script">Мезон</span><br>Клиника красоты · Ростов-на-Дону, ул. Максима Горького, 247</div>
+   <div>Пн–сб 9:00–21:00, вс 9:00–19:00<br><a href="tel:+79185593951">+7 918 559-39-51</a></div>
+  </div>
+  <div class="credit">Демо-сайт · разработка: Сергей Музыченко, Telegram <a href="https://t.me/spectator0011" target="_blank" rel="noopener">@spectator0011</a></div>
+ </div>
+</footer>
+<div class="callbar"><a href="https://wa.me/79185593951" target="_blank" rel="noopener">Записаться</a><a href="tel:+79185593951">Позвонить</a><a href="#/prices">Цены</a></div>
+<div class="lb" id="lb" role="dialog" aria-label="Фото"><button aria-label="Закрыть">×</button><img alt=""></div>
+<script>
+const P=[
+['inj','Инъекционная косметология',[
+ ['Мезотерапия','5 000 ₽'],['Мезотерапия волосистой части головы','5 000 ₽'],['Плазмолифтинг Cortexill PRP','6 500 ₽','1 пробирка'],['Липолитики','7 000 ₽','1 зона'],['Биоревитализация','9 000 ₽'],['Коллагеностимуляция','10 000 ₽'],['Увеличение губ','12 000 ₽'],['Контурная пластика','12 000 ₽'],['Лечение гипергидроза','12 000 ₽'],['Экзосомы','13 000 ₽'],['Полимолочная кислота','20 000 ₽'],['Radiesse','32 000 ₽'],['Диспорт','130 ₽','за 1 единицу'],['Ксеомин / Миотокс','350 ₽','за 1 единицу']]],
+['hw','Аппаратная косметология',[
+ ['Микротоковая терапия','2 500 ₽','стимуляция мышц лица слабыми импульсами: отёки, тонус'],['Миостимуляция','2 500 ₽'],['3D-омоложение на неодимовом лазере Aerolase','2 500 ₽'],['Le Skin V6','3 500 ₽','многофункциональный аппарат: RF, вакуум, ультразвук'],['Неодимовый лазер Aerolase','5 900 ₽','1064 нм, мягко воздействует на кожу без повреждения'],['HydraFacial — вакуумная чистка','6 000 ₽','очищение, эксфолиация и увлажнение'],['JetPeel — газожидкостный пилинг','6 000 ₽','струя кислорода и сывороток, без уколов'],['Infini — игольчатый RF','8 000 ₽','микроигольчатый RF для глубокого омоложения'],['Venus Viva — игольчатый RF','8 000 ₽','фракционный RF для обновления кожи'],['Ultraformer III','15 000 ₽','SMAS-лифтинг HIFU, неинвазивная альтернатива подтяжке'],['Монополярный RF-лифтинг Oligio','уточняйте','лифтинг без инъекций']]],
+['care','Уход и чистки',[
+ ['Удаление папиллом','500 ₽'],['Маски для лица','1 500 ₽'],['Пилинги','3 500 ₽'],['Чистки','4 000 ₽'],['Уход Maria Galland','5 000 ₽'],['Уход Anubis','5 500 ₽']]],
+['body','Массаж, остеопатия, тело',[
+ ['Тейпирование','500 ₽'],['Остеопатия','3 000 ₽'],['RSL — аппаратный массаж','4 500 ₽','виброкомпрессия: лимфодренаж и моделирование тела'],['Массаж лица','уточняйте']]],
+['hair','Волосы',[
+ ['Женская стрижка','от 2 000 ₽'],['Мужская стрижка','от 2 000 ₽'],['Детская стрижка','уточняйте'],['Стрижка горячими ножницами','уточняйте'],['Сложное окрашивание','уточняйте'],['Кератиновое выпрямление','уточняйте'],['Ботокс волос','уточняйте'],['Нанопластика','уточняйте'],['Реконструкция волос','уточняйте'],['Полировка волос','уточняйте'],['Прикорневой объём','уточняйте'],['Химическая завивка','уточняйте'],['Плетение кос','уточняйте'],['Свадебные и вечерние причёски','уточняйте']]],
+['other','Эпиляция, брови, ресницы, ногти',[
+ ['Депиляция: воск или шугаринг','500 ₽'],['Лазерная эпиляция LightSheer Duet','800 ₽','диодный лазер с вакуумом для снижения боли'],['Коррекция бровей','1 000 ₽'],['Ламинирование бровей','1 500 ₽'],['Ламинирование ресниц','3 000 ₽'],['Ногтевой сервис','1 300 ₽']]]
+];
+let cat='all';
+const tabs=document.getElementById('tabs'),list=document.getElementById('plist');
+tabs.innerHTML='<button class="tab on" data-c="all">Все</button>'+P.map(([k,t])=>`<button class="tab" data-c="${k}">${t}</button>`).join('');
+function render(){list.innerHTML=P.filter(([k])=>cat==='all'||cat===k).map(([k,t,it])=>`<div class="pcat"><h3>${t}</h3>`+it.map(x=>`<div class="prow"><span>${x[0]}</span><span class="p">${x[1]}</span>${x[2]?`<span class="d">${x[2]}</span>`:''}</div>`).join('')+'</div>').join('')}
+tabs.onclick=e=>{const b=e.target.closest('.tab');if(!b)return;cat=b.dataset.c;tabs.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x===b));render()};
+function route(){
+ const h=location.hash.replace(/^#\/?/,'');const [r,qs]=h.split('?');
+ const id=['','prices','clinic','reviews','contacts'].includes(r)?r:'';
+ document.querySelectorAll('.page').forEach(p=>p.classList.toggle('on',p.id==='p-'+id));
+ document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.dataset.r===id));
+ if(id==='prices'){const c=new URLSearchParams(qs||'').get('c');cat=c&&P.some(x=>x[0]===c)?c:'all';tabs.querySelectorAll('.tab').forEach(b=>b.classList.toggle('on',b.dataset.c===cat));render()}
+ document.getElementById('nav').classList.remove('open');scrollTo(0,0);
+}
+addEventListener('hashchange',route);route();
+const bg=document.querySelector('.burger');bg.onclick=()=>{const n=document.getElementById('nav');n.classList.toggle('open');bg.setAttribute('aria-expanded',n.classList.contains('open'))};
+const lb=document.getElementById('lb');
+document.getElementById('gal').onclick=e=>{const i=e.target.closest('img');if(!i)return;lb.querySelector('img').src=i.src;lb.classList.add('on')};
+lb.onclick=e=>{if(e.target.tagName!=='IMG')lb.classList.remove('on')};
+addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+document.addEventListener('error',e=>{const t=e.target;if(t.tagName==='IMG'&&t.closest('.gal')){t.style.display='none'}},true);
+</script>
+</body>
+</html>
