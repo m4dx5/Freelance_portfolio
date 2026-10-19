@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>По-Венски — кондитерская и кофейня на Зорге, 42а · Ростов-на-Дону</title>
+<meta name="description" content="Кондитерская «По-Венски» на Западном: корпусные и муссовые пирожные, бенто-торты, торты на заказ, венские вафли, завтраки и кофе. Ежедневно 8:00–21:00.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fbf5ee;--paper:#fff;--wine:#7a1f35;--wine2:#5c1627;--rose:#f3d9dc;--pist:#a9c27a;--ink:#2a1a1e;--muted:#7a6a6d;--line:#ecdfd6}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:400 17px/1.6 Manrope,system-ui,sans-serif;color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--wine);outline-offset:3px}
+h1,h2,h3{font-family:Prata,serif;font-weight:400;line-height:1.1}
+h2{font-size:clamp(32px,5vw,54px);margin-bottom:16px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+section{padding:80px 0}
+.lead{font-size:18px;color:var(--muted);max-width:58ch}
+.kick{font:700 12px Manrope;letter-spacing:.18em;text-transform:uppercase;color:var(--wine);margin-bottom:12px}
+
+header{position:sticky;top:0;z-index:40;background:rgba(251,245,238,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;gap:18px;height:66px}
+.logo{text-decoration:none;font:400 26px Prata;color:var(--wine);display:flex;align-items:center;gap:10px}
+.logo i{font-style:normal;display:inline-grid;place-items:center;width:36px;height:36px;border-radius:50%;border:1.5px solid var(--wine);font-size:14px}
+nav{display:flex;gap:2px;margin-left:auto}
+nav a{text-decoration:none;padding:8px 12px;font-weight:500;font-size:15px;border-radius:20px}
+nav a:hover{background:var(--rose)}
+nav a.on{background:var(--wine);color:#fff}
+.hd .tel{text-decoration:none;font-weight:700;white-space:nowrap}
+.burger{display:none;margin-left:auto;background:none;border:1.5px solid var(--wine);color:var(--wine);border-radius:20px;font:700 14px Manrope;padding:6px 14px;cursor:pointer}
+.page{display:none}.page.on{display:block}
+
+.hero{padding:40px 0 70px}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(56px,9vw,112px);color:var(--wine);letter-spacing:-.01em}
+.hero p{font-size:19px;margin:18px 0 26px;max-width:36ch}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;padding:14px 24px;border-radius:40px;font-weight:700;font-size:16px;border:1.5px solid var(--wine);color:var(--wine)}
+.btn.f{background:var(--wine);color:#fff}
+.btn.f:hover{background:var(--wine2)}
+.btn:not(.f):hover{background:var(--rose)}
+.arch{position:relative}
+.arch .a1{border-radius:240px 240px 18px 18px;overflow:hidden;aspect-ratio:4/5}
+.arch img{width:100%;height:100%;object-fit:cover}
+.arch .a2{position:absolute;width:42%;aspect-ratio:1;border-radius:50%;overflow:hidden;left:-12%;bottom:-6%;border:6px solid var(--cream)}
+.rating{display:flex;gap:22px;margin-top:28px;font-size:15px;color:var(--muted);flex-wrap:wrap}
+.rating b{font:400 28px Prata;color:var(--ink);display:block}
+
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px}
+.tile{background:var(--paper);border-radius:18px;overflow:hidden;border:1px solid var(--line)}
+.tile img{width:100%;aspect-ratio:1;object-fit:cover}
+.tile div{padding:14px 16px 18px}
+.tile h3{font-size:20px}
+.tile p{font-size:15px;color:var(--muted)}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.chips span{background:var(--paper);border:1px solid var(--line);border-radius:30px;padding:8px 16px;font-size:15px}
+
+.band{background:var(--wine);color:#fff}
+.band .lead{color:#efd3d8}
+.band .kick{color:var(--rose)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.split img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px}
+
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+.quotes blockquote{background:var(--paper);border-radius:18px;padding:22px;border:1px solid var(--line);font-size:16px}
+.quotes cite{display:block;margin-top:10px;font-style:normal;color:var(--muted);font-size:13px}
+
+/* drinks */
+.dcols{display:grid;grid-template-columns:repeat(2,1fr);gap:20px 50px;margin-top:26px}
+.dcat h3{font-size:26px;color:var(--wine);border-bottom:1px solid var(--wine);padding-bottom:6px;margin-bottom:6px;display:flex;justify-content:space-between;align-items:baseline}
+.dcat h3 small{font:500 13px Manrope;color:var(--muted)}
+.drow{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px dashed var(--line)}
+.drow b{white-space:nowrap}
+.note{font-size:14px;color:var(--muted);margin-top:18px;max-width:70ch}
+
+.gal{columns:3 240px;column-gap:12px;margin-top:24px}
+.gal figure{break-inside:avoid;margin-bottom:12px;cursor:zoom-in;border-radius:14px;overflow:hidden}
+.gal img{width:100%}
+.lb{position:fixed;inset:0;background:rgba(42,26,30,.95);display:none;align-items:center;justify-content:center;z-index:90;padding:20px}
+.lb.on{display:flex}
+.lb img{max-height:88vh;max-width:94vw;border-radius:8px}
+.lb button{position:absolute;top:12px;right:20px;background:none;border:0;color:#fff;font-size:36px;cursor:pointer}
+
+.contacts{display:grid;grid-template-columns:1fr 1.3fr;gap:30px;margin-top:24px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:12px 20px;margin-bottom:24px}
+.kv dt{color:var(--muted)}
+.kv a{font-weight:700;text-decoration:none}
+.map{min-height:420px;border-radius:18px;overflow:hidden;background:var(--rose)}
+.map iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+
+footer{background:var(--wine2);color:#e6c9cf;padding:40px 0 100px;font-size:15px}
+.ft{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer a{text-decoration:none;color:#fff}
+.credit{margin-top:20px;font-size:12px;color:#c49aa4}
+.callbar{display:none}
+
+@media (max-width:900px){
+ nav{display:none;position:absolute;top:66px;left:0;right:0;background:var(--cream);flex-direction:column;padding:8px 16px 16px;border-bottom:1px solid var(--line)}
+ nav.open{display:flex}
+ nav a{padding:12px}
+ .hd .tel{display:none}
+ .burger{display:block}
+ .hero .wrap,.split,.contacts{grid-template-columns:1fr}
+ .arch{max-width:420px;margin:0 auto;width:100%}
+ .arch .a2{left:-4%}
+ .grid{grid-template-columns:1fr 1fr}
+ .quotes{grid-template-columns:1fr}
+ .dcols{grid-template-columns:1fr}
+ .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50}
+ .callbar a{flex:1;text-align:center;text-decoration:none;padding:15px 6px;font-weight:700;background:var(--ink);color:#fff}
+ .callbar a:first-child{background:var(--wine)}
+}
+@media (max-width:560px){
+ .wrap{padding:0 16px}
+ section{padding:58px 0}
+ .grid{gap:10px}
+ .tile div{padding:10px 12px 14px}
+ .tile h3{font-size:17px}
+}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap hd">
+  <a class="logo" href="#/"><i>ПВ</i>По-Венски</a>
+  <button class="burger" aria-expanded="false" aria-controls="nav">Меню</button>
+  <nav id="nav">
+   <a href="#/" data-r="">Главная</a>
+   <a href="#/vitrina" data-r="vitrina">Витрина</a>
+   <a href="#/drinks" data-r="drinks">Напитки</a>
+   <a href="#/photo" data-r="photo">Фото</a>
+   <a href="#/contacts" data-r="contacts">Контакты</a>
+  </nav>
+  <a class="tel" href="tel:+79885309592">+7 988 530-95-92</a>
+ </div>
+</header>
+
+<main>
+<div class="page" id="p-">
+ <div class="hero">
+  <div class="wrap">
+   <div>
+    <div class="kick">Кондитерская · кофейня · Западный</div>
+    <h1>По-Венски</h1>
+    <p>Корпусные и муссовые пирожные, бенто-торты и торты на заказ. На завтрак и обед — венские вафли, сладкие и сытные, паста, супы и сэндвичи.</p>
+    <div class="btns"><a class="btn f" href="https://wa.me/79885309592" target="_blank" rel="noopener">Заказать торт в WhatsApp</a><a class="btn" href="#/vitrina">Что на витрине</a></div>
+    <div class="rating"><span><b>4,9</b>Яндекс Карты · 446 оценок</span><span><b>8–21</b>ежедневно</span></div>
+   </div>
+   <div class="arch">
+    <div class="a1"><img src="https://i8.photo.2gis.com/images/branch/0/30258560147467820_34cd.jpg" alt="Пирожные «По-Венски»"></div>
+    <div class="a2"><img src="https://i1.photo.2gis.com/images/branch/0/30258560164476224_3f85.jpg" alt=""></div>
+   </div>
+  </div>
+ </div>
+
+ <section style="padding-top:30px">
+  <div class="wrap">
+   <div class="kick">Витрина</div>
+   <h2>Пирожные, которые фотографируют</h2>
+   <p class="lead">Корпусные пирожные с вишней, клубникой, манго, фисташкой и «Ферреро Роше», муссовые десерты, моти и меренговые рулеты.</p>
+   <div class="grid">
+    <div class="tile"><img src="https://i7.photo.2gis.com/photo-gallery/35837417-6206-4c3d-806d-0da3689689bd.jpg" alt="Пирожное-фигурка" loading="lazy"><div><h3>Пирожные-фигурки</h3><p>Из шоколада и мусса</p></div></div>
+    <div class="tile"><img src="https://i4.photo.2gis.com/images/branch/0/30258560164476229_3751.jpg" alt="Корпусные пирожные" loading="lazy"><div><h3>Корпусные</h3><p>Фисташка, манго, ягоды</p></div></div>
+    <div class="tile"><img src="https://i7.photo.2gis.com/photo-gallery/3d05cdd6-96e3-4851-b041-8c93c12096e8.jpg" alt="Венская вафля" loading="lazy"><div><h3>Венские вафли</h3><p>Сладкие и сытные</p></div></div>
+    <div class="tile"><img src="https://i0.photo.2gis.com/images/branch/0/30258560148451587_e9ec.jpg" alt="Витрина с десертами" loading="lazy"><div><h3>Торты</h3><p>Бенто и на заказ</p></div></div>
+   </div>
+   <p style="margin-top:24px"><a class="btn" href="#/vitrina">Весь ассортимент</a></p>
+  </div>
+ </section>
+
+ <section class="band">
+  <div class="wrap split">
+   <div>
+    <div class="kick">Торты на заказ</div>
+    <h2>Бенто-торт к празднику</h2>
+    <p class="lead">Напишите в WhatsApp, какой нужен торт, к какой дате и на сколько гостей. Начинку, оформление и цену согласуем с вами.</p>
+    <p style="margin-top:22px"><a class="btn" style="border-color:#fff;color:#fff" href="https://wa.me/79885309592" target="_blank" rel="noopener">Написать в WhatsApp</a></p>
+   </div>
+   <img src="https://i0.photo.2gis.com/photo-gallery/9f1aa5bf-f0e8-4c42-9860-3750fa8104c7.jpg" alt="Витрина с тортами" loading="lazy">
+  </div>
+ </section>
+
+ <section>
+  <div class="wrap">
+   <div class="kick">Отзывы гостей</div>
+   <h2>Что пишут в 2ГИС</h2>
+   <div class="quotes">
+    <blockquote>«Милое, уютное по-домашнему кафе с вкусной едой и огромным выбором десертов».<cite>2ГИС</cite></blockquote>
+    <blockquote>«Очень вкусные десерты. Корпусная фисташка наша любофф. Атмосферно и уютно».<cite>2ГИС</cite></blockquote>
+    <blockquote>«Прекрасное место с красивым интерьером и уютной атмосферой. Если вы студент и вам нужно спокойное место — это кафе вам точно подойдёт».<cite>2ГИС</cite></blockquote>
+   </div>
+  </div>
+ </section>
+</div>
+
+<div class="page" id="p-vitrina">
+ <section>
+  <div class="wrap">
+   <div class="kick">Ассортимент</div>
+   <h2 style="font-size:clamp(42px,7vw,84px);color:var(--wine)">Витрина и кухня</h2>
+   <p class="lead">Цены на десерты и блюда уточняйте по телефону или в WhatsApp.</p>
+   <h3 style="font-size:28px;margin-top:40px">Десерты</h3>
+   <div class="chips"><span>Корпусные пирожные</span><span>Муссовые десерты</span><span>Традиционные пирожные</span><span>Бенто-торты</span><span>Торты целиком</span><span>Торты на заказ</span><span>Моти</span><span>Меренговые рулеты</span><span>Зефирные букеты</span><span>Круассаны</span></div>
+   <h3 style="font-size:28px;margin-top:36px">Кухня</h3>
+   <div class="chips"><span>Завтраки</span><span>Венские и бельгийские вафли</span><span>Гонконгские вафли</span><span>Паста</span><span>Супы</span><span>Салаты</span><span>Сэндвичи</span><span>Хачапури</span><span>Пельмени</span><span>Вареники</span><span>Детское меню</span></div>
+   <div class="grid" style="margin-top:36px">
+    <div class="tile"><img src="https://i8.photo.2gis.com/photo-gallery/e5fdacaa-2fa3-4174-909e-0f7e8bf0424d.jpg" alt="Десерт" loading="lazy"></div>
+    <div class="tile"><img src="https://i8.photo.2gis.com/photo-gallery/5859e754-924f-46bd-9619-283358477ddb.jpg" alt="Десерты-фигурки" loading="lazy"></div>
+    <div class="tile"><img src="https://i7.photo.2gis.com/images/branch/0/30258560148451584_4dd0.jpg" alt="Паста" loading="lazy"></div>
+    <div class="tile"><img src="https://i5.photo.2gis.com/images/branch/0/30258560164476213_db33.jpg" alt="Пирожное" loading="lazy"></div>
+   </div>
+  </div>
+ </section>
+</div>
+
+<div class="page" id="p-drinks">
+ <section>
+  <div class="wrap">
+   <div class="kick">Бар</div>
+   <h2 style="font-size:clamp(42px,7vw,84px);color:var(--wine)">Напитки</h2>
+   <p class="lead">Кофе с кофеином и без, на кокосовом, миндальном и банановом молоке. Матча, бабл-кофе, айс-кофе, какао и горячий шоколад. Кофе и чай можно взять с собой.</p>
+   <div class="dcols">
+    <div>
+     <div class="dcat"><h3>Чай <small>чайник</small></h3>
+      <div class="drow"><span>Ассам, Ассам с чабрецом, Эрл Грей</span><b>100 ₽</b></div>
+      <div class="drow"><span>Китайский зелёный, с жасмином</span><b>100 ₽</b></div>
+      <div class="drow"><span>Фруктовая симфония</span><b>100 ₽</b></div>
+      <div class="drow"><span>Мята, ромашка</span><b>100 ₽</b></div>
+     </div>
+     <div class="dcat" style="margin-top:26px"><h3>Молочный стимер <small>350 мл</small></h3>
+      <div class="drow"><span>Бабл-гам, клубничный, шоколадный, карамельный, кокос-банан</span><b>160 ₽</b></div>
+     </div>
+    </div>
+    <div>
+     <div class="dcat"><h3>Содовые <small>400 мл</small></h3>
+      <div class="drow"><span>Мохито, манго-маракуйя, грейпфрут-бузина</span><b>220 ₽</b></div>
+      <div class="drow"><span>Клубника-лайм, черника-бабл-гам, имбирная, апельсиновая</span><b>220 ₽</b></div>
+     </div>
+     <div class="dcat" style="margin-top:26px"><h3>Молочные коктейли <small>400 мл</small></h3>
+      <div class="drow"><span>Ванильный, шоколадный, клубничный, фисташковый</span><b>230 ₽</b></div>
+     </div>
+    </div>
+   </div>
+   <p class="note">Цены взяты с фото меню-доски в 2ГИС и могут отличаться. Цены на кофе уточняйте в кофейне.</p>
+  </div>
+ </section>
+</div>
+
+<div class="page" id="p-photo">
+ <section>
+  <div class="wrap">
+   <h2 style="font-size:clamp(42px,7vw,84px);color:var(--wine)">Фото</h2>
+   <div class="gal" id="gal"></div>
+  </div>
+ </section>
+</div>
+
+<div class="page" id="p-contacts">
+ <section>
+  <div class="wrap">
+   <h2 style="font-size:clamp(42px,7vw,84px);color:var(--wine)">Контакты</h2>
+   <div class="contacts">
+    <div>
+     <dl class="kv">
+      <dt>Адрес</dt><dd>Ростов-на-Дону, ул. Зорге, 42а, 1 этаж<br>Западный жилмассив</dd>
+      <dt>Часы</dt><dd>Ежедневно 8:00–21:00</dd>
+      <dt>Телефон</dt><dd><a href="tel:+79885309592">+7 988 530-95-92</a></dd>
+      <dt>WhatsApp</dt><dd><a href="https://wa.me/79885309592" target="_blank" rel="noopener">написать</a></dd>
+      <dt>Ещё</dt><dd>Wi-Fi, можно с ноутбуком и с собакой, летом терраса</dd>
+     </dl>
+     <div class="btns"><a class="btn f" href="tel:+79885309592">Позвонить</a><a class="btn" href="https://yandex.ru/maps/?rtext=~47.218226,39.633369" target="_blank" rel="noopener">Маршрут</a></div>
+    </div>
+    <div class="map"><iframe title="По-Венски на карте" loading="lazy" src="https://yandex.ru/map-widget/v1/?ll=39.633369%2C47.218226&z=17&pt=39.633369%2C47.218226%2Cpm2rdm"></iframe></div>
+   </div>
+  </div>
+ </section>
+</div>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="ft">
+   <div><b style="color:#fff;font:400 24px Prata">По-Венски</b><br>Ростов-на-Дону, ул. Зорге, 42а</div>
+   <div>Ежедневно 8:00–21:00<br><a href="tel:+79885309592">+7 988 530-95-92</a></div>
+  </div>
+  <div class="credit">Демо-сайт · разработка: Сергей Музыченко, Telegram <a href="https://t.me/spectator0011" target="_blank" rel="noopener">@spectator0011</a></div>
+ </div>
+</footer>
+<div class="callbar"><a href="https://wa.me/79885309592" target="_blank" rel="noopener">WhatsApp</a><a href="tel:+79885309592">Позвонить</a></div>
+<div class="lb" id="lb" role="dialog" aria-label="Фото"><button aria-label="Закрыть">×</button><img alt=""></div>
+<script>
+const G=["https://i1.photo.2gis.com/images/branch/0/30258560164476224_3f85.jpg","https://i8.photo.2gis.com/images/branch/0/30258560147467820_34cd.jpg","https://i4.photo.2gis.com/images/branch/0/30258560164476229_3751.jpg","https://i7.photo.2gis.com/photo-gallery/35837417-6206-4c3d-806d-0da3689689bd.jpg","https://i7.photo.2gis.com/photo-gallery/3d05cdd6-96e3-4851-b041-8c93c12096e8.jpg","https://i8.photo.2gis.com/photo-gallery/40537f3a-d332-426d-aa34-460ff3f41427.jpg","https://i0.photo.2gis.com/images/branch/0/30258560148451587_e9ec.jpg","https://i8.photo.2gis.com/photo-gallery/09023ed8-7fad-4bc2-9d76-c3a11a042546.jpg","https://i8.photo.2gis.com/photo-gallery/e5fdacaa-2fa3-4174-909e-0f7e8bf0424d.jpg","https://i7.photo.2gis.com/images/branch/0/30258560148451584_4dd0.jpg","https://i0.photo.2gis.com/photo-gallery/9f1aa5bf-f0e8-4c42-9860-3750fa8104c7.jpg","https://i8.photo.2gis.com/photo-gallery/5859e754-924f-46bd-9619-283358477ddb.jpg","https://i4.photo.2gis.com/images/branch/0/30258560164476230_6ac6.jpg","https://i5.photo.2gis.com/photo-gallery/10b06ef6-93fc-4d87-b5e3-79f2d674d9b3.jpg","https://i7.photo.2gis.com/photo-gallery/f8b1800c-cb5d-460f-a057-6ee95a3306a3.jpg","https://i5.photo.2gis.com/images/branch/0/30258560164476213_db33.jpg","https://i2.photo.2gis.com/images/branch/0/30258560147467821_245f.jpg","https://i6.photo.2gis.com/photo-gallery/215d30be-c500-4371-b6bb-d2b0f10b8384.jpg","https://i9.photo.2gis.com/photo-gallery/472b390b-22d3-4a1b-9c8e-45b2d468d18e.jpg","https://i0.photo.2gis.com/photo-gallery/26fb6cd0-d840-46f4-86aa-fe485603112a.jpg","https://i7.photo.2gis.com/photo-gallery/5f747126-7883-4c24-8c18-82300acc48e0.jpg"];
+document.getElementById('gal').innerHTML=G.map(u=>`<figure><img src="${u}" alt="Кондитерская «По-Венски»" loading="lazy"></figure>`).join('');
+function route(){
+ const r=location.hash.replace(/^#\/?/,'');const id=['','vitrina','drinks','photo','contacts'].includes(r)?r:'';
+ document.querySelectorAll('.page').forEach(p=>p.classList.toggle('on',p.id==='p-'+id));
+ document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.dataset.r===id));
+ document.getElementById('nav').classList.remove('open');scrollTo(0,0);
+}
+addEventListener('hashchange',route);route();
+const bg=document.querySelector('.burger');bg.onclick=()=>{const n=document.getElementById('nav');n.classList.toggle('open');bg.setAttribute('aria-expanded',n.classList.contains('open'))};
+const lb=document.getElementById('lb');
+document.getElementById('gal').onclick=e=>{const i=e.target.closest('img');if(!i)return;lb.querySelector('img').src=i.src;lb.classList.add('on')};
+lb.onclick=e=>{if(e.target.tagName!=='IMG')lb.classList.remove('on')};
+addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+document.addEventListener('error',e=>{const t=e.target;if(t.tagName==='IMG'){(t.closest('figure')||t.closest('.tile')||t).style.display='none'}},true);
+</script>
+</body>
+</html>
