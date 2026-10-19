@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Amura — японская кофейня на Пушкинской, 192/93 · Ростов-на-Дону</title>
+<meta name="description" content="Amura на Пушкинской: завтраки с 8:00, осидзуси и хенд-роллы, гёдза, лепёшки итамеши из печи, матча и кофе. Ежедневно 8:00–23:00.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kurale&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--rice:#f7f3ea;--paper:#fffdf8;--indigo:#1f3b73;--indigo2:#e3e8f2;--wood:#9a6a3c;--hanko:#c8352b;--ink:#1e1c1a;--muted:#6b6560;--line:#e6dfd2}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:400 17px/1.6 "Golos Text",system-ui,sans-serif;color:var(--ink);background:var(--rice);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--indigo);outline-offset:3px}
+h1,h2,h3{font-family:Kurale,serif;font-weight:400;line-height:1.08}
+h2{font-size:clamp(32px,5vw,56px);margin-bottom:18px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+section{padding:80px 0}
+.lead{font-size:18px;color:var(--muted);max-width:56ch}
+.hanko{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:8px;background:var(--hanko);color:#fff;font:400 16px/1 Kurale;transform:rotate(-6deg)}
+
+header{position:sticky;top:0;z-index:40;background:var(--paper);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;gap:18px;height:64px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;font:400 28px Kurale;color:var(--indigo)}
+.logo .hanko{width:34px;height:34px;font-size:13px}
+nav{display:flex;gap:2px;margin-left:auto}
+nav a{text-decoration:none;padding:8px 12px;font-weight:500;font-size:15px}
+nav a:hover{color:var(--indigo)}
+nav a.on{color:var(--indigo);box-shadow:inset 0 -2px 0 var(--indigo)}
+.hd .tel{text-decoration:none;font-weight:600;color:#fff;background:var(--indigo);padding:9px 14px;white-space:nowrap}
+.burger{display:none;margin-left:auto;background:none;border:1px solid var(--ink);font:600 14px "Golos Text";padding:6px 12px;cursor:pointer}
+.page{display:none}.page.on{display:block}
+
+.hero{padding:44px 0 70px}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:44px;align-items:center}
+.hero h1{font-size:clamp(68px,11vw,140px);color:var(--indigo)}
+.hero .sub{font:400 22px Kurale;margin:8px 0 18px;display:flex;align-items:center;gap:14px}
+.hero p{font-size:19px;max-width:34ch;margin-bottom:24px}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;padding:14px 22px;font-weight:600;font-size:16px;border:1.5px solid var(--ink)}
+.btn.i{background:var(--indigo);border-color:var(--indigo);color:#fff}
+.btn.i:hover{background:#17305f}
+.btn.o:hover{background:var(--paper)}
+.plates{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.plates div{border-radius:50%;overflow:hidden;aspect-ratio:1;box-shadow:0 0 0 8px var(--paper),0 0 0 9px var(--indigo2)}
+.plates img{width:100%;height:100%;object-fit:cover}
+.plates div:nth-child(2){transform:translateY(34px)}
+.plates div:nth-child(3){transform:translateY(-10px)}
+.facts{display:flex;gap:8px 24px;flex-wrap:wrap;margin-top:26px;font-size:15px;color:var(--muted)}
+.facts b{color:var(--ink)}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+.card{background:var(--paper);border:1px solid var(--line)}
+.card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.card div{padding:18px 20px 22px}
+.card h3{font-size:24px;margin-bottom:6px}
+.card p{color:var(--muted);font-size:16px}
+.card .p{font:400 20px Kurale;color:var(--indigo);margin-top:8px}
+
+.band{background:var(--indigo);color:#fff}
+.band .lead{color:#c9d2e6}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.split img{width:100%;aspect-ratio:4/3;object-fit:cover}
+
+/* menu */
+.tabs{display:flex;gap:6px;flex-wrap:wrap;position:sticky;top:64px;background:var(--rice);padding:12px 0;z-index:5;margin-top:20px}
+.tab{border:1px solid var(--line);background:var(--paper);padding:7px 14px;font:500 14px "Golos Text";cursor:pointer;color:var(--ink)}
+.tab.on{background:var(--indigo);color:#fff;border-color:var(--indigo)}
+.mcat{margin:34px 0}
+.mcat h3{font-size:32px;color:var(--indigo);padding-bottom:8px;border-bottom:1px solid var(--indigo);display:flex;align-items:center;gap:12px}
+.mrow{display:flex;align-items:baseline;gap:10px;padding:11px 0;border-bottom:1px dashed var(--line)}
+.mrow .n{flex:0 1 auto}
+.mrow .dots{flex:1;border-bottom:1px dotted #c9bfae;transform:translateY(-5px);min-width:16px}
+.mrow .p{font-weight:600;white-space:nowrap}
+.note{font-size:15px;color:var(--muted);margin-top:14px}
+
+.gal{columns:3 240px;column-gap:12px;margin-top:24px}
+.gal figure{break-inside:avoid;margin-bottom:12px;cursor:zoom-in;background:var(--paper)}
+.gal img{width:100%}
+.lb{position:fixed;inset:0;background:rgba(20,26,40,.95);display:none;align-items:center;justify-content:center;z-index:90;padding:20px}
+.lb.on{display:flex}
+.lb img{max-height:88vh;max-width:94vw}
+.lb button{position:absolute;top:12px;right:20px;background:none;border:0;color:#fff;font-size:36px;cursor:pointer}
+
+.contacts{display:grid;grid-template-columns:1fr 1.3fr;gap:30px;margin-top:24px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:12px 20px;margin-bottom:24px}
+.kv dt{color:var(--muted)}
+.kv a{font-weight:600;text-decoration:none}
+.map{min-height:420px;background:var(--indigo2)}
+.map iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+
+footer{background:var(--ink);color:#bdb6ad;padding:40px 0 100px;font-size:15px}
+.ft{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer a{text-decoration:none;color:#fff}
+.credit{margin-top:20px;font-size:12px;color:#8a837b}
+.callbar{display:none}
+
+@media (max-width:900px){
+ nav{display:none;position:absolute;top:64px;left:0;right:0;background:var(--paper);flex-direction:column;padding:8px 16px 16px;border-bottom:1px solid var(--line)}
+ nav.open{display:flex}
+ nav a{padding:12px}
+ .hd .tel{display:none}
+ .burger{display:block}
+ .hero .wrap,.split,.contacts{grid-template-columns:1fr}
+ .cards{grid-template-columns:1fr 1fr}
+ .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50}
+ .callbar a{flex:1;text-align:center;text-decoration:none;padding:15px 6px;font-weight:600;background:var(--ink);color:#fff}
+ .callbar a:first-child{background:var(--indigo)}
+}
+@media (max-width:560px){
+ .wrap{padding:0 16px}
+ section{padding:58px 0}
+ .cards{grid-template-columns:1fr}
+ .tabs{flex-wrap:nowrap;overflow-x:auto;margin-left:-16px;margin-right:-16px;padding-left:16px;padding-right:16px}
+ .tab{white-space:nowrap}
+ .mrow .dots{display:none}.mrow{justify-content:space-between}
+}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap hd">
+  <a class="logo" href="#/"><span class="hanko">ア</span>Amura</a>
+  <button class="burger" aria-expanded="false" aria-controls="nav">Меню</button>
+  <nav id="nav">
+   <a href="#/" data-r="">Главная</a>
+   <a href="#/menu" data-r="menu">Меню</a>
+   <a href="#/photo" data-r="photo">Фото</a>
+   <a href="#/contacts" data-r="contacts">Контакты</a>
+  </nav>
+  <a class="tel" href="tel:+79282707262">+7 928 270-72-62</a>
+ </div>
+</header>
+
+<main>
+<div class="page" id="p-">
+ <div class="hero">
+  <div class="wrap">
+   <div>
+    <h1>Amura</h1>
+    <div class="sub"><span class="hanko">朝</span>японская кофейня на Пушкинской</div>
+    <p>Завтраки с восьми утра — редкость для центра. Днём и вечером — осидзуси, гёдза, лепёшки из печи, матча и японские десерты.</p>
+    <div class="btns"><a class="btn i" href="#/menu">Смотреть меню</a><a class="btn o" href="tel:+79282707262">Позвонить</a></div>
+    <div class="facts"><span><b>Ежедневно</b> 8:00–23:00</span><span><b>Завтраки</b> 8:00–12:00</span><span>Доставка · можно с собакой</span></div>
+   </div>
+   <div class="plates" aria-hidden="true">
+    <div><img src="https://i3.photo.2gis.com/photo-gallery/68f91b44-5f4f-4936-be97-6ef1ec10c59f.jpg" alt=""></div>
+    <div><img src="https://i0.photo.2gis.com/photo-gallery/aaa96e07-4234-439b-b281-06559d08a50b.jpg" alt=""></div>
+    <div><img src="https://i0.photo.2gis.com/photo-gallery/2c2803ea-6e84-48d6-b052-1fa663254115.jpg" alt=""></div>
+    <div><img src="https://i9.photo.2gis.com/photo-gallery/8c497241-fddd-4159-b21e-bacfc0f3c2ff.jpg" alt=""></div>
+   </div>
+  </div>
+ </div>
+
+ <section style="padding-top:20px">
+  <div class="wrap">
+   <h2>Попробуйте первым делом</h2>
+   <div class="cards">
+    <div class="card"><img src="https://i3.photo.2gis.com/photo-gallery/68f91b44-5f4f-4936-be97-6ef1ec10c59f.jpg" alt="Осидзуси" loading="lazy"><div><h3>Осидзуси</h3><p>Прессованные суши с лососем, угрём или гребешком.</p><div class="p">580–750 ₽</div></div></div>
+    <div class="card"><img src="https://i9.photo.2gis.com/photo-gallery/8c497241-fddd-4159-b21e-bacfc0f3c2ff.jpg" alt="Гёдза" loading="lazy"><div><h3>Гёдза</h3><p>Японские пельмени: цыплёнок с кимчи, креветки с кинзой, говядина с имбирём.</p><div class="p">550–670 ₽</div></div></div>
+    <div class="card"><img src="https://i4.photo.2gis.com/photo-gallery/99725f2c-97cf-4f5a-89b7-2ca7f4a0dd4a.jpg" alt="Лепёшка итамеши" loading="lazy"><div><h3>Лепёшка итамеши</h3><p>Из печи — с копчёной курицей, пеперони или лососем и угрём.</p><div class="p">650–850 ₽</div></div></div>
+   </div>
+  </div>
+ </section>
+
+ <section class="band">
+  <div class="wrap split">
+   <div>
+    <h2>Матча — восемь способов</h2>
+    <p class="lead">Церемониальная, бамбл, тоник, на кокосовой воде, с манго-маракуйей или питахайей. И отдельно — рафы с лавандой, урбечем и кумкватом.</p>
+    <p style="margin-top:22px"><a class="btn" style="border-color:#fff;color:#fff" href="#/menu">Напитки в меню</a></p>
+   </div>
+   <img src="https://i8.photo.2gis.com/photo-gallery/35577fa7-24e7-436b-947c-bfbbcd4aab5b.jpg" alt="Напитки в Amura" loading="lazy">
+  </div>
+ </section>
+</div>
+
+<div class="page" id="p-menu">
+ <section>
+  <div class="wrap">
+   <h2 style="font-size:clamp(44px,8vw,96px);color:var(--indigo)">Меню</h2>
+   <p class="lead">Меню кофейни из 2ГИС. Состав и наличие позиций уточняйте у персонала.</p>
+   <div class="tabs" id="tabs"></div>
+   <div id="mlist"></div>
+   <p class="note">Оплата картой, наличными или по QR-коду. Есть доставка.</p>
+  </div>
+ </section>
+</div>
+
+<div class="page" id="p-photo">
+ <section>
+  <div class="wrap">
+   <h2 style="font-size:clamp(44px,8vw,96px);color:var(--indigo)">Фото</h2>
+   <div class="gal" id="gal"></div>
+  </div>
+ </section>
+</div>
+
+<div class="page" id="p-contacts">
+ <section>
+  <div class="wrap">
+   <h2 style="font-size:clamp(44px,8vw,96px);color:var(--indigo)">Контакты</h2>
+   <div class="contacts">
+    <div>
+     <dl class="kv">
+      <dt>Адрес</dt><dd>Ростов-на-Дону, Пушкинская ул., 192/93</dd>
+      <dt>Часы</dt><dd>Ежедневно 8:00–23:00<br>завтраки до 12:00</dd>
+      <dt>Телефон</dt><dd><a href="tel:+79282707262">+7 928 270-72-62</a></dd>
+      <dt>Удобства</dt><dd>Wi-Fi, доставка, можно с собакой</dd>
+     </dl>
+     <div class="btns"><a class="btn i" href="tel:+79282707262">Позвонить</a></div>
+     <p style="margin-top:20px"><a href="https://yandex.ru/maps/?rtext=~47.229014,39.734238" target="_blank" rel="noopener">Построить маршрут</a></p>
+    </div>
+    <div class="map"><iframe title="Amura на карте" loading="lazy" src="https://yandex.ru/map-widget/v1/?ll=39.734238%2C47.229014&z=17&pt=39.734238%2C47.229014%2Cpm2rdm"></iframe></div>
+   </div>
+  </div>
+ </section>
+</div>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="ft">
+   <div><b style="color:#fff;font:400 24px Kurale">Amura</b><br>Ростов-на-Дону, Пушкинская ул., 192/93</div>
+   <div>Ежедневно 8:00–23:00<br><a href="tel:+79282707262">+7 928 270-72-62</a></div>
+  </div>
+  <div class="credit">Демо-сайт · разработка: Сергей Музыченко, Telegram <a href="https://t.me/spectator0011" target="_blank" rel="noopener">@spectator0011</a></div>
+ </div>
+</footer>
+<div class="callbar"><a href="#/menu">Меню</a><a href="tel:+79282707262">Позвонить</a></div>
+<div class="lb" id="lb" role="dialog" aria-label="Фото"><button aria-label="Закрыть">×</button><img alt=""></div>
+<script>
+const MENU=[["Завтраки (с 8:00 до 12:00)", [["Японский завтрак", "1950"], ["Большой завтрак 1", "850"], ["Большой завтрак 2", "950"], ["Яичница из трёх яиц + фирменный хлеб", "270"], ["Омлет / скрэмбл", "350"], ["Омлет с мортаделлой и шпинатом", "550"], ["Омлет с креветками и цукини", "570"], ["Скрэмбл с угрём и сливочным унаги", "650"], ["Шакшука с брынзой", "550"], ["Яйцо Бенедикт с мортаделлой", "550"], ["Яйцо Бенедикт с копчёным лососем", "650"], ["Добавка: томаты / шпинат / грибы / сыр", "100"], ["Добавка: креветки / лосось / бекон / мортаделла", "250"], ["Гречка с грибами", "450"], ["Пшённая каша с пармезаном и яйцом пашот", "480"], ["Овсяная каша с манго и сухофруктами", "460"], ["Японская овсяная каша с матча", "450"], ["Йогурт капучино с гранолой", "420"]]], ["Блины, сырники, оладьи", [["Блины со сметаной / вареньем / сгущёнкой", "350"], ["Блины фаршированные креветкой и яйцом", "550"], ["Сырники со сметаной / вареньем / сгущёнкой", "510"], ["Панкейк с фисташковым соусом и ягодами", "450"], ["Оладьи из цукини с копчёной сметаной", "480"], ["Большой драник с лососем и яйцом пашот", "650"], ["Ленивые вареники", "480"]]], ["Сэндвичи и круассаны", [["Круассан", "260"], ["Круассан с шоколадом / ванилью", "370"], ["Круассан с ветчиной и сыром", "550"], ["Круассан с лососем", "650"], ["Сэндвич с мортаделлой", "550"], ["Брускетта — оливье на луковом хлебе", "480"], ["Кацу сандо с курицей", "480"], ["Кацу сандо с креветкой", "550"]]], ["Закуски и салаты", [["Куриный паштет с ягодным соусом", "470"], ["Гуакамоле с роти", "480"], ["Тартар из говядины с дайконом и васаби", "570"], ["Тунец татаки в соусе кинза-халапеньо", "560"], ["Хрустящие креветки «шёлковый кокон» с кремом васаби", "580"], ["Жареная курица по-японски", "550"], ["Блины с креветками том ям", "570"], ["Грин салат", "550"], ["Зелёный салат с японским виноградом и соусом гамадари", "550"], ["Японский нисуаз с тунцом", "650"], ["Жареные креветки, авокадо, соус шисо", "750"]]], ["Осидзуси и хенд-роллы", [["Хенд-ролл с угрём", "480"], ["Хенд-ролл с лососем", "550"], ["Хенд-ролл с гребешком", "580"], ["Осидзуси с угрём", "580"], ["Осидзуси с лососем", "680"], ["Осидзуси с гребешком", "750"]]], ["Супы и гёдза", [["Карри-рамен с курицей", "450"], ["Сукияки с говядиной и грибами эноки", "480"], ["Тядзукэ с лососем и рисом", "550"], ["Гёдза с цыплёнком и кимчи", "550"], ["Гёдза с креветками и кинзой", "650"], ["Гёдза с говядиной и имбирём", "670"]]], ["Лепёшки итамеши из печи", [["Копчёная курица, соус из кинзы", "650"], ["Ветчина, томаты, крем-сыр", "670"], ["Пеперони, халапеньо и чили-мёд", "750"], ["Лосось, угорь, соус спайси унаги", "850"]]], ["Горячее и боулы", [["Будда-боул", "650"], ["Донбури-боул с тунцом", "550"], ["Донбури-боул с лососем", "650"], ["Лазанья по-японски с говядиной", "550"], ["Кацу с жареным рисом, цыплёнок", "650"], ["Кацу с жареным рисом, креветки", "780"], ["Жареный рис с креветками", "680"], ["Унадзю — угорь с соусом унаги и рисом", "950"], ["Стейк филе-миньон в соусе чили-терияки", "1250"], ["Лосось с овощами в азиатском стиле", "1270"], ["Гребешки и креветки в сливочно-имбирном соусе", "1350"], ["Детская паста в сливочном соусе", "380"]]], ["Десерты", [["Конфеты ручной работы", "80"], ["Лунный пряник", "180"], ["Мороженое, 50 г", "180"], ["Моти", "250"], ["Канноли темпура с матча", "300"], ["Чиа с манго", "360"], ["Красная сакура", "370"], ["Японские пончики с соусом крем-англез", "390"], ["Шоколадный кекс с мисо", "450"], ["Чизкейк юдзу с малиной", "550"], ["Дикий лес", "750"]]], ["Кофе", [["Эспрессо", "180"], ["Американо", "240"], ["Фильтр", "240"], ["Капучино", "250"], ["Латте", "280"], ["Раф лавандовый", "350"], ["Раф урбеч", "350"], ["Раф цитрусовый", "350"], ["Раф кумкват-пекан", "350"], ["Эспрессо-тоник", "360"], ["Воронка 250 / 350 мл", "от 360"], ["Бамбл-кофе", "380"], ["Глясе", "480"], ["Мокко белый шоколад — матча", "480"], ["Мокко молочный шоколад — матча", "480"]]], ["Матча", [["Церемониальная матча", "380"], ["Кокос-алоэ", "380"], ["Бамбл-матча", "380"], ["Матча-тоник", "390"], ["Манго-маракуйя", "450"], ["Питахайя-клубника", "450"], ["Персик с джус-боллами", "450"], ["Матча на кокосовой воде", "450"]]], ["Чай, смузи, шейки", [["Чай: рукурири, эрл грей, дикая вишня, сенча, жасмин, молочный улун", "350"], ["Смузи «Оригами»", "520"], ["Смузи «Ваби-саби»", "490"], ["Смузи «Хокку»", "640"], ["Фреш яблоко", "410"], ["Фреш апельсин", "360"], ["Фреш грейпфрут", "390"], ["Молочные шейки: мидори-матча, кофейный, банана-сплит, ягодный", "450"], ["Кока-кола", "340"], ["Тоник «Нунчи»", "390"], ["Сок Rich", "250"]]], ["Бар", [["Настойки: драгонфрут, луми-лайм, юдзу", "290"], ["Сётю Smoky Oak Hakata no Hana", "440"], ["Байцзю", "490"], ["Умэсю Choya Uji Green Tea", "490"], ["Умэсю Umenishiki Ayame", "540"], ["Ликёр «Чайна-чайна»", "490"], ["Красное вино, красностоп", "550"], ["Саке Snow Beauty", "от 840"], ["Саке Yuzu Aladdin", "от 860"]]]];
+let cat=-1;
+const tabs=document.getElementById('tabs'),list=document.getElementById('mlist');
+tabs.innerHTML='<button class="tab on" data-c="-1">Всё</button>'+MENU.map((c,i)=>`<button class="tab" data-c="${i}">${c[0].replace(/ \(.*\)/,'')}</button>`).join('');
+const fp=p=>/^от/.test(p)?p+' ₽':(+p).toLocaleString('ru-RU').replace(/ /g,' ')+' ₽';
+function render(){list.innerHTML=MENU.map((c,i)=>cat!==-1&&cat!==i?'':`<div class="mcat"><h3>${c[0]}</h3>`+c[1].map(x=>`<div class="mrow"><span class="n">${x[0]}</span><span class="dots"></span><span class="p">${fp(x[1])}</span></div>`).join('')+'</div>').join('')}
+tabs.onclick=e=>{const b=e.target.closest('.tab');if(!b)return;cat=+b.dataset.c;tabs.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x===b));render()};render();
+const G='99725f2c-97cf-4f5a-89b7-2ca7f4a0dd4a@4 bc7f0f1c-295f-44fe-8685-1f0ed3963a6e@6 354fe217-a1d2-4fc0-872d-253c8c07a3cc@5 68f91b44-5f4f-4936-be97-6ef1ec10c59f@3 ab38366f-d29d-4069-8751-504c49a0d72e@5 cf74e1d7-cd09-49d9-a92f-7e3782b590ed@5 cceceb03-cd6f-4ac6-ba1a-cefd536e211a@3 2c2803ea-6e84-48d6-b052-1fa663254115@0 b5e23623-14f1-48c8-ada0-f48c461ef3ac@0 93f515d0-9260-447b-8dfe-65617cb0d0c9@1 0d2c0c13-070a-4e74-9640-71a973bffe5d@6 0a65d81c-b739-4aa2-b9bd-4d4fa8d5573c@7 aaa96e07-4234-439b-b281-06559d08a50b@0 913e81fb-7a6e-4654-b767-7c153da5e947@6 35577fa7-24e7-436b-947c-bfbbcd4aab5b@8 8c497241-fddd-4159-b21e-bacfc0f3c2ff@9 f35ed1e8-7e90-41c6-aab6-dc5769bb4c8b@8 5af5b09d-b661-40d4-a250-a03a4fe80f24@4'.split(' ').map(s=>{const[id,n]=s.split('@');return`https://i${n}.photo.2gis.com/photo-gallery/${id}.jpg`});
+document.getElementById('gal').innerHTML=G.map(u=>`<figure><img src="${u}" alt="Блюда и напитки Amura" loading="lazy"></figure>`).join('');
+function route(){
+ const r=location.hash.replace(/^#\/?/,'');const id=['','menu','photo','contacts'].includes(r)?r:'';
+ document.querySelectorAll('.page').forEach(p=>p.classList.toggle('on',p.id==='p-'+id));
+ document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.dataset.r===id));
+ document.getElementById('nav').classList.remove('open');scrollTo(0,0);
+}
+addEventListener('hashchange',route);route();
+const bg=document.querySelector('.burger');bg.onclick=()=>{const n=document.getElementById('nav');n.classList.toggle('open');bg.setAttribute('aria-expanded',n.classList.contains('open'))};
+const lb=document.getElementById('lb');
+document.getElementById('gal').onclick=e=>{const i=e.target.closest('img');if(!i)return;lb.querySelector('img').src=i.src;lb.classList.add('on')};
+lb.onclick=e=>{if(e.target.tagName!=='IMG')lb.classList.remove('on')};
+addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+document.addEventListener('error',e=>{const t=e.target;if(t.tagName==='IMG'){(t.closest('figure')||t.closest('.plates>div')||t).style.display='none'}},true);
+</script>
+</body>
+</html>
