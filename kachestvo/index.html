@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>КачестВО — парикмахерская на 2-й Краснодарской, 145/2 · Ростов-на-Дону</title>
+<meta name="description" content="Парикмахерская «КачестВО» в Западном: женские стрижки от 500 ₽, мужские от 450 ₽, детские, борода, косы, причёски, брови. Ежедневно 9:00–21:00, 2-я Краснодарская ул., 145/2.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Days+One&family=Pangolin&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1f1f1f;--red:#d6262b;--yellow:#f2c230;--paper:#fff;--soft:#f5f4f1;--line:#e4e2dd;--muted:#666}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:400 18px/1.6 "PT Sans",system-ui,sans-serif;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+h1,h2,h3{font-family:"Days One",sans-serif;font-weight:400;line-height:1.05}
+h2{font-size:clamp(30px,4.6vw,52px);margin-bottom:20px}
+h3{font-size:20px}
+.hand{font-family:Pangolin,cursive}
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+section{padding:76px 0}
+.lead{font-size:19px;color:var(--muted);max-width:56ch}
+.vo{color:var(--red)}
+
+header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:2px solid var(--ink)}
+.hd{display:flex;align-items:center;gap:20px;height:62px}
+.logo{font:400 22px "Days One";text-decoration:none}
+nav{display:flex;gap:2px;margin-left:auto}
+nav a{text-decoration:none;padding:8px 12px;font-weight:700;font-size:16px}
+nav a:hover{color:var(--red)}
+nav a.on{background:var(--yellow)}
+.hd .tel{text-decoration:none;font-weight:700;color:#fff;background:var(--red);padding:9px 14px;white-space:nowrap}
+.burger{display:none;margin-left:auto;background:none;border:2px solid var(--ink);font:700 15px "PT Sans";padding:5px 12px;cursor:pointer}
+.page{display:none}.page.on{display:block}
+
+.hero{padding:50px 0 70px;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(52px,9vw,112px);letter-spacing:-.01em}
+.hero .note{font:400 24px Pangolin;margin:12px 0 18px;transform:rotate(-2deg);display:inline-block;background:var(--yellow);padding:2px 12px}
+.hero p{font-size:20px;max-width:30ch;margin-bottom:26px}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;padding:15px 22px;font-weight:700;border:2px solid var(--ink);font-size:17px}
+.btn.r{background:var(--red);border-color:var(--red);color:#fff}
+.btn.r:hover{background:#b81f23;border-color:#b81f23}
+.btn.k{background:var(--ink);color:#fff}
+.btn:not(.r):not(.k):hover{background:var(--soft)}
+.frame{position:relative}
+.frame img{width:100%;aspect-ratio:4/3;object-fit:cover;border:2px solid var(--ink)}
+.frame svg{position:absolute;right:-18px;top:-30px;width:110px;height:110px}
+.doodle{stroke:var(--ink);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+
+.price-lines{border-top:2px solid var(--ink);margin-top:24px}
+.pl{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.pl b{font-weight:700;font-size:19px}
+.pl span{font:400 22px "Days One";white-space:nowrap}
+.pl span.q{font:400 18px Pangolin;color:var(--muted)}
+.pl small{display:block;color:var(--muted);font-size:15px;font-weight:400}
+
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+.card{border:2px solid var(--ink);padding:24px;background:#fff}
+.card h3{margin-bottom:8px}
+.card p{color:var(--muted);font-size:17px}
+.card .hand{color:var(--red);font-size:20px;margin-bottom:6px}
+
+.soft{background:var(--soft)}
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+.rev{background:#fff;border:2px solid var(--ink);padding:22px;position:relative}
+.rev:before{content:"“";position:absolute;top:-22px;left:16px;font:400 64px/1 "Days One";color:var(--red);background:var(--soft);padding:0 6px}
+.rev p{margin-bottom:12px;font-size:17px}
+.rev .who{font-size:15px;color:var(--muted)}
+.scores{display:flex;gap:40px;flex-wrap:wrap;margin-bottom:6px}
+.scores a{text-decoration:none}
+.scores b{display:block;font:400 60px/1 "Days One"}
+.scores span{font-size:15px;color:var(--muted)}
+
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:24px}
+.gal img{width:100%;aspect-ratio:4/3;object-fit:cover;border:2px solid var(--ink);cursor:zoom-in}
+.lb{position:fixed;inset:0;background:rgba(20,20,20,.95);display:none;align-items:center;justify-content:center;z-index:90;padding:20px}
+.lb.on{display:flex}
+.lb img{max-height:88vh;max-width:94vw}
+.lb button{position:absolute;top:12px;right:20px;background:none;border:0;color:#fff;font-size:36px;cursor:pointer}
+
+.contacts{display:grid;grid-template-columns:1fr 1.3fr;gap:30px;margin-top:24px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:12px 20px;margin-bottom:24px}
+.kv dt{color:var(--muted)}
+.kv a{font-weight:700;text-decoration:none}
+.map{border:2px solid var(--ink);min-height:420px;background:var(--soft)}
+.map iframe{width:100%;height:100%;min-height:416px;border:0;display:block}
+
+footer{background:var(--ink);color:#bbb;padding:40px 0 100px;font-size:16px}
+.ft{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer .logo{color:#fff;display:block;margin-bottom:6px}
+footer a{text-decoration:none;color:#fff}
+.credit{margin-top:20px;font-size:12px;color:#888}
+.callbar{display:none}
+
+@media (max-width:900px){
+ nav{display:none;position:absolute;top:62px;left:0;right:0;background:#fff;flex-direction:column;padding:8px 16px 16px;border-bottom:2px solid var(--ink)}
+ nav.open{display:flex}
+ nav a{padding:12px}
+ .hd .tel{display:none}
+ .burger{display:block}
+ .hero .wrap,.contacts{grid-template-columns:1fr}
+ .three,.revs{grid-template-columns:1fr}
+ .gal{grid-template-columns:1fr 1fr}
+ .frame svg{right:6px;width:80px;height:80px}
+ .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50;border-top:2px solid var(--ink)}
+ .callbar a{flex:1;text-align:center;text-decoration:none;padding:15px 6px;font-weight:700;background:#fff}
+ .callbar a:first-child{background:var(--red);color:#fff}
+}
+@media (max-width:520px){.wrap{padding:0 16px}section{padding:56px 0}.rev{margin-top:14px}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap hd">
+  <a class="logo" href="#/">Качест<span class="vo">ВО</span></a>
+  <button class="burger" aria-expanded="false" aria-controls="nav">Меню</button>
+  <nav id="nav">
+   <a href="#/" data-r="">Главная</a>
+   <a href="#/services" data-r="services">Услуги</a>
+   <a href="#/salon" data-r="salon">Салон</a>
+   <a href="#/reviews" data-r="reviews">Отзывы</a>
+   <a href="#/contacts" data-r="contacts">Контакты</a>
+  </nav>
+  <a class="tel" href="tel:+79885805381">+7 988 580-53-81</a>
+ </div>
+</header>
+
+<main>
+<div class="page" id="p-">
+ <div class="hero">
+  <div class="wrap">
+   <div>
+    <h1>Качест<span class="vo">ВО</span></h1>
+    <div class="note">стрижём для всей семьи</div>
+    <p>Парикмахерская в Западном, у остановки «Аллея Роз». Женские, мужские и детские стрижки, борода, косы, причёски и брови.</p>
+    <div class="btns"><a class="btn r" href="tel:+79885805381">Позвонить и записаться</a><a class="btn" href="#/services">Услуги</a></div>
+   </div>
+   <div class="frame">
+    <img src="https://i2.photo.2gis.com/photo-gallery/fc62119c-8e89-461f-b060-10ee5a695c27.jpg" alt="Светлый зал парикмахерской КачестВО">
+    <svg viewBox="0 0 100 100" aria-hidden="true"><g class="doodle"><circle cx="26" cy="72" r="12"/><circle cx="52" cy="80" r="12"/><path d="M34 63 78 18M44 70 86 30"/><path d="M78 18c4-4 10-2 8 4"/></g></svg>
+   </div>
+  </div>
+ </div>
+
+ <section class="soft">
+  <div class="wrap">
+   <h2>Цены</h2>
+   <p class="lead">Цены демократичные — так пишут и клиенты. Точную стоимость назовут по телефону: она зависит от длины и сложности.</p>
+   <div class="price-lines">
+    <div class="pl"><b>Женская стрижка</b><span>от 500 ₽</span></div>
+    <div class="pl"><b>Мужская стрижка</b><span>от 450 ₽</span></div>
+    <div class="pl"><b>Детская стрижка</b><span class="q">уточняйте</span></div>
+    <div class="pl"><b>Моделирование бороды</b><span class="q">уточняйте</span></div>
+   </div>
+   <p style="margin-top:22px"><a class="btn k" href="#/services">Все услуги</a></p>
+  </div>
+ </section>
+
+ <section>
+  <div class="wrap">
+   <h2>За что любят</h2>
+   <div class="three">
+    <div class="card"><div class="hand">быстро</div><h3>25–30 минут</h3><p>«Сделали красоту с учётом всех пожеланий, и всё заняло минут 25–30» — из отзыва в 2ГИС.</p></div>
+    <div class="card"><div class="hand">уютно</div><h3>Чай и кофе</h3><p>Светлый зал, музыка, а пока ждёте — предложат чай или кофе.</p></div>
+    <div class="card"><div class="hand">свои мастера</div><h3>Инна, Алина, Нина</h3><p>Клиенты возвращаются к своим мастерам: к Инне ходят уже не первый год.</p></div>
+   </div>
+  </div>
+ </section>
+
+ <section class="soft">
+  <div class="wrap">
+   <h2>Отзывы</h2>
+   <div class="revs">
+    <div class="rev"><p>Хожу в парикмахерскую к Инне не первый год, теперь и в новый салон, стрижкой доволен на все 100.</p><div class="who">Даниил Ильяшенко · 2ГИС</div></div>
+    <div class="rev"><p>Наконец-то нашла мастера, которая понимает, что я хочу в итоге и как этого добиться. Ещё один плюс — скорость.</p><div class="who">Дарья Тикунова · 2ГИС</div></div>
+    <div class="rev"><p>Стригли мужа. Кропотливо и красиво. Очень просторно, светло и чисто, приятная атмосфера, музыка.</p><div class="who">Наталья Шабалина · 2ГИС</div></div>
+   </div>
+  </div>
+ </section>
+</div>
+
+<div class="page" id="p-services">
+ <section>
+  <div class="wrap">
+   <h2 style="font-size:clamp(40px,7vw,80px)">Услуги</h2>
+   <p class="lead">Цены есть не по всем услугам — их назовёт администратор при записи. Оплата картой, наличными или по QR-коду.</p>
+   <div class="price-lines">
+    <div class="pl"><b>Женская стрижка<small>любая длина и сложность</small></b><span>от 500 ₽</span></div>
+    <div class="pl"><b>Мужская стрижка</b><span>от 450 ₽</span></div>
+    <div class="pl"><b>Детская стрижка<small>мастера стригут детей годами</small></b><span class="q">уточняйте</span></div>
+    <div class="pl"><b>Моделирование бороды</b><span class="q">уточняйте</span></div>
+    <div class="pl"><b>Плетение кос</b><span class="q">уточняйте</span></div>
+    <div class="pl"><b>Полировка волос</b><span class="q">уточняйте</span></div>
+    <div class="pl"><b>Свадебные и вечерние причёски</b><span class="q">уточняйте</span></div>
+    <div class="pl"><b>Оформление бровей<small>форма по типу лица</small></b><span class="q">уточняйте</span></div>
+   </div>
+   <p style="margin-top:26px"><a class="btn r" href="tel:+79885805381">Узнать цену и записаться</a></p>
+  </div>
+ </section>
+</div>
+
+<div class="page" id="p-salon">
+ <section>
+  <div class="wrap">
+   <h2 style="font-size:clamp(40px,7vw,80px)">Салон</h2>
+   <p class="lead">Первый этаж, светлый зал с рисунками на стенах. Работаем каждый день с 9 до 21. Можно прийти с собакой.</p>
+   <div class="gal" id="gal">
+    <img src="https://i2.photo.2gis.com/photo-gallery/fc62119c-8e89-461f-b060-10ee5a695c27.jpg" alt="Зал парикмахерской" loading="lazy">
+    <img src="https://i5.photo.2gis.com/photo-gallery/8eb01603-291f-4cdc-b47f-87f084af8f0b.jpg" alt="Рабочие места и мойка" loading="lazy">
+    <img src="https://i7.photo.2gis.com/photo-gallery/129985e0-2cbd-48c8-87e3-31ae15cb6546.jpg" alt="Мастера за работой" loading="lazy">
+    <img src="https://i8.photo.2gis.com/photo-gallery/26f8d1f9-c27c-4086-9cf7-c571dac0653e.jpg" alt="Мужская стрижка" loading="lazy">
+    <img src="https://i7.photo.2gis.com/photo-gallery/9c4c43bf-bf81-4bf5-a2a3-8d77882b70d8.jpg" alt="Вход с вывеской и часами работы" loading="lazy">
+    <img src="https://i0.photo.2gis.com/photo-gallery/2df8c6d6-485d-4951-b297-464faaea8b3c.jpg" alt="Здание снаружи" loading="lazy">
+   </div>
+   <h2 style="margin-top:56px">Мастера из отзывов</h2>
+   <div class="three">
+    <div class="card"><h3>Инна</h3><p>К ней годами водят детей и переходят на новый адрес следом.</p></div>
+    <div class="card"><h3>Алина</h3><p>«Аккуратно, красиво, смело и стильно» — короткие стрижки и смена образа.</p></div>
+    <div class="card"><h3>Нина</h3><p>«Спасла мой образ и сделала звездой корпоратива» — причёски к событиям.</p></div>
+   </div>
+  </div>
+ </section>
+</div>
+
+<div class="page" id="p-reviews">
+ <section>
+  <div class="wrap">
+   <h2 style="font-size:clamp(40px,7vw,80px)">Отзывы</h2>
+   <div class="scores">
+    <a href="https://2gis.ru/rostov-on-don/firm/70000001095484705/tab/reviews" target="_blank" rel="noopener"><b>5,0</b><span>2ГИС · 10 отзывов</span></a>
+    <a href="https://yandex.ru/maps/org/kachestvo/12218906782/reviews/" target="_blank" rel="noopener"><b>4,9</b><span>Яндекс Карты · 34 оценки</span></a>
+   </div>
+   <div class="revs" style="margin-top:36px">
+    <div class="rev"><p>Каждый месяц с превеликим удовольствием доверяю свою голову мастеру Алине. От меня было лишь пожелание короткой стрижки — результат превзошёл ожидания: аккуратно, красиво, смело и стильно. Цены демократичные.</p><div class="who">Ирина · Яндекс Карты</div></div>
+    <div class="rev"><p>Атмосфера очень уютная, персонал приветливый и внимательный, сразу предложили чай и кофе. Мастер выслушал все пожелания и подсказал, как лучше сделать.</p><div class="who">Алиса Алпатова · Яндекс Карты</div></div>
+    <div class="rev"><p>Огромное спасибо мастеру Нине! Она спасла мой образ и сделала звездой корпоратива. Стильно, профессионально и совсем недорого.</p><div class="who">Майя · 2ГИС</div></div>
+    <div class="rev"><p>Вожу сына подстригать к Иннуле давно, теперь по новому адресу. А ещё здесь можно сделать себе брови — мастер подобрала форму по типу лица, а не стандарт.</p><div class="who">anastasiya fedorina · 2ГИС</div></div>
+    <div class="rev"><p>Мастер сделал отличную стрижку, аккуратно и быстро. В этом салоне можно сделать и моделирование бороды.</p><div class="who">Юрий Ратников · 2ГИС</div></div>
+    <div class="rev"><p>Зашёл и не пожалел. Качество мастера действительно соответствует названию.</p><div class="who">Владислав Панков · 2ГИС</div></div>
+   </div>
+  </div>
+ </section>
+</div>
+
+<div class="page" id="p-contacts">
+ <section>
+  <div class="wrap">
+   <h2 style="font-size:clamp(40px,7vw,80px)">Контакты</h2>
+   <div class="contacts">
+    <div>
+     <dl class="kv">
+      <dt>Адрес</dt><dd>Ростов-на-Дону, 2-я Краснодарская ул., 145/2, 1 этаж<br>остановка «Аллея Роз»</dd>
+      <dt>Часы</dt><dd>Ежедневно 9:00–21:00</dd>
+      <dt>Телефон</dt><dd><a href="tel:+79885805381">+7 988 580-53-81</a></dd>
+      <dt>Оплата</dt><dd>Карта, наличные, QR-код</dd>
+     </dl>
+     <div class="btns"><a class="btn r" href="tel:+79885805381">Позвонить</a></div>
+     <p style="margin-top:20px"><a href="https://yandex.ru/maps/?rtext=~47.203255,39.630028" target="_blank" rel="noopener">Построить маршрут</a></p>
+    </div>
+    <div class="map"><iframe title="КачестВО на карте" loading="lazy" src="https://yandex.ru/map-widget/v1/?ll=39.630028%2C47.203255&z=17&pt=39.630028%2C47.203255%2Cpm2rdm"></iframe></div>
+   </div>
+  </div>
+ </section>
+</div>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="ft">
+   <div><a class="logo" href="#/">КачестВО</a>Парикмахерская · Ростов-на-Дону, 2-я Краснодарская ул., 145/2</div>
+   <div>Ежедневно 9:00–21:00<br><a href="tel:+79885805381">+7 988 580-53-81</a></div>
+  </div>
+  <div class="credit">Демо-сайт · разработка: Сергей Музыченко, Telegram <a href="https://t.me/spectator0011" target="_blank" rel="noopener">@spectator0011</a></div>
+ </div>
+</footer>
+<div class="callbar"><a href="tel:+79885805381">Позвонить</a><a href="#/services">Услуги</a></div>
+<div class="lb" id="lb" role="dialog" aria-label="Фото"><button aria-label="Закрыть">×</button><img alt=""></div>
+<script>
+function route(){
+ const r=location.hash.replace(/^#\/?/,'');const id=['','services','salon','reviews','contacts'].includes(r)?r:'';
+ document.querySelectorAll('.page').forEach(p=>p.classList.toggle('on',p.id==='p-'+id));
+ document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.dataset.r===id));
+ document.getElementById('nav').classList.remove('open');scrollTo(0,0);
+}
+addEventListener('hashchange',route);route();
+const bg=document.querySelector('.burger');bg.onclick=()=>{const n=document.getElementById('nav');n.classList.toggle('open');bg.setAttribute('aria-expanded',n.classList.contains('open'))};
+const lb=document.getElementById('lb');
+document.getElementById('gal').onclick=e=>{const i=e.target.closest('img');if(!i)return;lb.querySelector('img').src=i.src;lb.classList.add('on')};
+lb.onclick=e=>{if(e.target.tagName!=='IMG')lb.classList.remove('on')};
+addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+document.addEventListener('error',e=>{const t=e.target;if(t.tagName==='IMG'&&t.closest('.gal')){t.style.display='none'}},true);
+</script>
+</body>
+</html>
