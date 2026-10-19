@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Black Panther — барбершоп на Бекетова, 43 · Нижний Новгород</title>
+<meta name="description" content="Барбершоп Black Panther в Нижнем Новгороде: мужские стрижки от 900 ₽, борода, afro haircut, абонементы. Ежедневно 10:00–20:00, ул. Бекетова, 43, у остановки «Моховая».">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ruslan+Display&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--wall:#f6f5f1;--ink:#000;--ink2:#2b2b2b;--mustard:#e8a817;--wood:#9b6b43;--grey:#d9d8d3;--muted:#6b6a66}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:400 17px/1.6 Rubik,system-ui,sans-serif;color:var(--ink);background:var(--wall);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--mustard);outline-offset:2px}
+h1,h2,.sign{font-family:"Ruslan Display",serif;font-weight:400;line-height:.98;letter-spacing:.01em}
+h2{font-size:clamp(34px,5.6vw,66px);margin-bottom:22px}
+h3{font-size:21px;font-weight:700}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+section{padding:80px 0}
+.lead{font-size:18px;color:var(--muted);max-width:58ch}
+
+header{position:sticky;top:0;z-index:40;background:var(--wall);border-bottom:2px solid var(--ink)}
+.hd{display:flex;align-items:center;gap:20px;height:64px}
+.logo{font:400 22px "Ruslan Display";text-decoration:none;white-space:nowrap}
+nav{display:flex;gap:2px;margin-left:auto}
+nav a{text-decoration:none;padding:8px 12px;font-weight:500;font-size:15px}
+nav a:hover{background:var(--grey)}
+nav a.on{background:var(--ink);color:var(--wall)}
+.hd .book{text-decoration:none;background:var(--mustard);font-weight:700;padding:10px 16px;white-space:nowrap}
+.burger{display:none;margin-left:auto;background:none;border:2px solid var(--ink);font:700 14px Rubik;padding:6px 12px;cursor:pointer}
+.page{display:none}.page.on{display:block}
+
+/* hero: hand-lettered sign on a white wall */
+.hero{padding:56px 0 0}
+.hero h1{font-size:clamp(58px,13.5vw,186px);text-align:center;transform:rotate(-2deg);margin:0 auto}
+.hero h1 span{display:block}
+.hero .under{display:grid;grid-template-columns:1fr 1.3fr;gap:44px;align-items:center;margin-top:46px}
+.hero p{font-size:20px;max-width:30ch;margin-bottom:24px}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;padding:15px 22px;font-weight:700;font-size:16px;border:2px solid var(--ink)}
+.btn.y{background:var(--mustard);border-color:var(--mustard)}
+.btn.y:hover{background:#f1b938}
+.btn.k{background:var(--ink);color:var(--wall)}
+.btn.o:hover{background:var(--grey)}
+.photo{position:relative}
+.photo img{width:100%;aspect-ratio:4/3;object-fit:cover;border:2px solid var(--ink)}
+.badge{position:absolute;left:-26px;top:-30px;width:132px;height:132px;border-radius:50%;background:var(--mustard);display:grid;place-items:center;text-align:center;font:700 14px/1.2 Rubik;transform:rotate(-10deg);border:2px solid var(--ink)}
+.badge b{display:block;font:400 34px/1 "Ruslan Display"}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);margin-top:56px}
+.facts div{padding:18px 16px;border-right:2px solid var(--ink)}
+.facts div:last-child{border-right:0}
+.facts b{display:block;font:400 26px "Ruslan Display"}
+.facts span{font-size:14px;color:var(--muted)}
+
+/* price board */
+.board{border:2px solid var(--ink);background:#fff}
+.board .row{display:grid;grid-template-columns:1fr auto;gap:4px 20px;padding:18px 22px;border-bottom:1px solid var(--grey)}
+.board .row:last-child{border-bottom:0}
+.board .nm{font-weight:700;font-size:19px}
+.board .pr{font:400 28px "Ruslan Display";white-space:nowrap}
+.board .ds{grid-column:1/-1;color:var(--muted);font-size:15px;max-width:64ch}
+.board .row.hot{background:#fff6dd}
+.tag{display:inline-block;background:var(--mustard);font-size:12px;font-weight:700;padding:2px 8px;margin-left:8px;vertical-align:middle}
+
+.subs{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:2px solid var(--ink);margin-top:26px}
+.subs div{padding:24px;border-right:2px solid var(--ink);background:#fff}
+.subs div:last-child{border-right:0}
+.subs .pr{font:400 30px "Ruslan Display";margin:10px 0 6px}
+.subs .pr small{font:400 15px Rubik;color:var(--muted)}
+.subs p{font-size:15px;color:var(--muted)}
+
+.dark{background:var(--ink);color:var(--wall)}
+.dark .lead{color:#bdbcb7}
+.vibe{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:30px;border-top:1px solid #444}
+.vibe div{padding:22px 18px 0 0}
+.vibe b{display:block;color:var(--mustard);font:400 22px "Ruslan Display";margin-bottom:6px}
+.vibe p{color:#cfcec9;font-size:15px}
+
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:26px}
+.rev{border:2px solid var(--ink);background:#fff;padding:22px}
+.rev p{margin-bottom:12px}
+.rev .who{font-size:14px;color:var(--muted)}
+.rev .who b{color:var(--ink)}
+
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:26px}
+.gal figure{cursor:zoom-in;border:2px solid var(--ink);overflow:hidden;background:var(--grey)}
+.gal img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.94);display:none;align-items:center;justify-content:center;z-index:90;padding:20px}
+.lb.on{display:flex}
+.lb img{max-height:88vh;max-width:94vw}
+.lb button{position:absolute;top:12px;right:20px;background:none;border:0;color:#fff;font-size:36px;cursor:pointer}
+
+.contacts{display:grid;grid-template-columns:1fr 1.3fr;gap:36px;margin-top:26px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:12px 20px;margin-bottom:24px}
+.kv dt{color:var(--muted)}
+.kv a{font-weight:700;text-decoration:none}
+.find{background:#fff6dd;border-left:6px solid var(--mustard);padding:14px 18px;margin-bottom:24px}
+.map{border:2px solid var(--ink);min-height:420px;background:var(--grey)}
+.map iframe{width:100%;height:100%;min-height:416px;border:0;display:block}
+
+footer{background:var(--ink);color:#bdbcb7;padding:40px 0 100px;font-size:15px}
+.ft{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer .logo{color:var(--wall);display:block;margin-bottom:6px}
+footer a{text-decoration:none;color:var(--wall)}
+.credit{margin-top:20px;font-size:12px;color:#8a8984}
+.callbar{display:none}
+
+@media (max-width:900px){
+ nav{display:none;position:absolute;top:64px;left:0;right:0;background:var(--wall);flex-direction:column;padding:8px 16px 16px;border-bottom:2px solid var(--ink)}
+ nav.open{display:flex}
+ nav a{padding:12px}
+ .hd .book{display:none}
+ .burger{display:block}
+ .hero .under,.contacts{grid-template-columns:1fr}
+ .facts{grid-template-columns:1fr 1fr}
+ .facts div:nth-child(2){border-right:0}
+ .facts div:nth-child(-n+2){border-bottom:2px solid var(--ink)}
+ .subs,.revs{grid-template-columns:1fr}
+ .subs div{border-right:0;border-bottom:2px solid var(--ink)}
+ .subs div:last-child{border-bottom:0}
+ .vibe{grid-template-columns:1fr 1fr}
+ .gal{grid-template-columns:1fr 1fr}
+ .badge{left:auto;right:-6px;top:-34px;width:112px;height:112px}
+ .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50;border-top:2px solid var(--ink)}
+ .callbar a{flex:1;text-align:center;text-decoration:none;padding:15px 6px;font-weight:700;background:var(--wall)}
+ .callbar a:first-child{background:var(--mustard)}
+ .callbar a+a{border-left:2px solid var(--ink)}
+}
+@media (max-width:520px){
+ .wrap{padding:0 16px}
+ section{padding:58px 0}
+ .vibe{grid-template-columns:1fr}
+ .board .row{padding:16px}
+ .board .pr{font-size:23px}
+}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap hd">
+  <a class="logo" href="#/">Black Panther</a>
+  <button class="burger" aria-expanded="false" aria-controls="nav">Меню</button>
+  <nav id="nav">
+   <a href="#/" data-r="">Главная</a>
+   <a href="#/prices" data-r="prices">Цены</a>
+   <a href="#/team" data-r="team">Барберы и фото</a>
+   <a href="#/reviews" data-r="reviews">Отзывы</a>
+   <a href="#/contacts" data-r="contacts">Контакты</a>
+  </nav>
+  <a class="book" href="https://black-panther.onligo.ru" target="_blank" rel="noopener">Записаться онлайн</a>
+ </div>
+</header>
+
+<main>
+<div class="page" id="p-">
+ <div class="hero">
+  <div class="wrap">
+   <h1><span>Black</span><span>Panther</span></h1>
+   <div class="under">
+    <div>
+     <p>Мужская парикмахерская на Бекетова, у остановки «Моховая». Стрижки, борода и afro haircut — с кофе, музыкой и приставкой, пока ждёте.</p>
+     <div class="btns">
+      <a class="btn y" href="https://black-panther.onligo.ru" target="_blank" rel="noopener">Записаться онлайн</a>
+      <a class="btn o" href="tel:+79873966033">Позвонить</a>
+     </div>
+    </div>
+    <div class="photo">
+     <img src="https://i5.photo.2gis.com/photo-gallery/991fa73d-c7c6-4202-9da1-b3d5fefef24b.jpg" alt="Барберы Black Panther с клиентом после стрижки">
+     <div class="badge"><span><b>900 ₽</b>первая стрижка</span></div>
+    </div>
+   </div>
+   <div class="facts">
+    <div><b>5,0</b><span>Яндекс Карты · 199 оценок</span></div>
+    <div><b>5,0</b><span>2ГИС · 48 оценок</span></div>
+    <div><b>10–20</b><span>каждый день</span></div>
+    <div><b>1 100 ₽</b><span>мужская стрижка</span></div>
+   </div>
+  </div>
+ </div>
+
+ <section>
+  <div class="wrap">
+   <h2>Основное</h2>
+   <div class="board">
+    <div class="row hot"><span class="nm">Первая стрижка <span class="tag">для новых клиентов</span></span><span class="pr">900 ₽</span></div>
+    <div class="row"><span class="nm">Стрижка</span><span class="pr">1 100 ₽</span></div>
+    <div class="row"><span class="nm">Стрижка + борода</span><span class="pr">1 500 ₽</span></div>
+    <div class="row"><span class="nm">Борода</span><span class="pr">700 ₽</span></div>
+   </div>
+   <p style="margin-top:20px"><a class="btn k" href="#/prices">Все цены и абонементы</a></p>
+  </div>
+ </section>
+
+ <section class="dark">
+  <div class="wrap">
+   <h2>Почему сюда возвращаются</h2>
+   <p class="lead">Собрали из отзывов в 2ГИС и Яндекс Картах — так о Black Panther пишут сами клиенты.</p>
+   <div class="vibe">
+    <div><b>Слушают</b><p>Подбирают стрижку под вас и учитывают пожелания.</p></div>
+    <div><b>Атмосфера</b><p>«Максимально братская»: музыка, разговоры, хорошее настроение.</p></div>
+    <div><b>Кофе и PS</b><p>Угостят чаем или кофе, а если пришли раньше — есть приставка.</p></div>
+    <div><b>Afro Haircut</b><p>Умеют работать с афротекстурными волосами — редкость для города.</p></div>
+   </div>
+  </div>
+ </section>
+
+ <section>
+  <div class="wrap">
+   <h2>Отзывы</h2>
+   <div class="revs">
+    <div class="rev"><p>Приходил стричься к барберу Инасиу, попросил подобрать свой вариант под стрижку. Оказался в большом впечатлении от его умений и подбора стрижки.</p><div class="who"><b>Егор Голубев</b> · 2ГИС</div></div>
+    <div class="rev"><p>Отлично стригут, мастер аккуратен, атмосфера максимально братская, комфортная. В такую парикмахерскую хочется возвращаться.</p><div class="who"><b>Борис Думаревский</b> · 2ГИС</div></div>
+    <div class="rev"><p>Если рано пришли и просят подождать, то время пролетит незаметно за вкусным кофе. Приду обязательно ещё не один раз!</p><div class="who"><b>Евгений Курочкин</b> · 2ГИС</div></div>
+   </div>
+  </div>
+ </section>
+</div>
+
+<div class="page" id="p-prices">
+ <section>
+  <div class="wrap">
+   <h2 style="font-size:clamp(42px,8vw,96px)">Цены</h2>
+   <p class="lead">Прайс барбершопа из 2ГИС. Оплата картой, наличными, переводом или по QR-коду, можно частями.</p>
+   <h3 style="margin:36px 0 12px">Мужские стрижки</h3>
+   <div class="board">
+    <div class="row hot"><span class="nm">Первая стрижка <span class="tag">для новых клиентов</span></span><span class="pr">900 ₽</span><span class="ds">Первая стрижка по сниженной цене — чтобы познакомиться с барбершопом.</span></div>
+    <div class="row"><span class="nm">Стрижка</span><span class="pr">1 100 ₽</span><span class="ds">Классическая мужская стрижка.</span></div>
+    <div class="row"><span class="nm">Стрижка + борода</span><span class="pr">1 500 ₽</span><span class="ds">Стрижка и моделирование бороды за один визит.</span></div>
+    <div class="row"><span class="nm">Борода</span><span class="pr">700 ₽</span><span class="ds">Моделирование формы, выравнивание контура, уход и советы, как поддерживать форму.</span></div>
+    <div class="row"><span class="nm">Укладка + окантовка</span><span class="pr">600 ₽</span></div>
+    <div class="row"><span class="nm">Afro Haircut (VIP)</span><span class="pr">2 000 ₽</span><span class="ds">Стрижки и причёски для афротекстурных волос.</span></div>
+    <div class="row"><span class="nm">Детская стрижка</span><span class="pr" style="font-size:18px;font-family:Rubik;font-weight:700">уточняйте</span></div>
+   </div>
+   <h3 style="margin:46px 0 4px">Абонементы</h3>
+   <p class="lead">Фиксированная цена и приоритетная запись. В прайсе по две цены на каждый абонемент — стоимость зависит от мастера, уточните при покупке.</p>
+   <div class="subs">
+    <div><h3>5 стрижек</h3><div class="pr">5 000 <small>или</small> 6 000 ₽</div><p>Действует 5 месяцев. Выгода 500 ₽.</p></div>
+    <div><h3>5 стрижек + борода</h3><div class="pr">7 000 <small>или</small> 8 500 ₽</div><p>Действует 5 месяцев. Выгода 500 ₽.</p></div>
+    <div><h3>Борода</h3><div class="pr">3 300 <small>или</small> 4 500 ₽</div><p>Действует 2 месяца. Выгода 900 ₽.</p></div>
+   </div>
+   <p style="margin-top:28px"><a class="btn y" href="https://black-panther.onligo.ru" target="_blank" rel="noopener">Записаться онлайн</a></p>
+  </div>
+ </section>
+</div>
+
+<div class="page" id="p-team">
+ <section>
+  <div class="wrap">
+   <h2 style="font-size:clamp(42px,8vw,96px)">Барберы и фото</h2>
+   <p class="lead">Интернациональная команда. В отзывах чаще всего благодарят Инасиу и Рубена — за подбор стрижки и подход к клиенту.</p>
+   <div class="gal" id="gal"></div>
+  </div>
+ </section>
+</div>
+
+<div class="page" id="p-reviews">
+ <section>
+  <div class="wrap">
+   <h2 style="font-size:clamp(42px,8vw,96px)">Отзывы</h2>
+   <div class="facts" style="margin-top:0;grid-template-columns:repeat(3,1fr)">
+    <div><b>5,0</b><span><a href="https://yandex.ru/maps/org/black_panther/122057641045/reviews/" target="_blank" rel="noopener">Яндекс Карты</a> · 199 оценок</span></div>
+    <div><b>5,0</b><span><a href="https://2gis.ru/n_novgorod/firm/70000001103448758/tab/reviews" target="_blank" rel="noopener">2ГИС</a> · 48 оценок</span></div>
+    <div style="border-right:0"><b>2026</b><span>«Хорошее место» в Яндекс Картах</span></div>
+   </div>
+   <div class="revs">
+    <div class="rev"><p>Был у мастера Рубена. Понравилась техника исполнения и подход к клиенту. Очень позитивные ребята. Чаем, кофем угостят, ещё и приставка есть.</p><div class="who"><b>Андрей Думнов</b> · 2ГИС</div></div>
+    <div class="rev"><p>Первый раз посетил и с уверенностью могу сказать, что вернусь сюда снова! Приятная музыка и атмосфера. Барбер Инасиу справился с работой на все 100%.</p><div class="who"><b>Даниил Соловьев</b> · 2ГИС</div></div>
+    <div class="rev"><p>Невероятное место, уровень мастерства на высоте. Комфортные диалоги, музыка и забота.</p><div class="who"><b>Иван Панкратов</b> · 2ГИС</div></div>
+    <div class="rev"><p>Хожу стричься к ребятам регулярно. Стригут хорошо и учитывают пожелания.</p><div class="who"><b>Алексей Нарышкин</b> · 2ГИС</div></div>
+    <div class="rev"><p>Быстро, качественно придали моей голове ухоженности. Атмосфера располагает стричься здесь на постоянку. Ребятам респект, кофе хороший.</p><div class="who"><b>Antonio Suhano</b> · 2ГИС</div></div>
+    <div class="rev"><p>Отличное место. Постригли очень хорошо. Даже стажёр справляется отлично со своим делом, рекомендую.</p><div class="who"><b>Тимофей</b> · 2ГИС</div></div>
+   </div>
+  </div>
+ </section>
+</div>
+
+<div class="page" id="p-contacts">
+ <section>
+  <div class="wrap">
+   <h2 style="font-size:clamp(42px,8vw,96px)">Контакты</h2>
+   <div class="contacts">
+    <div>
+     <div class="find"><b>Как найти:</b> 1 этаж, сразу за остановкой «Моховая». Дверь слева от «Ломбард Народный», над входом — вывеска «Мужская парикмахерская».</div>
+     <dl class="kv">
+      <dt>Адрес</dt><dd>Нижний Новгород, ул. Бекетова, 43</dd>
+      <dt>Часы</dt><dd>Ежедневно 10:00–20:00</dd>
+      <dt>Телефон</dt><dd><a href="tel:+79873966033">+7 987 396-60-33</a></dd>
+     </dl>
+     <div class="btns">
+      <a class="btn y" href="https://black-panther.onligo.ru" target="_blank" rel="noopener">Онлайн-запись</a>
+      <a class="btn o" href="https://wa.me/79873966033" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn o" href="https://t.me/+79873966033" target="_blank" rel="noopener">Telegram</a>
+      <a class="btn o" href="https://vk.com/blackpanther2304" target="_blank" rel="noopener">ВКонтакте</a>
+     </div>
+    </div>
+    <div class="map"><iframe title="Black Panther на карте" loading="lazy" src="https://yandex.ru/map-widget/v1/?ll=44.015261%2C56.293047&z=17&pt=44.015261%2C56.293047%2Cpm2rdm"></iframe></div>
+   </div>
+  </div>
+ </section>
+</div>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="ft">
+   <div><a class="logo" href="#/">Black Panther</a>Барбершоп · Нижний Новгород, ул. Бекетова, 43</div>
+   <div>Ежедневно 10:00–20:00<br><a href="tel:+79873966033">+7 987 396-60-33</a></div>
+  </div>
+  <div class="credit">Демо-сайт · разработка: Сергей Музыченко, Telegram <a href="https://t.me/spectator0011" target="_blank" rel="noopener">@spectator0011</a></div>
+ </div>
+</footer>
+<div class="callbar"><a href="https://black-panther.onligo.ru" target="_blank" rel="noopener">Записаться</a><a href="tel:+79873966033">Позвонить</a><a href="#/prices">Цены</a></div>
+<div class="lb" id="lb" role="dialog" aria-label="Фото"><button aria-label="Закрыть">×</button><img alt=""></div>
+<script>
+const G='8cb2e79e-b9d9-41e9-8736-41d8b8f9c52b@3 dfdb7b70-cc42-40f1-893c-11049b70572a@0 dbccd98e-9e38-4d8f-8e2d-ecefaf74df48@4 2521543e-6602-45a1-8bee-1a132d2bbe36@9 cbe7c819-7c21-4501-bbf1-f4a56198f33a@0 ec290e1b-d89e-4003-b4b7-fb80fea30040@5 dc53a7e0-5feb-4cba-909a-d9f6b25ad777@2 4331d412-3f79-4c4a-a771-ec346778e634@1 5c2c9921-c2d8-445c-bc99-bb0ffffd68f4@1 b848ca09-5e60-45fd-b0aa-19778f5ada74@9 d13f5ac2-602d-4411-8b7e-a5414be4716a@1 652fda00-ba2c-4056-92b0-84e60c3cba83@5 c116ef99-27c1-4822-96c3-4afc930b49c0@5 ddf93f63-7028-4e9b-9d43-6b7f48c450a0@9 e3dc1857-1e94-4370-b175-ff3ecafe3d1c@9 edbf0428-7a4a-4eea-bf56-80b1860742ef@4 25545c20-adac-42d2-937c-9b6ef31be2c6@6 42d8c15a-0d81-4971-b308-4062a7b128d8@5'.split(' ').map(s=>{const[id,n]=s.split('@');return`https://i${n}.photo.2gis.com/photo-gallery/${id}.jpg`});
+document.getElementById('gal').innerHTML=G.map(u=>`<figure><img src="${u}" alt="Black Panther: барберы, стрижки, интерьер" loading="lazy"></figure>`).join('');
+function route(){
+ const r=location.hash.replace(/^#\/?/,'');const id=['','prices','team','reviews','contacts'].includes(r)?r:'';
+ document.querySelectorAll('.page').forEach(p=>p.classList.toggle('on',p.id==='p-'+id));
+ document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.dataset.r===id));
+ document.getElementById('nav').classList.remove('open');scrollTo(0,0);
+}
+addEventListener('hashchange',route);route();
+const bg=document.querySelector('.burger');bg.onclick=()=>{const n=document.getElementById('nav');n.classList.toggle('open');bg.setAttribute('aria-expanded',n.classList.contains('open'))};
+const lb=document.getElementById('lb');
+document.getElementById('gal').onclick=e=>{const i=e.target.closest('img');if(!i)return;lb.querySelector('img').src=i.src;lb.classList.add('on')};
+lb.onclick=e=>{if(e.target.tagName!=='IMG')lb.classList.remove('on')};
+addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+document.addEventListener('error',e=>{const t=e.target;if(t.tagName==='IMG'){(t.closest('figure')||t).style.display='none'}},true);
+</script>
+</body>
+</html>
