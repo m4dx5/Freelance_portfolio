@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>СреЗ2 — барбершоп на Свердлова, 32Б, Екатеринбург</title>
+<meta name="description" content="Барбершоп СреЗ2 в Екатеринбурге: мужские и детские стрижки, борода, бритьё опасной бритвой, уход VOLCARE. Ул. Свердлова, 32Б, ЖК «Екатерининский парк». Ежедневно 10:00–22:00.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --k:#0c0c0c; --k2:#161515; --cream:#efe6d8; --cream2:#e4d8c4; --red:#d9271c; --brick:#9c4a32; --ink:#0c0c0c; --mute:#6c655c; --line:rgba(12,12,12,.14);
+  --max:1240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font:400 18px/1.55 Jost,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:"Dela Gothic One",Impact,sans-serif;font-weight:400;line-height:.98;text-transform:uppercase;letter-spacing:-.01em}
+.lb2{display:inline-block;font-weight:700;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--red)}
+.ph{overflow:hidden;background:#2a2725}
+.ph img{width:100%;height:100%;object-fit:cover}
+
+header{position:sticky;top:0;z-index:40;background:var(--k);color:#fff}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.logo{font-family:"Dela Gothic One";font-size:28px;letter-spacing:.01em;line-height:1;display:flex;align-items:baseline;gap:8px}
+.logo em{font-style:normal;color:var(--red)}
+.logo small{font-family:Jost;font-size:11px;font-weight:600;letter-spacing:.24em;color:#9a948b}
+.links{display:flex;gap:4px}
+.links a{padding:9px 13px;font-weight:500;font-size:15.5px;color:#c9c3b9}
+.links a:hover{color:#fff}
+.links a.on{color:#fff;box-shadow:inset 0 -2px 0 var(--red)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 26px;font:600 15px Jost;letter-spacing:.08em;text-transform:uppercase;transition:background .2s,color .2s,transform .2s;white-space:nowrap;border:0;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.b-red{background:var(--red);color:#fff}
+.b-red:hover{background:#b51d14}
+.b-dark{background:var(--k);color:#fff}
+.b-cream{background:var(--cream);color:var(--k)}
+.b-out{border:2px solid var(--k)}
+.b-out:hover{background:var(--k);color:#fff}
+.b-outw{border:2px solid rgba(255,255,255,.45);color:#fff}
+.burger{display:none;width:46px;height:46px;border:2px solid #fff;background:none;color:#fff;font-size:18px;cursor:pointer}
+
+.page{display:none;animation:in .35s ease}
+.page.on{display:block}
+@keyframes in{from{opacity:0}to{opacity:1}}
+section{padding:96px 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:44px;flex-wrap:wrap}
+.head h2{font-size:clamp(40px,5.6vw,76px);margin-top:12px}
+.head p{max-width:400px;color:var(--mute)}
+.ptop{background:var(--k);color:#fff;padding:80px 0 64px;position:relative;overflow:hidden}
+.ptop .big3{position:absolute;right:-30px;bottom:-90px;font-family:"Dela Gothic One";font-size:340px;line-height:1;color:rgba(255,255,255,.04);pointer-events:none}
+.ptop h1{font-size:clamp(48px,8vw,112px);margin-top:16px;position:relative}
+.ptop p{max-width:560px;color:#b5aea4;margin-top:18px;font-size:19px;position:relative}
+
+/* hero */
+.hero{background:var(--k);color:#fff;display:grid;grid-template-columns:1.05fr .95fr;min-height:calc(100vh - 70px)}
+.hero .tx{padding:72px 56px 56px max(28px,calc((100vw - var(--max))/2 + 28px));display:flex;flex-direction:column;justify-content:center}
+.hero h1{font-size:clamp(64px,9.4vw,150px);line-height:.9}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero .sub{font-family:"Dela Gothic One";font-size:clamp(18px,1.8vw,24px);text-transform:uppercase;color:#b5aea4;margin-top:14px;letter-spacing:.02em}
+.hero p{font-size:19px;color:#c9c3b9;max-width:500px;margin:22px 0 32px}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.hero .facts{display:flex;gap:28px;flex-wrap:wrap;margin-top:44px;padding-top:24px;border-top:1px solid #2c2a28}
+.hero .facts b{display:block;font-family:"Dela Gothic One";font-size:30px;font-weight:400}
+.hero .facts span{font-size:14px;color:#9a948b}
+.hero .pic{position:relative;min-height:520px}
+.hero .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero .pic .stamp{position:absolute;left:-46px;bottom:56px;width:120px;height:120px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;text-align:center;font-family:"Dela Gothic One";font-size:15px;line-height:1.05;transform:rotate(-12deg);z-index:1}
+
+/* ticker */
+.tick{background:var(--red);color:#fff;overflow:hidden;white-space:nowrap;padding:16px 0}
+.tick div{display:inline-block;animation:tk 30s linear infinite;font-family:"Dela Gothic One";font-size:22px;text-transform:uppercase}
+.tick span{margin:0 26px}
+@keyframes tk{to{transform:translateX(-50%)}}
+
+/* popular */
+.pop{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--k);border-left:2px solid var(--k)}
+.pop>div{border-right:2px solid var(--k);border-bottom:2px solid var(--k);padding:28px 24px;display:flex;flex-direction:column;gap:10px;min-height:250px}
+.pop .n{font-family:"Dela Gothic One";font-size:14px;color:var(--red)}
+.pop h3{font-size:22px;line-height:1.05}
+.pop p{color:var(--mute);font-size:15.5px;flex:1}
+.pop b{font-family:"Dela Gothic One";font-weight:400;font-size:30px}
+.pop .dark{background:var(--k);color:#fff}
+.pop .dark p{color:#b5aea4}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--k);color:#fff}
+.about .ph{min-height:560px}
+.about .tx{padding:72px 56px}
+.about h2{font-size:clamp(38px,4.6vw,64px);margin:14px 0 22px}
+.about p{color:#c9c3b9;margin-bottom:14px}
+.perks{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:26px}
+.perks>div{border:1px solid #2f2c29;padding:16px 18px}
+.perks b{display:block;font-weight:600}
+.perks span{font-size:14.5px;color:#9a948b}
+
+/* barbers */
+.barbers{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.bb{background:#fff;padding:32px;border:2px solid var(--k);position:relative}
+.bb .ini{width:76px;height:76px;border-radius:50%;background:var(--k);color:var(--cream);display:grid;place-items:center;font-family:"Dela Gothic One";font-size:32px;margin-bottom:18px}
+.bb h3{font-size:32px}
+.bb .role{font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin:6px 0 14px;display:block}
+.bb p{color:var(--mute);font-size:16px}
+.bb q{display:block;margin-top:14px;padding-top:14px;border-top:1px solid var(--line);font-style:italic}
+
+/* looks */
+.looks{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.looks .ph{aspect-ratio:3/4;cursor:zoom-in}
+
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rv{background:#fff;padding:30px;display:flex;flex-direction:column;justify-content:space-between;gap:18px;border:2px solid var(--k)}
+.rv p{font-size:17px}
+.rv footer{display:flex;justify-content:space-between;gap:10px;font-size:14px;font-weight:600;color:var(--mute)}
+.rv footer i{font-style:normal;color:var(--red);letter-spacing:2px}
+.rv.hl{background:var(--k);color:#fff}
+.rv.hl p{font-family:"Dela Gothic One";font-size:24px;line-height:1.15;text-transform:uppercase}
+.rv.hl footer{color:#9a948b}
+
+/* price page */
+.pcats{display:grid;gap:56px}
+.pcat h2{font-size:clamp(32px,4vw,52px);margin-bottom:20px;display:flex;align-items:baseline;gap:16px}
+.pcat h2 small{font-family:Jost;font-size:15px;font-weight:600;letter-spacing:.14em;color:var(--red)}
+.row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;padding:20px 0;border-bottom:2px solid var(--k);align-items:start}
+.row:first-of-type{border-top:2px solid var(--k)}
+.row h3{font-family:Jost;font-weight:600;text-transform:none;font-size:20px;letter-spacing:0;line-height:1.3}
+.row p{color:var(--mute);font-size:15.5px;margin-top:4px;max-width:760px}
+.row b{font-family:"Dela Gothic One";font-weight:400;font-size:26px;white-space:nowrap}
+.pnote{margin-top:44px;background:var(--k);color:#fff;padding:32px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.pnote p{max-width:640px;color:#c9c3b9}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:260px;gap:8px}
+.gal .ph{cursor:zoom-in}
+.gal .w{grid-column:span 2}
+.gal .t{grid-row:span 2}
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.94);display:none;place-items:center;z-index:80;padding:20px;cursor:zoom-out}
+.lb.on{display:grid}
+.lb img{max-width:92vw;max-height:88vh}
+
+/* scores */
+.scores{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:24px}
+.sc{background:var(--k);color:#fff;padding:34px;display:flex;gap:26px;align-items:center}
+.sc .big{font-family:"Dela Gothic One";font-size:84px;line-height:.85;color:var(--red)}
+.sc h3{font-size:26px}
+.sc p{color:#9a948b;font-size:15px;margin:4px 0 8px}
+.sc a{font-weight:600;border-bottom:2px solid var(--red)}
+
+/* contacts */
+.cgrid{display:grid;grid-template-columns:1fr 1.15fr;gap:0;border:2px solid var(--k)}
+.cbox{background:#fff;padding:40px}
+.kv{display:grid;gap:24px;margin-bottom:30px}
+.kv span{display:block;font-size:12.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:4px}
+.kv b,.kv a{font-family:"Dela Gothic One";font-weight:400;font-size:24px;line-height:1.15;text-transform:uppercase}
+.kv a:hover{color:var(--red)}
+.kv em{display:block;font-style:normal;color:var(--mute);font-size:16px;margin-top:4px}
+.map{min-height:520px;background:#ddd;border-left:2px solid var(--k)}
+.map iframe{width:100%;height:100%;min-height:520px;border:0;display:block}
+
+.foot{background:var(--k);color:#9a948b;padding:60px 0 28px}
+.foot .g{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+.foot .logo{color:#fff}
+.foot h4{font-family:"Dela Gothic One";font-weight:400;text-transform:uppercase;color:#fff;font-size:17px;margin-bottom:12px}
+.foot .g a:not(.logo){display:block;margin-bottom:6px}
+.foot a:hover{color:#fff}
+.credit{margin-top:40px;padding-top:18px;border-top:1px solid #2c2a28;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13.5px;color:#76706a}
+.credit a{color:#d8d1c6}
+
+.callbar{display:none}
+
+@media (max-width:1060px){
+  .hero,.about,.cgrid,.scores{grid-template-columns:1fr}
+  .hero .tx{padding:56px 28px}
+  .hero .pic{min-height:440px}
+  .hero .pic .stamp{left:auto;right:24px;bottom:-40px}
+  .about .ph{min-height:380px}
+  .about .tx{padding:48px 28px}
+  .map{border-left:0;border-top:2px solid var(--k)}
+  .pop{grid-template-columns:1fr 1fr}
+  .barbers,.revs{grid-template-columns:1fr 1fr}
+  .looks{grid-template-columns:repeat(3,1fr)}
+  .gal{grid-template-columns:repeat(3,1fr)}
+  .foot .g{grid-template-columns:1fr 1fr}
+}
+@media (max-width:900px){
+  .links{display:none;position:absolute;top:70px;left:0;right:0;flex-direction:column;background:var(--k);padding:8px 16px 18px;border-top:1px solid #2c2a28}
+  .links.open{display:flex}
+  .links a{font-size:19px;padding:14px 6px;border-bottom:1px solid #2c2a28}
+  .links a.on{box-shadow:none;color:var(--red)}
+  .nav>.btn{display:none}
+  .burger{display:block}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  section{padding:64px 0}
+  .hero .tx{padding:44px 16px}
+  .hero .pic{min-height:360px}
+  .hero .facts{gap:20px}
+  .about .tx{padding:40px 16px}
+  .perks{grid-template-columns:1fr}
+  .pop,.barbers,.revs{grid-template-columns:1fr}
+  .pop>div{min-height:0}
+  .looks{grid-template-columns:repeat(2,1fr)}
+  .gal{grid-template-columns:1fr 1fr;grid-auto-rows:170px}
+  .row b{font-size:21px}
+  .row h3{font-size:18px}
+  .sc{flex-direction:column;align-items:flex-start;gap:10px;padding:26px}
+  .cbox{padding:26px}
+  .kv b,.kv a{font-size:21px}
+  .ptop .big3{font-size:200px}
+  .foot .g{grid-template-columns:1fr}
+  .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:50;gap:8px}
+  .callbar .btn{flex:1;padding:15px 10px;box-shadow:0 10px 26px -10px rgba(0,0,0,.6)}
+  .foot{padding-bottom:100px}
+}
+@media (prefers-reduced-motion:reduce){.page{animation:none}.tick div{animation:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#/" class="logo" aria-label="СреЗ2 — на главную">СРЕ<em>З2</em><small>BARBERSHOP</small></a>
+    <nav class="links" id="links">
+      <a href="#/">Главная</a>
+      <a href="#/prices">Услуги и цены</a>
+      <a href="#/team">Барберы</a>
+      <a href="#/photos">Фото</a>
+      <a href="#/reviews">Отзывы</a>
+      <a href="#/contacts">Контакты</a>
+    </nav>
+    <a href="https://n2118963.yclients.ru/" target="_blank" rel="noopener" class="btn b-red">Записаться</a>
+    <button class="burger" id="burger" aria-label="Меню">☰</button>
+  </div>
+</header>
+
+<main>
+
+<!-- ГЛАВНАЯ -->
+<div class="page" data-page="/">
+  <section class="hero" style="padding:0">
+    <div class="tx">
+      <span class="lb2">Барбершоп · Екатеринбург</span>
+      <h1 style="margin-top:16px">СРЕ<em>З2</em></h1>
+      <div class="sub">Свердлова, 32Б</div>
+      <p>Мужские и детские стрижки, борода, бритьё опасной бритвой и уход для лица. В каждую стрижку входят двухразовое мытьё и укладка.</p>
+      <div class="cta">
+        <a href="https://n2118963.yclients.ru/" target="_blank" rel="noopener" class="btn b-red">Записаться онлайн</a>
+        <a href="#/prices" class="btn b-outw">Цены</a>
+      </div>
+      <div class="facts">
+        <div><b>5,0</b><span>2ГИС · 45 оценок</span></div>
+        <div><b>4,9</b><span>Яндекс · 38 оценок</span></div>
+        <div><b>10–22</b><span>без выходных</span></div>
+      </div>
+    </div>
+    <div class="pic">
+      <img src="https://i7.photo.2gis.com/photo-gallery/e558532d-eab6-4a09-8423-d43c9cfc2539.jpg" alt="Вход в барбершоп СреЗ2 вечером" loading="eager">
+      <div class="stamp">ЖК «Екате&shy;рининский парк»</div>
+    </div>
+  </section>
+
+  <div class="tick" aria-hidden="true"><div><span>Стрижки</span>✦<span>Борода</span>✦<span>Опасная бритва</span>✦<span>Уход VOLCARE</span>✦<span>Отец и сын</span>✦<span>Студентам</span>✦<span>Стрижки</span>✦<span>Борода</span>✦<span>Опасная бритва</span>✦<span>Уход VOLCARE</span>✦<span>Отец и сын</span>✦<span>Студентам</span>✦</div></div>
+
+  <section>
+    <div class="wrap">
+      <div class="head"><div><span class="lb2">Популярное</span><h2>Что выбирают чаще</h2></div><a href="#/prices" class="btn b-out">Все 24 услуги</a></div>
+      <div class="pop">
+        <div><span class="n">01</span><h3>Мужская стрижка</h3><p>Подбор формы под тип волос и лица, двухразовое мытьё, укладка.</p><b>1 990 ₽</b></div>
+        <div><span class="n">02</span><h3>Стрижка + борода</h3><p>Стрижка и моделирование бороды за один визит.</p><b>3 680 ₽</b></div>
+        <div><span class="n">03</span><h3>Королевское бритьё</h3><p>Распаривание, бритьё, очищение и глиняная маска VOLCARE.</p><b>2 290 ₽</b></div>
+        <div class="dark"><span class="n">04</span><h3>Отец и сын</h3><p>Две стрижки с общей записью в одно время.</p><b>3 390 ₽</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" style="padding:0">
+    <div class="ph"><img src="https://i0.photo.2gis.com/photo-gallery/f8e8c9b5-7783-41b3-ab8c-3e7cacb7e96a.jpg" alt="Зал барбершопа" loading="lazy"></div>
+    <div class="tx">
+      <span class="lb2">Пространство</span>
+      <h2>Кирпич, свет и PS5</h2>
+      <p>Барбершоп на первом этаже ЖК «Екатерининский парк». Клиенты отмечают стильный интерьер, вкусный чай и зону ожидания с PlayStation 5.</p>
+      <div class="perks">
+        <div><b>Зона ожидания</b><span>с PS5 и чаем</span></div>
+        <div><b>Wi-Fi</b><span>для клиентов</span></div>
+        <div><b>Можно с собакой</b><span>берите с собой</span></div>
+        <div><b>Оплата</b><span>карта, наличные, QR</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head"><div><span class="lb2">Результат</span><h2>Работы барберов</h2></div><a href="#/photos" class="btn b-out">Все фото</a></div>
+      <div class="looks" id="looks"></div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><div><span class="lb2">Отзывы</span><h2>Говорят клиенты</h2></div><a href="#/reviews" class="btn b-out">Все отзывы</a></div>
+      <div class="revs">
+        <blockquote class="rv hl"><p>«Лучший барбершоп в Екатеринбурге однозначно!»</p><footer>Mikhail Imamov · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Могу отметить множество плюсов, начиная интерьером и зоной ожидания с PS5 и заканчивая результатом стрижки и приятной беседой с мастером»</p><footer>Богдан Морозов · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Стригусь у Тимофея второй год, и за это время он ни разу меня не подвёл. Лучший барбер, которого я знаю»</p><footer>Михаил Жанаев · 2ГИС <i>★★★★★</i></footer></blockquote>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ЦЕНЫ -->
+<div class="page" data-page="/prices">
+  <div class="ptop"><div class="big3">32</div><div class="wrap"><span class="lb2">Прайс</span><h1>Услуги и цены</h1><p>Актуальный прайс барбершопа — 24 услуги. Записаться можно онлайн или по телефону.</p></div></div>
+  <section style="padding-top:64px">
+    <div class="wrap">
+      <div class="pcats" id="pcats"></div>
+      <div class="pnote"><p>Стрижка для студентов — по действующему студенческому билету. Детская стрижка — для детей от 4 до 10 лет.</p><a href="https://n2118963.yclients.ru/" target="_blank" rel="noopener" class="btn b-red">Записаться онлайн</a></div>
+    </div>
+  </section>
+</div>
+
+<!-- КОМАНДА -->
+<div class="page" data-page="/team">
+  <div class="ptop"><div class="big3">32</div><div class="wrap"><span class="lb2">Команда</span><h1>Барберы</h1><p>Имена мастеров, которых чаще всего благодарят в отзывах. Выбрать мастера можно при онлайн-записи.</p></div></div>
+  <section style="padding-top:64px">
+    <div class="wrap">
+      <div class="barbers">
+        <div class="bb"><div class="ini">Р</div><h3>Рико</h3><span class="role">Бренд-барбер</span><p>«Стригусь у Рико уже давно, и каждый раз всё на высшем уровне. Понимает с полуслова»</p><q>Кирилл Максимов, 2ГИС</q></div>
+        <div class="bb"><div class="ini">Т</div><h3>Тимофей</h3><span class="role">Барбер</span><p>«Муж стрижётся у Тимофея около 5 лет, нравится профессионализм и качество!»</p><q>Polina, 2ГИС</q></div>
+        <div class="bb"><div class="ini">П</div><h3>Павел</h3><span class="role">Барбер</span><p>«Мастера топ-уровня выполнят любую стрижку. Отмечу Тимофея и Павла»</p><q>Денис Д., 2ГИС</q></div>
+      </div>
+      <div class="pnote" style="margin-top:28px"><p>Хотите к конкретному мастеру? Выберите его при записи в онлайн-журнале или напишите в Telegram.</p><a href="https://t.me/srez32srez" target="_blank" rel="noopener" class="btn b-cream">Telegram</a></div>
+    </div>
+  </section>
+</div>
+
+<!-- ФОТО -->
+<div class="page" data-page="/photos">
+  <div class="ptop"><div class="big3">32</div><div class="wrap"><span class="lb2">Фото</span><h1>Внутри СреЗ2</h1><p>Зал, работа мастеров и результат. Нажмите на фото, чтобы открыть крупнее.</p></div></div>
+  <section style="padding-top:56px"><div class="wrap"><div class="gal" id="gal"></div></div></section>
+</div>
+
+<!-- ОТЗЫВЫ -->
+<div class="page" data-page="/reviews">
+  <div class="ptop"><div class="big3">32</div><div class="wrap"><span class="lb2">Отзывы</span><h1>Слово клиентам</h1><p>70 отзывов в 2ГИС и Яндекс Картах.</p></div></div>
+  <section style="padding-top:56px">
+    <div class="wrap">
+      <div class="scores">
+        <div class="sc"><div class="big">5,0</div><div><h3>2ГИС</h3><p>45 оценок · 37 отзывов</p><a href="https://2gis.ru/ekaterinburg/firm/70000001114210396/tab/reviews" target="_blank" rel="noopener">Читать в 2ГИС →</a></div></div>
+        <div class="sc"><div class="big">4,9</div><div><h3>Яндекс Карты</h3><p>38 оценок · 33 отзыва</p><a href="https://yandex.ru/maps/org/srez2/30838591481/reviews/" target="_blank" rel="noopener">Читать в Яндексе →</a></div></div>
+      </div>
+      <div class="revs">
+        <blockquote class="rv hl"><p>«Лучшее место на земле — приходить сюда одно удовольствие»</p><footer>Роман Шилов · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Стригся уже 2 раза у Тимофея и Рико. Даже не знаю, к кому из мастеров дальше записываться, — один лучше другого! Нам как раз не хватало такого места на районе»</p><footer>Mikhail Imamov · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Мастер внимательно выслушал пожелания и сделал всё именно так, как я хотел. Стрижка получилась аккуратной, современной и действительно качественной»</p><footer>Эдуард Хисамутдинов · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Стильный барбершоп на Свердлова. Остальные меркнут по соотношению цена/качество и уровню сервиса. Ещё и чай вкусный наливают»</p><footer>2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Мастера внимательно выслушивают пожелания и предлагают свои рекомендации. Аккуратные линии, стильные формы, качественные средства ухода. Время ожидания минимальное»</p><footer>Александр Кондратьев · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Качество на порядок выше других конкурентов. Отдельно хочу выделить барбера Рико — однозначно профессионал!»</p><footer>Алексей Долгов · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Отличное место. Нам подходит по расположению — в пешей доступности. Отмечу Тимофея и Павла»</p><footer>Денис Д. · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«По ценам кайф, и сам мастер учёл все пожелания. Атмосферная обстановка и удобное расположение»</p><footer>Plnd Wash · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Чувствуется профессионализм команды барберов и внимание к мелочам»</p><footer>Роман Шилов · 2ГИС <i>★★★★★</i></footer></blockquote>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- КОНТАКТЫ -->
+<div class="page" data-page="/contacts">
+  <div class="ptop"><div class="big3">32</div><div class="wrap"><span class="lb2">Контакты</span><h1>Свердлова, 32Б</h1><p>Первый этаж ЖК «Екатерининский парк», Железнодорожный район.</p></div></div>
+  <section style="padding-top:56px">
+    <div class="wrap cgrid">
+      <div class="cbox">
+        <div class="kv">
+          <div><span>Адрес</span><b>Екатеринбург, ул. Свердлова, 32Б</b><em>ЖК «Екатерининский парк», 1 этаж · ост. «Улица Азина» ~500 м</em></div>
+          <div><span>Телефон</span><a href="tel:+79090003299">+7 909 000-32-99</a></div>
+          <div><span>Режим работы</span><b>Ежедневно 10:00–22:00</b></div>
+          <div><span>Telegram</span><a href="https://t.me/srez32srez" target="_blank" rel="noopener">t.me/srez32srez</a></div>
+        </div>
+        <div class="cta"><a href="https://n2118963.yclients.ru/" target="_blank" rel="noopener" class="btn b-red">Записаться онлайн</a><a href="tel:+79090003299" class="btn b-out">Позвонить</a></div>
+      </div>
+      <div class="map"><iframe src="https://yandex.ru/map-widget/v1/?ll=60.609326%2C56.852356&z=17&pt=60.609326,56.852356,pm2rdm" loading="lazy" title="Карта: ул. Свердлова, 32Б"></iframe></div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="g">
+      <div><a href="#/" class="logo">СРЕ<em>З2</em></a><p style="margin-top:16px;max-width:320px">Барбершоп в Екатеринбурге. Ул. Свердлова, 32Б, ЖК «Екатерининский парк».</p></div>
+      <div><h4>Разделы</h4><a href="#/prices">Услуги и цены</a><a href="#/team">Барберы</a><a href="#/photos">Фото</a><a href="#/reviews">Отзывы</a></div>
+      <div><h4>Связь</h4><a href="tel:+79090003299">+7 909 000-32-99</a><a href="https://t.me/srez32srez" target="_blank" rel="noopener">Telegram</a><a href="https://n2118963.yclients.ru/" target="_blank" rel="noopener">Онлайн-запись</a><span>Ежедневно 10:00–22:00</span></div>
+    </div>
+    <div class="credit"><span>© Барбершоп СреЗ2, Екатеринбург</span><span>Демо-сайт · разработка: Сергей Музыченко, Telegram <a href="https://t.me/spectator0011" target="_blank" rel="noopener">@spectator0011</a></span></div>
+  </div>
+</footer>
+
+<div class="callbar"><a href="https://n2118963.yclients.ru/" target="_blank" rel="noopener" class="btn b-red">Записаться</a><a href="tel:+79090003299" class="btn b-cream">Позвонить</a></div>
+<div class="lb" id="lb"><img alt=""></div>
+
+<script>
+const P=[
+ ["Стрижки","",[
+  ["Мужская стрижка","Индивидуальный подбор формы с учётом типа волос, особенностей лица и симметрии головы. Двухразовое мытьё и укладка.",1990],
+  ["Стрижка на ножницах","Удлинённые стрижки — от живой текстуры до безупречной гладкости. Двухразовое мытьё и укладка.",2290],
+  ["Стрижка машинкой (несколько насадок)","Одна или две насадки без перехода — для коротких лаконичных форм. Двухразовое мытьё.",1200],
+  ["Детская стрижка (от 4 до 10 лет)","Аккуратно и быстро, чтобы ребёнок не устал.",1690],
+  ["Стрижка для студентов","Полноценная мужская стрижка по действующему студенческому билету.",1690],
+  ["Отец и сын (совместная стрижка)","Две полноценные стрижки с общей записью в одно время.",3390],
+  ["Окантовка головы","Чёткое оформление предыдущей стрижки по линии роста волос: шея, виски, вокруг ушей.",490],
+  ["Укладка без стрижки","Мытьё, сушка, форма и объём с профессиональными средствами.",500]]],
+ ["Борода и бритьё","",[
+  ["Моделирование бороды (опасным лезвием)","Аккуратная выразительная форма с учётом особенностей лица и роста волос.",1690],
+  ["Моделирование бороды (триммер + шейвер)","Менее контактная альтернатива опасной бритве — быстро и комфортно.",1490],
+  ["Стрижка бороды (одна длина)","Лёгкая длина под щетину или коррекция существующей формы.",1200],
+  ["Бритьё лица опасной бритвой","Классическое бритьё с предварительным распариванием кожи.",1990],
+  ["Бритьё головы опасной бритвой","Распаривание кожи головы и бережное бритьё шаветкой.",1990],
+  ["Бритьё начисто шейвером","Сухой способ без распаривания — быстро и чисто.",1490],
+  ["Королевское бритьё","Распаривание, бритьё и уходовый комплекс: очищающий гель и глиняная маска VOLCARE.",2290]]],
+ ["Комплексы","",[
+  ["Мужская стрижка + моделирование бороды","Полностью завершённый образ за один визит.",3680],
+  ["Мужская стрижка + борода + воск","Стрижка, моделирование бороды и удаление нежелательных волос воском.",3980],
+  ["Мужская стрижка + особый уход VOLCARE","Стрижка и уход за кожей лица по протоколу VOLCARE.",3390]]],
+ ["Уход и тонирование","",[
+  ["Комплекс по уходу за лицом VOLCARE","6 этапов на основе экстракта термального планктона: очищение, скраб, горячее полотенце, глиняная маска, крем и сыворотка под глаза.",1400],
+  ["Black Mask — чёрная маска","",500],
+  ["Тонирование бороды","Щадящий состав — маскировка седины и ухоженный вид.",1000],
+  ["Тонирование головы","Насыщенный оттенок, блеск и маскировка седины.",1200],
+  ["Воск (удаление нежелательных волос)","Удаляет волос с корнем, результат держится 2–5 недель.",300],
+  ["Расслабляющий массаж головы","Мягкий массаж головы и висков — дополнение к стрижке.",800]]]
+];
+const fmt=n=>n.toLocaleString('ru-RU').replace(/ /g,' ')+' ₽';
+document.getElementById('pcats').innerHTML=P.map(([c,_,items])=>`<div class="pcat"><h2>${c}<small>${items.length} услуг${items.length<5?'и':''}</small></h2>${items.map(([n,d,p])=>`<div class="row"><div><h3>${n}</h3>${d?`<p>${d}</p>`:''}</div><b>${fmt(p)}</b></div>`).join('')}</div>`).join('');
+
+const G=s=>`https://i${s}.jpg`;
+const LOOKS=["0.photo.2gis.com/photo-gallery/5c722898-9c01-4f10-9de1-3016e7500a51","9.photo.2gis.com/photo-gallery/9e298bdc-77dc-4f4b-86f1-2dd3f3fceab7","8.photo.2gis.com/photo-gallery/e037a64a-3af1-4bf5-b00a-cbcd6ccf8feb","1.photo.2gis.com/photo-gallery/03ac0daa-4b91-478d-98b6-9646ee8068cc","2.photo.2gis.com/photo-gallery/cec02703-75b2-4a1c-8397-304bce47548e","8.photo.2gis.com/photo-gallery/fe90e9d3-cc65-4a6e-b63f-76a64190d033"];
+document.getElementById('looks').innerHTML=LOOKS.map(s=>`<div class="ph"><img src="${G(s)}" alt="Стрижка от барберов СреЗ2" loading="lazy"></div>`).join('');
+const PH=[
+ ["0.photo.2gis.com/photo-gallery/f8e8c9b5-7783-41b3-ab8c-3e7cacb7e96a","t","Зал барбершопа"],
+ ["9.photo.2gis.com/photo-gallery/e3832ed3-5c04-4f68-8bca-8248789f1734","","Барбер за работой"],
+ ["3.photo.2gis.com/photo-gallery/591914f5-3cf1-40ad-9989-5898909cbdd6","","Стрижка машинкой"],
+ ["4.photo.2gis.com/photo-gallery/182334a8-1fcd-49de-9109-dbc7e27cff7d","w","Вход с вывеской"],
+ ["0.photo.2gis.com/photo-gallery/430a5dad-026a-402f-bea2-47519d198f9a","t","Работа мастера"],
+ ["6.photo.2gis.com/photo-gallery/0aff8459-5356-43e2-aec9-032a4a13a68c","","Результат стрижки"],
+ ["8.photo.2gis.com/photo-gallery/bceac744-9e48-458a-ae33-166af50e7935","","Стрижка и борода"],
+ ["4.photo.2gis.com/photo-gallery/1edfb83c-1d85-4f93-9fb0-a9eead12f95b","","Кресло барбера"],
+ ["7.photo.2gis.com/photo-gallery/3a5bdc97-ccf1-42ec-8334-a08609b5e2b7","t","Мастер и клиент"],
+ ["4.photo.2gis.com/photo-gallery/b92f762b-ce4a-4b02-b87b-18641c4fc1f4","","Интерьер"],
+ ["2.photo.2gis.com/photo-gallery/db1d086d-1e4e-48a3-a87b-e352f59d57f4","","Fade"],
+ ["3.photo.2gis.com/photo-gallery/d9575a4e-b116-42ca-9ab6-b66f2437c1f0","","Бритьё"],
+ ["6.photo.2gis.com/photo-gallery/a3cd2eed-a6bd-4bad-9dc0-fb8cdf77eb31","w","Работа машинкой"],
+ ["2.photo.2gis.com/photo-gallery/2763578f-fcaf-42e8-b7bf-f61486a7d729","","Результат"],
+ ["6.photo.2gis.com/photo-gallery/386df001-7605-4b59-8dcf-31f5c7899c51","","Результат"],
+ ["1.photo.2gis.com/photo-gallery/6dd2500d-5858-44ca-b4b1-74872edc555c","","Средства для укладки"],
+ ["1.photo.2gis.com/photo-gallery/49f82074-c699-4488-bf32-f51fe649b7af","","Фирменная полиграфия"]
+];
+document.getElementById('gal').innerHTML=PH.map(([s,c,a])=>`<div class="ph ${c}"><img src="${G(s)}" alt="${a}" loading="lazy"></div>`).join('');
+
+const pages=[...document.querySelectorAll('.page')],links=[...document.querySelectorAll('.links a')],nav=document.getElementById('links');
+const titles={'/':'СреЗ2 — барбершоп на Свердлова, 32Б','/prices':'Услуги и цены — СреЗ2','/team':'Барберы — СреЗ2','/photos':'Фото — СреЗ2','/reviews':'Отзывы — СреЗ2','/contacts':'Контакты — СреЗ2'};
+function route(){const p=location.hash.replace(/^#/,'')||'/';const t=pages.find(x=>x.dataset.page===p)||pages[0];pages.forEach(x=>x.classList.toggle('on',x===t));links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+t.dataset.page));nav.classList.remove('open');scrollTo(0,0);document.title=titles[t.dataset.page]}
+addEventListener('hashchange',route);route();
+document.getElementById('burger').onclick=()=>nav.classList.toggle('open');
+const lb=document.getElementById('lb'),li=lb.querySelector('img');
+document.addEventListener('click',e=>{const box=e.target.closest('#gal .ph,#looks .ph');if(box){li.src=box.querySelector('img').src;lb.classList.add('on')}});
+lb.onclick=()=>lb.classList.remove('on');addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+document.querySelectorAll('img').forEach(i=>i.addEventListener('error',()=>{i.style.visibility='hidden'}));
+</script>
+</body>
+</html>

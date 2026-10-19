@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Пески — кофе на песке, Казань</title>
+<meta name="description" content="Пески (Pesky) — веганская кофейня на Профсоюзной, 22 в Казани. Кофе в джезве на горячем песке: на воде, на овсяном молоке, на вишнёвом соке, с халвой. Веранда в зелени. Ежедневно 12:00–22:00.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Commissioner:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sand:#efe2c8; --sand2:#e4d2ae; --paper:#f8f1e2; --cobalt:#1e3d8c; --cobalt2:#15306f; --copper:#b5672f; --copper2:#cf7c3f; --earth:#2a1c13; --brick:#8a4a32; --mute:#7d6c58; --line:rgba(42,28,19,.14);
+  --max:1180px;
+  --tile:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23f8f1e2'/%3E%3Cg fill='none' stroke='%231e3d8c' stroke-width='2.2'%3E%3Cpath d='M32 6 L40 24 L58 32 L40 40 L32 58 L24 40 L6 32 L24 24 Z'/%3E%3Ccircle cx='32' cy='32' r='6'/%3E%3Cpath d='M0 0 L10 0 M0 0 L0 10 M64 0 L54 0 M64 0 L64 10 M0 64 L10 64 M0 64 L0 54 M64 64 L54 64 M64 64 L64 54'/%3E%3C/g%3E%3Ccircle cx='32' cy='32' r='2.5' fill='%23b5672f'/%3E%3C/svg%3E");
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--earth);font:400 17px/1.65 Commissioner,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:"Yeseva One",Georgia,serif;font-weight:400;line-height:1.05;letter-spacing:.005em}
+h1 em,h2 em{font-style:normal;color:var(--copper)}
+.ey{font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--cobalt)}
+.ph{overflow:hidden;background:var(--sand2);border-radius:14px}
+.ph img{width:100%;height:100%;object-fit:cover}
+.tileband{height:28px;background:var(--tile);background-size:28px 28px;border-block:2px solid var(--cobalt)}
+
+header{position:sticky;top:0;z-index:40;background:rgba(248,241,226,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:18px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo .tl{width:42px;height:42px;border-radius:10px;background:var(--tile);background-size:42px 42px;border:2px solid var(--cobalt)}
+.logo b{font-family:"Yeseva One";font-weight:400;font-size:28px;line-height:1}
+.logo small{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+.links{display:flex;gap:26px;font-weight:500;font-size:15px}
+.links a{padding:6px 0;border-bottom:2px solid transparent}
+.links a:hover,.links a.on{border-color:var(--copper)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 24px;border-radius:12px;font:600 15px Commissioner;transition:transform .2s,background .2s;white-space:nowrap;border:0;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.b-cob{background:var(--cobalt);color:#fff}
+.b-cob:hover{background:var(--cobalt2)}
+.b-cop{background:var(--copper);color:#fff}
+.b-cop:hover{background:var(--copper2)}
+.b-line{border:1.5px solid var(--earth)}
+.b-paper{background:var(--paper);color:var(--earth)}
+.burger{display:none;width:46px;height:46px;border-radius:12px;border:0;background:var(--cobalt);color:#fff;font-size:18px;cursor:pointer}
+
+.page{display:none;animation:in .5s ease}
+.page.on{display:block}
+@keyframes in{from{opacity:0}to{opacity:1}}
+section{padding:96px 0}
+.ptop{padding:72px 0 30px;text-align:center}
+.ptop h1{font-size:clamp(52px,8vw,108px);margin-top:12px}
+.ptop p{max-width:600px;margin:16px auto 0;color:var(--mute);font-size:18px}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:44px;flex-wrap:wrap}
+.head h2{font-size:clamp(38px,5.2vw,66px);margin-top:10px}
+.head p{max-width:400px;color:var(--mute)}
+
+/* hero */
+.hero{padding:40px 0 90px}
+.hgrid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(64px,10vw,150px);line-height:.95}
+.hero .lead{font-size:20px;max-width:480px;margin:24px 0 30px;color:#4a3828}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.rate{display:flex;gap:30px;margin-top:36px;flex-wrap:wrap}
+.rate b{display:block;font-family:"Yeseva One";font-weight:400;font-size:38px;line-height:1;color:var(--cobalt)}
+.rate span{font-size:13.5px;color:var(--mute)}
+.frame{position:relative;padding:22px;border-radius:24px;background:var(--tile);background-size:44px 44px;border:3px solid var(--cobalt)}
+.frame .ph{aspect-ratio:4/5;border-radius:12px;border:3px solid var(--paper)}
+.frame .tag{position:absolute;left:-18px;bottom:44px;background:var(--copper);color:#fff;padding:14px 18px;border-radius:12px;font-weight:600;max-width:230px;box-shadow:0 14px 30px -14px rgba(0,0,0,.5)}
+.frame .tag b{display:block;font-family:"Yeseva One";font-weight:400;font-size:22px}
+
+/* ritual */
+.ritual{background:var(--earth);color:var(--sand)}
+.ritual .head h2{color:var(--paper)}
+.ritual .head p{color:#c9b796}
+.ritual .ey{color:var(--copper2)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.st{border:1px solid rgba(239,226,200,.18);border-radius:18px;padding:26px;display:flex;flex-direction:column;gap:10px}
+.st .n{font-family:"Yeseva One";font-size:44px;color:var(--copper2);line-height:1}
+.st h3{font-size:24px;color:var(--paper)}
+.st p{color:#c9b796;font-size:15.5px}
+
+/* signature */
+.sig{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.cup{background:#fff;border-radius:20px;overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column}
+.cup .ph{aspect-ratio:4/3;border-radius:0}
+.cup .t{padding:22px 24px 26px;display:flex;flex-direction:column;gap:8px;flex:1}
+.cup h3{font-size:26px}
+.cup p{color:var(--mute);font-size:15.5px;flex:1}
+.cup b{font-family:"Yeseva One";font-weight:400;font-size:24px;color:var(--cobalt)}
+
+/* veranda */
+.ver{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}
+.ver .big{min-height:520px}
+.ver .txt{background:var(--cobalt);color:#e6ebf7;border-radius:14px;padding:44px;display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+.ver h2{font-size:clamp(36px,4.4vw,56px);color:#fff}
+.ver h2 em{color:var(--sand2)}
+.ver .chips{display:flex;flex-wrap:wrap;gap:8px}
+.ver .chips span{background:rgba(255,255,255,.12);border-radius:999px;padding:8px 14px;font-size:14px}
+
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rv{background:#fff;border-radius:18px;padding:30px;display:flex;flex-direction:column;justify-content:space-between;gap:20px;border-top:6px solid var(--cobalt)}
+.rv:nth-child(3n+2){border-top-color:var(--copper)}
+.rv p{font-size:17px;line-height:1.6}
+.rv footer{display:flex;justify-content:space-between;font-size:14px;color:var(--mute);font-weight:600}
+.rv footer i{font-style:normal;color:var(--copper);letter-spacing:2px}
+
+/* menu */
+.mgroup{margin-bottom:56px}
+.mgroup .hd{display:flex;align-items:center;gap:18px;margin-bottom:22px}
+.mgroup .hd .tl{width:44px;height:44px;border-radius:10px;background:var(--tile);background-size:44px 44px;border:2px solid var(--cobalt);flex:0 0 auto}
+.mgroup h2{font-size:clamp(34px,4.4vw,52px)}
+.mgroup .hd small{color:var(--mute);margin-left:auto;font-size:15px}
+.items{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.it{background:#fff;border-radius:18px;border:1px solid var(--line);padding:16px;display:grid;grid-template-columns:110px 1fr;gap:18px;align-items:center}
+.it.noimg{grid-template-columns:1fr}
+.it .ph{width:110px;height:110px;border-radius:12px}
+.it h3{font-family:Commissioner;font-weight:600;font-size:18px;letter-spacing:0}
+.it p{color:var(--mute);font-size:14.5px;margin-top:4px;line-height:1.5}
+.it .pr{display:inline-block;margin-top:10px;font-family:"Yeseva One";font-size:22px;color:var(--cobalt)}
+.mnote{background:var(--sand);border-radius:18px;padding:28px 32px;display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}
+.mnote p{max-width:640px}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about .frame .ph{aspect-ratio:1}
+.about h2{font-size:clamp(38px,4.8vw,62px);margin:12px 0 20px}
+.about p{font-size:18px;color:#4a3828;margin-bottom:16px}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:230px;gap:12px}
+.gal .ph{cursor:zoom-in}
+.gal .w{grid-column:span 2}
+.gal .t{grid-row:span 2}
+.lb{position:fixed;inset:0;background:rgba(30,20,12,.93);display:none;place-items:center;z-index:80;padding:20px;cursor:zoom-out}
+.lb.on{display:grid}
+.lb img{max-width:92vw;max-height:88vh;border-radius:12px}
+
+/* scores */
+.scores{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:24px}
+.sc{background:var(--cobalt);color:#fff;border-radius:18px;padding:34px;display:flex;align-items:center;gap:26px}
+.sc:nth-child(2){background:var(--copper)}
+.sc .big{font-family:"Yeseva One";font-size:88px;line-height:.9}
+.sc h3{font-size:28px}
+.sc p{opacity:.85;font-size:14.5px;margin:4px 0 10px}
+.sc a{font-weight:700;text-decoration:underline;text-underline-offset:4px}
+
+/* contacts */
+.cgrid{display:grid;grid-template-columns:1fr 1.2fr;gap:20px}
+.cbox{background:#fff;border-radius:18px;padding:40px;border:1px solid var(--line)}
+.kv{display:grid;gap:22px;margin-bottom:28px}
+.kv span{display:block;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--cobalt);margin-bottom:3px}
+.kv b,.kv a{font-family:"Yeseva One";font-weight:400;font-size:26px;line-height:1.2}
+.kv a:hover{color:var(--copper)}
+.kv em{display:block;font-style:normal;color:var(--mute);font-size:15px;margin-top:3px}
+.map{border-radius:18px;overflow:hidden;min-height:500px;background:var(--sand2);border:3px solid var(--cobalt)}
+.map iframe{width:100%;height:100%;min-height:494px;border:0;display:block}
+
+.foot{background:var(--earth);color:#bba78a;padding:56px 0 28px}
+.foot .g{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+.foot .logo{display:flex}.foot .logo b{color:var(--paper)}
+.foot .logo small{color:#9f8b6f}
+.foot h4{font-family:"Yeseva One";font-weight:400;color:var(--paper);font-size:22px;margin-bottom:12px}
+.foot a{display:block;margin-bottom:6px}
+.foot a:hover{color:var(--copper2)}
+.credit{margin-top:40px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px;color:#8b7860}
+.credit a{display:inline;color:#ddcbae}
+
+.callbar{display:none}
+
+@media (max-width:1040px){
+  .hgrid,.ver,.about,.cgrid,.scores{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .sig,.revs{grid-template-columns:1fr 1fr}
+  .items{grid-template-columns:1fr}
+  .gal{grid-template-columns:1fr 1fr 1fr}
+  .foot .g{grid-template-columns:1fr 1fr}
+  .frame{max-width:520px}
+}
+@media (max-width:860px){
+  .links{display:none;position:absolute;top:76px;left:0;right:0;flex-direction:column;gap:0;background:var(--paper);padding:8px 20px 20px;border-bottom:1px solid var(--line)}
+  .links.open{display:flex}
+  .links a{font-size:19px;padding:13px 0;border-bottom:1px solid var(--line)}
+  .nav>.btn{display:none}
+  .burger{display:block}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  section{padding:64px 0}
+  .hero{padding:24px 0 56px}
+  .frame{padding:14px}
+  .frame .tag{left:8px;bottom:26px}
+  .steps,.sig,.revs{grid-template-columns:1fr}
+  .ver .big{min-height:320px}
+  .ver .txt,.cbox{padding:26px}
+  .it{grid-template-columns:84px 1fr;gap:14px}
+  .it .ph{width:84px;height:84px}
+  .gal{grid-template-columns:1fr 1fr;grid-auto-rows:160px}
+  .sc{flex-direction:column;align-items:flex-start;gap:8px;padding:26px}
+  .foot .g{grid-template-columns:1fr}
+  .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:50;gap:8px}
+  .callbar .btn{flex:1;box-shadow:0 10px 26px -10px rgba(0,0,0,.45)}
+  .foot{padding-bottom:100px}
+}
+@media (prefers-reduced-motion:reduce){.page{animation:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#/" class="logo" aria-label="Пески — на главную"><span class="tl"></span><div><b>Пески</b><small>Pesky · кофе на песке</small></div></a>
+    <nav class="links" id="links">
+      <a href="#/">Главная</a>
+      <a href="#/menu">Меню</a>
+      <a href="#/about">О кофейне</a>
+      <a href="#/reviews">Отзывы</a>
+      <a href="#/contacts">Контакты</a>
+    </nav>
+    <a href="https://wa.me/79179262303" target="_blank" rel="noopener" class="btn b-cob">Забронировать столик</a>
+    <button class="burger" id="burger" aria-label="Меню">☰</button>
+  </div>
+</header>
+
+<main>
+
+<!-- ГЛАВНАЯ -->
+<div class="page" data-page="/">
+  <section class="hero">
+    <div class="wrap hgrid">
+      <div>
+        <div class="ey">Веганская кофейня · Профсоюзная, 22</div>
+        <h1 style="margin-top:18px">Кофе <em>на песке</em></h1>
+        <p class="lead">Варим кофе в медной джезве на горячем песке — по старым восточным традициям. На воде, на овсяном молоке, на вишнёвом соке или с халвой. Тихо, тепло, под джаз.</p>
+        <div class="cta">
+          <a href="#/menu" class="btn b-cop">Смотреть меню</a>
+          <a href="https://wa.me/79179262303" target="_blank" rel="noopener" class="btn b-line">Написать в WhatsApp</a>
+        </div>
+        <div class="rate">
+          <div><b>5,0</b><span>Яндекс Карты · 1281 оценка</span></div>
+          <div><b>4,9</b><span>2ГИС · 358 оценок</span></div>
+          <div><b>12–22</b><span>каждый день</span></div>
+        </div>
+      </div>
+      <div class="frame">
+        <div class="ph"><img src="https://i8.photo.2gis.com/photo-gallery/51df8494-9652-4907-ada4-8e56de7cf22e.jpg" alt="Медная джезва на подносе с расписной плиткой" loading="eager"></div>
+        <div class="tag"><b>350 ₽</b>чашка кофе на воде, сваренного на песке</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="tileband"></div>
+
+  <section class="ritual">
+    <div class="wrap">
+      <div class="head"><div><div class="ey">Ритуал</div><h2>Как это <em>происходит</em></h2></div><p>Гости говорят, что пить кофе здесь — «как настоящий ритуал». Вот почему.</p></div>
+      <div class="steps">
+        <div class="st"><span class="n">01</span><h3>Горячий песок</h3><p>Джезву погружают в раскалённый песок — кофе нагревается медленно и равномерно.</p></div>
+        <div class="st"><span class="n">02</span><h3>Медная джезва</h3><p>Кофе подают прямо в джезве — разливаете сами, в своём темпе.</p></div>
+        <div class="st"><span class="n">03</span><h3>Поднос и плитка</h3><p>Всё приносят на деревянном подносе с расписной плиткой, вместе с водой.</p></div>
+        <div class="st"><span class="n">04</span><h3>К кофе</h3><p>Воздушная восточная халва или королевские финики — по 200 ₽.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head"><div><div class="ey">Чаще всего заказывают</div><h2>Фирменные <em>рецепты</em></h2></div><a href="#/menu" class="btn b-line">Всё меню</a></div>
+      <div class="sig">
+        <div class="cup"><div class="ph"><img src="https://cachizer1.2gis.com/market/d04b5d0e-7496-45a4-9e09-d33de80928b4.jpg?h=480&w=640" alt="Кофе на вишнёвом соке" loading="lazy"></div><div class="t"><h3>На вишнёвом соке</h3><p>Авторский рецепт с яркими нотами вишни и корицы — его советуют почти в каждом отзыве.</p><b>450 ₽</b></div></div>
+        <div class="cup"><div class="ph"><img src="https://cachizer3.2gis.com/market/3a16c88e-aef9-4f74-900d-0fd992f434d0.jpg?h=480&w=640" alt="Кофе с халвой" loading="lazy"></div><div class="t"><h3>С халвой</h3><p>Арабика и тонкие ароматы восточного лакомства — бодрость и сладость в одной джезве.</p><b>450 ₽</b></div></div>
+        <div class="cup"><div class="ph"><img src="https://cachizer2.2gis.com/market/520eef57-dc37-414c-8da5-f3a07fa58d75.jpg?h=480&w=640" alt="Кофе на овсяном молоке" loading="lazy"></div><div class="t"><h3>На овсяном молоке</h3><p>Нежный сливочный вкус и кремовая пенка — полностью растительный.</p><b>430 ₽</b></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap ver">
+      <div class="ph big"><img src="https://i8.photo.2gis.com/photo-gallery/079c16da-096a-494a-bcf0-cc6d51268696.jpg" alt="Веранда среди деревьев" loading="lazy"></div>
+      <div class="txt">
+        <div>
+          <div class="ey" style="color:var(--sand2)">Веранда</div>
+          <h2 style="margin-top:12px">Свой маленький <em>мир</em></h2>
+          <p style="margin-top:16px">Веранда в зелени со столиками на двоих — летом в тени деревьев, осенью — рядом с уличной грелкой. Можно прийти с собакой.</p>
+        </div>
+        <div class="chips"><span>Летняя веранда</span><span>Столики на улице</span><span>Бронь столиков</span><span>Банкеты</span><span>Меню на английском</span><span>Кофе с собой</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><div><div class="ey">Отзывы</div><h2>Говорят <em>гости</em></h2></div><a href="#/reviews" class="btn b-line">Все отзывы</a></div>
+      <div class="revs">
+        <blockquote class="rv"><p>«Невероятно атмосферное и самобытное заведение на Профсоюзной. Сам кофе на вкус тягучий, плотный, бархатистый. Процесс его распития выглядит как настоящий ритуал»</p><footer>Саша Сашина · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Никогда не думал, что найду такой вкусный кофе. А я любитель его. Кофе на вишнёвом соке — это нечто!»</p><footer>Михаил Петров · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Место, которое можно включить в список достопримечательностей Казани для кофеманов»</p><footer>Илья Николаич · 2ГИС <i>★★★★★</i></footer></blockquote>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- МЕНЮ -->
+<div class="page" data-page="/menu">
+  <div class="wrap ptop">
+    <div class="ey">Меню</div>
+    <h1>Что <em>сварить</em></h1>
+    <p>Весь кофе варим в джезве на песке. Всё молоко — растительное. Цены по меню кофейни.</p>
+  </div>
+  <section style="padding-top:30px">
+    <div class="wrap" id="menu"></div>
+    <div class="wrap"><div class="mnote"><p>Меню небольшое и меняется — уточните у бариста, что есть сегодня. Столик можно забронировать в WhatsApp.</p><a href="https://wa.me/79179262303" target="_blank" rel="noopener" class="btn b-cob">Написать в WhatsApp</a></div></div>
+  </section>
+</div>
+
+<!-- О КОФЕЙНЕ -->
+<div class="page" data-page="/about">
+  <div class="wrap ptop"><div class="ey">О кофейне</div><h1>Это место — <em>наша душа</em></h1><p>Так о «Песках» говорят их создатели в ответах гостям.</p></div>
+  <section style="padding-top:40px">
+    <div class="wrap about">
+      <div class="frame"><div class="ph"><img src="https://i8.photo.2gis.com/images/branch/0/30258560166026375_dc2c.jpg" alt="Зал с окнами в зелень" loading="lazy"></div></div>
+      <div>
+        <div class="ey">Pesky</div>
+        <h2>Маленькая кофейня <em>с большим уютом</em></h2>
+        <p>«Пески» — веганская кофейня на первом этаже дома на Профсоюзной, 22, в нескольких минутах от площади Тукая. Тёплые цвета, джаз, кирпичные стены, расписная плитка и маленькие столики на двоих.</p>
+        <p>Гости сравнивают интерьер с бабушкиной дачей и рассматривают детали подолгу. Здесь хорошо на свидании, с друзьями или одному — с книгой и чашкой кофе на вишнёвом соке.</p>
+        <div class="cta" style="margin-top:22px"><a href="#/menu" class="btn b-cop">Меню</a><a href="#/contacts" class="btn b-line">Как найти</a></div>
+      </div>
+    </div>
+  </section>
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><div><div class="ey">Фото</div><h2>Загляните <em>внутрь</em></h2></div><p>Нажмите на фото, чтобы открыть крупнее.</p></div>
+      <div class="gal" id="gal"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ОТЗЫВЫ -->
+<div class="page" data-page="/reviews">
+  <div class="wrap ptop"><div class="ey">Отзывы</div><h1>Говорят <em>гости</em></h1><p>Больше тысячи отзывов в двух картах.</p></div>
+  <section style="padding-top:40px">
+    <div class="wrap">
+      <div class="scores">
+        <div class="sc"><div class="big">5,0</div><div><h3>Яндекс Карты</h3><p>1281 оценка · 767 отзывов</p><a href="https://yandex.ru/maps/org/pesky/185513677129/reviews/" target="_blank" rel="noopener">Читать в Яндексе</a></div></div>
+        <div class="sc"><div class="big">4,9</div><div><h3>2ГИС</h3><p>358 оценок · 236 отзывов</p><a href="https://2gis.ru/kazan/firm/70000001034415733/tab/reviews" target="_blank" rel="noopener">Читать в 2ГИС</a></div></div>
+      </div>
+      <div class="revs">
+        <blockquote class="rv"><p>«Место с неповторимой атмосферой. Тёплые цвета, джаз, уютная веранда, стильно украшенное помещение и маленькие столики на двоих. Идеальное место для свиданий и неторопливых бесед»</p><footer>Никита Сниткин · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«На веранде погружаешься в отдельный маленький мир. Здорово, что можно посидеть рядом с грелкой под дождём и почитать стихи с чашечкой кофе на вишнёвом соке»</p><footer>Виктория Безпалова · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Потрясающе атмосферное место! Тихо, красиво, интерьер и подача лучше, чем в дорогих ресторанах. Кофе восхитительный»</p><footer>Анна Авдеева · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Всей душой обожаю это место. С огромным удовольствием приезжаю каждый раз, когда бываю в Казани. Видно, что с большой любовью создано это заведение»</p><footer>Алана Коробова · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Очень вайбовое место для ценителей кофе по-турецки. Позитивные баристы Алия и Мадина подняли настроение, спасибо»</p><footer>Илья Николаич · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Сама кофейня очень уютная, с интерьером как у бабушки на даче — то, что нужно для осенних дней. Приятная бариста всё подсказала по меню»</p><footer>Alexandra Boychenko · 2ГИС <i>★★★★★</i></footer></blockquote>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- КОНТАКТЫ -->
+<div class="page" data-page="/contacts">
+  <div class="wrap ptop"><div class="ey">Контакты</div><h1>Приходите <em>на кофе</em></h1></div>
+  <section style="padding-top:40px">
+    <div class="wrap cgrid">
+      <div class="cbox">
+        <div class="kv">
+          <div><span>Адрес</span><b>Казань, Профсоюзная ул., 22</b><em>1 этаж · Вахитовский район · м. «Площадь Тукая», ~650 м</em></div>
+          <div><span>Телефон</span><a href="tel:+79003232239">+7 900 323-22-39</a></div>
+          <div><span>WhatsApp и бронь</span><a href="https://wa.me/79179262303" target="_blank" rel="noopener">+7 917 926-23-03</a></div>
+          <div><span>Время работы</span><b>Ежедневно 12:00–22:00</b></div>
+        </div>
+        <div class="cta"><a href="https://wa.me/79179262303" target="_blank" rel="noopener" class="btn b-cob">WhatsApp</a><a href="tel:+79003232239" class="btn b-line">Позвонить</a></div>
+      </div>
+      <div class="map"><iframe src="https://yandex.ru/map-widget/v1/?ll=49.116272%2C55.791147&z=17&pt=49.116272,55.791147,pm2rdm" loading="lazy" title="Карта: Профсоюзная ул., 22"></iframe></div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<div class="tileband"></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="g">
+      <div><a href="#/" class="logo"><span class="tl"></span><div><b>Пески</b><small>Pesky · кофе на песке</small></div></a><p style="margin-top:14px;max-width:340px">Веганская кофейня на Профсоюзной, 22 в Казани. Кофе в джезве на песке, веранда в зелени.</p></div>
+      <div><h4>Разделы</h4><a href="#/menu">Меню</a><a href="#/about">О кофейне</a><a href="#/reviews">Отзывы</a><a href="#/contacts">Контакты</a></div>
+      <div><h4>Связаться</h4><a href="tel:+79003232239">+7 900 323-22-39</a><a href="https://wa.me/79179262303" target="_blank" rel="noopener">WhatsApp</a><span style="display:block">Ежедневно 12:00–22:00</span></div>
+    </div>
+    <div class="credit"><span>© Кофейня «Пески», Казань</span><span>Демо-сайт · разработка: Сергей Музыченко, Telegram <a href="https://t.me/spectator0011" target="_blank" rel="noopener">@spectator0011</a></span></div>
+  </div>
+</footer>
+
+<div class="callbar"><a href="https://wa.me/79179262303" class="btn b-cob">WhatsApp</a><a href="#/menu" class="btn b-cop">Меню</a></div>
+<div class="lb" id="lb"><img alt=""></div>
+
+<script>
+const im=(s,u)=>`https://cachizer${s}.2gis.com/market/${u}.jpg?h=320&w=320`;
+const M=[
+ ["Кофе на песке","в джезве",[
+  ["На воде",350,"Бессмертная классика. Чёрный кофе, сваренный по древним восточным традициям.",im(3,"d8975902-85e2-409e-9cea-611dd0bdba4b")],
+  ["Микс на воде",350,"Крепче и гуще классического за счёт робусты в составе помола.",""],
+  ["На овсяном молоке",430,"Нежный сливочный вкус. Кремовая пенка.",im(2,"520eef57-dc37-414c-8da5-f3a07fa58d75")],
+  ["На вишнёвом соке",450,"Авторский рецепт с яркими нотами вишни и корицы.",im(1,"d04b5d0e-7496-45a4-9e09-d33de80928b4")],
+  ["С солёной карамелью",450,"Мягкий, бархатный напиток — более сливочный и сладкий, чем кофе на молоке.",im(2,"3e730295-f843-47bb-a0a2-5921d297e700")],
+  ["С халвой",450,"Авторский рецепт: благородную арабику оттеняют ароматы восточного лакомства.",im(3,"3a16c88e-aef9-4f74-900d-0fd992f434d0")]
+ ]],
+ ["Без кофе","на растительном молоке",[
+  ["Какао",400,"Натуральный какао на растительном молоке, тростниковый сахар — по желанию.",im(3,"491249c6-e32f-43aa-bbbe-948ec92378b0")],
+  ["Кэроб",450,"Напиток из плодов рожкового дерева. Без кофеина, без сахара.",im(2,"50d1e50c-7c2a-40a9-8bf0-b6301b5d3877")],
+  ["Горячий шоколад",480,"Густой и ароматный: чёрный шоколад и растительное молоко.",im(3,"60c6ffa5-3c08-4dad-9c5a-9c851490800c")],
+  ["Матча зелёная",430,"Японский чай в порошке, сваренный на овсяном молоке.",im(1,"9f9fc0f6-f2f8-4fff-b8d5-03ae8ca315b5")],
+  ["Матча голубая",430,"",""]
+ ]],
+ ["К кофе","",[
+  ["Восточная сласть",200,"Воздушная сахарная восточная халва.",im(1,"e3630375-4b85-4def-bb08-bf6694e0c599")],
+  ["Королевские финики",200,"",""],
+  ["Минеральная вода «Боржоми»",240,"",im(3,"8848d3e8-53bc-4d65-b511-9c0f34a14f05")]
+ ]]
+];
+document.getElementById('menu').innerHTML=M.map(([g,sub,items])=>`<div class="mgroup"><div class="hd"><span class="tl"></span><h2>${g}</h2><small>${sub}</small></div><div class="items">${items.map(([n,p,d,img])=>`<div class="it${img?'':' noimg'}">${img?`<div class="ph"><img src="${img}" alt="${n}" loading="lazy"></div>`:''}<div><h3>${n}</h3>${d?`<p>${d}</p>`:''}<span class="pr">${p} ₽</span></div></div>`).join('')}</div></div>`).join('');
+
+const G=[["i8","photo-gallery/db3824de-dc49-4855-8bea-83510be47239","w t"],["i2","images/branch/0/30258560081553271_0650",""],["i7","images/branch/0/30258560095767434_d298",""],["i6","images/branch/0/30258560082378185_7167",""],["i6","photo-gallery/feba1832-ed8a-47a7-988a-4957e934c876",""],["i7","images/branch/0/30258560097571749_0b7b","w"],["i7","photo-gallery/31a91b55-58ba-41b9-a765-008c88e5f5c5",""],["i4","photo-gallery/b61ffe45-922b-4934-b96b-fc35d958b139",""],["i6","photo-gallery/91fc9615-27a1-48df-917c-14738e7269ea",""],["i6","images/branch/0/30258560129059714_bc84","t"],["i3","photo-gallery/8b775a5c-38a7-4161-8a64-c30cc227119b",""],["i2","photo-gallery/8e31c792-0503-4a9e-ace0-7336c4926a70",""],["i7","photo-gallery/f0093d5d-7535-4033-8297-53a7ab77f279","w"],["i2","photo-gallery/ec096764-7bb2-47f0-acf4-efd7ca1d916d",""],["i6","photo-gallery/fbe1ea35-071a-4491-b699-35f7ae74431f",""],["i5","photo-gallery/565cef15-26bb-43e3-818c-b3448da16fb4",""]];
+document.getElementById('gal').innerHTML=G.map(([h,p,c])=>`<div class="ph ${c}"><img src="https://${h}.photo.2gis.com/${p}.jpg" alt="Кофейня «Пески»" loading="lazy"></div>`).join('');
+
+const pages=[...document.querySelectorAll('.page')],links=[...document.querySelectorAll('.links a')],nav=document.getElementById('links');
+const titles={'/':'Пески — кофе на песке, Казань','/menu':'Меню — Пески','/about':'О кофейне — Пески','/reviews':'Отзывы — Пески','/contacts':'Контакты — Пески'};
+function route(){const p=location.hash.replace(/^#/,'')||'/';const t=pages.find(x=>x.dataset.page===p)||pages[0];pages.forEach(x=>x.classList.toggle('on',x===t));links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+t.dataset.page));nav.classList.remove('open');scrollTo(0,0);document.title=titles[t.dataset.page]}
+addEventListener('hashchange',route);route();
+document.getElementById('burger').onclick=()=>nav.classList.toggle('open');
+const lb=document.getElementById('lb'),li=lb.querySelector('img');
+document.getElementById('gal').addEventListener('click',e=>{const i=e.target.closest('.ph')?.querySelector('img');if(i){li.src=i.src;lb.classList.add('on')}});
+lb.onclick=()=>lb.classList.remove('on');addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+document.querySelectorAll('img').forEach(i=>i.addEventListener('error',()=>{i.style.visibility='hidden'}));
+</script>
+</body>
+</html>

@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Авангард-Сервис — автосервис на Салова, 57 к5</title>
+<meta name="description" content="Авангард-Сервис: ТО и замена масла, диагностика, ремонт двигателя и ходовой, развал-схождение на новом стенде, шиномонтаж, кузовной ремонт. Ул. Салова, 57 к5, у м. «Бухарестская».">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f3f4f2; --white:#fff; --ink:#0f1112; --ink2:#2b2f33; --mute:#6c7277; --y:#ffcc00; --y2:#ffd83d; --line:rgba(15,17,18,.12);
+  --max:1220px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 "Exo 2",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+h1,h2,h3{font-weight:800;line-height:1;letter-spacing:-.02em}
+h1 i,h2 i{font-style:italic;font-weight:800}
+.chip{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.chip::before{content:"";width:10px;height:10px;background:var(--y);transform:skewX(-14deg)}
+.ph{overflow:hidden;background:#dfe1de}
+.ph img{width:100%;height:100%;object-fit:cover}
+
+header{position:sticky;top:0;z-index:40;background:var(--white);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px;gap:18px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo .mk{width:44px;height:44px;background:var(--y);display:grid;place-items:center;font-weight:900;font-style:italic;font-size:24px;transform:skewX(-10deg)}
+.logo b{font-weight:900;font-size:21px;letter-spacing:-.01em;font-style:italic}
+.logo small{display:block;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);font-style:normal}
+.links{display:flex;gap:4px}
+.links a{padding:10px 14px;font-weight:600;font-size:15px;position:relative}
+.links a.on::after,.links a:hover::after{content:"";position:absolute;left:14px;right:14px;bottom:4px;height:3px;background:var(--y)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 26px;font:700 15px "Exo 2";letter-spacing:.02em;border:0;cursor:pointer;transition:transform .15s,background .15s;white-space:nowrap;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%)}
+.btn:hover{transform:translateY(-2px)}
+.b-y{background:var(--y);color:var(--ink)}
+.b-y:hover{background:var(--y2)}
+.b-ink{background:var(--ink);color:#fff}
+.b-w{background:#e4e6e3;color:var(--ink)}
+.burger{display:none;width:46px;height:46px;border:0;background:var(--y);font-size:18px;cursor:pointer}
+
+.page{display:none}
+.page.on{display:block}
+section{padding:96px 0}
+.ptop{background:var(--ink);color:#fff;padding:72px 0 56px;position:relative;overflow:hidden}
+.ptop::after{content:"";position:absolute;right:-60px;top:0;bottom:0;width:340px;background:repeating-linear-gradient(-60deg,var(--y) 0 22px,transparent 22px 44px);opacity:.9;clip-path:polygon(30% 0,100% 0,70% 100%,0 100%)}
+.ptop h1{font-size:clamp(46px,7.5vw,104px);margin-top:16px;position:relative;z-index:1;max-width:820px}
+.ptop p{max-width:560px;color:#b9bfc4;margin-top:16px;position:relative;z-index:1;font-size:18px}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:44px;flex-wrap:wrap}
+.head h2{font-size:clamp(34px,5vw,64px);margin-top:12px}
+.head p{max-width:400px;color:var(--mute)}
+
+/* hero */
+.hero{background:var(--white);overflow:hidden;position:relative}
+.hgrid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);min-height:calc(100svh - 74px)}
+.hl{padding:72px 48px 56px 0;display:flex;flex-direction:column;justify-content:space-between;gap:40px}
+.hero h1{font-size:clamp(48px,6.6vw,100px)}
+.hero h1 span{background:var(--y);padding:0 .12em;margin-left:-.12em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.hero p{font-size:19px;max-width:520px;margin:24px 0 32px;color:var(--ink2)}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.nums{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--ink)}
+.nums div{padding:18px 18px 0 0}
+.nums b{display:block;font-weight:900;font-style:italic;font-size:40px;line-height:1}
+.nums span{font-size:13.5px;color:var(--mute)}
+.hr{position:relative;background:var(--ink)}
+.hr .ph{position:absolute;inset:0;clip-path:polygon(18% 0,100% 0,100% 100%,0 100%)}
+.hr .badge{position:absolute;left:4%;bottom:40px;background:var(--y);padding:18px 22px;max-width:270px;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%)}
+.hr .badge b{display:block;font-weight:900;font-size:20px;line-height:1.1}
+.hr .badge span{font-size:14px}
+
+/* ticker */
+.tick{background:var(--y);overflow:hidden;padding:16px 0;border-block:2px solid var(--ink)}
+.tick .t{display:flex;gap:40px;width:max-content;animation:mq 32s linear infinite;font-weight:800;font-style:italic;font-size:22px;text-transform:uppercase}
+.tick span::after{content:"//";margin-left:40px;opacity:.5}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* services */
+.sgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.s{background:var(--white);padding:26px 22px;display:flex;flex-direction:column;gap:10px;min-height:220px;border-bottom:4px solid transparent;transition:border-color .2s,transform .2s}
+.s:hover{border-color:var(--y);transform:translateY(-3px)}
+.s .n{font-weight:900;font-style:italic;font-size:30px;color:#c9ccc8;line-height:1}
+.s h3{font-size:21px}
+.s p{color:var(--mute);font-size:15px}
+.s.feat{background:var(--ink);color:#fff}
+.s.feat p{color:#b9bfc4}
+.s.feat .n{color:var(--y)}
+
+/* trust */
+.trust{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.trust h2{font-size:clamp(34px,4.6vw,58px);margin:12px 0 22px}
+.tl{display:grid;gap:0}
+.tl div{display:grid;grid-template-columns:160px 1fr;gap:18px;padding:18px 0;border-top:2px solid var(--ink)}
+.tl b{font-weight:900;font-style:italic;font-size:24px}
+.tl p{color:var(--ink2)}
+.quote{background:var(--y);padding:40px;clip-path:polygon(0 0,100% 0,100% calc(100% - 40px),calc(100% - 40px) 100%,0 100%)}
+.quote p{font-size:22px;font-weight:600;line-height:1.45}
+.quote footer{margin-top:20px;font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.rv{background:var(--white);padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:18px;border-left:4px solid var(--y)}
+.rv p{font-size:16.5px}
+.rv footer{display:flex;justify-content:space-between;font-size:14px;font-weight:700;color:var(--mute)}
+.rv footer i{font-style:normal;color:#e0a800;letter-spacing:2px}
+
+/* find */
+.find{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.fbox{background:var(--white);padding:40px}
+.fbox h2{font-size:clamp(30px,4vw,48px);margin:12px 0 20px}
+.steps{display:grid;gap:16px;counter-reset:s}
+.steps div{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start}
+.steps div::before{counter-increment:s;content:counter(s);width:36px;height:36px;display:grid;place-items:center;background:var(--y);font-weight:900;font-style:italic;font-size:18px;clip-path:polygon(6px 0,100% 0,calc(100% - 6px) 100%,0 100%)}
+.scheme{background:var(--white);padding:16px;cursor:zoom-in}
+.scheme .ph{aspect-ratio:4/3}
+.scheme small{display:block;margin-top:10px;color:var(--mute);font-size:14px}
+
+/* services page */
+.blocks{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.blk{background:var(--white);padding:32px}
+.blk .top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:14px}
+.blk h2{font-size:clamp(24px,2.6vw,32px)}
+.blk .tag{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;background:var(--y);padding:4px 9px}
+.blk ul{list-style:none;display:grid;gap:8px}
+.blk li{padding-left:22px;position:relative}
+.blk li::before{content:"";position:absolute;left:0;top:10px;width:12px;height:3px;background:var(--ink)}
+.blk.dark{background:var(--ink);color:#fff}
+.blk.dark li::before{background:var(--y)}
+.price{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-top:16px;padding-top:16px;border-top:2px solid var(--y)}
+.price b{font-weight:900;font-style:italic;font-size:30px}
+.brands{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.brands span{background:var(--white);padding:7px 12px;font-size:14px;font-weight:600}
+.pnote{margin-top:24px;background:var(--y);padding:28px 32px;display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}
+.pnote p{max-width:640px;font-weight:600}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:260px;gap:10px}
+.gal .ph{cursor:zoom-in}
+.gal .w{grid-column:span 2}
+.lb{position:fixed;inset:0;background:rgba(10,11,12,.94);display:none;place-items:center;z-index:80;padding:20px;cursor:zoom-out}
+.lb.on{display:grid}
+.lb img{max-width:92vw;max-height:88vh}
+
+/* scores */
+.scores{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:24px}
+.sc{background:var(--white);padding:32px;display:flex;align-items:center;gap:26px}
+.sc .big{font-weight:900;font-style:italic;font-size:84px;line-height:.9}
+.sc .big::after{content:"";display:block;height:6px;background:var(--y);margin-top:6px}
+.sc h3{font-size:24px}
+.sc p{color:var(--mute);font-size:14.5px;margin:4px 0 10px}
+.sc a{font-weight:700;text-decoration:underline;text-decoration-color:var(--y);text-decoration-thickness:3px;text-underline-offset:4px}
+
+/* contacts */
+.kv{display:grid;gap:22px;margin-bottom:28px}
+.kv span{display:block;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin-bottom:2px}
+.kv b,.kv a{font-weight:800;font-size:24px;line-height:1.2}
+.kv em{display:block;font-style:normal;color:var(--mute);font-size:15px;margin-top:2px}
+.map{min-height:460px;background:#dfe1de}
+.map iframe{width:100%;height:100%;min-height:460px;border:0;display:block}
+
+.foot{background:var(--ink);color:#9aa0a5;padding:56px 0 28px}
+.foot .g{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+.foot .logo b{color:#fff}
+.foot h4{color:#fff;font-weight:800;font-size:16px;margin-bottom:12px;text-transform:uppercase;letter-spacing:.08em}
+.foot a{display:block;margin-bottom:6px}
+.foot a:hover{color:var(--y)}
+.credit{margin-top:40px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px;color:#6f767c}
+.credit a{display:inline;color:#cfd4d8}
+
+.callbar{display:none}
+
+@media (max-width:1040px){
+  .hgrid,.trust,.find,.blocks,.scores{grid-template-columns:1fr}
+  .hl{padding:52px 0 40px}
+  .hr{min-height:420px;margin:0 -28px}
+  .hr .ph{clip-path:none}
+  .sgrid{grid-template-columns:1fr 1fr}
+  .revs{grid-template-columns:1fr 1fr}
+  .gal{grid-template-columns:1fr 1fr}
+  .foot .g{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  .links{display:none;position:absolute;top:74px;left:0;right:0;flex-direction:column;background:var(--white);padding:8px 16px 18px;border-bottom:1px solid var(--line)}
+  .links.open{display:flex}
+  .links a{font-size:18px;padding:13px 12px}
+  .nav>.btn{display:none}
+  .burger{display:block}
+  .ptop::after{width:160px;opacity:.5}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  section{padding:64px 0}
+  .hr{margin:0 -16px;min-height:340px}
+  .nums b{font-size:30px}
+  .sgrid,.revs{grid-template-columns:1fr}
+  .s{min-height:auto}
+  .tl div{grid-template-columns:1fr;gap:4px}
+  .fbox,.blk{padding:24px}
+  .quote{padding:28px}
+  .gal{grid-template-columns:1fr;grid-auto-rows:220px}
+  .gal .w{grid-column:auto}
+  .sc{flex-direction:column;align-items:flex-start;gap:8px}
+  .foot .g{grid-template-columns:1fr}
+  .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:50;gap:8px}
+  .callbar .btn{flex:1;padding:15px 10px}
+  .foot{padding-bottom:100px}
+}
+@media (prefers-reduced-motion:reduce){.tick .t{animation:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#/" class="logo" aria-label="Авангард-Сервис — на главную"><span class="mk">А</span><div><b>АВАНГАРД-СЕРВИС</b><small>автосервис · Салова, 57</small></div></a>
+    <nav class="links" id="links">
+      <a href="#/">Главная</a>
+      <a href="#/services">Услуги</a>
+      <a href="#/photos">Сервис</a>
+      <a href="#/reviews">Отзывы</a>
+      <a href="#/contacts">Как найти</a>
+    </nav>
+    <a href="tel:+78129237499" class="btn b-y">+7 (812) 923-74-99</a>
+    <button class="burger" id="burger" aria-label="Меню">☰</button>
+  </div>
+</header>
+
+<main>
+
+<!-- ГЛАВНАЯ -->
+<div class="page" data-page="/">
+  <section class="hero" style="padding:0">
+    <div class="wrap hgrid">
+      <div class="hl">
+        <div>
+          <span class="chip">Фрунзенский район · м. «Бухарестская»</span>
+          <h1 style="margin-top:20px">Сервис, где <span>не обманывают</span></h1>
+          <p>ТО, диагностика, ремонт двигателя и ходовой, развал-схождение на новом стенде, шиномонтаж и кузовной ремонт. Честно скажем, что нужно сделать сейчас, а что может подождать.</p>
+          <div class="cta"><a href="tel:+78129237499" class="btn b-y">Записаться по телефону</a><a href="#/contacts" class="btn b-w">Как найти</a></div>
+        </div>
+        <div class="nums">
+          <div><b>4,7</b><span>Яндекс · 66 оценок</span></div>
+          <div><b>5,0</b><span>2ГИС</span></div>
+          <div><b>7/7</b><span>без выходных</span></div>
+        </div>
+      </div>
+      <div class="hr">
+        <div class="ph"><img src="https://i8.photo.2gis.com/images/branch/0/30258560118032661_1394.jpg" alt="Боксы автосервиса на Салова, 57" loading="eager"></div>
+        <div class="badge"><b>Салова, 57 к5</b><span>Въезд 1, производственный корпус</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="tick" aria-hidden="true"><div class="t">
+    <span>Замена масла</span><span>Развал-схождение</span><span>Диагностика</span><span>Ходовая</span><span>Шиномонтаж</span><span>Сцепление</span><span>Кузовной ремонт</span><span>ГРМ</span>
+    <span>Замена масла</span><span>Развал-схождение</span><span>Диагностика</span><span>Ходовая</span><span>Шиномонтаж</span><span>Сцепление</span><span>Кузовной ремонт</span><span>ГРМ</span>
+  </div></div>
+
+  <section>
+    <div class="wrap">
+      <div class="head"><div><span class="chip">Услуги</span><h2>Что делаем</h2></div><p>Любые марки — от Лады до Porsche. Масло и фильтры всегда в наличии, запчасти под заказ привозят быстро.</p></div>
+      <div class="sgrid">
+        <a href="#/services" class="s feat"><span class="n">01</span><h3>ТО и замена масла</h3><p>Масло и фильтры для всех автомобилей — в наличии. Замена масла — 1 200 ₽.</p></a>
+        <a href="#/services" class="s"><span class="n">02</span><h3>Диагностика</h3><p>Компьютерная диагностика, поиск посторонних шумов и неисправностей.</p></a>
+        <a href="#/services" class="s"><span class="n">03</span><h3>Развал-схождение</h3><p>Новый стенд — настройка углов колёс «по нулям».</p></a>
+        <a href="#/services" class="s"><span class="n">04</span><h3>Ходовая</h3><p>Подвеска, стойки, пневмоподвеска, тормоза, проточка дисков.</p></a>
+        <a href="#/services" class="s"><span class="n">05</span><h3>Двигатель и КПП</h3><p>Бензин и дизель, ГРМ, сцепление, КПП, мосты.</p></a>
+        <a href="#/services" class="s"><span class="n">06</span><h3>Шиномонтаж</h3><p>Шиномонтаж, ремонт порезов, хранение шин, мотошиномонтаж.</p></a>
+        <a href="#/services" class="s"><span class="n">07</span><h3>Кузов</h3><p>Восстановление геометрии, сварка, вмятины, покраска, полировка.</p></a>
+        <a href="#/services" class="s"><span class="n">08</span><h3>Электрика</h3><p>Стартеры, генераторы, фары, установка доп. оборудования.</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap trust">
+      <div>
+        <span class="chip">Почему возвращаются</span>
+        <h2>Годами — <i>к одним мастерам</i></h2>
+        <div class="tl">
+          <div><b>Честно</b><p>Ничего лишнего не навязывают: скажут, что срочно, а что можно отложить.</p></div>
+          <div><b>Быстро</b><p>Запчасти привозят в течение часа, ремонт — в оговорённые сроки.</p></div>
+          <div><b>С гарантией</b><p>После ремонта — чек и гарантия на работы.</p></div>
+          <div><b>Удобно</b><p>Оплата картой, наличными или по безналу. Метро и ТРК — рядом.</p></div>
+        </div>
+      </div>
+      <blockquote class="quote"><p>«Приезжаю сюда с 2005 года. Как всегда всё делают быстро и качественно. Находят неисправность, покупают необходимые запчасти, привозят их в течение часа, ремонтируют авто. Дают гарантию. Цены более чем демократичные»</p><footer>Сергей Мироновский · Яндекс Карты</footer></blockquote>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><div><span class="chip">Отзывы</span><h2>Говорят клиенты</h2></div><a href="#/reviews" class="btn b-ink">Все отзывы</a></div>
+      <div class="revs">
+        <blockquote class="rv"><p>«Долго искал надёжный сервис, где не обманут и сделают работу на совесть. Здесь именно так! Честно сказали, что срочно, а что можно отложить. Дали чек и гарантию»</p><footer>Юрий Михайлов · Яндекс <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Отличный новый стенд развал-схождения. Сделали всё по нулям. Машина стала ехать идеально ровно даже в колее»</p><footer>Константин Ли · Яндекс <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Единственный автосервис в городе, где не обманывают. Наконец-то я нашёл его!»</p><footer>Mr. Sturmgewehr · 2ГИС <i>★★★★★</i></footer></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap find">
+      <div class="fbox">
+        <span class="chip">Как найти</span>
+        <h2>Салова, 57 корпус 5</h2>
+        <div class="steps">
+          <div><p>Заезжайте на территорию через <b>въезд 1</b> с улицы Салова.</p></div>
+          <div><p>Автосервис — в <b>производственном корпусе</b>, на схеме у въезда он отмечен как «Автосервис».</p></div>
+          <div><p>Пн–Пт 10:00–20:00, Сб–Вс 11:00–19:00. Лучше записаться заранее по телефону.</p></div>
+        </div>
+        <div class="cta" style="margin-top:26px"><a href="tel:+78129237499" class="btn b-y">Позвонить</a><a href="#/contacts" class="btn b-w">Карта</a></div>
+      </div>
+      <div class="scheme" data-lb="https://i4.photo.2gis.com/images/branch/0/30258560118032666_9623.jpg"><div class="ph"><img src="https://i4.photo.2gis.com/images/branch/0/30258560118032666_9623.jpg" alt="Схема территории Салова, 57 к5" loading="lazy"></div><small>Схема территории у въезда. Нажмите, чтобы увеличить.</small></div>
+    </div>
+  </section>
+</div>
+
+<!-- УСЛУГИ -->
+<div class="page" data-page="/services">
+  <div class="ptop"><div class="wrap"><span class="chip">Услуги</span><h1>Ремонт и обслуживание</h1><p>В прайсе на картах указана только замена масла. Остальное считаем после осмотра — позвоните, сориентируем по цене.</p></div></div>
+  <section style="padding-top:56px">
+    <div class="wrap">
+      <div class="blocks">
+        <div class="blk dark"><div class="top"><h2>ТО и масло</h2><span class="tag">в наличии</span></div><ul><li>Замена моторного масла и фильтров</li><li>Свечи зажигания</li><li>Полное сервисное обслуживание</li><li>Масло и фильтры для всех автомобилей — всегда в наличии</li></ul><div class="price"><span>Замена масла</span><b>1 200 ₽</b></div></div>
+        <div class="blk"><div class="top"><h2>Диагностика</h2></div><ul><li>Компьютерная диагностика</li><li>Поиск посторонних шумов в двигателе и подвеске</li><li>Осмотр важных узлов при обслуживании</li></ul></div>
+        <div class="blk"><div class="top"><h2>Развал-схождение</h2><span class="tag">новый стенд</span></div><ul><li>Регулировка углов установки колёс</li><li>Проверка после ремонта подвески</li></ul></div>
+        <div class="blk"><div class="top"><h2>Ходовая и тормоза</h2></div><ul><li>Ремонт подвески и стоек</li><li>Ремонт пневмоподвески</li><li>Ремонт тормозной системы</li><li>Проточка тормозных дисков</li></ul></div>
+        <div class="blk"><div class="top"><h2>Двигатель и трансмиссия</h2></div><ul><li>Ремонт бензиновых и дизельных двигателей</li><li>Замена ГРМ</li><li>Ремонт сцепления, КПП и РКПП</li><li>Установка коробок, в том числе вариаторов</li><li>Ремонт моста</li><li>Топливная система, система охлаждения, выхлоп</li></ul></div>
+        <div class="blk"><div class="top"><h2>Шины</h2></div><ul><li>Шиномонтаж</li><li>Ремонт порезов</li><li>Сезонное хранение шин</li><li>Мотошиномонтаж</li></ul></div>
+        <div class="blk"><div class="top"><h2>Кузовной ремонт</h2></div><ul><li>Восстановление геометрии</li><li>Сварка</li><li>Удаление вмятин</li><li>Покраска и полировка</li></ul></div>
+        <div class="blk"><div class="top"><h2>Электрика</h2></div><ul><li>Ремонт стартеров и генераторов</li><li>Ремонт фар</li><li>Установка дополнительного оборудования</li><li>Запчасти и комплектующие под заказ</li></ul></div>
+      </div>
+      <div class="head" style="margin:56px 0 18px"><div><span class="chip">Марки</span><h2 style="font-size:clamp(28px,3.6vw,44px)">Ремонтируем все марки</h2></div><p>Есть и грузовое направление — уточняйте по телефону.</p></div>
+      <div class="brands"><span>Lada</span><span>Toyota</span><span>Kia</span><span>Hyundai</span><span>Renault</span><span>Volkswagen</span><span>Skoda</span><span>Nissan</span><span>Mitsubishi</span><span>Mazda</span><span>Honda</span><span>Subaru</span><span>Ford</span><span>Chevrolet</span><span>Opel</span><span>Peugeot</span><span>Citroen</span><span>BMW</span><span>Mercedes-Benz</span><span>Audi</span><span>Volvo</span><span>Land Rover</span><span>Lexus</span><span>Infiniti</span><span>Porsche</span><span>Haval</span><span>Chery</span><span>Geely</span><span>Changan</span><span>Tesla</span><span>УАЗ</span><span>ГАЗ</span><span>и другие</span></div>
+      <div class="pnote"><p>Расскажите по телефону марку, год и что беспокоит — назовём ориентировочную стоимость и время.</p><a href="tel:+78129237499" class="btn b-ink">+7 (812) 923-74-99</a></div>
+    </div>
+  </section>
+</div>
+
+<!-- СЕРВИС / ФОТО -->
+<div class="page" data-page="/photos">
+  <div class="ptop"><div class="wrap"><span class="chip">Сервис</span><h1>Где мы работаем</h1><p>Боксы в производственном корпусе на Салова, 57 к5 — около километра от метро «Бухарестская».</p></div></div>
+  <section style="padding-top:56px">
+    <div class="wrap">
+      <div class="gal">
+        <div class="ph w"><img src="https://i8.photo.2gis.com/images/branch/0/30258560118032661_1394.jpg" alt="Корпус с боксами" loading="lazy"></div>
+        <div class="ph"><img src="https://i6.photo.2gis.com/images/branch/0/30258560118101368_e94f.jpg" alt="Автомобиль на подъёмнике" loading="lazy"></div>
+        <div class="ph"><img src="https://i2.photo.2gis.com/images/branch/0/30258560118032658_dee7.jpg" alt="Въезд в боксы" loading="lazy"></div>
+        <div class="ph w"><img src="https://i8.photo.2gis.com/images/branch/0/30258560118032663_da86.jpg" alt="Боксы автосервиса" loading="lazy"></div>
+        <div class="ph"><img src="https://i2.photo.2gis.com/images/branch/0/30258560118101367_7455.jpg" alt="Ворота бокса" loading="lazy"></div>
+        <div class="ph"><img src="https://i4.photo.2gis.com/images/branch/0/30258560118032665_d320.jpg" alt="Улица Салова" loading="lazy"></div>
+        <div class="ph"><img src="https://i4.photo.2gis.com/images/branch/0/30258560118032666_9623.jpg" alt="Схема территории" loading="lazy"></div>
+      </div>
+      <blockquote class="quote" style="margin-top:28px"><p>«Единственное, наверное, чего не хватает, — это зоны ожидания. Но у метро есть ТРК, подождать можно и там»</p><footer>Из отзыва клиента · Яндекс Карты</footer></blockquote>
+    </div>
+  </section>
+</div>
+
+<!-- ОТЗЫВЫ -->
+<div class="page" data-page="/reviews">
+  <div class="ptop"><div class="wrap"><span class="chip">Отзывы</span><h1>Что говорят клиенты</h1><p>Многие ездят сюда годами — некоторые с 2005-го.</p></div></div>
+  <section style="padding-top:56px">
+    <div class="wrap">
+      <div class="scores">
+        <div class="sc"><div class="big">4,7</div><div><h3>Яндекс Карты</h3><p>66 оценок · 34 отзыва</p><a href="https://yandex.ru/maps/org/avangard_servis/1106594955/reviews/" target="_blank" rel="noopener">Читать в Яндексе</a></div></div>
+        <div class="sc"><div class="big">5,0</div><div><h3>2ГИС</h3><p>2 оценки · 2 отзыва</p><a href="https://2gis.ru/spb/firm/5348553838857211/tab/reviews" target="_blank" rel="noopener">Читать в 2ГИС</a></div></div>
+      </div>
+      <div class="revs">
+        <blockquote class="rv"><p>«Особенно благодарна управляющему Анатолию — очень отзывчивый человек, всегда найдёт варианты для ремонта и организует работу. Уже несколько лет пользуюсь услугами этих ребят»</p><footer>Любовь · Яндекс <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Первый раз приехала по рекомендации ещё в 2015 году. С тех пор ремонтируюсь и прохожу ТО только здесь. Ничего лишнего не берут»</p><footer>Viktoriia · Яндекс <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Помогли определить причину постороннего шума в двигателе и оперативно устранили неисправность. Мастера относятся к вашей машине как к своей»</p><footer>Andrey Andrey · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Отличный новый стенд развал-схождения. Спасибо Сергею. Человек с большим опытом, это видно»</p><footer>Константин Ли · Яндекс <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Обращалась в другой сервис — цену назвали колоссальную, у них обошлось в разы дешевле»</p><footer>Елизавета И. · Яндекс <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«В связи с профессиональной деятельностью приходится ездить по разным автосервисам, но только тут доверяю ремонт своего автомобиля»</p><footer>Игорь Лучинин · Яндекс <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Продавец контрактного вариатора посоветовал обратиться в данное СТО. Работа произведена в срок, отношение и квалификация работников отличная»</p><footer>Павел Ильин · Яндекс <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Всегда оперативно решают проблемы с машиной. Ответственный персонал и руководитель. Умеренные цены на услуги»</p><footer>Ирина Ч. · Яндекс <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Радушный персонал, качественный ремонт, запчасти приезжают быстро»</p><footer>Валерий Фокин · Яндекс <i>★★★★★</i></footer></blockquote>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- КАК НАЙТИ -->
+<div class="page" data-page="/contacts">
+  <div class="ptop"><div class="wrap"><span class="chip">Как найти</span><h1>Контакты</h1><p>Въезд 1 с улицы Салова, производственный корпус, вход «Автосервис».</p></div></div>
+  <section style="padding-top:56px">
+    <div class="wrap find">
+      <div class="fbox">
+        <div class="kv">
+          <div><span>Адрес</span><b>Санкт-Петербург, ул. Салова, 57 к5</b><em>Фрунзенский район · м. «Бухарестская» — около 1 км</em></div>
+          <div><span>Телефон</span><a href="tel:+78129237499">+7 (812) 923-74-99</a></div>
+          <div><span>Режим работы</span><b>Пн–Пт 10:00–20:00</b><b style="display:block">Сб–Вс 11:00–19:00</b></div>
+          <div><span>Оплата</span><b>Карта · наличные · безнал</b></div>
+        </div>
+        <div class="cta"><a href="tel:+78129237499" class="btn b-y">Позвонить</a><a href="https://yandex.ru/maps/org/avangard_servis/1106594955/" target="_blank" rel="noopener" class="btn b-w">Маршрут</a></div>
+      </div>
+      <div class="map"><iframe src="https://yandex.ru/map-widget/v1/?ll=30.370464%2C59.889713&z=16&pt=30.370464,59.889713,pm2rdm" loading="lazy" title="Карта: ул. Салова, 57 к5"></iframe></div>
+    </div>
+    <div class="wrap" style="margin-top:20px">
+      <div class="scheme" data-lb="https://i4.photo.2gis.com/images/branch/0/30258560118032666_9623.jpg" style="max-width:720px"><div class="ph"><img src="https://i4.photo.2gis.com/images/branch/0/30258560118032666_9623.jpg" alt="Схема территории" loading="lazy"></div><small>Схема территории: заезжайте через «Въезд 1», автосервис — в производственном корпусе.</small></div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="g">
+      <div><a href="#/" class="logo"><span class="mk">А</span><div><b>АВАНГАРД-СЕРВИС</b><small>автосервис · Салова, 57</small></div></a><p style="margin-top:14px;max-width:340px">ТО, диагностика, ремонт двигателя и ходовой, развал-схождение, шиномонтаж и кузовной ремонт.</p></div>
+      <div><h4>Разделы</h4><a href="#/services">Услуги</a><a href="#/photos">Сервис</a><a href="#/reviews">Отзывы</a><a href="#/contacts">Как найти</a></div>
+      <div><h4>Связь</h4><a href="tel:+78129237499">+7 (812) 923-74-99</a><span style="display:block">Пн–Пт 10:00–20:00</span><span style="display:block">Сб–Вс 11:00–19:00</span></div>
+    </div>
+    <div class="credit"><span>© Авангард-Сервис, Санкт-Петербург</span><span>Демо-сайт · разработка: Сергей Музыченко, Telegram <a href="https://t.me/spectator0011" target="_blank" rel="noopener">@spectator0011</a></span></div>
+  </div>
+</footer>
+
+<div class="callbar"><a href="tel:+78129237499" class="btn b-y">Позвонить</a><a href="#/contacts" class="btn b-ink">Как найти</a></div>
+<div class="lb" id="lb"><img alt=""></div>
+
+<script>
+const pages=[...document.querySelectorAll('.page')],links=[...document.querySelectorAll('.links a')],menu=document.getElementById('links');
+const titles={'/':'Авангард-Сервис — автосервис на Салова, 57','/services':'Услуги — Авангард-Сервис','/photos':'Сервис — Авангард-Сервис','/reviews':'Отзывы — Авангард-Сервис','/contacts':'Как найти — Авангард-Сервис'};
+function route(){const p=location.hash.replace(/^#/,'')||'/';const t=pages.find(x=>x.dataset.page===p)||pages[0];pages.forEach(x=>x.classList.toggle('on',x===t));links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+t.dataset.page));menu.classList.remove('open');scrollTo(0,0);document.title=titles[t.dataset.page]}
+addEventListener('hashchange',route);route();
+document.getElementById('burger').onclick=()=>menu.classList.toggle('open');
+const lb=document.getElementById('lb'),li=lb.querySelector('img');
+document.querySelectorAll('.gal .ph').forEach(p=>p.onclick=()=>{const i=p.querySelector('img');li.src=i.src;li.alt=i.alt;lb.classList.add('on')});
+document.querySelectorAll('[data-lb]').forEach(p=>p.onclick=()=>{li.src=p.dataset.lb;li.alt='Схема территории';lb.classList.add('on')});
+lb.onclick=()=>lb.classList.remove('on');addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+document.querySelectorAll('img').forEach(i=>i.addEventListener('error',()=>{i.style.visibility='hidden'}));
+</script>
+</body>
+</html>

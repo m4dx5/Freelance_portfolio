@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Лицей — пекарня на Остоженке, 30</title>
+<meta name="description" content="Лицей — пекарня и кафе на Остоженке, 30. Свежая выпечка, завтраки весь день, обеды и ужины, авторский кофе, летняя веранда. 5,0 в 2ГИС и Яндекс Картах.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Marck+Script&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#fbf8f3; --cream:#f2ebe0; --red:#c81f2a; --red2:#a8141e; --ink:#171515; --mute:#77706a; --line:rgba(23,21,21,.12);
+  --max:1200px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:400 17px/1.6 "Golos Text",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:Prata,Georgia,serif;font-weight:400;line-height:1.05;letter-spacing:-.01em}
+.script{font-family:"Marck Script",cursive}
+.lbl{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--red)}
+.ph{overflow:hidden;background:var(--cream)}
+.ph img{width:100%;height:100%;object-fit:cover}
+
+/* top ribbon */
+.ribbon{background:var(--red);color:#fff;font-size:13px;text-align:center;padding:8px 12px;letter-spacing:.02em}
+.ribbon b{font-weight:600}
+
+/* header */
+header{position:sticky;top:0;z-index:40;background:rgba(251,248,243,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+.logo{font-family:"Marck Script",cursive;font-size:40px;color:var(--red);line-height:1;transform:rotate(-4deg);display:inline-block}
+.links{display:flex;gap:4px}
+.links a{padding:9px 14px;font-size:15px;font-weight:500;border-radius:999px}
+.links a:hover{background:var(--cream)}
+.links a.on{background:var(--ink);color:var(--paper)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:600;font-size:15px;transition:transform .2s,background .2s;white-space:nowrap;border:0;cursor:pointer;font-family:inherit}
+.btn:hover{transform:translateY(-2px)}
+.b-red{background:var(--red);color:#fff}
+.b-red:hover{background:var(--red2)}
+.b-ink{background:var(--ink);color:var(--paper)}
+.b-line{border:1.5px solid var(--ink)}
+.b-white{background:#fff;color:var(--red)}
+.burger{display:none;width:46px;height:46px;border-radius:50%;border:0;background:var(--red);color:#fff;font-size:18px;cursor:pointer}
+
+.page{display:none;animation:up .45s ease}
+.page.on{display:block}
+@keyframes up{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+section{padding:96px 0}
+.ptop{padding:72px 0 20px;border-bottom:1px solid var(--line)}
+.ptop .row{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap}
+.ptop h1{font-size:clamp(52px,8vw,108px);margin-top:12px}
+.ptop h1 .script{color:var(--red);font-size:1.1em}
+.ptop p{max-width:440px;color:var(--mute);padding-bottom:10px}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:44px;flex-wrap:wrap}
+.head h2{font-size:clamp(40px,5.4vw,70px);margin-top:10px}
+.head h2 .script{color:var(--red)}
+.head p{max-width:380px;color:var(--mute)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:calc(100svh - 112px)}
+.hero .l{padding:64px 56px 56px max(28px,calc((100vw - var(--max))/2 + 28px));display:flex;flex-direction:column;justify-content:space-between;gap:40px}
+.hero h1{font-size:clamp(58px,7.4vw,112px)}
+.hero h1 .script{color:var(--red);font-size:1.25em;display:inline-block;transform:rotate(-4deg);margin-left:-4px}
+.hero p{font-size:19px;color:#4a4542;max-width:470px;margin:24px 0 30px}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.stats{display:grid;grid-template-columns:repeat(3,auto);gap:34px;justify-content:start;border-top:1px solid var(--line);padding-top:24px}
+.stats b{display:block;font-family:Prata;font-size:34px;font-weight:400;line-height:1.1}
+.stats span{font-size:13.5px;color:var(--mute)}
+.hero .r{position:relative;background:var(--red)}
+.hero .r .ph{position:absolute;inset:0}
+.hero .r .tag{position:absolute;left:24px;bottom:24px;background:var(--paper);padding:14px 18px;border-radius:14px;max-width:290px;font-size:15px;box-shadow:0 14px 30px -14px rgba(0,0,0,.4)}
+.hero .r .tag b{display:block;font-family:Prata;font-weight:400;font-size:20px}
+
+/* marquee */
+.mq{border-block:1px solid var(--line);overflow:hidden;padding:18px 0;background:var(--paper)}
+.mq .t{display:flex;gap:46px;width:max-content;animation:mq 36s linear infinite;font-family:Prata;font-size:26px}
+.mq span::after{content:"✻";color:var(--red);margin-left:46px;font-size:20px}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* day parts */
+.day{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line)}
+.day>div{padding:0 0 30px;border-right:1px solid var(--line);background:#fff}
+.day>div:last-child{border-right:0}
+.day .ph{aspect-ratio:4/3}
+.day .t{padding:24px 26px 0}
+.day .time{font-size:13px;font-weight:600;color:var(--red);letter-spacing:.12em;text-transform:uppercase}
+.day h3{font-size:34px;margin:8px 0 10px}
+.day p{color:var(--mute);font-size:15.5px}
+.day ul{list-style:none;margin-top:16px}
+.day li{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-top:1px dashed var(--line);font-size:15px}
+.day li b{font-weight:600;white-space:nowrap}
+
+/* vitrine */
+.vitrine{background:var(--red);color:#fff}
+.vitrine .head h2,.vitrine .head h2 .script{color:#fff}
+.vitrine .lbl{color:#ffd9db}
+.vitrine .head p{color:#ffd9db}
+.vgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.vgrid .ph{aspect-ratio:3/4;border-radius:10px;position:relative}
+.vgrid .ph span{position:absolute;left:12px;bottom:12px;background:#fff;color:var(--ink);font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px}
+.vnote{margin-top:26px;display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap;color:#ffe3e4}
+
+/* quotes */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.q{border:1px solid var(--line);background:#fff;padding:30px;display:flex;flex-direction:column;justify-content:space-between;gap:20px}
+.q p{font-family:Prata;font-size:20px;line-height:1.4}
+.q footer{display:flex;justify-content:space-between;font-size:14px;color:var(--mute)}
+.q footer i{font-style:normal;color:var(--red);letter-spacing:2px}
+
+/* visit */
+.visit{display:grid;grid-template-columns:1.1fr .9fr;border:1px solid var(--line);background:#fff}
+.visit .ph{min-height:460px}
+.visit .t{padding:48px}
+.visit h2{font-size:clamp(38px,4.6vw,60px);margin:10px 0 24px}
+.hours div{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line)}
+.hours b{font-weight:600}
+
+/* menu */
+.mtabs{position:sticky;top:76px;z-index:20;background:var(--paper);border-bottom:1px solid var(--line);padding:14px 0}
+.mtabs .wrap{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+.mtabs .wrap::-webkit-scrollbar{display:none}
+.mt{flex:0 0 auto;padding:9px 16px;border-radius:999px;border:1.5px solid var(--line);background:transparent;font:500 15px "Golos Text";cursor:pointer;color:var(--ink)}
+.mt.on{background:var(--red);border-color:var(--red);color:#fff}
+.mcat{padding-top:60px;scroll-margin-top:150px}
+.mcat .hd{display:flex;align-items:baseline;gap:18px;border-bottom:2px solid var(--ink);padding-bottom:12px;margin-bottom:6px}
+.mcat .hd .no{font-family:Prata;color:var(--red);font-size:22px}
+.mcat .hd h2{font-size:clamp(34px,4.4vw,52px)}
+.mcat .hd small{margin-left:auto;color:var(--mute);font-size:14px}
+.items{display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
+.it{display:grid;grid-template-columns:1fr auto;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.it h3{font-family:"Golos Text";font-weight:500;font-size:17px;line-height:1.35}
+.it small{display:block;color:var(--mute);font-size:14px;margin-top:2px}
+.it .p{font-family:Prata;font-size:19px;white-space:nowrap}
+.mfoot{margin-top:56px;background:var(--cream);padding:28px 32px;display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}
+.mfoot p{max-width:680px;color:#4a4542}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about .ph{aspect-ratio:4/5}
+.about h2{font-size:clamp(40px,5vw,66px);margin:12px 0 22px}
+.about h2 .script{color:var(--red)}
+.about p{font-size:18px;color:#3d3936;margin-bottom:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chips span{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font-size:14px;font-weight:500}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:230px;gap:12px}
+.gal .ph{cursor:zoom-in}
+.gal .w2{grid-column:span 2}
+.gal .h2{grid-row:span 2}
+.lb{position:fixed;inset:0;background:rgba(15,10,10,.94);display:none;place-items:center;z-index:80;padding:20px;cursor:zoom-out}
+.lb.on{display:grid}
+.lb img{max-width:92vw;max-height:88vh}
+
+/* reviews */
+.scores{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:24px}
+.score{background:var(--red);color:#fff;padding:36px;display:flex;align-items:center;gap:28px}
+.score:nth-child(2){background:var(--ink)}
+.score .big{font-family:Prata;font-size:92px;line-height:.9}
+.score h3{font-size:28px}
+.score p{opacity:.8;font-size:15px;margin:4px 0 10px}
+.score a{font-weight:600;text-decoration:underline;text-underline-offset:4px}
+
+/* contacts */
+.cgrid{display:grid;grid-template-columns:1fr 1.2fr;gap:20px}
+.cbox{background:#fff;border:1px solid var(--line);padding:40px}
+.kv{display:grid;gap:24px;margin-bottom:30px}
+.kv span{display:block;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:4px}
+.kv b,.kv a{font-family:Prata;font-weight:400;font-size:27px;line-height:1.2}
+.kv a:hover{color:var(--red)}
+.kv em{display:block;font-style:normal;color:var(--mute);font-size:15px}
+.kv .hrs{font-family:"Golos Text";font-size:16px;display:grid;gap:4px;margin-top:4px}
+.kv .hrs div{display:flex;justify-content:space-between;max-width:320px}
+.map{min-height:500px;background:var(--cream);border:1px solid var(--line)}
+.map iframe{width:100%;height:100%;min-height:498px;border:0;display:block}
+
+/* footer */
+.foot{background:var(--ink);color:#bdb6b0;padding:56px 0 28px;margin-top:40px}
+.foot .g{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+.foot .logo{color:#fff}
+.foot h4{color:#fff;font-family:Prata;font-weight:400;font-size:20px;margin-bottom:12px}
+.foot a{display:block;margin-bottom:6px}
+.foot a:hover{color:#fff}
+.credit{margin-top:40px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px;color:#8d857f}
+.credit a{display:inline;color:#cfc8c2}
+
+.callbar{display:none}
+
+@media (max-width:1000px){
+  .hero{grid-template-columns:1fr}
+  .hero .l{padding:44px 28px}
+  .hero .r{min-height:420px}
+  .day,.quotes{grid-template-columns:1fr}
+  .day>div{border-right:0;border-bottom:1px solid var(--line)}
+  .vgrid{grid-template-columns:1fr 1fr}
+  .visit,.about,.cgrid,.scores{grid-template-columns:1fr}
+  .visit .ph{min-height:320px}
+  .items{grid-template-columns:1fr}
+  .gal{grid-template-columns:1fr 1fr}
+  .foot .g{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  .links{display:none;position:absolute;top:76px;left:0;right:0;flex-direction:column;background:var(--paper);padding:10px 16px 18px;border-bottom:1px solid var(--line)}
+  .links.open{display:flex}
+  .links a{font-size:19px;padding:12px 14px}
+  .nav>.btn{display:none}
+  .burger{display:block}
+}
+@media (max-width:560px){
+  .wrap{padding:0 16px}
+  section{padding:64px 0}
+  .ribbon{font-size:12px}
+  .hero .l{padding:36px 16px}
+  .hero .r{min-height:340px}
+  .stats{grid-template-columns:repeat(3,1fr);gap:12px}
+  .stats b{font-size:26px}
+  .visit .t,.cbox{padding:26px}
+  .score{flex-direction:column;align-items:flex-start;gap:8px;padding:26px}
+  .gal{grid-auto-rows:150px}
+  .mcat .hd small{display:none}
+  .foot .g{grid-template-columns:1fr}
+  .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:50;gap:8px}
+  .callbar .btn{flex:1;box-shadow:0 10px 26px -10px rgba(0,0,0,.45)}
+  .foot{padding-bottom:100px}
+}
+@media (prefers-reduced-motion:reduce){.mq .t{animation:none}.page{animation:none}}
+</style>
+</head>
+<body>
+
+<div class="ribbon"><b>Хорошее место 2026</b> по версии Яндекс Карт · Остоженка, 30 · у метро «Парк культуры»</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#/" class="logo" aria-label="Лицей — на главную">Лицей</a>
+    <nav class="links" id="links">
+      <a href="#/">Главная</a>
+      <a href="#/menu">Меню</a>
+      <a href="#/about">Пекарня</a>
+      <a href="#/reviews">Отзывы</a>
+      <a href="#/contacts">Контакты</a>
+    </nav>
+    <a href="tel:+79160795804" class="btn b-red">+7 916 079-58-04</a>
+    <button class="burger" id="burger" aria-label="Меню">☰</button>
+  </div>
+</header>
+
+<main>
+
+<!-- ГЛАВНАЯ -->
+<div class="page" data-page="/">
+  <div class="hero">
+    <div class="l">
+      <div>
+        <div class="lbl">Пекарня · кафе · Хамовники</div>
+        <h1 style="margin-top:16px">Пекарня <span class="script">Лицей</span><br>на Остоженке</h1>
+        <p>Свежая выпечка с утра, завтраки, обеды и ужины, авторский кофе — а летом бокал вина или просекко на веранде.</p>
+        <div class="cta">
+          <a href="#/menu" class="btn b-red">Смотреть меню</a>
+          <a href="#/contacts" class="btn b-line">Как добраться</a>
+        </div>
+      </div>
+      <div class="stats">
+        <div><b>5,0</b><span>2ГИС · 1038 отзывов</span></div>
+        <div><b>5,0</b><span>Яндекс · 827 оценок</span></div>
+        <div><b>с 8:00</b><span>по будням</span></div>
+      </div>
+    </div>
+    <div class="r">
+      <div class="ph"><img src="https://i8.photo.2gis.com/photo-gallery/08646a3d-1f71-4483-9356-56c44dac0938.jpg" alt="Фасад пекарни Лицей с красными вывесками" loading="eager"></div>
+      <div class="tag"><b>Остоженка, 30 с1</b>480 м от «Парка культуры»</div>
+    </div>
+  </div>
+
+  <div class="mq" aria-hidden="true"><div class="t">
+    <span>Сырники из рикотты</span><span>Драники с лососем</span><span>Клубничный тарт</span><span>Айс-латте на топлёном молоке</span><span>Раф с миндальным урбечем</span><span>Буррата</span><span>Шакшука</span>
+    <span>Сырники из рикотты</span><span>Драники с лососем</span><span>Клубничный тарт</span><span>Айс-латте на топлёном молоке</span><span>Раф с миндальным урбечем</span><span>Буррата</span><span>Шакшука</span>
+  </div></div>
+
+  <section>
+    <div class="wrap">
+      <div class="head">
+        <div><div class="lbl">С утра до вечера</div><h2>Целый день <span class="script">в Лицее</span></h2></div>
+        <p>Можно забежать за круассаном и кофе с собой, а можно остаться на завтрак, обед или ужин.</p>
+      </div>
+      <div class="day">
+        <div>
+          <div class="ph"><img src="https://i9.photo.2gis.com/photo-gallery/3c9afe04-9172-42de-a6d1-d0bec715c5e1.jpg" alt="Завтрак" loading="lazy"></div>
+          <div class="t"><div class="time">с 8:00</div><h3>Завтраки</h3><p>Скрэмблы, сырники, каши, драники и датский завтрак.</p>
+            <ul><li>Сырники из рикотты <b>550 ₽</b></li><li>Завтрак с лососем и авокадо <b>950 ₽</b></li><li>Шакшука с брынзой <b>690 ₽</b></li></ul></div>
+        </div>
+        <div>
+          <div class="ph"><img src="https://i1.photo.2gis.com/photo-gallery/6fec820c-3f30-4282-b0bd-d7419e0b7716.jpg" alt="Паста" loading="lazy"></div>
+          <div class="t"><div class="time">днём</div><h3>Обед</h3><p>Супы, салаты, паста и сэндвичи.</p>
+            <ul><li>Тыквенный крем-суп с креветками <b>690 ₽</b></li><li>Каламарата с говяжьей щекой <b>890 ₽</b></li><li>Авокадо с крабом <b>890 ₽</b></li></ul></div>
+        </div>
+        <div>
+          <div class="ph"><img src="https://i6.photo.2gis.com/photo-gallery/a265556b-67da-44d2-a23f-0ff91387f7bb.jpg" alt="Ужин" loading="lazy"></div>
+          <div class="t"><div class="time">вечером</div><h3>Ужин</h3><p>Горячее, закуски к вину и стейк бавет с чимичурри.</p>
+            <ul><li>Тарелка к вину <b>990 ₽</b></li><li>Запечённый камамбер <b>750 ₽</b></li><li>Стейк бавет <b>1190 ₽</b></li></ul></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="vitrine">
+    <div class="wrap">
+      <div class="head">
+        <div><div class="lbl">Витрина</div><h2>Выпечка <span class="script">каждый день</span></h2></div>
+        <p>Тарты, круассаны, маффины и булочки — витрина обновляется с утра.</p>
+      </div>
+      <div class="vgrid">
+        <div class="ph"><img src="https://i7.photo.2gis.com/photo-gallery/912bda0e-120b-4c71-b654-65aaf6759e28.jpg" alt="Клубничный тарт" loading="lazy"><span>Тарты</span></div>
+        <div class="ph"><img src="https://i6.photo.2gis.com/photo-gallery/24559570-194d-407b-bfa7-8a0c90d2b293.jpg" alt="Круассаны и слойки" loading="lazy"><span>Круассаны</span></div>
+        <div class="ph"><img src="https://i6.photo.2gis.com/photo-gallery/70bc6420-1799-412b-8398-0ac4a305c28d.jpg" alt="Маффины" loading="lazy"><span>Маффины</span></div>
+        <div class="ph"><img src="https://i8.photo.2gis.com/photo-gallery/88db9b0c-a6a6-434e-8af5-9ea4ab1f146a.jpg" alt="Витрина с выпечкой" loading="lazy"><span>Витрина</span></div>
+      </div>
+      <div class="vnote"><span>Ассортимент выпечки меняется — спросите, что из печи только что.</span><a href="tel:+79160795804" class="btn b-white">Позвонить</a></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head">
+        <div><div class="lbl">Отзывы</div><h2>Говорят <span class="script">гости</span></h2></div>
+        <a href="#/reviews" class="btn b-line">Все отзывы →</a>
+      </div>
+      <div class="quotes">
+        <blockquote class="q"><p>«Брала в этот раз клубничный тарт и он оказался чудесным, интересная ореховая основа и сладкая клубника сверху»</p><footer>Дарья К. · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="q"><p>«Безумно вкусно! Обслуживание на высоте, айс латте на топлёном молоке вообще отдельная любовь»</p><footer>Ангелина Н. · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="q"><p>«Шикарнейшее место! Нашли по отзывам. Брали завтрак с лососем, сырники и айс латте. Всё вкусно»</p><footer>Хуршед Нурматов · 2ГИС <i>★★★★★</i></footer></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="visit">
+        <div class="ph"><img src="https://i5.photo.2gis.com/photo-gallery/e1beded7-165f-4708-87f9-f2092920352b.jpg" alt="Вход в пекарню" loading="lazy"></div>
+        <div class="t">
+          <div class="lbl">Приходите</div>
+          <h2>Остоженка, 30 с1</h2>
+          <div class="hours">
+            <div><span>Понедельник — пятница</span><b>8:00–23:00</b></div>
+            <div><span>Суббота</span><b>9:00–23:00</b></div>
+            <div><span>Воскресенье</span><b>9:00–22:00</b></div>
+          </div>
+          <div class="cta" style="margin-top:26px"><a href="tel:+79160795804" class="btn b-red">Позвонить</a><a href="#/contacts" class="btn b-line">Карта</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- МЕНЮ -->
+<div class="page" data-page="/menu">
+  <div class="wrap ptop">
+    <div class="lbl">Меню</div>
+    <div class="row"><h1>Меню <span class="script">Лицея</span></h1><p>Кухня и напитки. Выпечку смотрите на витрине — она меняется каждый день.</p></div>
+  </div>
+  <div class="mtabs"><div class="wrap" id="mtabs"></div></div>
+  <div class="wrap" id="menu"></div>
+  <div class="wrap">
+    <div class="mfoot"><p>Цены по данным карточек заведения в 2ГИС и Яндекс Картах и могут отличаться от актуальных. Уточняйте у официанта или по телефону.</p><a href="tel:+79160795804" class="btn b-red">Позвонить</a></div>
+  </div>
+</div>
+
+<!-- О ПЕКАРНЕ -->
+<div class="page" data-page="/about">
+  <div class="wrap ptop">
+    <div class="lbl">Пекарня</div>
+    <div class="row"><h1>Про <span class="script">Лицей</span></h1><p>Пекарня, кофейня и кафе в одном месте — в Хамовниках, на Остоженке.</p></div>
+  </div>
+  <section>
+    <div class="wrap about">
+      <div class="ph"><img src="https://i0.photo.2gis.com/photo-gallery/8618734e-62bb-40d4-a4dc-b809b9e24161.jpg" alt="Красная вывеска Лицея" loading="lazy"></div>
+      <div>
+        <div class="lbl">Кто мы</div>
+        <h2>Позавтракать, пообедать <span class="script">или поужинать</span></h2>
+        <p>«Лицей» — это пекарня, где можно позавтракать, пообедать или поужинать, а летом провести время за бокалом вина или просекко на веранде.</p>
+        <p>С утра — витрина свежей выпечки и кофе с собой, днём — супы, салаты и паста, вечером — горячее и закуски к вину. Работаем каждый день, до 23:00.</p>
+        <div class="chips"><span>Летняя веранда</span><span>Столики на улице</span><span>До 60 мест</span><span>Можно с ноутбуком</span><span>Можно с собакой</span><span>Wi-Fi</span><span>Навынос</span><span>Доставка</span><span>Карта · наличные · QR</span></div>
+      </div>
+    </div>
+  </section>
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><div><div class="lbl">Фото</div><h2>Загляните <span class="script">внутрь</span></h2></div><p>Нажмите на фото, чтобы открыть крупнее.</p></div>
+      <div class="gal">
+        <div class="ph w2 h2"><img src="https://i6.photo.2gis.com/photo-gallery/9e07363d-9507-40de-9d8c-8f9e64160afd.jpg" alt="Красные полки с выпечкой" loading="lazy"></div>
+        <div class="ph"><img src="https://i4.photo.2gis.com/photo-gallery/dd3dde36-1013-4538-b20d-aa91971954e7.jpg" alt="Цветы на веранде" loading="lazy"></div>
+        <div class="ph"><img src="https://i0.photo.2gis.com/photo-gallery/b6cfd7d6-87d2-482d-baac-a7d5810764df.jpg" alt="Кофе в красном стакане" loading="lazy"></div>
+        <div class="ph"><img src="https://i1.photo.2gis.com/photo-gallery/8ff2e109-b97e-4420-bdc0-73458896c4fb.jpg" alt="Латте-арт" loading="lazy"></div>
+        <div class="ph"><img src="https://i2.photo.2gis.com/photo-gallery/805cf2ff-c971-4a04-ab8e-fbe1b357448c.jpg" alt="Тарты на витрине" loading="lazy"></div>
+        <div class="ph w2"><img src="https://i1.photo.2gis.com/photo-gallery/b2fa054a-1f84-41ac-9f27-029cb122fc50.jpg" alt="Зал вечером" loading="lazy"></div>
+        <div class="ph"><img src="https://i1.photo.2gis.com/photo-gallery/8904943c-879c-41e6-beab-fc2a0b79a0ae.jpg" alt="Фирменный пакет" loading="lazy"></div>
+        <div class="ph"><img src="https://i3.photo.2gis.com/photo-gallery/66151488-d595-426f-8b3c-13344d7ee0fd.jpg" alt="Тыквенный суп" loading="lazy"></div>
+        <div class="ph"><img src="https://i3.photo.2gis.com/photo-gallery/834f47f9-359b-4f17-ad7e-1424e14891f4.jpg" alt="Пирожные" loading="lazy"></div>
+        <div class="ph"><img src="https://i5.photo.2gis.com/photo-gallery/fa650cc7-9f8e-4e35-bf03-df7314833244.jpg" alt="Круассан" loading="lazy"></div>
+        <div class="ph w2"><img src="https://i9.photo.2gis.com/photo-gallery/d875e786-548b-4f29-977b-1e25b0add0eb.jpg" alt="Витрина" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ОТЗЫВЫ -->
+<div class="page" data-page="/reviews">
+  <div class="wrap ptop">
+    <div class="lbl">Отзывы</div>
+    <div class="row"><h1>Говорят <span class="script">гости</span></h1><p>Больше полутора тысяч отзывов в двух картах — и средняя оценка 5,0.</p></div>
+  </div>
+  <section style="padding-top:44px">
+    <div class="wrap">
+      <div class="scores">
+        <div class="score"><div class="big">5,0</div><div><h3>2ГИС</h3><p>1038 отзывов</p><a href="https://2gis.ru/moscow/firm/70000001093349771/tab/reviews" target="_blank" rel="noopener">Читать в 2ГИС</a></div></div>
+        <div class="score"><div class="big">5,0</div><div><h3>Яндекс Карты</h3><p>827 оценок · «Хорошее место 2026»</p><a href="https://yandex.ru/maps/org/litsey/156472542634/reviews/" target="_blank" rel="noopener">Читать в Яндексе</a></div></div>
+      </div>
+      <div class="quotes">
+        <blockquote class="q"><p>«В лицее работают лучшие ребята, всегда дружелюбные и на мой взгляд именно они — лицо заведения. Брала в этот раз клубничный тарт и он оказался чудесным»</p><footer>Дарья К. · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="q"><p>«Шикарнейшее место! Нашли по отзывам. Брали завтрак с лососем, сырники и айс латте. Всё вкусно»</p><footer>Хуршед Нурматов · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="q"><p>«Хорошее, атмосферное место, вкусные блюда и напитки. Особенно рекомендую кофе раф, необыкновенный»</p><footer>Наталья Т. · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="q"><p>«Супер вкусная выпечка, классные блюда и напитки! Одно из лучших мест в Москве!»</p><footer>Никита Р. · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="q"><p>«Безумно вкусно! Обслуживание на высоте, айс латте на топлёном молоке вообще отдельная любовь»</p><footer>Ангелина Н. · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="q"><p>«Всё очень-очень вкусно, качество, большие порции, доступная цена. Обязательно вернёмся ещё»</p><footer>Дарья К. · 2ГИС <i>★★★★★</i></footer></blockquote>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- КОНТАКТЫ -->
+<div class="page" data-page="/contacts">
+  <div class="wrap ptop">
+    <div class="lbl">Контакты</div>
+    <div class="row"><h1>Ждём <span class="script">в гости</span></h1><p>Хамовники, 480 метров от метро «Парк культуры».</p></div>
+  </div>
+  <section style="padding-top:44px">
+    <div class="wrap cgrid">
+      <div class="cbox">
+        <div class="kv">
+          <div><span>Адрес</span><b>Москва, ул. Остоженка, 30 с1</b><em>Хамовники · метро «Парк культуры», 480 м</em></div>
+          <div><span>Телефон</span><a href="tel:+79160795804">+7 916 079-58-04</a></div>
+          <div><span>Режим работы</span>
+            <div class="hrs"><div><span style="all:unset">Пн–Пт</span><b style="font:600 16px 'Golos Text'">8:00–23:00</b></div><div><span style="all:unset">Сб</span><b style="font:600 16px 'Golos Text'">9:00–23:00</b></div><div><span style="all:unset">Вс</span><b style="font:600 16px 'Golos Text'">9:00–22:00</b></div></div>
+          </div>
+        </div>
+        <div class="cta"><a href="tel:+79160795804" class="btn b-red">Позвонить</a><a href="https://yandex.ru/maps/org/litsey/156472542634/" target="_blank" rel="noopener" class="btn b-line">Маршрут</a></div>
+      </div>
+      <div class="map"><iframe src="https://yandex.ru/map-widget/v1/?ll=37.596211%2C55.739899&z=17&pt=37.596211,55.739899,pm2rdm" loading="lazy" title="Карта: Остоженка, 30 с1"></iframe></div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="g">
+      <div><a href="#/" class="logo">Лицей</a><p style="margin-top:14px;max-width:330px">Пекарня и кафе на Остоженке, 30. Выпечка, завтраки, обеды и ужины, авторский кофе.</p></div>
+      <div><h4>Разделы</h4><a href="#/menu">Меню</a><a href="#/about">Пекарня</a><a href="#/reviews">Отзывы</a><a href="#/contacts">Контакты</a></div>
+      <div><h4>Связаться</h4><a href="tel:+79160795804">+7 916 079-58-04</a><span style="display:block">Пн–Пт 8:00–23:00</span><span style="display:block">Сб 9:00–23:00 · Вс 9:00–22:00</span></div>
+    </div>
+    <div class="credit"><span>© Лицей, Москва</span><span>Демо-сайт · разработка: Сергей Музыченко, Telegram <a href="https://t.me/spectator0011" target="_blank" rel="noopener">@spectator0011</a></span></div>
+  </div>
+</footer>
+
+<div class="callbar"><a href="tel:+79160795804" class="btn b-red">Позвонить</a><a href="#/menu" class="btn b-ink">Меню</a></div>
+<div class="lb" id="lb"><img alt=""></div>
+
+<script>
+const MENU=[
+ ["breakfast","Завтраки","с 8:00 по будням",[
+  ["Круассан с лососем",890],["Завтрак с лососем и авокадо",950],["Датский завтрак с мортаделлой",890],["Драники с лососем, пашот и сметаной",790],["Драники с пастрами из индейки и битыми огурцами",790],["Сырники из рикотты с чёрной смородиной и сметаной",550],["Скрэмбл с прошутто крудо, томатами и сливочно-трюфельным кремом",690],["Скрэмбл с авокадо, томатами и трюфельным маслом",590],["Скрэмбл с креветками и копчёной страчателлой",790],["Шакшука с брынзой",690],["Омлет с маринованными томатами",650],["Два яйца, тартин, масло",390,"яйца на выбор: 5 минут, пашот, скрэмбл"],["Каша овсяная с нектаринами в карамели",590],["Каша овсяная со свежими ягодами",590],["Каша рисовая на миндальном молоке с малиной",590],["Зелёная греча с пашот и вялеными томатами",590]]],
+ ["snacks","Закуски","к вину и не только",[
+  ["Тарелка к вину",990],["Вителло тоннато",850],["Тартар из говядины с картофелем фри",750],["Тартар из говядины с трюфельным айоли",690],["Запечённый камамбер с маринованным виноградом и соусом манго-юдзу",750],["Буррата с маринованными томатами",690,"томаты маринуем сами"],["Страчателла с клубникой, помидорами и соусом из трав",690],["Роти с креветкой и гуакамоле",590],["Паштет из куриной печени с соусом из чёрной смородины и желе из просекко",490],["Ассорти оливок",450],["Батат фри с пармезаном",390]]],
+ ["salads","Салаты","",[
+  ["Авокадо с крабом",890],["Салат с пастрами из говядины и соусом наршараб",790],["Салат с подкопчённым лососем, яйцом 5 минут и соусом тар-тар",790],["Салат с копчёной утиной грудкой и печёной тыквой",690],["Салат с куриной грудкой в тайской заправке",690],["Зелёный салат с авокадо",690],["Салат из свежих овощей",690]]],
+ ["soups","Супы","",[
+  ["Тыквенный крем-суп с креветками и страчателлой",690],["Щавелевый суп с говяжьей щекой, пашот и сметаной",590],["Грибной суп с картофелем и сметаной",590],["Окрошка с мортаделлой",550,"на квасе или кефире"]]],
+ ["hot","Горячее","",[
+  ["Стейк бавет с битым картофелем и соусом чимичурри",1190,"подаём с припущенным кейлом"],["Говяжьи щёчки с печёным картофелем и муссом из пармезана",950],["Паста каламарата с говяжьей щекой",890],["Форель с орзо и кремом из кунжута",890],["Куриный шницель с картофельным пюре, помидорами и пармезаном",890],["Топ блейд с пшеницей и соусом демиглас",850],["Кебаб на тарелке с говядиной",850,"гарнир на выбор: картофель фри или рис"],["Спагетти в соусе биск с креветками",750],["Куриное филе с брокколи и перечным соусом",690],["Куриные котлетки с картофельным пюре и соусом тар-тар",650]]],
+ ["bread","На хлебе","сэндвичи, тосты, бейглы",[
+  ["Сэндвич с куриным шницелем и соусом цезарь",750],["Сэндвич с пастрами из индейки, страчателлой и песто",750],["Сэндвич с тамбовским окороком и чёрной смородиной",750],["Авокадо-тост",690,"целый или половинка"],["Тост с мортаделлой, творожным сыром и яйцом",690],["Бейгл с пастрами из говядины и огурчиком",690],["Сэндвич с тунцом и яйцом",650],["Сэндвич с курицей",590],["Сэндвич с тунцом",590],["Хлебная тарелка с маслом розмарин-лимон",350]]],
+ ["coffee","Кофе","",[
+  ["Эспрессо",260,"40 г"],["Американо",270,"200 мл"],["Флэт уайт",320,"200 мл"],["Фильтр-кофе",310,"300 мл"],["Капучино",380,"300 мл"],["Латте",380,"300 мл"],["Раф ванильный",410,"300 мл"]]],
+ ["signature","Авторские напитки","300 мл",[
+  ["Латте лайм — белый шоколад",540],["Фильтр-кофе гранат-амаро",490],["Раф с миндальным урбечем и ромом",490],["Кленовый матча-латте",490]]],
+ ["cold","Холодный кофе","300 мл",[
+  ["Айс-латте на топлёном молоке",450],["Айс-латте",350],["Айс-фильтр гранат-амаро",490],["Холодный раф: пломбир, миндальный урбеч",490],["Бамбл вишня-липа",490],["Апельсиновый бамбл",490],["Эспрессо-тоник",450]]],
+ ["drinks","Холодные напитки","300 мл",[
+  ["Лимонад каламанси-грейпфрут",450],["Лимонад малина-лайм",450],["Пряная смородина на квасе",450],["Айс-ти молочный улун-лайм",450],["Апельсиновый фреш",450],["Матча-малина на кокосовом молоке",490],["Матча-бамбл",490]]],
+ ["warm","Горячие напитки","",[
+  ["Какао bean-to-bar",450,"300 мл"],["Матча-латте",370,"300 мл"],["Какао без сахара",360,"300 мл"],["Горячий шоколад",360,"200 мл"]]],
+ ["tea","Чай","чайник 500 мл",[
+  ["Чай с чабрецом, брусника-черешня",490,"фруктовый"],["Чай облепиха-кумкват",490,"фруктовый"],["Зелёный с жасмином",390],["Сенча",390],["Эрл грей",390],["Ассам",390],["Гречишный",390],["Светлый улун хризантема-слива",390],["Тизан яблоко-лемонграсс",390],["Тизан тибетская ромашка — лист ежевики",390],["Чай акация-роза-вишня",390]]]
+];
+const tabsEl=document.getElementById('mtabs'),menuEl=document.getElementById('menu');
+MENU.forEach(([id,name,sub,items],i)=>{
+  tabsEl.insertAdjacentHTML('beforeend',`<button class="mt${i?'':' on'}" data-go="${id}">${name}</button>`);
+  menuEl.insertAdjacentHTML('beforeend',`<div class="mcat" id="${id}"><div class="hd"><span class="no">${String(i+1).padStart(2,'0')}</span><h2>${name}</h2><small>${sub}</small></div><div class="items">${items.map(([n,p,s])=>`<div class="it"><h3>${n}${s?`<small>${s}</small>`:''}</h3><span class="p">${p} ₽</span></div>`).join('')}</div></div>`);
+});
+const tabs=[...tabsEl.children];
+tabs.forEach(t=>t.onclick=()=>document.getElementById(t.dataset.go).scrollIntoView({behavior:'smooth'}));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){tabs.forEach(t=>{const on=t.dataset.go===e.target.id;t.classList.toggle('on',on);if(on)t.scrollIntoView({block:'nearest',inline:'center'})})}}),{rootMargin:'-40% 0px -55% 0px'});
+document.querySelectorAll('.mcat').forEach(c=>io.observe(c));
+
+const pages=[...document.querySelectorAll('.page')],links=[...document.querySelectorAll('.links a')],nav=document.getElementById('links');
+const titles={'/':'Лицей — пекарня на Остоженке','/menu':'Меню — Лицей','/about':'Пекарня — Лицей','/reviews':'Отзывы — Лицей','/contacts':'Контакты — Лицей'};
+function route(){const p=location.hash.replace(/^#/,'')||'/';const t=pages.find(x=>x.dataset.page===p)||pages[0];pages.forEach(x=>x.classList.toggle('on',x===t));links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+t.dataset.page));nav.classList.remove('open');scrollTo(0,0);document.title=titles[t.dataset.page]}
+addEventListener('hashchange',route);route();
+document.getElementById('burger').onclick=()=>nav.classList.toggle('open');
+const lb=document.getElementById('lb'),li=lb.querySelector('img');
+document.querySelectorAll('.gal .ph').forEach(p=>p.onclick=()=>{const i=p.querySelector('img');li.src=i.src;li.alt=i.alt;lb.classList.add('on')});
+lb.onclick=()=>lb.classList.remove('on');addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+document.querySelectorAll('img').forEach(i=>i.addEventListener('error',()=>{i.style.visibility='hidden'}));
+</script>
+</body>
+</html>

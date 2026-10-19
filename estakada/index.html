@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Эстакада — автосервис на Ванеева, 10 (Санкт-Петербург)</title>
+<meta name="description" content="Автосервис «Эстакада»: диагностика, ТО, ремонт двигателя, подвески, тормозов, трансмиссии и электрики. Ул. Ванеева, 10 (въезд с ул. Ворошилова), ежедневно 10:00–20:00.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --g0:#111418; --g1:#181c21; --g2:#232930; --g3:#343c45; --steel:#8b96a3; --conc:#e8eaed; --paper:#f5f6f7;
+  --blue:#1f62d6; --blue2:#3d7ef0; --orange:#ff7a1a; --orange2:#ff9447; --line:rgba(255,255,255,.1); --lineD:rgba(17,20,24,.12);
+  --max:1240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--g0);font:400 16.5px/1.6 "IBM Plex Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+h1,h2,h3,.ru{font-family:"Russo One",sans-serif;font-weight:400;line-height:1.02;letter-spacing:.005em;text-transform:uppercase}
+.mono{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.tag{display:inline-flex;gap:8px;align-items:center;color:var(--orange)}
+.tag::before{content:"";width:22px;height:2px;background:var(--orange)}
+.ph{overflow:hidden;background:var(--g2)}
+.ph img{width:100%;height:100%;object-fit:cover}
+
+/* header */
+header{position:sticky;top:0;z-index:40;background:var(--g0);color:#fff;border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo svg{width:38px;height:38px}
+.logo b{font-family:"Russo One";font-weight:400;font-size:22px;letter-spacing:.06em}
+.logo small{display:block;font-size:10px;letter-spacing:.24em;color:var(--steel);text-transform:uppercase;margin-top:-2px}
+.links{display:flex;gap:4px}
+.links a{padding:10px 14px;font-size:14px;font-weight:600;color:#c8cfd7;border-radius:4px}
+.links a:hover{color:#fff;background:var(--g2)}
+.links a.on{color:#fff;background:var(--blue)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 24px;border-radius:4px;font:700 15px "IBM Plex Sans";transition:transform .2s,background .2s;white-space:nowrap;border:0;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.b-or{background:var(--orange);color:#111}
+.b-or:hover{background:var(--orange2)}
+.b-blue{background:var(--blue);color:#fff}
+.b-blue:hover{background:var(--blue2)}
+.b-line{border:1.5px solid rgba(255,255,255,.35);color:#fff}
+.b-line:hover{border-color:#fff}
+.b-dark{border:1.5px solid var(--g0);color:var(--g0)}
+.burger{display:none;width:46px;height:46px;border-radius:4px;border:0;background:var(--g2);color:#fff;font-size:18px;cursor:pointer}
+
+.page{display:none;animation:in .4s ease}
+.page.on{display:block}
+@keyframes in{from{opacity:0}to{opacity:1}}
+section{padding:96px 0}
+.dark{background:var(--g1);color:#fff}
+.ptop{background:var(--g1);color:#fff;padding:72px 0 56px;position:relative;overflow:hidden}
+.ptop::after{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(90deg,transparent,#000 60%);pointer-events:none}
+.ptop h1{font-size:clamp(46px,7.5vw,100px);margin-top:16px;position:relative;z-index:1}
+.ptop p{max-width:560px;color:#aab3bd;margin-top:16px;position:relative;z-index:1}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:44px;flex-wrap:wrap}
+.head h2{font-size:clamp(34px,4.6vw,58px);margin-top:12px}
+.head p{max-width:400px;color:#5b6570}
+.dark .head p{color:#aab3bd}
+
+/* hero */
+.hero{background:var(--g1);color:#fff;position:relative;overflow:hidden}
+.hero .bg{position:absolute;inset:0}
+.hero .bg img{width:100%;height:100%;object-fit:cover;opacity:.38}
+.hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--g1) 25%,rgba(24,28,33,.6) 60%,rgba(24,28,33,.2))}
+.hero .wrap{position:relative;z-index:1;padding-top:96px;padding-bottom:64px;min-height:calc(100svh - 72px);display:flex;flex-direction:column;justify-content:space-between;gap:48px}
+.hero h1{font-size:clamp(54px,9vw,132px);max-width:900px}
+.hero h1 span{color:var(--orange)}
+.hero p{font-size:19px;color:#c8cfd7;max-width:540px;margin:24px 0 32px}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.promo{display:inline-flex;align-items:center;gap:14px;background:var(--orange);color:#111;padding:14px 18px;border-radius:4px;font-weight:700;margin-bottom:26px}
+.promo b{font-family:"Russo One";font-weight:400;font-size:18px;text-transform:uppercase}
+.spec{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.spec div{padding:20px 20px 0 0}
+.spec b{display:block;font-family:"Russo One";font-weight:400;font-size:38px;line-height:1}
+.spec span{font-size:13px;color:#aab3bd}
+
+/* units grid */
+.units{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--lineD);border:2px solid var(--lineD)}
+.unit{background:#fff;padding:30px 28px;display:flex;flex-direction:column;gap:14px;min-height:240px;transition:background .2s}
+.unit:hover{background:var(--conc)}
+.unit .top{display:flex;justify-content:space-between;align-items:center}
+.unit .ic{width:52px;height:52px;border-radius:4px;background:var(--g0);display:grid;place-items:center}
+.unit .ic svg{width:28px;height:28px;stroke:var(--orange);fill:none;stroke-width:2}
+.unit h3{font-size:24px}
+.unit p{color:#5b6570;font-size:15px}
+.unit .from{margin-top:auto;font-weight:700}
+.unit .from em{font-style:normal;color:var(--blue)}
+
+/* why */
+.why{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.why .ph{aspect-ratio:4/3;border-radius:4px}
+.checks{display:grid;gap:2px;margin-top:26px}
+.checks>div{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.checks b{font-family:"IBM Plex Mono";color:var(--orange);font-size:14px;padding-top:3px}
+.checks h3{font-size:18px;margin-bottom:4px}
+.checks p{color:#aab3bd;font-size:15px}
+
+/* brands */
+.brands{display:flex;flex-wrap:wrap;gap:8px}
+.brands span{border:1.5px solid var(--lineD);padding:9px 14px;font-weight:600;font-size:14px;border-radius:4px;background:#fff}
+.brands span.hl{background:var(--g0);color:#fff;border-color:var(--g0)}
+
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rv{background:#fff;border-left:4px solid var(--orange);padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:18px}
+.dark .rv{background:var(--g2)}
+.rv p{font-size:16.5px}
+.rv footer{display:flex;justify-content:space-between;font-size:13.5px;font-weight:600;color:#5b6570}
+.dark .rv footer{color:#aab3bd}
+.rv footer i{font-style:normal;color:var(--orange);letter-spacing:2px}
+
+/* how to get */
+.route{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}
+.route>div{background:#fff;padding:44px;border:1px solid var(--lineD)}
+.route h2{font-size:clamp(32px,4vw,52px);margin:12px 0 20px}
+.steps{counter-reset:s;display:grid;gap:14px;margin-top:10px}
+.steps div{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start}
+.steps div::before{counter-increment:s;content:counter(s,decimal-leading-zero);font-family:"IBM Plex Mono";color:#fff;background:var(--blue);border-radius:4px;display:grid;place-items:center;height:32px;font-size:13px}
+.hrs div{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--lineD);font-size:16px}
+.hrs b{font-family:"Russo One";font-weight:400}
+
+/* prices */
+.pnav{position:sticky;top:72px;z-index:20;background:var(--paper);border-bottom:1px solid var(--lineD)}
+.pnav .wrap{display:flex;gap:6px;overflow-x:auto;padding-top:12px;padding-bottom:12px;scrollbar-width:none}
+.pnav .wrap::-webkit-scrollbar{display:none}
+.pn{flex:0 0 auto;padding:10px 16px;border-radius:4px;border:1.5px solid var(--lineD);background:#fff;font:600 14px "IBM Plex Sans";cursor:pointer}
+.pn.on{background:var(--g0);border-color:var(--g0);color:#fff}
+.pblock{padding-top:52px;scroll-margin-top:140px}
+.pblock .hd{display:flex;align-items:center;gap:16px;margin-bottom:12px}
+.pblock .hd .mono{background:var(--orange);color:#111;padding:4px 8px;border-radius:3px}
+.pblock h2{font-size:clamp(28px,3.6vw,42px)}
+table{width:100%;border-collapse:collapse;background:#fff}
+td{padding:16px 18px;border-bottom:1px solid var(--lineD);vertical-align:top}
+td:last-child{text-align:right;white-space:nowrap;font-family:"Russo One";font-size:18px}
+td small{display:block;color:#5b6570;font-size:13.5px;margin-top:3px}
+tr:hover td{background:var(--conc)}
+.pnote{margin-top:40px;background:var(--g0);color:#fff;padding:28px 32px;border-radius:4px;display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}
+.pnote p{max-width:640px;color:#c8cfd7}
+.worklist{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.worklist span{background:#fff;border:1px solid var(--lineD);padding:7px 12px;border-radius:4px;font-size:14px}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:4px}
+.gal .ph{cursor:zoom-in}
+.gal .w{grid-column:span 2}
+.gal .t{grid-row:span 2}
+.lb{position:fixed;inset:0;background:rgba(10,12,14,.95);display:none;place-items:center;z-index:80;padding:20px;cursor:zoom-out}
+.lb.on{display:grid}
+.lb img{max-width:92vw;max-height:88vh}
+
+/* scores */
+.scores{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line);margin-bottom:28px}
+.sc{background:var(--g2);padding:34px;display:flex;align-items:center;gap:26px}
+.sc .big{font-family:"Russo One";font-size:84px;line-height:.9;color:var(--orange)}
+.sc h3{font-size:24px}
+.sc p{color:#aab3bd;font-size:14.5px;margin:4px 0 10px}
+.sc a{color:var(--orange2);font-weight:700}
+
+/* contacts */
+.cgrid{display:grid;grid-template-columns:1fr 1.2fr;gap:16px}
+.cbox{background:#fff;padding:40px;border:1px solid var(--lineD)}
+.kv{display:grid;gap:22px;margin-bottom:28px}
+.kv .mono{color:var(--blue);display:block;margin-bottom:4px}
+.kv b,.kv a{font-family:"Russo One";font-weight:400;font-size:24px;line-height:1.2;text-transform:none}
+.kv a:hover{color:var(--blue)}
+.kv em{display:block;font-style:normal;color:#5b6570;font-size:15px;margin-top:2px}
+.map{min-height:520px;background:var(--conc)}
+.map iframe{width:100%;height:100%;min-height:520px;border:0;display:block}
+
+/* footer */
+.foot{background:var(--g0);color:#8b96a3;padding:56px 0 28px}
+.foot .g{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+.foot .logo b{color:#fff}
+.foot h4{font-family:"Russo One";font-weight:400;color:#fff;font-size:16px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}
+.foot a{display:block;margin-bottom:6px}
+.foot a:hover{color:#fff}
+.credit{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px;color:#6b7580}
+.credit a{display:inline;color:#c8cfd7}
+
+.callbar{display:none}
+
+@media (max-width:1040px){
+  .units,.revs{grid-template-columns:1fr 1fr}
+  .why,.route,.cgrid,.scores{grid-template-columns:1fr}
+  .spec{grid-template-columns:1fr 1fr}
+  .gal{grid-template-columns:1fr 1fr 1fr}
+  .foot .g{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  .links{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;background:var(--g0);padding:10px 16px 18px;border-bottom:1px solid var(--line)}
+  .links.open{display:flex}
+  .links a{font-size:17px;padding:13px 14px}
+  .nav>.btn{display:none}
+  .burger{display:block}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  section{padding:64px 0}
+  .hero .wrap{padding-top:56px;padding-bottom:40px}
+  .spec b{font-size:30px}
+  .units,.revs{grid-template-columns:1fr}
+  .unit{min-height:auto}
+  .route>div,.cbox{padding:26px}
+  .gal{grid-template-columns:1fr 1fr;grid-auto-rows:150px}
+  .sc{flex-direction:column;align-items:flex-start;gap:8px;padding:26px}
+  td{padding:14px 12px}
+  td:last-child{font-size:16px}
+  .foot .g{grid-template-columns:1fr}
+  .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:50;gap:8px}
+  .callbar .btn{flex:1;box-shadow:0 10px 26px -10px rgba(0,0,0,.5)}
+  .foot{padding-bottom:100px}
+}
+@media (prefers-reduced-motion:reduce){.page{animation:none}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="lift" viewBox="0 0 40 40"><rect x="2" y="2" width="36" height="36" rx="4" fill="#ff7a1a"/><path d="M8 30h24M11 30V12M29 30V12M11 19h18M14 19l3-6h8l3 6" stroke="#111" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header>
+  <div class="wrap nav">
+    <a href="#/" class="logo" aria-label="Эстакада — на главную"><svg><use href="#lift"/></svg><div><b>ЭСТАКАДА</b><small>автосервис · СПб</small></div></a>
+    <nav class="links" id="links">
+      <a href="#/">Главная</a>
+      <a href="#/prices">Работы и цены</a>
+      <a href="#/about">О сервисе</a>
+      <a href="#/reviews">Отзывы</a>
+      <a href="#/contacts">Контакты</a>
+    </nav>
+    <a href="tel:+79660142266" class="btn b-or">+7 966 014-22-66</a>
+    <button class="burger" id="burger" aria-label="Меню">☰</button>
+  </div>
+</header>
+
+<main>
+
+<!-- ГЛАВНАЯ -->
+<div class="page" data-page="/">
+  <section class="hero" style="padding:0">
+    <div class="bg"><img src="https://i9.photo.2gis.com/images/branch/0/30258560096263962_16df.jpg" alt="" loading="eager"></div>
+    <div class="wrap">
+      <div>
+        <div class="promo"><b>Диагностика подвески — бесплатно</b><span>акция сервиса</span></div>
+        <h1>Ремонт авто <span>без лишних</span> работ</h1>
+        <p>Диагностика, ТО и ремонт любых легковых машин — от «японцев» и VAG до УАЗа. Покажем неисправность на подъёмнике и объясним, что действительно нужно менять.</p>
+        <div class="cta">
+          <a href="tel:+79660142266" class="btn b-or">Записаться по телефону</a>
+          <a href="https://wa.me/79660142266" target="_blank" rel="noopener" class="btn b-line">Написать в WhatsApp</a>
+        </div>
+      </div>
+      <div class="spec">
+        <div><b>4,8</b><span>Яндекс Карты · 166 оценок</span></div>
+        <div><b>4,9</b><span>2ГИС · 31 оценка</span></div>
+        <div><b>4</b><span>подъёмника</span></div>
+        <div><b>10–20</b><span>без выходных</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head"><div><span class="mono tag">Что делаем</span><h2>Ремонт по узлам</h2></div><p>Цены «от» — финальная стоимость зависит от машины и объёма работ. Полный прайс — в разделе «Работы и цены».</p></div>
+      <div class="units">
+        <a href="#/prices" class="unit"><div class="top"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div><span class="mono">01</span></div><h3>Диагностика и ТО</h3><p>Компьютерная диагностика, проверка перед покупкой, замена масла и фильтров.</p><div class="from">от <em>200 ₽</em></div></a>
+        <a href="#/prices" class="unit"><div class="top"><div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="10" rx="2"/><path d="M8 8V5h8v3M2 12h2M20 12h2"/></svg></div><span class="mono">02</span></div><h3>Двигатель</h3><p>ГРМ, прокладки ГБЦ и клапанной крышки, замена двигателя.</p><div class="from">от <em>1 000 ₽</em></div></a>
+        <a href="#/prices" class="unit"><div class="top"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="7" cy="12" r="3"/><circle cx="17" cy="12" r="3"/><path d="M10 12h4"/></svg></div><span class="mono">03</span></div><h3>Трансмиссия</h3><p>Сцепление, ШРУСы, масло в АКПП и МКПП, замена коробки.</p><div class="from">от <em>1 500 ₽</em></div></a>
+        <a href="#/prices" class="unit"><div class="top"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 20l4-8 4 4 4-12"/><circle cx="6" cy="20" r="1.5"/></svg></div><span class="mono">04</span></div><h3>Подвеска</h3><p>Рычаги, сайлентблоки, шаровые, амортизаторы, ступичные подшипники.</p><div class="from">от <em>500 ₽</em></div></a>
+        <a href="#/prices" class="unit"><div class="top"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg></div><span class="mono">05</span></div><h3>Тормоза</h3><p>Колодки, диски, тормозная жидкость, ремонт суппортов.</p><div class="from">от <em>1 400 ₽</em></div></a>
+        <a href="#/prices" class="unit"><div class="top"><div class="ic"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div><span class="mono">06</span></div><h3>Электрика</h3><p>Проводка, прошивка ЭБУ, кондиционер, сигнализации.</p><div class="from">от <em>1 000 ₽</em></div></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark">
+    <div class="wrap why">
+      <div class="ph"><img src="https://i0.photo.2gis.com/images/branch/0/30258560107956436_3f81.jpg" alt="Зона ожидания для клиентов" loading="lazy"></div>
+      <div>
+        <span class="mono tag">Почему к нам</span>
+        <h2 style="font-size:clamp(34px,4.4vw,56px);margin-top:12px">Честно и по делу</h2>
+        <div class="checks">
+          <div><b>01</b><div><h3>Всё покажут</h3><p>Машину поднимут на подъёмнике при вас и объяснят, что и зачем менять.</p></div></div>
+          <div><b>02</b><div><h3>Быстро</h3><p>Многие работы делают за несколько часов. Запчасти под заказ привозят оперативно.</p></div></div>
+          <div><b>03</b><div><h3>Гарантия</h3><p>Гарантия на работы и запчасти — условия указаны в заказ-наряде.</p></div></div>
+          <div><b>04</b><div><h3>Удобно платить</h3><p>Карта, наличные, QR, перевод, безнал для организаций. Для клиентов — Wi-Fi.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head"><div><span class="mono tag">Марки</span><h2>Ремонтируем всё</h2></div><p>Отечественные, европейские, японские, корейские и китайские машины. Отдельный опыт — VAG и УАЗ.</p></div>
+      <div class="brands">
+        <span class="hl">УАЗ</span><span class="hl">Audi · VW · Skoda · Seat</span><span>Toyota</span><span>Lexus</span><span>Nissan</span><span>Mazda</span><span>Honda</span><span>Mitsubishi</span><span>Subaru</span><span>Hyundai</span><span>Kia</span><span>Genesis</span><span>BMW</span><span>Mercedes-Benz</span><span>Volvo</span><span>Land Rover</span><span>Ford</span><span>Renault</span><span>Peugeot</span><span>Citroen</span><span>Opel</span><span>Chevrolet</span><span>Haval</span><span>Geely</span><span>Chery</span><span>Лада</span><span>ГАЗ</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><div><span class="mono tag">Отзывы</span><h2>Что говорят клиенты</h2></div><a href="#/reviews" class="btn b-dark">Все отзывы</a></div>
+      <div class="revs">
+        <blockquote class="rv"><p>«Приехал поменять масло и фильтры, думал будет долго и дорого, оказалось быстро и качественно. Очень впечатлён слесарями, мужики с руками и мозгами»</p><footer>Сергей · Яндекс <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«4 подъёмника, хорошие спецы. Технику знают, ремонтируют быстро. Цены гуманные. Рекомендую, особенно для уазистов, хотя ремонтируют всё»</p><footer>Сердитый · Яндекс <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Оперативно нашли и устранили неисправность в подвеске (никто не мог найти). Приемлемые цены, гарантия на запчасти и услуги»</p><footer>Павел Ч · 2ГИС <i>★★★★★</i></footer></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap route">
+      <div>
+        <span class="mono tag">Как проехать</span>
+        <h2>Ванеева, 10</h2>
+        <div class="steps">
+          <div><p><b>Въезд с улицы Ворошилова</b> — не с Ванеева. Ориентир — ворота с вывеской «Эстакада».</p></div>
+          <div><p>Невский район, правый берег. От метро «Проспект Большевиков» — около 1,9 км.</p></div>
+          <div><p>Позвоните или напишите заранее — подберём время и запчасти.</p></div>
+        </div>
+        <div class="cta" style="margin-top:26px"><a href="tel:+79660142266" class="btn b-or">Позвонить</a><a href="#/contacts" class="btn b-dark">Карта</a></div>
+      </div>
+      <div>
+        <span class="mono tag">Режим</span>
+        <div class="hrs" style="margin-top:16px">
+          <div><span>Понедельник — пятница</span><b>10:00–20:00</b></div>
+          <div><span>Суббота — воскресенье</span><b>10:00–20:00</b></div>
+          <div><span>Запись</span><b>по телефону</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ЦЕНЫ -->
+<div class="page" data-page="/prices">
+  <div class="ptop"><div class="wrap"><span class="mono tag">Прайс</span><h1>Работы и цены</h1><p>Стоимость работ «от» — без учёта запчастей. Точную цену мастер назовёт после осмотра машины.</p></div></div>
+  <div class="pnav"><div class="wrap" id="pnav"></div></div>
+  <div class="wrap" id="plist"></div>
+  <div class="wrap">
+    <div class="pblock">
+      <div class="hd"><span class="mono">+</span><h2>Ещё делаем</h2></div>
+      <p style="color:#5b6570">Цены — по телефону после диагностики.</p>
+      <div class="worklist"><span>Ремонт АКПП, DSG, вариатора</span><span>Ремонт МКПП и РКПП</span><span>Ремонт ГБЦ</span><span>Эндоскопия двигателя</span><span>Раскоксовка</span><span>Чистка форсунок</span><span>Ремонт турбины</span><span>Ремонт дизельной топливной системы</span><span>Ремонт гибридов</span><span>Ремонт рулевых реек</span><span>Ремонт ГУР</span><span>Ремонт пневмоподвески</span><span>Ремонт карданных валов и мостов</span><span>Ремонт системы охлаждения</span><span>Ремонт выхлопной системы</span><span>Стартеры и генераторы</span><span>Автоэлектроника</span><span>Вебасто</span><span>Сигнализации и парктроники</span><span>Шиномонтаж</span><span>Правка и сварка дисков</span><span>Покраска дисков</span><span>Детейлинг и полировка</span></div>
+    </div>
+    <div class="pnote"><p>Цены по данным сервиса в Яндекс Картах. Акция: диагностика подвески — бесплатно.</p><a href="tel:+79660142266" class="btn b-or">+7 966 014-22-66</a></div>
+  </div>
+  <div style="height:80px"></div>
+</div>
+
+<!-- О СЕРВИСЕ -->
+<div class="page" data-page="/about">
+  <div class="ptop"><div class="wrap"><span class="mono tag">О сервисе</span><h1>Эстакада</h1><p>Легковой автосервис в Невском районе: четыре подъёмника, своя зона ожидания и мастера, которые объясняют, что делают.</p></div></div>
+  <section>
+    <div class="wrap">
+      <div class="head"><div><span class="mono tag">Фото</span><h2>Боксы и работы</h2></div><p>Нажмите на фото, чтобы открыть крупнее.</p></div>
+      <div class="gal">
+        <div class="ph w t"><img src="https://i9.photo.2gis.com/images/branch/0/30258560096263962_16df.jpg" alt="УАЗ на подъёмнике" loading="lazy"></div>
+        <div class="ph"><img src="https://i7.photo.2gis.com/images/branch/0/30258560059689509_2e02.jpg" alt="Въезд в сервис" loading="lazy"></div>
+        <div class="ph"><img src="https://i2.photo.2gis.com/images/branch/0/30258560107956428_0b9b.jpg" alt="Кроссовер на подъёмнике" loading="lazy"></div>
+        <div class="ph"><img src="https://i0.photo.2gis.com/images/branch/0/30258560107956436_3f81.jpg" alt="Зона ожидания" loading="lazy"></div>
+        <div class="ph"><img src="https://i2.photo.2gis.com/images/branch/0/30258560064069741_4451.jpg" alt="Ремонтная зона" loading="lazy"></div>
+        <div class="ph w"><img src="https://i1.photo.2gis.com/images/branch/0/30258560062116252_67ce.jpg" alt="Работы в боксе" loading="lazy"></div>
+        <div class="ph"><img src="https://i7.photo.2gis.com/images/branch/0/30258560061803768_54c7.jpg" alt="Детали двигателя" loading="lazy"></div>
+        <div class="ph"><img src="https://i3.photo.2gis.com/images/branch/0/30258560062496351_0be4.jpg" alt="Ремонт подвески" loading="lazy"></div>
+        <div class="ph"><img src="https://i3.photo.2gis.com/images/branch/0/30258560069530621_f976.jpg" alt="Автомобиль после ремонта" loading="lazy"></div>
+        <div class="ph"><img src="https://i2.photo.2gis.com/images/branch/0/30258560062152267_3a60.jpg" alt="На подъёмнике" loading="lazy"></div>
+        <div class="ph w"><img src="https://i6.photo.2gis.com/images/branch/0/30258560096263975_88b1.jpg" alt="Внедорожник в ремонте" loading="lazy"></div>
+        <div class="ph"><img src="https://i3.photo.2gis.com/images/branch/0/30258560107956442_07a0.jpg" alt="Офис приёмки" loading="lazy"></div>
+        <div class="ph"><img src="https://i6.photo.2gis.com/images/branch/0/30258560061853984_4fdc.jpg" alt="Ремонт ходовой" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ОТЗЫВЫ -->
+<div class="page" data-page="/reviews">
+  <div class="ptop"><div class="wrap"><span class="mono tag">Отзывы</span><h1>Нам доверяют</h1><p>Больше 120 отзывов в двух картах. «Хорошее место 2026» по версии Яндекс Карт.</p></div></div>
+  <section class="dark">
+    <div class="wrap">
+      <div class="scores">
+        <div class="sc"><div class="big">4,8</div><div><h3>Яндекс Карты</h3><p>166 оценок · 103 отзыва</p><a href="https://yandex.ru/maps/org/estakada/212523770143/reviews/" target="_blank" rel="noopener">Читать в Яндексе →</a></div></div>
+        <div class="sc"><div class="big">4,9</div><div><h3>2ГИС</h3><p>31 оценка · 22 отзыва</p><a href="https://2gis.ru/spb/firm/70000001052567767/tab/reviews" target="_blank" rel="noopener">Читать в 2ГИС →</a></div></div>
+      </div>
+      <div class="revs">
+        <blockquote class="rv"><p>«Обслуживание класс, всё чисто, гостеприимно. Работу выполнили быстро, качественно и недорого, с уважением к клиенту»</p><footer>Иван Иванов · Яндекс <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Специалист сервиса Роман быстро и чётко провёл диагностику и сделал заключение, что удалять катализатор нет необходимости, а нужно всего лишь заменить один из датчиков. Это позволило сэкономить»</p><footer>Владимир П. · Яндекс <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Мастер Алексей доходчиво объяснил, в чём проблема, и заказал запчасти. Сделали за пару часов, как и обещали»</p><footer>Полина · Яндекс <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Заехал без записи с ерундовой поломкой по электрике. Несмотря на то, что все были заняты, ребята сразу помогли»</p><footer>Vakin Sobakin · Яндекс <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Менял масло в двигателе на Тойоте Эсквайр, всё было сделано отлично, быстро, профессионально. Теперь буду ездить только сюда!»</p><footer>Василий Ворощук · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Хороший автосервис, всегда там ремонтирую свой автомобиль, ребята всё покажут и подскажут. Не первый год к ним обращаюсь»</p><footer>Городской житель · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Обращался не один раз и всегда быстро решали проблемы с моей, уже не молодой, Ауди. Машина не болталась по две недели в ремзоне»</p><footer>Сергей Головин · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Замена сцепления была выполнена в срок и без каких-либо проблем. Мастера внимательно отнеслись к моему автомобилю»</p><footer>Андрей Агалаков · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Посещал несколько раз. Переделывать пока за ними нечего не приходилось. Все дефекты покажут и объяснят. Цены приемлемые»</p><footer>Алексей Ефимов · Яндекс <i>★★★★★</i></footer></blockquote>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- КОНТАКТЫ -->
+<div class="page" data-page="/contacts">
+  <div class="ptop"><div class="wrap"><span class="mono tag">Контакты</span><h1>Запись и адрес</h1></div></div>
+  <section>
+    <div class="wrap cgrid">
+      <div class="cbox">
+        <div class="kv">
+          <div><span class="mono">Адрес</span><b>Санкт-Петербург, ул. Ванеева, 10</b><em>Въезд с ул. Ворошилова · м. «Проспект Большевиков»</em></div>
+          <div><span class="mono">Телефон</span><a href="tel:+79660142266">+7 966 014-22-66</a></div>
+          <div><span class="mono">Режим</span><b>Ежедневно 10:00–20:00</b></div>
+          <div><span class="mono">Почта</span><a href="mailto:Estakada.auto@yandex.ru" style="font-size:20px">Estakada.auto@yandex.ru</a></div>
+        </div>
+        <div class="cta"><a href="tel:+79660142266" class="btn b-or">Позвонить</a><a href="https://wa.me/79660142266" target="_blank" rel="noopener" class="btn b-blue">WhatsApp</a><a href="https://t.me/+79660142266" target="_blank" rel="noopener" class="btn b-dark">Telegram</a></div>
+      </div>
+      <div class="map"><iframe src="https://yandex.ru/map-widget/v1/?ll=30.450315%2C59.928233&z=16&pt=30.450315,59.928233,pm2rdm" loading="lazy" title="Карта: ул. Ванеева, 10"></iframe></div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="g">
+      <div><a href="#/" class="logo"><svg><use href="#lift"/></svg><div><b>ЭСТАКАДА</b><small>автосервис · СПб</small></div></a><p style="margin-top:14px;max-width:340px">Ул. Ванеева, 10 (въезд с ул. Ворошилова), Санкт-Петербург. Диагностика, ТО и ремонт легковых автомобилей.</p></div>
+      <div><h4>Разделы</h4><a href="#/prices">Работы и цены</a><a href="#/about">О сервисе</a><a href="#/reviews">Отзывы</a><a href="#/contacts">Контакты</a></div>
+      <div><h4>Связь</h4><a href="tel:+79660142266">+7 966 014-22-66</a><a href="https://wa.me/79660142266" target="_blank" rel="noopener">WhatsApp</a><a href="https://t.me/+79660142266" target="_blank" rel="noopener">Telegram</a><span style="display:block">Ежедневно 10:00–20:00</span></div>
+    </div>
+    <div class="credit"><span>© Автосервис «Эстакада», Санкт-Петербург</span><span>Демо-сайт · разработка: Сергей Музыченко, Telegram <a href="https://t.me/spectator0011" target="_blank" rel="noopener">@spectator0011</a></span></div>
+  </div>
+</footer>
+
+<div class="callbar"><a href="tel:+79660142266" class="btn b-or">Позвонить</a><a href="https://wa.me/79660142266" class="btn b-blue">WhatsApp</a></div>
+<div class="lb" id="lb"><img alt=""></div>
+
+<script>
+const P=[
+ ["diag","Диагностика и ТО",[["Компьютерная диагностика автомобиля",1000],["Диагностика перед покупкой",2000],["Комплексное ТО",1000],["Замена масла в двигателе",1000],["Замена фильтра салона",200],["Замена топливного фильтра",1000],["Заправка кондиционера",2000]]],
+ ["engine","Двигатель",[["Замена ремня / цепи ГРМ",7000],["Замена цепи ГРМ — VAG (Audi, VW, Skoda, Seat, Porsche, Bentley)",16000,"цена за работу"],["Замена цепи ГРМ — УАЗ, все модели",22000,"гарантия 1 год или 20 000 км; все детали в наличии"],["Замена прокладки клапанной крышки",1700],["Замена прокладки ГБЦ",15000],["Замена двигателя",20000]]],
+ ["trans","Трансмиссия",[["Замена масла МКПП",1500],["Замена масла АКПП",2500],["Замена наружного ШРУСа",2500],["Замена внутреннего ШРУСа",3500],["Замена комплекта сцепления",7000],["Замена АКПП",10000]]],
+ ["susp","Подвеска",[["Замена (перепрессовка) сайлентблока",500],["Замена шаровой опоры",1000],["Замена рычага подвески",2000],["Замена ступичного подшипника",2000],["Замена амортизатора (макферсон)",2500],["Замена шкворней УАЗ (4 шт.)",20000,"мост «Спайсер» и открытый мост нового образца"]]],
+ ["brakes","Тормоза",[["Замена тормозных колодок",1400],["Замена тормозного диска",1400],["Замена тормозной жидкости",1500],["Ремонт тормозного суппорта",1500]]],
+ ["elec","Электрика",[["Ремонт электропроводки",1000],["Прошивка ЭБУ",7000,"чип-тюнинг, отключение сажевого фильтра и иммобилайзера, адаптация"]]]
+];
+const nav=document.getElementById('pnav'),list=document.getElementById('plist');
+P.forEach(([id,name,rows],i)=>{
+  nav.insertAdjacentHTML('beforeend',`<button class="pn${i?'':' on'}" data-go="${id}">${name}</button>`);
+  list.insertAdjacentHTML('beforeend',`<div class="pblock" id="${id}"><div class="hd"><span class="mono">${String(i+1).padStart(2,'0')}</span><h2>${name}</h2></div><table>${rows.map(([n,p,s])=>`<tr><td>${n}${s?`<small>${s}</small>`:''}</td><td>от ${p.toLocaleString('ru-RU').replace(/ /g,' ')} ₽</td></tr>`).join('')}</table></div>`);
+});
+const pns=[...nav.children];
+pns.forEach(b=>b.onclick=()=>document.getElementById(b.dataset.go).scrollIntoView({behavior:'smooth'}));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)pns.forEach(b=>b.classList.toggle('on',b.dataset.go===e.target.id))}),{rootMargin:'-40% 0px -55% 0px'});
+document.querySelectorAll('.pblock[id]').forEach(b=>io.observe(b));
+
+const pages=[...document.querySelectorAll('.page')],links=[...document.querySelectorAll('.links a')],menu=document.getElementById('links');
+const titles={'/':'Эстакада — автосервис на Ванеева, 10','/prices':'Работы и цены — Эстакада','/about':'О сервисе — Эстакада','/reviews':'Отзывы — Эстакада','/contacts':'Контакты — Эстакада'};
+function route(){const p=location.hash.replace(/^#/,'')||'/';const t=pages.find(x=>x.dataset.page===p)||pages[0];pages.forEach(x=>x.classList.toggle('on',x===t));links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+t.dataset.page));menu.classList.remove('open');scrollTo(0,0);document.title=titles[t.dataset.page]}
+addEventListener('hashchange',route);route();
+document.getElementById('burger').onclick=()=>menu.classList.toggle('open');
+const lb=document.getElementById('lb'),li=lb.querySelector('img');
+document.querySelectorAll('.gal .ph').forEach(p=>p.onclick=()=>{const i=p.querySelector('img');li.src=i.src;li.alt=i.alt;lb.classList.add('on')});
+lb.onclick=()=>lb.classList.remove('on');addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+document.querySelectorAll('img').forEach(i=>i.addEventListener('error',()=>{i.style.visibility='hidden'}));
+</script>
+</body>
+</html>

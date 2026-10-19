@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Студия «Развитие» — фитнес, пилатес, йога и танцы на Хуторской, 1</title>
+<meta name="description" content="Студия «Развитие» в ЖК «Исеть парк», Екатеринбург: пилатес в мини-группах и на реформере, силовые, йога, танцы, детская хореография, кунг-фу Вин Чун для детей и консультации психолога. Пробная тренировка — 500 ₽.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Wix+Madefor+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f5ef; --white:#fff; --sage:#5d7a5f; --sage2:#466048; --mint:#e3ebdf; --clay:#c8724f; --peach:#f5e3d7; --ink:#1f2a22; --mute:#66706a; --line:rgba(31,42,34,.12);
+  --max:1200px; --r:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.65 "Wix Madefor Text",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:Lora,Georgia,serif;font-weight:600;line-height:1.08;letter-spacing:-.01em}
+h1 em,h2 em{font-style:italic;font-weight:500;color:var(--sage)}
+.chip{display:inline-block;font-weight:600;font-size:13px;letter-spacing:.06em;color:var(--sage2);background:var(--mint);padding:7px 14px;border-radius:999px}
+.ph{overflow:hidden;background:#e7e3d9;border-radius:var(--r)}
+.ph img{width:100%;height:100%;object-fit:cover}
+
+header{position:sticky;top:0;z-index:40;background:rgba(247,245,239,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font-family:Lora;font-weight:700;font-size:23px;line-height:1}
+.logo .mk{width:38px;height:38px;border-radius:12px;background:var(--sage);display:grid;place-items:center}
+.logo .mk svg{width:22px;height:22px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round}
+.logo small{display:block;font-family:"Wix Madefor Text";font-weight:500;font-size:11.5px;color:var(--mute);letter-spacing:.06em;margin-top:3px}
+.links{display:flex;gap:2px}
+.links a{padding:9px 13px;border-radius:10px;font-weight:500;font-size:15px;color:var(--mute)}
+.links a:hover{color:var(--ink)}
+.links a.on{background:var(--mint);color:var(--sage2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 24px;border-radius:14px;font:600 15.5px "Wix Madefor Text";transition:transform .2s,background .2s;white-space:nowrap;border:0;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.b-sage{background:var(--sage);color:#fff}
+.b-sage:hover{background:var(--sage2)}
+.b-clay{background:var(--clay);color:#fff}
+.b-line{background:#fff;border:1.5px solid var(--line)}
+.b-line:hover{border-color:var(--sage)}
+.burger{display:none;width:46px;height:46px;border-radius:12px;border:0;background:var(--sage);color:#fff;font-size:18px;cursor:pointer}
+
+.page{display:none;animation:in .4s ease}
+.page.on{display:block}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+section{padding:90px 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:40px;flex-wrap:wrap}
+.head h2{font-size:clamp(34px,4.6vw,56px);margin-top:14px}
+.head p{max-width:420px;color:var(--mute)}
+.ptop{padding:68px 0 16px}
+.ptop h1{font-size:clamp(42px,6.4vw,84px);margin-top:16px;max-width:900px}
+.ptop p{max-width:620px;color:var(--mute);font-size:18px;margin-top:16px}
+
+/* hero */
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center;padding-top:52px;padding-bottom:30px}
+.hero h1{font-size:clamp(44px,6.2vw,82px);margin:18px 0 0}
+.hero p{font-size:19px;color:var(--mute);max-width:520px;margin:20px 0 28px}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.hstats{display:flex;gap:30px;margin-top:36px;flex-wrap:wrap}
+.hstats b{display:block;font-family:Lora;font-size:34px;line-height:1}
+.hstats span{font-size:14px;color:var(--mute)}
+.hgrid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:260px 260px;gap:14px;position:relative}
+.hgrid .ph:first-child{grid-row:span 2}
+.offer{position:absolute;left:-26px;top:24px;background:var(--clay);color:#fff;border-radius:18px;padding:16px 20px;box-shadow:0 18px 36px -18px rgba(0,0,0,.45);transform:rotate(-4deg)}
+.offer b{display:block;font-family:Lora;font-size:30px;line-height:1}
+.offer span{font-size:13.5px;font-weight:500}
+
+/* for whom */
+.who{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.wc{border-radius:26px;padding:34px;display:flex;flex-direction:column;gap:12px;min-height:330px}
+.wc h3{font-size:30px}
+.wc ul{list-style:none;display:grid;gap:7px;flex:1}
+.wc li{display:flex;gap:10px}
+.wc li::before{content:"—";color:var(--sage)}
+.wc .from{font-weight:700}
+.wc.a{background:#fff;border:1px solid var(--line)}
+.wc.b{background:var(--peach)}
+.wc.b li::before{color:var(--clay)}
+.wc.c{background:var(--sage);color:#fff}
+.wc.c li::before{color:#cfe0cb}
+
+/* reformer */
+.ref{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--ink);color:#fff;border-radius:32px;overflow:hidden}
+.ref .ph{border-radius:0;min-height:460px}
+.ref .tx{padding:60px 52px;display:flex;flex-direction:column;justify-content:center}
+.ref .chip{background:rgba(255,255,255,.1);color:#d7e5d3;align-self:flex-start}
+.ref h2{font-size:clamp(34px,4vw,52px);margin:16px 0}
+.ref h2 em{color:#b9d1b4}
+.ref p{color:#c3cbc5;margin-bottom:22px}
+.ref .eq{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.ref .eq span{border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:7px 14px;font-size:14.5px}
+
+/* psych */
+.psy{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;align-items:center;background:var(--mint);border-radius:32px;padding:52px}
+.psy h2{font-size:clamp(32px,3.8vw,48px);margin:14px 0}
+.psy p{color:var(--mute);margin-bottom:12px}
+.psy .card{background:#fff;border-radius:22px;padding:30px}
+.psy .card b{font-family:Lora;font-size:40px}
+.psy .card ul{list-style:none;margin:14px 0 20px;display:grid;gap:8px}
+.psy .card li{display:flex;gap:10px}
+.psy .card li::before{content:"✓";color:var(--sage);font-weight:700}
+
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rv{background:#fff;border-radius:var(--r);padding:28px;border:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;gap:18px}
+.rv p{font-size:16.5px}
+.rv footer{display:flex;justify-content:space-between;gap:10px;font-size:14px;font-weight:600;color:var(--mute)}
+.rv footer i{font-style:normal;color:var(--clay);letter-spacing:2px}
+.rv.hl{background:var(--sage);color:#fff;border:0}
+.rv.hl p{font-family:Lora;font-size:21px;line-height:1.4}
+.rv.hl footer{color:#d7e5d3}
+.rv.hl footer i{color:#fff}
+
+/* directions page */
+.dg{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.dc{background:#fff;border-radius:24px;border:1px solid var(--line);padding:32px}
+.dc .top{display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin-bottom:10px;flex-wrap:wrap}
+.dc h2{font-size:30px}
+.dc .pr{font-family:Lora;font-weight:600;font-size:22px;color:var(--sage2);white-space:nowrap}
+.dc p{color:var(--mute)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.tags span{background:var(--bg);border-radius:999px;padding:6px 13px;font-size:14px;font-weight:500}
+
+/* prices */
+.ptable{background:#fff;border-radius:26px;border:1px solid var(--line);overflow:hidden}
+.prow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:22px;padding:22px 30px;border-bottom:1px solid var(--line);align-items:center}
+.prow:last-child{border-bottom:0}
+.prow small{display:block;color:var(--mute);font-size:14.5px;margin-top:2px}
+.prow b{font-family:Lora;font-weight:600;font-size:23px;white-space:nowrap}
+.pbanners{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:22px}
+.pb{border-radius:24px;padding:30px 32px}
+.pb b{display:block;font-family:Lora;font-size:clamp(40px,5vw,60px);line-height:1}
+.pb span{display:block;margin-top:8px;font-weight:500}
+.pb.t{background:var(--clay);color:#fff}
+.pb.m{background:var(--sage);color:#fff}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:230px;gap:12px}
+.gal .ph{cursor:zoom-in;border-radius:18px}
+.gal .t{grid-row:span 2}
+.gal .w{grid-column:span 2}
+.lb{position:fixed;inset:0;background:rgba(20,28,22,.93);display:none;place-items:center;z-index:80;padding:20px;cursor:zoom-out}
+.lb.on{display:grid}
+.lb img{max-width:92vw;max-height:88vh;border-radius:14px}
+
+/* contacts */
+.cgrid{display:grid;grid-template-columns:1fr 1.15fr;gap:20px}
+.cbox{background:#fff;border-radius:26px;border:1px solid var(--line);padding:38px}
+.kv{display:grid;gap:22px;margin-bottom:28px}
+.kv span{display:block;font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--sage);margin-bottom:4px}
+.kv b,.kv a.v{font-family:Lora;font-weight:600;font-size:24px;line-height:1.2;display:block}
+.kv a.v:hover{color:var(--sage)}
+.kv em{display:block;font-style:normal;color:var(--mute);font-size:15.5px;margin-top:3px}
+.soc{display:flex;gap:8px;flex-wrap:wrap}
+.map{border-radius:26px;overflow:hidden;min-height:520px;background:#e7e3d9}
+.map iframe{width:100%;height:100%;min-height:520px;border:0;display:block}
+
+.foot{background:var(--ink);color:#a8b2ab;padding:58px 0 28px;margin-top:60px}
+.foot .g{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+.foot .logo{color:#fff}
+.foot .logo small{color:#8a948d}
+.foot h4{font-family:Lora;color:#fff;font-size:18px;margin-bottom:12px}
+.foot .g a:not(.logo){display:block;margin-bottom:6px}
+.foot a:hover{color:#fff}
+.credit{margin-top:40px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13.5px;color:#7e8881}
+.credit a{color:#dfe7e1}
+
+.callbar{display:none}
+
+@media (max-width:1040px){
+  .hero .wrap,.ref,.psy,.cgrid{grid-template-columns:1fr}
+  .who,.revs{grid-template-columns:1fr 1fr}
+  .dg{grid-template-columns:1fr}
+  .gal{grid-template-columns:repeat(3,1fr)}
+  .ref .tx{padding:44px 34px}
+  .ref .ph{min-height:340px}
+  .psy{padding:36px}
+  .offer{left:12px}
+  .foot .g{grid-template-columns:1fr 1fr}
+}
+@media (max-width:880px){
+  .links{display:none;position:absolute;top:74px;left:0;right:0;flex-direction:column;background:var(--bg);padding:8px 16px 18px;border-bottom:1px solid var(--line)}
+  .links.open{display:flex}
+  .links a{font-size:18px;padding:13px 14px}
+  .nav>.btn{display:none}
+  .burger{display:block}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  section{padding:60px 0}
+  .hero .wrap{padding-top:30px;gap:34px}
+  .hgrid{grid-template-rows:180px 180px;gap:10px}
+  .offer{left:8px;top:8px;padding:12px 16px}
+  .offer b{font-size:24px}
+  .who,.revs,.pbanners{grid-template-columns:1fr}
+  .wc{min-height:0;padding:26px}
+  .ref{border-radius:24px}
+  .ref .tx{padding:32px 22px}
+  .psy{padding:24px;border-radius:24px}
+  .dc,.cbox{padding:24px}
+  .prow{padding:18px}
+  .prow b{font-size:19px}
+  .gal{grid-template-columns:1fr 1fr;grid-auto-rows:160px}
+  .gal .w{grid-column:span 2}
+  .foot .g{grid-template-columns:1fr}
+  .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:50;gap:8px}
+  .callbar .btn{flex:1;box-shadow:0 12px 26px -12px rgba(0,0,0,.5)}
+  .foot{padding-bottom:100px}
+}
+@media (prefers-reduced-motion:reduce){.page{animation:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#/" class="logo" aria-label="Студия «Развитие» — на главную"><span class="mk"><svg viewBox="0 0 24 24"><path d="M12 21V10"/><path d="M12 13c-4 0-6-3-6-7 4 0 6 3 6 7z"/><path d="M12 11c0-4 2-7 6-7 0 4-2 7-6 7z"/></svg></span><span>Развитие<small>студия · Хуторская, 1</small></span></a>
+    <nav class="links" id="links">
+      <a href="#/">Главная</a>
+      <a href="#/directions">Направления</a>
+      <a href="#/prices">Цены</a>
+      <a href="#/photos">Фото</a>
+      <a href="#/reviews">Отзывы</a>
+      <a href="#/contacts">Контакты</a>
+    </nav>
+    <a href="https://wa.me/79122386142" target="_blank" rel="noopener" class="btn b-sage">Записаться</a>
+    <button class="burger" id="burger" aria-label="Меню">☰</button>
+  </div>
+</header>
+
+<main>
+
+<!-- ГЛАВНАЯ -->
+<div class="page" data-page="/">
+  <section class="hero" style="padding:0">
+    <div class="wrap">
+      <div>
+        <span class="chip">Студия в ЖК «Исеть парк» · Екатеринбург</span>
+        <h1>Тренировки для <em>тела</em> и для <em>души</em></h1>
+        <p>Пилатес в мини-группах и на большом оборудовании, силовые, йога и танцы для взрослых. Хореография и кунг-фу для детей. Консультации психолога — в той же студии.</p>
+        <div class="cta">
+          <a href="https://wa.me/79122386142" target="_blank" rel="noopener" class="btn b-sage">Записаться на пробную</a>
+          <a href="#/directions" class="btn b-line">Все направления</a>
+        </div>
+        <div class="hstats">
+          <div><b>5,0</b><span>2ГИС · 14 оценок</span></div>
+          <div><b>от 500 ₽</b><span>за занятие</span></div>
+          <div><b>9–21</b><span>ежедневно</span></div>
+        </div>
+      </div>
+      <div class="hgrid">
+        <div class="ph"><img src="https://i1.photo.2gis.com/photo-gallery/05cbbd44-4b15-4e66-8660-e00f6de55d0a.jpg" alt="Занятие в студии «Развитие»" loading="eager"></div>
+        <div class="ph"><img src="https://i0.photo.2gis.com/photo-gallery/dadaf243-09d1-4197-9092-baec51d3b01f.jpg" alt="Групповое занятие" loading="eager"></div>
+        <div class="ph"><img src="https://i1.photo.2gis.com/video-gallery/32b909be-a404-42ff-a3c6-82354f961675.jpg" alt="Пилатес на реформере" loading="eager"></div>
+        <div class="offer"><b>500 ₽</b><span>пробная тренировка</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head"><div><span class="chip">Для кого</span><h2>Направления на <em>любой запрос</em></h2></div><a href="#/directions" class="btn b-line">Подробнее</a></div>
+      <div class="who">
+        <div class="wc a"><h3>Взрослым</h3><ul><li>Пилатес в мини-группах</li><li>Растяжка, МФР, здоровая спина</li><li>Силовые тренировки</li><li>Хатха-йога, Йога Strong, ресурсная йога</li><li>Стрип-пластика, танец живота, джаз-фанк</li></ul><span class="from">от 500 ₽</span></div>
+        <div class="wc b"><h3>Детям</h3><ul><li>Современная хореография: 3–5, 6–9, 10+ лет</li><li>Кунг-фу Вин Чун</li><li>Йога для детей</li></ul><span class="from">от 500 ₽</span></div>
+        <div class="wc c"><h3>Персонально</h3><ul><li>Пилатес на реформере, «Кадиллаке» и «Бочке»</li><li>Персональный тренер</li><li>Консультации психолога</li></ul><span class="from">от 2 000 ₽</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="ref">
+        <div class="ph"><img src="https://i1.photo.2gis.com/video-gallery/32b909be-a404-42ff-a3c6-82354f961675.jpg" alt="Пилатес на большом оборудовании" loading="lazy"></div>
+        <div class="tx">
+          <span class="chip">Индивидуально</span>
+          <h2>Пилатес на <em>большом оборудовании</em></h2>
+          <p>Индивидуальные тренировки на профессиональном оборудовании для пилатеса.</p>
+          <div class="eq"><span>Реформер</span><span>«Кадиллак»</span><span>Лестница-«Бочка»</span></div>
+          <a href="https://wa.me/79122386142" target="_blank" rel="noopener" class="btn b-clay" style="align-self:flex-start">2 000–2 500 ₽ · записаться</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="psy">
+        <div>
+          <span class="chip" style="background:#fff">Психолог</span>
+          <h2>Не только <em>тело</em></h2>
+          <p>В студии принимает клинический психолог Олеся Геннадьевна — индивидуальные и семейные консультации, терапия. Есть личный приём и онлайн-консультации.</p>
+          <p>Её же называют «супер тренером»: в отзывах благодарят и за тренировки, и за психологическую помощь.</p>
+        </div>
+        <div class="card">
+          <b>4 000 ₽</b><span style="color:var(--mute)"> · приём, терапия</span>
+          <ul><li>Индивидуальный психолог для взрослых</li><li>Семейный психолог</li><li>Очно или онлайн</li></ul>
+          <a href="https://wa.me/79122386142" target="_blank" rel="noopener" class="btn b-sage">Записаться на консультацию</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><div><span class="chip">Отзывы</span><h2>Что говорят <em>ученики</em></h2></div><a href="#/reviews" class="btn b-line">Все отзывы</a></div>
+      <div class="revs">
+        <div class="rv hl"><p>«„Развитие“ — рецепт здоровья, релакса, хорошего сна и настроения! Студия насыщена различными направлениями тренировок, на любой запрос»</p><footer>Галия Бикамова · 2ГИС <i>★★★★★</i></footer></div>
+        <div class="rv"><p>«Тренировки не только для тела, но и для души. Тренер всегда чувствует настроение и подбирает тренировку именно ту, которая нужна!»</p><footer>Светлана · 2ГИС <i>★★★★★</i></footer></div>
+        <div class="rv"><p>«Хожу на тренировки с января. Улучшилось состояние здоровья и подтянулось тело. Олеся Геннадьевна — супер тренер!»</p><footer>Виктория Чиркова · 2ГИС <i>★★★★★</i></footer></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- НАПРАВЛЕНИЯ -->
+<div class="page" data-page="/directions">
+  <div class="ptop"><div class="wrap"><span class="chip">Направления</span><h1>Чем можно заниматься в <em>«Развитии»</em></h1><p>Мини-группы для взрослых и детей, персональные тренировки и консультации психолога. Пробное занятие на любое направление — 500 ₽.</p></div></div>
+  <section style="padding-top:40px">
+    <div class="wrap dg">
+      <div class="dc"><div class="top"><h2>Фитнес</h2><span class="pr">500–900 ₽</span></div><p>Силовые тренировки, пилатес, растяжка, здоровая спина. Например, растяжка + МФР + пилатес в мини-группе.</p><div class="tags"><span>Силовые</span><span>Пилатес</span><span>Растяжка</span><span>МФР</span><span>Здоровая спина</span><span>Шейпинг</span></div></div>
+      <div class="dc"><div class="top"><h2>Йога</h2><span class="pr">500–900 ₽</span></div><p>Хатха-йога, Йога Strong и ресурсная йога. Есть отдельные занятия йогой для детей.</p><div class="tags"><span>Хатха</span><span>Йога Strong</span><span>Ресурсная</span><span>Детская йога</span></div></div>
+      <div class="dc"><div class="top"><h2>Танцы для взрослых</h2><span class="pr">500–900 ₽</span></div><p>Танцевальные направления в мини-группах.</p><div class="tags"><span>Стрип-пластика</span><span>Танец живота</span><span>Джаз-модерн</span><span>Джаз-фанк</span></div></div>
+      <div class="dc"><div class="top"><h2>Детская хореография</h2><span class="pr">650–900 ₽</span></div><p>Современная хореография по возрастным группам: 3–5 лет, 6–9 лет и старше 10 лет.</p><div class="tags"><span>3–5 лет</span><span>6–9 лет</span><span>10+</span></div></div>
+      <div class="dc"><div class="top"><h2>Кунг-фу Вин Чун</h2><span class="pr">500–700 ₽</span></div><p>Для детей и подростков. Боевое искусство и «умный спорт»: общее физическое развитие и мягкое погружение в систему единоборств.</p><div class="tags"><span>Дети</span><span>Подростки</span></div></div>
+      <div class="dc"><div class="top"><h2>Пилатес на оборудовании</h2><span class="pr">2 000–2 500 ₽</span></div><p>Индивидуальные тренировки на реформере, «Кадиллаке» и лестнице-«Бочке».</p><div class="tags"><span>Реформер</span><span>«Кадиллак»</span><span>«Бочка»</span><span>Персонально</span></div></div>
+      <div class="dc" style="grid-column:1/-1;background:var(--mint);border:0"><div class="top"><h2>Психолог</h2><span class="pr">4 000 ₽</span></div><p>Приём клинического психолога и терапия. Индивидуальные консультации для взрослых и семейные. Личный приём или онлайн.</p></div>
+    </div>
+  </section>
+</div>
+
+<!-- ЦЕНЫ -->
+<div class="page" data-page="/prices">
+  <div class="ptop"><div class="wrap"><span class="chip">Цены</span><h1>Стоимость <em>занятий</em></h1><p>Прайс студии в 2ГИС, обновлён 1 октября 2026. Возможны разовые посещения и абонементы.</p></div></div>
+  <section style="padding-top:40px">
+    <div class="wrap">
+      <div class="pbanners">
+        <div class="pb t"><b>500 ₽</b><span>пробная тренировка — на детские и взрослые направления</span></div>
+        <div class="pb m"><b>от 3 200 ₽</b><span>месячный абонемент</span></div>
+      </div>
+      <div class="ptable">
+        <div class="prow"><div>Фитнес-тренировки<small>силовые, пилатес, растяжка, здоровая спина</small></div><b>500–900 ₽</b></div>
+        <div class="prow"><div>Йога<small>хатха, Йога Strong, ресурсная йога</small></div><b>500–900 ₽</b></div>
+        <div class="prow"><div>Танцевальные направления для взрослых<small>стрип-пластика, танец живота</small></div><b>500–900 ₽</b></div>
+        <div class="prow"><div>Современная хореография для детей<small>группы 3–5, 6–9 лет и старше 10</small></div><b>650–900 ₽</b></div>
+        <div class="prow"><div>Кунг-фу Вин Чун для детей и подростков</div><b>500–700 ₽</b></div>
+        <div class="prow"><div>Пилатес на большом оборудовании<small>индивидуально: реформер, «Кадиллак», «Бочка»</small></div><b>2 000–2 500 ₽</b></div>
+        <div class="prow"><div>Консультация психолога, терапия</div><b>4 000 ₽</b></div>
+      </div>
+      <p style="color:var(--mute);font-size:15px;margin-top:18px">Оплата наличными или переводом с карты.</p>
+    </div>
+  </section>
+</div>
+
+<!-- ФОТО -->
+<div class="page" data-page="/photos">
+  <div class="ptop"><div class="wrap"><span class="chip">Фото</span><h1>Светлая <em>новая</em> студия</h1><p>Большие окна, зеркала, инвентарь для пилатеса и силовых, тренажёры для пилатеса на оборудовании.</p></div></div>
+  <section style="padding-top:40px"><div class="wrap"><div class="gal" id="gal"></div></div></section>
+</div>
+
+<!-- ОТЗЫВЫ -->
+<div class="page" data-page="/reviews">
+  <div class="ptop"><div class="wrap"><span class="chip">Отзывы · 5,0 в 2ГИС</span><h1>Слово <em>ученикам</em></h1><p>14 оценок, все — пятёрки. <a href="https://2gis.ru/ekaterinburg/firm/70000001104773827/tab/reviews" target="_blank" rel="noopener" style="color:var(--sage2);font-weight:600">Читать в 2ГИС →</a></p></div></div>
+  <section style="padding-top:40px">
+    <div class="wrap revs">
+      <div class="rv hl"><p>«Занятия просто волшебные, каждый раз новый сценарий упражнений, в том числе с инвентарём. А главное — чудесный тренер Олеся! Спасибо за улыбки, позитив и индивидуальный подход к каждому»</p><footer>Галия Бикамова <i>★★★★★</i></footer></div>
+      <div class="rv"><p>«Хожу в эту студию уже 3 месяца. Тренировки очень результативные, всегда разнообразные. Очень приятно, что студия новая, инвентарь всё время пополняется»</p><footer>Светлана <i>★★★★★</i></footer></div>
+      <div class="rv"><p>«В шаговой доступности от дома, хорошие мини-групповые тренировки. Растяжка + МФР + пилатес — любимая тренировка. Приветливый и профессиональный тренер Олеся»</p><footer>Елена Лобанова <i>★★★★★</i></footer></div>
+      <div class="rv"><p>«Очень нравится атмосфера. Каждая тренировка разная. Улучшилось состояние здоровья и подтянулось тело»</p><footer>Виктория Чиркова <i>★★★★★</i></footer></div>
+      <div class="rv"><p>«Небольшая студия, очень удобно, что находится прям в моём доме. Хожу на пилатес и растяжку в мини-группе. Чудесный, внимательный тренер»</p><footer>Ирина Герасимова <i>★★★★★</i></footer></div>
+      <div class="rv"><p>«Жена дочку сюда водит на занятия. Довольны мои девочки, нравится»</p><footer>Олег Шубин <i>★★★★★</i></footer></div>
+      <div class="rv"><p>«Хочу выразить огромную благодарность Олесе Геннадьевне! Обращалась к ней за психологической помощью. Если вы цените профессиональный подход, который даёт результаты, — вам сюда!»</p><footer>Александра Фишелева <i>★★★★★</i></footer></div>
+      <div class="rv"><p>«Очень корректный и деликатный подход! Проходила онлайн-консультации и приезжала лично, так как живу в Тюмени»</p><footer>Екатерина Самойлова <i>★★★★★</i></footer></div>
+      <div class="rv"><p>«Спасибо психологу Олесе Геннадьевне за профессиональную помощь!»</p><footer>Дмитрий <i>★★★★★</i></footer></div>
+    </div>
+  </section>
+</div>
+
+<!-- КОНТАКТЫ -->
+<div class="page" data-page="/contacts">
+  <div class="ptop"><div class="wrap"><span class="chip">Контакты</span><h1>Приходите на <em>пробное</em></h1><p>Студия находится в ЖК «Исеть парк», Октябрьский район.</p></div></div>
+  <section style="padding-top:40px">
+    <div class="wrap cgrid">
+      <div class="cbox">
+        <div class="kv">
+          <div><span>Адрес</span><b>Екатеринбург, Хуторская ул., 1</b><em>ЖК «Исеть парк», Октябрьский район</em></div>
+          <div><span>Телефон, WhatsApp, Telegram</span><a class="v" href="tel:+79122386142">+7 912 238-61-42</a></div>
+          <div><span>Время работы</span><b>Ежедневно 9:00–21:00</b></div>
+          <div><span>Почта</span><a class="v" href="mailto:belousova1975@mail.ru" style="font-size:20px">belousova1975@mail.ru</a></div>
+        </div>
+        <div class="soc">
+          <a href="https://wa.me/79122386142" target="_blank" rel="noopener" class="btn b-sage">WhatsApp</a>
+          <a href="https://t.me/+79122386142" target="_blank" rel="noopener" class="btn b-line">Telegram</a>
+          <a href="https://vk.com/club218527683" target="_blank" rel="noopener" class="btn b-line">ВКонтакте</a>
+        </div>
+      </div>
+      <div class="map"><iframe src="https://yandex.ru/map-widget/v1/?ll=60.641728%2C56.802613&z=16&pt=60.641728,56.802613,pm2gnm" loading="lazy" title="Карта: Хуторская ул., 1"></iframe></div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="g">
+      <div><a href="#/" class="logo"><span class="mk"><svg viewBox="0 0 24 24"><path d="M12 21V10"/><path d="M12 13c-4 0-6-3-6-7 4 0 6 3 6 7z"/><path d="M12 11c0-4 2-7 6-7 0 4-2 7-6 7z"/></svg></span><span>Развитие<small>студия · Хуторская, 1</small></span></a><p style="margin-top:16px;max-width:320px">Фитнес, пилатес, йога, танцы, детские направления и психолог в ЖК «Исеть парк».</p></div>
+      <div><h4>Разделы</h4><a href="#/directions">Направления</a><a href="#/prices">Цены</a><a href="#/photos">Фото</a><a href="#/reviews">Отзывы</a></div>
+      <div><h4>Связь</h4><a href="tel:+79122386142">+7 912 238-61-42</a><a href="https://wa.me/79122386142" target="_blank" rel="noopener">WhatsApp</a><a href="https://vk.com/club218527683" target="_blank" rel="noopener">ВКонтакте</a><span>Ежедневно 9:00–21:00</span></div>
+    </div>
+    <div class="credit"><span>© Студия «Развитие», Екатеринбург</span><span>Демо-сайт · разработка: Сергей Музыченко, Telegram <a href="https://t.me/spectator0011" target="_blank" rel="noopener">@spectator0011</a></span></div>
+  </div>
+</footer>
+
+<div class="callbar"><a href="https://wa.me/79122386142" target="_blank" rel="noopener" class="btn b-sage">Записаться</a><a href="tel:+79122386142" class="btn b-line">Позвонить</a></div>
+<div class="lb" id="lb"><img alt=""></div>
+
+<script>
+const PH=[
+ ["i8.photo.2gis.com/photo-gallery/43d4944b-7396-4af8-b8cc-2fc37db5bcce","t","Вход в студию"],
+ ["i0.photo.2gis.com/photo-gallery/dadaf243-09d1-4197-9092-baec51d3b01f","w","Групповое занятие"],
+ ["i1.photo.2gis.com/video-gallery/32b909be-a404-42ff-a3c6-82354f961675","t","Пилатес на «Кадиллаке»"],
+ ["i1.photo.2gis.com/photo-gallery/05cbbd44-4b15-4e66-8660-e00f6de55d0a","","Занятие"],
+ ["i7.photo.2gis.com/photo-gallery/4321278d-0b2b-4447-aafd-cc232f089f99","","Зал с растениями"],
+ ["i8.photo.2gis.com/photo-gallery/134c6f25-b8f3-4a1a-8a04-f0f8126625e3","","Инвентарь"],
+ ["i1.photo.2gis.com/video-gallery/816a2502-83ef-4983-8be4-1994c6f46b86","","Пилатес"],
+ ["i6.photo.2gis.com/photo-gallery/80c559d7-82b1-445f-a1ab-5b866cc53697","w","Зал студии"],
+ ["i1.photo.2gis.com/video-gallery/0578964c-2b6f-4c3b-9097-aef46cb784b0","","Йога"],
+ ["i0.photo.2gis.com/photo-gallery/b0586f7c-ee0f-44d4-8535-b5a33ae58bf8","","Силовая тренировка"],
+ ["i1.photo.2gis.com/video-gallery/94cdf677-c2a7-4237-baf9-3430c1aeabad","","Растяжка"]
+];
+document.getElementById('gal').innerHTML=PH.map(([s,c,a])=>`<div class="ph ${c}"><img src="https://${s}.jpg" alt="${a}" loading="lazy"></div>`).join('');
+
+const pages=[...document.querySelectorAll('.page')],links=[...document.querySelectorAll('.links a')],nav=document.getElementById('links');
+const titles={'/':'Студия «Развитие» — фитнес, пилатес, йога и танцы на Хуторской, 1','/directions':'Направления — студия «Развитие»','/prices':'Цены — студия «Развитие»','/photos':'Фото — студия «Развитие»','/reviews':'Отзывы — студия «Развитие»','/contacts':'Контакты — студия «Развитие»'};
+function route(){const p=location.hash.replace(/^#/,'')||'/';const t=pages.find(x=>x.dataset.page===p)||pages[0];pages.forEach(x=>x.classList.toggle('on',x===t));links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+t.dataset.page));nav.classList.remove('open');scrollTo(0,0);document.title=titles[t.dataset.page]}
+addEventListener('hashchange',route);route();
+document.getElementById('burger').onclick=()=>nav.classList.toggle('open');
+const lb=document.getElementById('lb'),li=lb.querySelector('img');
+document.getElementById('gal').addEventListener('click',e=>{const b=e.target.closest('.ph');if(b){li.src=b.querySelector('img').src;lb.classList.add('on')}});
+lb.onclick=()=>lb.classList.remove('on');addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+document.querySelectorAll('img').forEach(i=>i.addEventListener('error',()=>{i.style.visibility='hidden'}));
+</script>
+</body>
+</html>

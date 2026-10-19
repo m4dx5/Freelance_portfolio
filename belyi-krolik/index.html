@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Белый Кролик — салон красоты в Краснодаре</title>
+<meta name="description" content="Салон красоты «Белый Кролик» в Краснодаре: стрижки, окрашивание, Total Blond, маникюр и педикюр, брови и ресницы, макияж. Ул. им. Героя Яцкова, 13. Ежедневно 9:00–21:00. Онлайн-запись.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --white:#fff; --snow:#fbf8f6; --blush:#f4e4e1; --rose:#c98b8b; --rose2:#b07070; --ink:#151214; --mute:#7b7175; --line:rgba(21,18,20,.11);
+  --max:1220px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--snow);color:var(--ink);font:400 17px/1.65 "Nunito Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:Forum,Georgia,serif;font-weight:400;line-height:1.02;letter-spacing:.005em}
+.tg{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--rose2)}
+.tg svg{width:18px;height:18px;fill:var(--rose)}
+.ph{overflow:hidden;background:var(--blush)}
+.ph img{width:100%;height:100%;object-fit:cover}
+
+header{position:sticky;top:0;z-index:40;background:rgba(251,248,246,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font-family:Forum;font-size:28px;line-height:1}
+.logo svg{width:30px;height:30px;fill:var(--ink)}
+.links{display:flex;gap:2px}
+.links a{padding:9px 13px;font-weight:600;font-size:15px;color:var(--mute);border-radius:999px}
+.links a:hover{color:var(--ink)}
+.links a.on{background:var(--ink);color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 28px;border-radius:999px;font:700 15px "Nunito Sans";transition:transform .2s,background .2s;white-space:nowrap;border:0;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.b-ink{background:var(--ink);color:#fff}
+.b-ink:hover{background:#3a3236}
+.b-rose{background:var(--rose);color:#fff}
+.b-rose:hover{background:var(--rose2)}
+.b-line{border:1.5px solid var(--ink)}
+.b-line:hover{background:var(--ink);color:#fff}
+.b-white{background:#fff;color:var(--ink)}
+.burger{display:none;width:46px;height:46px;border-radius:50%;border:0;background:var(--ink);color:#fff;font-size:18px;cursor:pointer}
+
+.page{display:none;animation:in .45s ease}
+.page.on{display:block}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+section{padding:96px 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:44px;flex-wrap:wrap}
+.head h2{font-size:clamp(42px,5.6vw,76px);margin-top:12px}
+.head p{max-width:420px;color:var(--mute)}
+.ptop{padding:76px 0 20px;text-align:center}
+.ptop h1{font-size:clamp(52px,8.4vw,120px);margin-top:14px}
+.ptop p{max-width:580px;margin:16px auto 0;color:var(--mute);font-size:18.5px}
+
+/* hero */
+.hero .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:50px;align-items:center;padding-top:40px;padding-bottom:30px}
+.hero h1{font-size:clamp(66px,9.6vw,148px);line-height:.92;margin:18px 0 0}
+.hero h1 em{font-style:normal;color:var(--rose)}
+.hero p{font-size:19px;color:var(--mute);max-width:480px;margin:22px 0 30px}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.stars{display:flex;gap:26px;margin-top:38px;flex-wrap:wrap}
+.stars b{display:block;font-family:Forum;font-size:44px;line-height:1}
+.stars span{font-size:14px;color:var(--mute)}
+.hgal{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:280px 280px;gap:12px}
+.hgal .ph{border-radius:22px}
+.hgal .a{grid-row:span 2;border-radius:200px 200px 22px 22px}
+.hgal .b{grid-column:span 2}
+
+/* offer */
+.offer{background:var(--ink);color:#fff;border-radius:32px;padding:46px 50px;display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:center}
+.offer h2{font-size:clamp(36px,4.4vw,58px)}
+.offer h2 em{font-style:normal;color:var(--rose)}
+.offer p{color:#bfb5b9;margin-top:12px}
+.ol{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ol>div{border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:16px 18px;display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.ol b{font-family:Forum;font-size:26px;white-space:nowrap;color:#f6d7d5}
+
+/* directions */
+.dirs{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.dc{background:#fff;border-radius:26px;overflow:hidden;display:flex;flex-direction:column}
+.dc .ph{aspect-ratio:3/4}
+.dc .tx{padding:20px 22px 24px}
+.dc h3{font-size:32px}
+.dc p{color:var(--mute);font-size:15px;margin-top:4px}
+.dc b{display:block;margin-top:10px;font-weight:800;color:var(--rose2)}
+
+/* masters */
+.ms{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.m{background:#fff;border-radius:22px;padding:26px;display:flex;gap:16px;align-items:flex-start}
+.m .av{flex:0 0 56px;height:56px;border-radius:50%;background:var(--blush);display:grid;place-items:center;font-family:Forum;font-size:26px;color:var(--rose2)}
+.m h3{font-size:26px}
+.m span{font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--rose2)}
+.m p{color:var(--mute);font-size:15px;margin-top:6px}
+
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rv{background:#fff;border-radius:24px;padding:30px;display:flex;flex-direction:column;justify-content:space-between;gap:18px}
+.rv p{font-size:16.5px}
+.rv footer{display:flex;justify-content:space-between;gap:10px;font-size:14px;font-weight:700;color:var(--mute)}
+.rv footer i{font-style:normal;color:var(--rose);letter-spacing:2px}
+.rv.hl{background:var(--blush)}
+.rv.hl p{font-family:Forum;font-size:27px;line-height:1.25}
+
+/* prices */
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.pc{background:#fff;border-radius:26px;padding:32px}
+.pc h2{font-size:38px;margin-bottom:10px;display:flex;align-items:baseline;gap:12px}
+.pc h2 small{font-family:"Nunito Sans";font-size:12px;font-weight:800;letter-spacing:.2em;color:var(--rose2)}
+.pr{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;padding:14px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.pr:last-child{border-bottom:0}
+.pr small{display:block;color:var(--mute);font-size:14px}
+.pr b{font-family:Forum;font-size:23px;white-space:nowrap}
+.first{margin-top:22px;background:var(--rose);color:#fff;border-radius:26px;padding:30px 34px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.first p{max-width:640px}
+
+/* gallery */
+.ftabs{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.ftabs button{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:10px 18px;font:700 14.5px "Nunito Sans";cursor:pointer;color:var(--mute)}
+.ftabs button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.gal{columns:4;column-gap:12px}
+.gal .ph{break-inside:avoid;margin-bottom:12px;border-radius:20px;cursor:zoom-in}
+.gal .ph img{height:auto}
+.lb{position:fixed;inset:0;background:rgba(21,18,20,.94);display:none;place-items:center;z-index:80;padding:20px;cursor:zoom-out}
+.lb.on{display:grid}
+.lb img{max-width:92vw;max-height:88vh;border-radius:16px}
+
+/* contacts */
+.cgrid{display:grid;grid-template-columns:1fr 1.15fr;gap:20px}
+.cbox{background:#fff;border-radius:28px;padding:40px}
+.kv{display:grid;gap:22px;margin-bottom:28px}
+.kv span{display:block;font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--rose2);margin-bottom:4px}
+.kv b,.kv a.v{font-family:Forum;font-size:27px;line-height:1.2;display:block;font-weight:400}
+.kv a.v:hover{color:var(--rose2)}
+.kv em{display:block;font-style:normal;color:var(--mute);font-size:15.5px;margin-top:3px}
+.soc{display:flex;gap:8px;flex-wrap:wrap}
+.map{border-radius:28px;overflow:hidden;min-height:540px;background:var(--blush)}
+.map iframe{width:100%;height:100%;min-height:540px;border:0;display:block}
+
+.foot{background:var(--ink);color:#a59aa0;padding:60px 0 28px;margin-top:60px}
+.foot .g{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+.foot .logo{color:#fff}
+.foot .logo svg{fill:#fff}
+.foot h4{font-family:Forum;font-weight:400;font-size:22px;color:#fff;margin-bottom:12px}
+.foot .g a:not(.logo){display:block;margin-bottom:6px}
+.foot a:hover{color:#fff}
+.credit{margin-top:40px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13.5px;color:#82777c}
+.credit a{color:#eee}
+
+.callbar{display:none}
+
+@media (max-width:1060px){
+  .hero .wrap,.offer,.cgrid,.pgrid{grid-template-columns:1fr}
+  .dirs{grid-template-columns:1fr 1fr}
+  .ms,.revs{grid-template-columns:1fr 1fr}
+  .gal{columns:3}
+  .foot .g{grid-template-columns:1fr 1fr}
+}
+@media (max-width:900px){
+  .links{display:none;position:absolute;top:76px;left:0;right:0;flex-direction:column;background:var(--snow);padding:8px 16px 18px;border-bottom:1px solid var(--line)}
+  .links.open{display:flex}
+  .links a{font-size:18px;padding:13px 16px}
+  .nav>.btn{display:none}
+  .burger{display:block}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  section{padding:62px 0}
+  .hero .wrap{padding-top:28px;gap:34px}
+  .hgal{grid-template-rows:190px 190px;gap:8px}
+  .offer{padding:30px 22px;border-radius:24px}
+  .ol{grid-template-columns:1fr}
+  .dirs{gap:10px}
+  .dc .tx{padding:14px 14px 18px}
+  .dc h3{font-size:26px}
+  .ms,.revs{grid-template-columns:1fr}
+  .pc,.cbox{padding:24px}
+  .gal{columns:2;column-gap:8px}
+  .gal .ph{margin-bottom:8px}
+  .foot .g{grid-template-columns:1fr}
+  .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:50;gap:8px}
+  .callbar .btn{flex:1;padding:15px 10px;box-shadow:0 12px 26px -12px rgba(0,0,0,.5)}
+  .callbar .b-white{border:1.5px solid var(--ink)}
+  .foot{padding-bottom:100px}
+}
+@media (prefers-reduced-motion:reduce){.page{animation:none}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute"><symbol id="rb" viewBox="0 0 32 32"><path d="M11 2c2 0 3 4 3 9 0 1-.1 2-.3 2.9A8 8 0 0 1 16 13.6c.8 0 1.6.1 2.3.3-.2-.9-.3-1.9-.3-2.9 0-5 1-9 3-9s3 4 3 9c0 2.3-.5 4.3-1.2 5.8A8 8 0 0 1 24 22c0 4.4-3.6 8-8 8s-8-3.6-8-8c0-1.4.3-2.6.9-3.8C8.2 16.6 8 14.6 8 12c0-5 1-10 3-10z"/></symbol></svg>
+
+<header>
+  <div class="wrap nav">
+    <a href="#/" class="logo" aria-label="Белый Кролик — на главную"><svg><use href="#rb"/></svg>Белый Кролик</a>
+    <nav class="links" id="links">
+      <a href="#/">Главная</a>
+      <a href="#/prices">Услуги и цены</a>
+      <a href="#/works">Работы</a>
+      <a href="#/team">Мастера</a>
+      <a href="#/reviews">Отзывы</a>
+      <a href="#/contacts">Контакты</a>
+    </nav>
+    <a href="https://n1131268.yclients.com" target="_blank" rel="noopener" class="btn b-ink">Записаться</a>
+    <button class="burger" id="burger" aria-label="Меню">☰</button>
+  </div>
+</header>
+
+<main>
+
+<!-- ГЛАВНАЯ -->
+<div class="page" data-page="/">
+  <section class="hero" style="padding:0">
+    <div class="wrap">
+      <div>
+        <span class="tg"><svg><use href="#rb"/></svg>Салон красоты · Краснодар</span>
+        <h1>Белый <em>Кролик</em></h1>
+        <p>Волосы, ногти, брови и макияж в одном салоне в Губернском микрорайоне. Стрижки и сложное окрашивание, Total Blond, маникюр и педикюр, ламинирование бровей и ресниц.</p>
+        <div class="cta">
+          <a href="https://n1131268.yclients.com" target="_blank" rel="noopener" class="btn b-ink">Записаться онлайн</a>
+          <a href="#/prices" class="btn b-line">Цены</a>
+        </div>
+        <div class="stars">
+          <div><b>5,0</b><span>2ГИС · 867 оценок</span></div>
+          <div><b>5,0</b><span>Яндекс · 525 оценок</span></div>
+          <div><b>9–21</b><span>без выходных</span></div>
+        </div>
+      </div>
+      <div class="hgal">
+        <div class="ph a"><img src="https://i0.photo.2gis.com/photo-gallery/e9f41492-2712-4f44-bc85-ea74fb7260be.jpg" alt="Окрашивание в салоне Белый Кролик" loading="eager"></div>
+        <div class="ph b"><img src="https://i9.photo.2gis.com/photo-gallery/1a2183f7-4075-4f25-9a36-cfe659061253.jpg" alt="Маникюр" loading="eager"></div>
+        <div class="ph"><img src="https://i4.photo.2gis.com/images/branch/0/30258560081533250_ad1b.jpg" alt="Блонд" loading="eager"></div>
+        <div class="ph"><img src="https://i5.photo.2gis.com/photo-gallery/abeb646f-4414-4f58-a69e-e98f2edb14de.jpg" alt="Брови" loading="eager"></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="offer">
+        <div><span class="tg" style="color:#f6d7d5"><svg><use href="#rb"/></svg>Первый визит</span><h2 style="margin-top:12px">Цены для <em>новых</em> гостей</h2><p>Специальные цены на первое посещение — из витрины салона в Яндекс Картах. Уточняйте актуальность при записи.</p></div>
+        <div class="ol">
+          <div><span>Женская стрижка</span><b>1 390 ₽</b></div>
+          <div><span>Мужская стрижка</span><b>1 000 ₽</b></div>
+          <div><span>Маникюр + гель-лак</span><b>1 590 ₽</b></div>
+          <div><span>Окрашивание бровей</span><b>1 190 ₽</b></div>
+          <div style="grid-column:1/-1"><span>Окрашивание + стрижка + уход</span><b>6 590 ₽</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><div><span class="tg"><svg><use href="#rb"/></svg>Направления</span><h2>Всё в одном месте</h2></div><a href="#/prices" class="btn b-line">Все услуги</a></div>
+      <div class="dirs">
+        <a href="#/prices" class="dc"><div class="ph"><img src="https://i8.photo.2gis.com/images/branch/0/30258560055499549_b887.jpg" alt="Окрашивание" loading="lazy"></div><div class="tx"><h3>Hair</h3><p>Стрижки, окрашивание, Total Blond, уход, укладки</p><b>от 1 350 ₽</b></div></a>
+        <a href="#/prices" class="dc"><div class="ph"><img src="https://i1.photo.2gis.com/photo-gallery/a00b8618-6d46-4fc9-9fc9-fd282952ce8a.jpg" alt="Маникюр" loading="lazy"></div><div class="tx"><h3>Nail</h3><p>Маникюр и педикюр, наращивание, мужской маникюр</p><b>от 750 ₽</b></div></a>
+        <a href="#/prices" class="dc"><div class="ph"><img src="https://i7.photo.2gis.com/images/branch/0/30258560099113025_1962.jpg" alt="Брови" loading="lazy"></div><div class="tx"><h3>Brows & Lashes</h3><p>Архитектура и ламинирование бровей, ламинирование ресниц</p><b>от 800 ₽</b></div></a>
+        <a href="#/prices" class="dc"><div class="ph"><img src="https://i2.photo.2gis.com/photo-gallery/7a09b53a-bb82-4c48-b550-6e7d8ebebc52.jpg" alt="Макияж" loading="lazy"></div><div class="tx"><h3>Make up</h3><p>Макияж и полный образ вместе с укладкой</p><b>2 000–3 000 ₽</b></div></a>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><div><span class="tg"><svg><use href="#rb"/></svg>Отзывы</span><h2>Говорят гостьи</h2></div><a href="#/reviews" class="btn b-line">Все отзывы</a></div>
+      <div class="revs">
+        <blockquote class="rv hl"><p>«Не раз просила срочно принять — и для меня всегда находили окошко»</p><footer>Анастасия · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Приятные мастера и хороший спектр услуг, предлагают напитки. Удобная запись, почти всегда есть удобные окна. Очень быстро и качественно»</p><footer>Анастасия Федосенко · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Мастер Катерина — волшебница: укладка получилась волшебная, а её массаж головы — это просто космос»</p><footer>Ирина Савенко · 2ГИС <i>★★★★★</i></footer></blockquote>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ЦЕНЫ -->
+<div class="page" data-page="/prices">
+  <div class="ptop"><div class="wrap"><span class="tg"><svg><use href="#rb"/></svg>Прайс</span><h1>Услуги и цены</h1><p>Прайс салона из 2ГИС (обновлён 30 апреля 2026). Точная стоимость зависит от длины волос и сложности — мастер назовёт её до начала работы.</p></div></div>
+  <section style="padding-top:40px">
+    <div class="wrap">
+      <div class="pgrid">
+        <div class="pc"><h2>Волосы<small>HAIR</small></h2>
+          <div class="pr"><div>Стрижка<small>с мытьём головы и укладкой</small></div><b>1 350–2 000 ₽</b></div>
+          <div class="pr"><div>Модное окрашивание в однотонный цвет</div><b>2 990–10 000 ₽</b></div>
+          <div class="pr"><div>Total Blond</div><b>от 4 990 ₽</b></div>
+          <div class="pr"><div>Сложное окрашивание</div><b>от 5 990 ₽</b></div>
+          <div class="pr"><div>Уход за волосами</div><b>1 200–2 500 ₽</b></div>
+          <div class="pr"><div>Укладка</div><b>1 100–2 500 ₽</b></div>
+        </div>
+        <div class="pc"><h2>Ногти<small>NAIL</small></h2>
+          <div class="pr"><div>Маникюр гигиенический</div><b>750–900 ₽</b></div>
+          <div class="pr"><div>Маникюр + выравнивание + гель-лак + снятие</div><b>1 650–2 050 ₽</b></div>
+          <div class="pr"><div>Маникюр мужской</div><b>1 100 ₽</b></div>
+          <div class="pr"><div>Наращивание ногтей</div><b>2 500–4 500 ₽</b></div>
+          <div class="pr"><div>Обработка пальчиков + гель-лак</div><b>1 850 ₽</b></div>
+          <div class="pr"><div>Педикюр гигиенический</div><b>2 000 ₽</b></div>
+          <div class="pr"><div>Педикюр с покрытием гель-лак</div><b>2 490 ₽</b></div>
+          <div class="pr"><div>Мужской педикюр</div><b>2 200 ₽</b></div>
+        </div>
+        <div class="pc"><h2>Брови и ресницы<small>BROWS & LASHES</small></h2>
+          <div class="pr"><div>Архитектура бровей</div><b>1 400 ₽</b></div>
+          <div class="pr"><div>Ламинирование + архитектура бровей</div><b>2 200 ₽</b></div>
+          <div class="pr"><div>Окрашивание хной</div><b>800 ₽</b></div>
+          <div class="pr"><div>Окрашивание краской</div><b>800 ₽</b></div>
+          <div class="pr"><div>Ламинирование ресниц</div><b>2 200 ₽</b></div>
+        </div>
+        <div class="pc"><h2>Макияж<small>MAKE UP</small></h2>
+          <div class="pr"><div>Макияж</div><b>2 000–3 000 ₽</b></div>
+          <p style="color:var(--mute);font-size:15px;margin-top:16px">Также в салоне: детские и мужские стрижки, стрижка бороды, плетение кос, полировка волос, свадебные и вечерние причёски, прикорневой объём, парафиновые ванночки, шугаринг и восковая эпиляция.</p>
+        </div>
+      </div>
+      <div class="first"><p><b>Первый визит?</b> Для новых гостей действуют специальные цены на стрижку, маникюр и окрашивание бровей — уточните при онлайн-записи.</p><a href="https://n1131268.yclients.com" target="_blank" rel="noopener" class="btn b-white">Записаться онлайн</a></div>
+    </div>
+  </section>
+</div>
+
+<!-- РАБОТЫ -->
+<div class="page" data-page="/works">
+  <div class="ptop"><div class="wrap"><span class="tg"><svg><use href="#rb"/></svg>Портфолио</span><h1>Работы мастеров</h1><p>Нажмите на фото, чтобы открыть крупнее.</p></div></div>
+  <section style="padding-top:30px">
+    <div class="wrap">
+      <div class="ftabs" id="ftabs"><button type="button" data-f="all" class="on">Все</button><button type="button" data-f="hair">Волосы</button><button type="button" data-f="nails">Ногти</button><button type="button" data-f="face">Брови и макияж</button></div>
+      <div class="gal" id="gal"></div>
+    </div>
+  </section>
+</div>
+
+<!-- МАСТЕРА -->
+<div class="page" data-page="/team">
+  <div class="ptop"><div class="wrap"><span class="tg"><svg><use href="#rb"/></svg>Команда</span><h1>Мастера</h1><p>Имена мастеров — из отзывов гостей в 2ГИС. Выбрать мастера и время можно при онлайн-записи.</p></div></div>
+  <section style="padding-top:40px">
+    <div class="wrap">
+      <div class="ms">
+        <div class="m"><div class="av">Е</div><div><span>Мастер</span><h3>Елена</h3><p>«Почти год хожу к вам. Мой мастер Елена просто огонь»</p></div></div>
+        <div class="m"><div class="av">К</div><div><span>Укладки</span><h3>Катерина</h3><p>«Укладка получилась волшебная, а её массаж головы — просто космос»</p></div></div>
+        <div class="m"><div class="av">З</div><div><span>Стрижки</span><h3>Захар</h3><p>«Очень понравилась стрижка: обновила ровный срез, сделали мытьё головы»</p></div></div>
+        <div class="m"><div class="av">Л</div><div><span>Маникюр</span><h3>Лия</h3><p>«Шикарный маникюр от мастера Лии»</p></div></div>
+        <div class="m"><div class="av">В</div><div><span>Мастер</span><h3>Виктория</h3><p>«Была у двух мастеров, и обе мне очень понравились — Виктория и Армине»</p></div></div>
+        <div class="m"><div class="av">А</div><div><span>Мастер</span><h3>Армине</h3><p>«Как трепетно относятся к клиенту»</p></div></div>
+      </div>
+      <div class="first" style="background:var(--ink)"><p>Салон открыт для новых мастеров — актуальная вакансия есть в 2ГИС.</p><a href="https://t.me/belyikrolik23" target="_blank" rel="noopener" class="btn b-white">Написать в Telegram</a></div>
+    </div>
+  </section>
+</div>
+
+<!-- ОТЗЫВЫ -->
+<div class="page" data-page="/reviews">
+  <div class="ptop"><div class="wrap"><span class="tg"><svg><use href="#rb"/></svg>Отзывы</span><h1>Больше 1 000 отзывов</h1><p>5,0 в 2ГИС (673 отзыва) и 5,0 в Яндекс Картах (373 отзыва).</p></div></div>
+  <section style="padding-top:40px">
+    <div class="wrap revs">
+      <blockquote class="rv hl"><p>«Нашла салон случайно, он оказался рядом с домом, и мне очень всё понравилось! Как трепетно относятся к клиенту»</p><footer>Анастасия <i>★★★★★</i></footer></blockquote>
+      <blockquote class="rv"><p>«Была впервые у мастера Захара, очень понравилась стрижка. Я обновила ровный срез, и мне сделали мытьё головы. Очень довольна результатом»</p><footer>Лолита <i>★★★★★</i></footer></blockquote>
+      <blockquote class="rv"><p>«Мне очень понравился салон и коллектив в целом! Приветливые, отзывчивые и работу выполняют на 5+»</p><footer>Нина Зимина <i>★★★★★</i></footer></blockquote>
+      <blockquote class="rv"><p>«Отличный салон, здесь работают профессионалы. Делала стрижку, очень довольна»</p><footer>Maria Slepets <i>★★★★★</i></footer></blockquote>
+      <blockquote class="rv"><p>«Почти год хожу к вам. Мой мастер Елена просто огонь. Цените такого замечательного мастера»</p><footer>Екатерина Шевченко <i>★★★★★</i></footer></blockquote>
+      <blockquote class="rv"><p>«Самый лучший маникюр — в Белом Кролике»</p><footer>Анастасия Кротова <i>★★★★★</i></footer></blockquote>
+      <blockquote class="rv"><p>«Делают очень красивый маникюр!»</p><footer>Полина Середа <i>★★★★★</i></footer></blockquote>
+      <blockquote class="rv"><p>«Отличный подход к клиенту, всё хорошо»</p><footer>Николай Саренко <i>★★★★★</i></footer></blockquote>
+      <blockquote class="rv"><p>«Всем рекомендую, отличные мастера»</p><footer>Александра Щербакова <i>★★★★★</i></footer></blockquote>
+    </div>
+    <div class="wrap" style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:30px"><a href="https://2gis.ru/krasnodar/firm/70000001034963845/tab/reviews" target="_blank" rel="noopener" class="btn b-line">Отзывы в 2ГИС</a><a href="https://yandex.ru/maps/org/bely_krolik/234277320152/reviews/" target="_blank" rel="noopener" class="btn b-line">Отзывы в Яндексе</a></div>
+  </section>
+</div>
+
+<!-- КОНТАКТЫ -->
+<div class="page" data-page="/contacts">
+  <div class="ptop"><div class="wrap"><span class="tg"><svg><use href="#rb"/></svg>Контакты</span><h1>Ждём в гости</h1><p>Прикубанский округ, Губернский микрорайон.</p></div></div>
+  <section style="padding-top:40px">
+    <div class="wrap cgrid">
+      <div class="cbox">
+        <div class="kv">
+          <div><span>Адрес</span><b>Краснодар, ул. им. Героя Яцкова, 13</b><em>1 этаж · есть пандус</em></div>
+          <div><span>Телефон</span><a class="v" href="tel:+79823632243">+7 982 363-22-43</a></div>
+          <div><span>Время работы</span><b>Ежедневно 9:00–21:00</b></div>
+          <div><span>Почта</span><a class="v" href="mailto:belyikrolik23@mail.ru" style="font-size:21px">belyikrolik23@mail.ru</a></div>
+        </div>
+        <div class="soc">
+          <a href="https://n1131268.yclients.com" target="_blank" rel="noopener" class="btn b-ink">Онлайн-запись</a>
+          <a href="https://wa.me/79823632243" target="_blank" rel="noopener" class="btn b-line">WhatsApp</a>
+          <a href="https://t.me/belyikrolik23" target="_blank" rel="noopener" class="btn b-line">Telegram</a>
+          <a href="https://vk.com/belyi_krolik_23" target="_blank" rel="noopener" class="btn b-line">ВКонтакте</a>
+        </div>
+      </div>
+      <div class="map"><iframe src="https://yandex.ru/map-widget/v1/?ll=39.039537%2C45.069545&z=17&pt=39.039537,45.069545,pm2rdm" loading="lazy" title="Карта: ул. им. Героя Яцкова, 13"></iframe></div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="g">
+      <div><a href="#/" class="logo"><svg><use href="#rb"/></svg>Белый Кролик</a><p style="margin-top:16px;max-width:320px">Салон красоты в Краснодаре. Ул. им. Героя Яцкова, 13.</p></div>
+      <div><h4>Разделы</h4><a href="#/prices">Услуги и цены</a><a href="#/works">Работы</a><a href="#/team">Мастера</a><a href="#/reviews">Отзывы</a></div>
+      <div><h4>Связь</h4><a href="tel:+79823632243">+7 982 363-22-43</a><a href="https://wa.me/79823632243" target="_blank" rel="noopener">WhatsApp</a><a href="https://t.me/belyikrolik23" target="_blank" rel="noopener">Telegram</a><span>Ежедневно 9:00–21:00</span></div>
+    </div>
+    <div class="credit"><span>© Салон красоты «Белый Кролик», Краснодар</span><span>Демо-сайт · разработка: Сергей Музыченко, Telegram <a href="https://t.me/spectator0011" target="_blank" rel="noopener">@spectator0011</a></span></div>
+  </div>
+</footer>
+
+<div class="callbar"><a href="https://n1131268.yclients.com" target="_blank" rel="noopener" class="btn b-ink">Записаться</a><a href="tel:+79823632243" class="btn b-white">Позвонить</a></div>
+<div class="lb" id="lb"><img alt=""></div>
+
+<script>
+const G={hair:["i0.photo.2gis.com/photo-gallery/e9f41492-2712-4f44-bc85-ea74fb7260be","i4.photo.2gis.com/images/branch/0/30258560081533250_ad1b","i8.photo.2gis.com/images/branch/0/30258560055499549_b887","i1.photo.2gis.com/video-gallery/17c8ae36-269e-4bd1-843e-e8cfb21a4656","i3.photo.2gis.com/photo-gallery/3060bd5a-e22b-470c-8ad9-bb03f04bcddd","i3.photo.2gis.com/photo-gallery/27a11b09-e3cf-49dc-b589-d4746562ebf9","i1.photo.2gis.com/photo-gallery/61bdac20-52ea-4c37-85e5-96d744664118","i0.photo.2gis.com/images/branch/0/30258560099112736_fd96","i6.photo.2gis.com/images/branch/23/3236962271311791_a6f4","i4.photo.2gis.com/images/branch/0/30258560081533217_0e7e","i3.photo.2gis.com/images/branch/0/30258560099113589_923e","i6.photo.2gis.com/images/branch/0/30258560067023547_276d","i0.photo.2gis.com/images/branch/0/30258560095022325_508b","i9.photo.2gis.com/images/branch/0/30258560099113024_3a27"],
+nails:["i1.photo.2gis.com/photo-gallery/a00b8618-6d46-4fc9-9fc9-fd282952ce8a","i9.photo.2gis.com/photo-gallery/1a2183f7-4075-4f25-9a36-cfe659061253","i8.photo.2gis.com/photo-gallery/b85b1c8d-0a53-422d-a35b-1dace2f5bfc4","i7.photo.2gis.com/photo-gallery/79369a4e-c8b6-4b3d-9f36-f1e58feafaa5","i9.photo.2gis.com/photo-gallery/90ee3964-7a9f-4ffc-b7cc-d35076d65b1e","i0.photo.2gis.com/images/branch/0/30258560157620245_3c0e","i7.photo.2gis.com/photo-gallery/bd8ec43f-b6c6-43c9-9b64-dbf67ff04f23"],
+face:["i5.photo.2gis.com/photo-gallery/abeb646f-4414-4f58-a69e-e98f2edb14de","i7.photo.2gis.com/images/branch/0/30258560099113025_1962","i2.photo.2gis.com/photo-gallery/7a09b53a-bb82-4c48-b550-6e7d8ebebc52","i0.photo.2gis.com/images/branch/0/30258560099113366_5ff8","i3.photo.2gis.com/images/branch/0/30258560099113476_dff2","i7.photo.2gis.com/images/branch/0/30258560091576894_587e"]};
+const ALT={hair:'Окрашивание и стрижка',nails:'Маникюр и педикюр',face:'Брови и макияж'};
+const gal=document.getElementById('gal');
+function showG(f){const keys=f==='all'?['hair','nails','face']:[f];let items=[];if(f==='all'){const m=Math.max(...keys.map(k=>G[k].length));for(let i=0;i<m;i++)keys.forEach(k=>{if(G[k][i])items.push([k,G[k][i]])})}else items=G[f].map(s=>[f,s]);gal.innerHTML=items.map(([k,s])=>`<div class="ph"><img src="https://${s}.jpg" alt="${ALT[k]}" loading="lazy"></div>`).join('');gal.querySelectorAll('img').forEach(i=>i.addEventListener('error',()=>{i.closest('.ph').style.display='none'}))}
+document.getElementById('ftabs').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;[...b.parentNode.children].forEach(x=>x.classList.toggle('on',x===b));showG(b.dataset.f)});showG('all');
+
+const pages=[...document.querySelectorAll('.page')],links=[...document.querySelectorAll('.links a')],nav=document.getElementById('links');
+const titles={'/':'Белый Кролик — салон красоты в Краснодаре','/prices':'Услуги и цены — Белый Кролик','/works':'Работы — Белый Кролик','/team':'Мастера — Белый Кролик','/reviews':'Отзывы — Белый Кролик','/contacts':'Контакты — Белый Кролик'};
+function route(){const p=location.hash.replace(/^#/,'')||'/';const t=pages.find(x=>x.dataset.page===p)||pages[0];pages.forEach(x=>x.classList.toggle('on',x===t));links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+t.dataset.page));nav.classList.remove('open');scrollTo(0,0);document.title=titles[t.dataset.page]}
+addEventListener('hashchange',route);route();
+document.getElementById('burger').onclick=()=>nav.classList.toggle('open');
+const lb=document.getElementById('lb'),li=lb.querySelector('img');
+gal.addEventListener('click',e=>{const b=e.target.closest('.ph');if(b){li.src=b.querySelector('img').src;lb.classList.add('on')}});
+lb.onclick=()=>lb.classList.remove('on');addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+document.querySelectorAll('.hgal img,.dc img').forEach(i=>i.addEventListener('error',()=>{i.style.visibility='hidden'}));
+</script>
+</body>
+</html>

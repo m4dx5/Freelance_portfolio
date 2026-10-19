@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Cuba — coffee bar на Садовой, 20, Новосибирск</title>
+<meta name="description" content="Coffee bar Cuba в Новосибирске у метро «Октябрьская»: specialty-кофе, авторские рафы и латте, завтраки весь день — овсяноблины, скрэмблы, боулы, сырники. Садовая ул., 20. Пн–Пт 7:30–21:00, Сб–Вс 9:00–21:00.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Didact+Gothic&display=swap" rel="stylesheet">
+<style>
+:root{
+  --white:#fff; --paper:#f6f5f2; --ink:#161616; --mute:#77736d; --line:#e4e1db; --red:#d52b23; --red2:#b31f18; --sage:#8ea585;
+  --max:1200px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--ink);font:400 17px/1.65 "Didact Gothic",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:Montserrat,sans-serif;font-weight:300;text-transform:uppercase;letter-spacing:.06em;line-height:1.1}
+.cap{display:inline-block;font-family:Montserrat;font-size:12px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--red)}
+.ph{overflow:hidden;background:var(--paper)}
+.ph img{width:100%;height:100%;object-fit:cover}
+
+header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px;gap:16px}
+.logo{font-family:Montserrat;font-weight:300;font-size:15px;letter-spacing:.14em;text-transform:lowercase;display:flex;align-items:baseline;gap:8px}
+.logo b{font-weight:600;font-size:26px;letter-spacing:.08em;text-transform:uppercase}
+.links{display:flex;gap:2px}
+.links a{padding:9px 14px;font-family:Montserrat;font-weight:500;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.links a:hover{color:var(--ink)}
+.links a.on{color:var(--red)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 28px;font:600 13px Montserrat;letter-spacing:.16em;text-transform:uppercase;transition:background .2s,color .2s;white-space:nowrap;border:0;cursor:pointer}
+.b-red{background:var(--red);color:#fff}
+.b-red:hover{background:var(--red2)}
+.b-line{border:1px solid var(--ink)}
+.b-line:hover{background:var(--ink);color:#fff}
+.b-white{background:#fff;color:var(--ink)}
+.burger{display:none;width:46px;height:46px;border:1px solid var(--ink);background:none;font-size:18px;cursor:pointer}
+
+.page{display:none;animation:in .4s ease}
+.page.on{display:block}
+@keyframes in{from{opacity:0}to{opacity:1}}
+section{padding:96px 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:44px;flex-wrap:wrap}
+.head h2{font-size:clamp(30px,4.2vw,52px);margin-top:14px}
+.head p{max-width:400px;color:var(--mute)}
+.ptop{padding:76px 0 24px;text-align:center}
+.ptop h1{font-size:clamp(40px,7vw,92px);margin-top:16px}
+.ptop p{max-width:560px;margin:16px auto 0;color:var(--mute);font-size:18px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - 74px)}
+.hero .tx{display:flex;flex-direction:column;justify-content:center;padding:64px 56px 56px max(28px,calc((100vw - var(--max))/2 + 28px))}
+.hero .small{font-family:Montserrat;font-weight:300;font-size:20px;letter-spacing:.2em;text-transform:lowercase;color:var(--mute)}
+.hero h1{font-family:Montserrat;font-weight:600;font-size:clamp(84px,13vw,200px);letter-spacing:.04em;line-height:.9;margin:6px 0 0}
+.hero h1 i{font-style:normal;color:var(--red)}
+.hero p{font-size:19px;color:var(--mute);max-width:470px;margin:24px 0 32px}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.hero .meta{display:flex;gap:30px;flex-wrap:wrap;margin-top:44px;padding-top:22px;border-top:1px solid var(--line)}
+.hero .meta b{display:block;font-family:Montserrat;font-weight:500;font-size:26px}
+.hero .meta span{font-size:14px;color:var(--mute)}
+.hero .pics{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:6px;min-height:560px}
+.hero .pics .ph:first-child{grid-row:span 2}
+
+/* breakfast strip */
+.dishes{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.dish .ph{aspect-ratio:4/5;margin-bottom:14px}
+.dish h3{font-size:14.5px;font-weight:500;letter-spacing:.08em;line-height:1.35}
+.dish p{color:var(--mute);font-size:14.5px;margin-top:4px}
+.dish b{display:block;font-family:Montserrat;font-weight:500;margin-top:8px;color:var(--red)}
+
+/* coffee */
+.coffee{background:var(--paper)}
+.cg{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.cc{background:var(--paper);padding:34px 30px}
+.cc h3{font-size:19px;font-weight:500;margin-bottom:14px}
+.cc .l{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px dotted #cfcac2;font-size:15.5px}
+.cc .l:last-child{border-bottom:0}
+.cc .l b{font-family:Montserrat;font-weight:500;white-space:nowrap}
+
+/* about */
+.about{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.about .ph{aspect-ratio:5/4}
+.about h2{font-size:clamp(30px,3.8vw,48px);margin:14px 0 20px}
+.about p{color:var(--mute);margin-bottom:14px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.tags span{border:1px solid var(--line);padding:8px 14px;font-size:14.5px}
+.tags span.r{border-color:var(--red);color:var(--red)}
+
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rv{border:1px solid var(--line);padding:30px;display:flex;flex-direction:column;justify-content:space-between;gap:18px}
+.rv p{font-size:16.5px}
+.rv footer{display:flex;justify-content:space-between;gap:10px;font-size:13px;font-family:Montserrat;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.rv footer i{font-style:normal;color:var(--red);letter-spacing:2px}
+.rv.hl{background:var(--red);color:#fff;border:0}
+.rv.hl p{font-family:Montserrat;font-weight:300;font-size:22px;line-height:1.4}
+.rv.hl footer,.rv.hl footer i{color:#ffd9d6}
+
+/* menu */
+.mtabs{display:flex;justify-content:center;gap:4px;flex-wrap:wrap;margin-bottom:36px;position:sticky;top:74px;background:#fff;z-index:5;padding:12px 0;border-bottom:1px solid var(--line)}
+.mtabs button{border:0;background:none;padding:10px 16px;font:500 13px Montserrat;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);cursor:pointer}
+.mtabs button.on{color:var(--red);box-shadow:inset 0 -2px 0 var(--red)}
+.mlist{max-width:880px;margin:0 auto}
+.mrow{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:24px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.mrow h3{font-size:15px;font-weight:500;letter-spacing:.06em;line-height:1.35}
+.mrow p{color:var(--mute);font-size:14.5px;margin-top:3px}
+.mrow .w{color:var(--mute);font-size:13.5px;white-space:nowrap}
+.mrow b{font-family:Montserrat;font-weight:500;font-size:18px;white-space:nowrap}
+.mnote{max-width:880px;margin:22px auto 0;color:var(--mute);font-size:14.5px}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:260px;gap:6px}
+.gal .ph{cursor:zoom-in}
+.gal .t{grid-row:span 2}
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;place-items:center;z-index:80;padding:20px;cursor:zoom-out}
+.lb.on{display:grid}
+.lb img{max-width:92vw;max-height:88vh}
+
+/* scores */
+.scores{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:26px}
+.sc{border:1px solid var(--line);padding:32px;display:flex;gap:24px;align-items:center}
+.sc .big{font-family:Montserrat;font-weight:300;font-size:80px;line-height:.9;color:var(--red)}
+.sc h3{font-size:18px;font-weight:500}
+.sc p{color:var(--mute);font-size:14.5px;margin:4px 0 8px}
+.sc a{font-family:Montserrat;font-weight:600;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid var(--red)}
+
+/* contacts */
+.cgrid{display:grid;grid-template-columns:1fr 1.15fr;border:1px solid var(--line)}
+.cbox{padding:44px}
+.kv{display:grid;gap:24px;margin-bottom:30px}
+.kv span{display:block;font-family:Montserrat;font-size:11.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--red);margin-bottom:6px}
+.kv b,.kv a.v{font-family:Montserrat;font-weight:400;font-size:22px;line-height:1.3;display:block}
+.kv em{display:block;font-style:normal;color:var(--mute);font-size:15.5px;margin-top:3px}
+.map{min-height:520px;background:var(--paper);border-left:1px solid var(--line)}
+.map iframe{width:100%;height:100%;min-height:520px;border:0;display:block}
+
+.foot{background:var(--ink);color:#a7a39d;padding:60px 0 28px;margin-top:60px}
+.foot .g{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+.foot .logo{color:#fff}
+.foot h4{font-family:Montserrat;font-weight:500;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;margin-bottom:14px}
+.foot .g a:not(.logo){display:block;margin-bottom:6px}
+.foot a:hover{color:#fff}
+.credit{margin-top:40px;padding-top:18px;border-top:1px solid #2e2e2e;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13.5px;color:#7a7670}
+.credit a{color:#eee}
+
+.callbar{display:none}
+
+@media (max-width:1060px){
+  .hero,.about,.cgrid,.scores{grid-template-columns:1fr}
+  .hero .tx{padding:56px 28px}
+  .hero .pics{min-height:460px}
+  .map{border-left:0;border-top:1px solid var(--line)}
+  .dishes{grid-template-columns:1fr 1fr}
+  .cg,.revs{grid-template-columns:1fr 1fr}
+  .gal{grid-template-columns:repeat(3,1fr)}
+  .foot .g{grid-template-columns:1fr 1fr}
+}
+@media (max-width:880px){
+  .links{display:none;position:absolute;top:74px;left:0;right:0;flex-direction:column;background:#fff;padding:8px 16px 18px;border-bottom:1px solid var(--line)}
+  .links.open{display:flex}
+  .links a{font-size:15px;padding:14px 6px;border-bottom:1px solid var(--line)}
+  .nav>.btn{display:none}
+  .burger{display:block}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  section{padding:62px 0}
+  .hero .tx{padding:40px 16px}
+  .hero .pics{min-height:340px}
+  .hero .meta{gap:20px}
+  .dishes{gap:12px}
+  .cg,.revs{grid-template-columns:1fr}
+  .cc{padding:26px 20px}
+  .mtabs{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;margin-left:-16px;margin-right:-16px;padding:10px 16px}
+  .mtabs button{flex:0 0 auto}
+  .mrow{grid-template-columns:minmax(0,1fr) auto;gap:4px 16px}
+  .mrow .w{grid-column:1;grid-row:2}
+  .mrow b{grid-row:1/span 2;grid-column:2;align-self:center}
+  .gal{grid-template-columns:1fr 1fr;grid-auto-rows:170px}
+  .sc{flex-direction:column;align-items:flex-start;gap:10px;padding:24px}
+  .cbox{padding:26px}
+  .foot .g{grid-template-columns:1fr}
+  .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:50;gap:8px}
+  .callbar .btn{flex:1;padding:15px 8px;box-shadow:0 12px 26px -12px rgba(0,0,0,.5)}
+  .callbar .b-white{border:1px solid var(--ink)}
+  .foot{padding-bottom:100px}
+}
+@media (prefers-reduced-motion:reduce){.page{animation:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#/" class="logo" aria-label="Cuba — на главную">coffee bar <b>CUBA</b></a>
+    <nav class="links" id="links">
+      <a href="#/">Главная</a>
+      <a href="#/menu">Меню</a>
+      <a href="#/photos">Фото</a>
+      <a href="#/reviews">Отзывы</a>
+      <a href="#/contacts">Контакты</a>
+    </nav>
+    <a href="tel:+79612238447" class="btn b-red">Позвонить</a>
+    <button class="burger" id="burger" aria-label="Меню">☰</button>
+  </div>
+</header>
+
+<main>
+
+<!-- ГЛАВНАЯ -->
+<div class="page" data-page="/">
+  <section class="hero" style="padding:0">
+    <div class="tx">
+      <span class="cap">Новосибирск · Садовая, 20</span>
+      <span class="small" style="margin-top:22px">coffee bar</span>
+      <h1>CUB<i>A</i></h1>
+      <p>Кофейня у метро «Октябрьская»: кофе, который можно собрать под себя, и завтраки весь день — овсяноблины, скрэмблы, боулы, сырники и домашние десерты.</p>
+      <div class="cta">
+        <a href="#/menu" class="btn b-red">Меню</a>
+        <a href="#/contacts" class="btn b-line">Как добраться</a>
+      </div>
+      <div class="meta">
+        <div><b>5,0</b><span>Яндекс · 1 071 оценка</span></div>
+        <div><b>4,9</b><span>2ГИС · 1 880 оценок</span></div>
+        <div><b>7:30</b><span>открываемся в будни</span></div>
+      </div>
+    </div>
+    <div class="pics">
+      <div class="ph"><img src="https://i1.photo.2gis.com/images/branch/0/30258560067447424_316d.jpg" alt="Вход в кофейню Cuba" loading="eager"></div>
+      <div class="ph"><img src="https://i3.photo.2gis.com/photo-gallery/9f7c325e-aad4-4c87-9deb-3730439c9bab.jpg" alt="Завтрак в Cuba" loading="eager"></div>
+      <div class="ph"><img src="https://i5.photo.2gis.com/photo-gallery/998fa9b4-843f-4fbc-99b0-391d0fdb8d47.jpg" alt="Интерьер с цветами" loading="eager"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head"><div><span class="cap">Завтраки весь день</span><h2>То, за чем возвращаются</h2></div><a href="#/menu" class="btn b-line">Всё меню</a></div>
+      <div class="dishes">
+        <div class="dish"><div class="ph"><img src="https://i8.photo.2gis.com/photo-gallery/c29d224a-a094-4d60-b5a4-fff630ba401e.jpg" alt="Скрэмбл с венскими колбасками" loading="lazy"></div><h3>Скрэмбл с венскими колбасками</h3><p>или с курицей су-вид</p><b>530 ₽</b></div>
+        <div class="dish"><div class="ph"><img src="https://i5.photo.2gis.com/photo-gallery/bcd18625-7f1c-45af-94ef-2c9cbbc3ab2d.jpg" alt="Картофельный омлет" loading="lazy"></div><h3>Картофельный омлет с руколой</h3><p>печёные черри, греческий йогурт</p><b>530 ₽</b></div>
+        <div class="dish"><div class="ph"><img src="https://i7.photo.2gis.com/photo-gallery/58760f09-1a8c-4403-b482-88214b6d847c.jpg" alt="Кабачковые оладьи" loading="lazy"></div><h3>Кабачковые оладьи со шпинатом</h3><p>яйцо и сметана</p><b>460 ₽</b></div>
+        <div class="dish"><div class="ph"><img src="https://i8.photo.2gis.com/photo-gallery/04df7491-069e-4977-8eb4-fdab25956664.jpg" alt="Гранола" loading="lazy"></div><h3>Ореховая гранола</h3><p>вишнёвый соус и йогурт</p><b>300 ₽</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="coffee">
+    <div class="wrap">
+      <div class="head"><div><span class="cap">Кофе</span><h2>Классика, альтернатива, рафы</h2></div><p>«Лучший кофе в Новосибирске, всегда можно заказать кастом под себя» — из отзыва в 2ГИС.</p></div>
+      <div class="cg">
+        <div class="cc"><h3>Классика</h3><div class="l"><span>Эспрессо</span><b>180 / 210</b></div><div class="l"><span>Американо</span><b>210</b></div><div class="l"><span>Капучино</span><b>265–305</b></div><div class="l"><span>Флэт уайт</span><b>280</b></div><div class="l"><span>Фильтр</span><b>230 / 300</b></div></div>
+        <div class="cc"><h3>Чёрный кофе</h3><div class="l"><span>V60</span><b>350</b></div><div class="l"><span>Аэропресс</span><b>350</b></div><div class="l"><span>Кемекс</span><b>350</b></div><div class="l"><span>Лунго</span><b>270</b></div><div class="l"><span>Колд брю</span><b>280</b></div></div>
+        <div class="cc"><h3>Рафы, 450 мл</h3><div class="l"><span>Груша-сыр</span><b>390</b></div><div class="l"><span>Солёная карамель</span><b>390</b></div><div class="l"><span>Манго-сыр</span><b>390</b></div><div class="l"><span>Ореховый</span><b>390</b></div><div class="l"><span>Ванильный</span><b>390</b></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap about">
+      <div class="ph"><img src="https://i6.photo.2gis.com/photo-gallery/6c06446f-5dd7-4fac-9b4f-7539e179929a.jpg" alt="Красные ящики Cuba у входа" loading="lazy"></div>
+      <div>
+        <span class="cap">Место</span>
+        <h2>Минимализм, цветы и красные ящики</h2>
+        <p>Светлый зал до 40 мест, живые цветы на столах и летние столики у входа. Можно прийти с ноутбуком и поработать за завтраком.</p>
+        <p>Гости отдельно отмечают бесплатную питьевую воду: фильтр-кран и стаканы стоят в свободном доступе.</p>
+        <div class="tags"><span class="r">Лучшая кофейня 2022 · 2ГИС</span><span>Wi-Fi</span><span>Можно с ноутбуком</span><span>Можно с собакой</span><span>Столики на улице</span><span>Меню на английском</span><span>Еда навынос</span><span>Доступный вход</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><div><span class="cap">Отзывы</span><h2>Что говорят гости</h2></div><a href="#/reviews" class="btn b-line">Все отзывы</a></div>
+      <div class="revs">
+        <blockquote class="rv hl"><p>«Надо просто один раз прийти и понять, почему хочется возвращаться»</p><footer>Анна Задворнова · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Все блюда с понятным чистым составом. Питаюсь по КБЖУ, и здесь идеально могу подобрать себе завтрак, обед или ужин. Всегда можно попросить убрать или добавить ингредиенты»</p><footer>Ksenia Vorontsova · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Яркий вкусный эспрессо: ореховый вкус сначала, уходящий в приятную ягодную кислинку. Фильтр ровный, с фруктовым оттенком»</p><footer>Андрей Решетов · 2ГИС <i>★★★★★</i></footer></blockquote>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- МЕНЮ -->
+<div class="page" data-page="/menu">
+  <div class="ptop"><div class="wrap"><span class="cap">Меню</span><h1>Еда и напитки</h1><p>По фото меню, опубликованным кофейней в 2ГИС в мае 2026. Цены в рублях.</p></div></div>
+  <section style="padding-top:20px">
+    <div class="wrap">
+      <div class="mtabs" id="mtabs"></div>
+      <div class="mlist" id="mlist"></div>
+      <p class="mnote">Есть винная карта и коктейли — спросите у бариста.</p>
+    </div>
+  </section>
+</div>
+
+<!-- ФОТО -->
+<div class="page" data-page="/photos">
+  <div class="ptop"><div class="wrap"><span class="cap">Фото</span><h1>Cuba в кадре</h1><p>Завтраки, десерты, зал и вход. Нажмите на фото, чтобы открыть крупнее.</p></div></div>
+  <section style="padding-top:30px"><div class="wrap"><div class="gal" id="gal"></div></div></section>
+</div>
+
+<!-- ОТЗЫВЫ -->
+<div class="page" data-page="/reviews">
+  <div class="ptop"><div class="wrap"><span class="cap">Отзывы</span><h1>Почти 1 500 отзывов</h1><p>979 в 2ГИС и 459 в Яндекс Картах.</p></div></div>
+  <section style="padding-top:30px">
+    <div class="wrap">
+      <div class="scores">
+        <div class="sc"><div class="big">5,0</div><div><h3>Яндекс Карты</h3><p>1 071 оценка · 459 отзывов</p><a href="https://yandex.ru/maps/org/cuba/75258159586/reviews/" target="_blank" rel="noopener">Читать</a></div></div>
+        <div class="sc"><div class="big">4,9</div><div><h3>2ГИС</h3><p>1 880 оценок · 979 отзывов</p><a href="https://2gis.ru/novosibirsk/firm/70000001052235657/tab/reviews" target="_blank" rel="noopener">Читать</a></div></div>
+      </div>
+      <div class="revs">
+        <blockquote class="rv hl"><p>«Лучший кофе в городе и вкусная еда, вежливый персонал»</p><footer>Арина · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Пришли с подругой первый раз на завтрак. Очень приятный персонал, хорошая музыка, красивая обстановка. А еда и напитки — это просто восторг, очень вкусно»</p><footer>Мария Аверкина <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Брала пармезанники и колд-брю с ягодной пеной — просто выше всех похвал! Приятно, что нам предложили бесплатно напитки, поскольку задерживали предзаказанную еду»</p><footer>Софья Карпович <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Меню достаточно большое, есть из чего выбрать. Особо хотела бы отметить общий доступ к питьевой воде — фильтр-кран и рядом стаканы»</p><footer>Юлия <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Холодный раф солёная карамель — это вообще»</p><footer>Анна Скиба <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Кекс был с лимонным кремом, сам влажный, с большим количеством орехов. Лосось свежий, рукола хрустящая»</p><footer>Марина Мирошникова <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Посещаю с первых дней открытия, очень рад, что держат качество напитков и обслуживание»</p><footer>Timur <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«В минималистичном стиле оформлено заведение, ничего лишнего. Просто и приятно»</p><footer>Софья В <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Очень вкусный кофе, пока это лучшие завтраки в городе для меня»</p><footer>Алёна <i>★★★★★</i></footer></blockquote>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- КОНТАКТЫ -->
+<div class="page" data-page="/contacts">
+  <div class="ptop"><div class="wrap"><span class="cap">Контакты</span><h1>Садовая, 20</h1><p>Октябрьский район, ~300 м от метро «Октябрьская».</p></div></div>
+  <section style="padding-top:30px">
+    <div class="wrap cgrid">
+      <div class="cbox">
+        <div class="kv">
+          <div><span>Адрес</span><b>Новосибирск, Садовая ул., 20</b></div>
+          <div><span>Время работы</span><b>Пн–Пт 7:30–21:00</b><b>Сб–Вс 9:00–21:00</b></div>
+          <div><span>Телефон</span><a class="v" href="tel:+79612238447">+7 961 223-84-47</a></div>
+        </div>
+        <div class="cta"><a href="tel:+79612238447" class="btn b-red">Позвонить</a><a href="https://yandex.ru/maps/org/cuba/75258159586/" target="_blank" rel="noopener" class="btn b-line">Маршрут</a></div>
+      </div>
+      <div class="map"><iframe src="https://yandex.ru/map-widget/v1/?ll=82.939241%2C55.016679&z=17&pt=82.939241,55.016679,pm2rdm" loading="lazy" title="Карта: Садовая ул., 20"></iframe></div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="g">
+      <div><a href="#/" class="logo">coffee bar <b>CUBA</b></a><p style="margin-top:16px;max-width:320px">Кофейня в Новосибирске. Садовая ул., 20, у метро «Октябрьская».</p></div>
+      <div><h4>Разделы</h4><a href="#/menu">Меню</a><a href="#/photos">Фото</a><a href="#/reviews">Отзывы</a><a href="#/contacts">Контакты</a></div>
+      <div><h4>Связь</h4><a href="tel:+79612238447">+7 961 223-84-47</a><span style="display:block">Пн–Пт 7:30–21:00</span><span style="display:block">Сб–Вс 9:00–21:00</span></div>
+    </div>
+    <div class="credit"><span>© Coffee bar Cuba, Новосибирск</span><span>Демо-сайт · разработка: Сергей Музыченко, Telegram <a href="https://t.me/spectator0011" target="_blank" rel="noopener">@spectator0011</a></span></div>
+  </div>
+</footer>
+
+<div class="callbar"><a href="tel:+79612238447" class="btn b-red">Позвонить</a><a href="#/menu" class="btn b-white">Меню</a></div>
+<div class="lb" id="lb"><img alt=""></div>
+
+<script>
+const MENU={
+ "Завтраки":[
+  ["Картофельный омлет с руколой и печёными черри","картофель, лук, розмарин, яйцо, моцарелла, рукола, черри, греческий йогурт","210 г",530],
+  ["Кабачковые оладьи со шпинатом, яйцом и сметаной","","260 г",460],
+  ["Скрэмбл с лососем","яйцо, молоко, лосось, творожный сыр, огурец, авокадо, тост","280 г",620],
+  ["Скрэмбл с венскими колбасками / курицей су-вид","","360 г",530],
+  ["Полента с хрустящим беконом, пармезаном и печёными черри","","345 г",460],
+  ["Овсяная каша с вялеными томатами и пармезаном","","240 г",360],
+  ["Рисовая каша с клубничным соусом и миндалём","","240 г",380],
+  ["Сырники","сметана, сгущёнка, ягодный соус","150 г",390],
+  ["Пармезанники с зелёным салатом","","230 г",560],
+  ["Смородиновый творог","","195 г",310],
+  ["Ореховая гранола с вишнёвым соусом и йогуртом","","180 г",300]],
+ "Овсяноблины и боулы":[
+  ["Овсяноблины с ростбифом","ростбиф, страчателла, черри, рукола, бальзамический соус","250 г",710],
+  ["Овсяноблины с вялеными томатами и страчателлой","вяленые томаты, страчателла, авокадо, бальзамический соус","220 г",520],
+  ["Овсяноблины с лососем и яйцом пашот","лосось, творожный сыр, огурец, яйцо пашот","290 г",610],
+  ["Овсяноблины с арахисовой пастой, бананом и вишнёвым соусом","","300 г",400],
+  ["Боул с лососем и киноа","лосось, киноа, кунжут, зелёный горошек, огурец, авокадо, редис, цитрусовый соус","300 г",620],
+  ["Боул с курицей су-вид","кускус, куриная грудка, шампиньоны, печёный перец, черри, брокколи, ореховый соус","310 г",510]],
+ "Тосты и сэндвичи":[
+  ["Тост с беконом, скрэмблом и соусом из пармезана","","345 г",710],
+  ["Тост с авокадо, яйцами пашот и соусом из пармезана","","280 г",530],
+  ["Брускетта со страчателлой и печёным перцем","","175 г",530],
+  ["Брускетта / круассан с ростбифом","","135 / 170 г","550 / 640"],
+  ["Брускетта / круассан с лососем","","135 / 170 г","530 / 610"],
+  ["Сэндвич с рваной говядиной и печёным перцем","","230 г",850],
+  ["Сэндвич с ветчиной и моцареллой","","270 г",800],
+  ["Сэндвич / гречневый блин с курицей","быстро, как вы просили","225 г",510],
+  ["Сэндвич / гречневый блин с лососем","быстро, как вы просили","225 г",610],
+  ["Сэндвич / гречневый блин с ростбифом","быстро, как вы просили","225 г",610]],
+ "Десерты":[
+  ["Протеиновый бол","классический / кокосовый","50 г",150],
+  ["Мороженое","базиликовое / фисташковое / кофейно-шоколадное / ореховое","100 г",380],
+  ["Банановый хлеб с кофейным кремом","","140 г",340],
+  ["Морковный кекс с апельсиново-ванильным кремом","","140 г",310],
+  ["Лимонный кекс","","130 г",280],
+  ["Брауни","","105 г",380],
+  ["Лаймовый чизкейк","","160 г",390],
+  ["Овсяное печенье с шоколадом, фисташкой, грецким орехом и гималайской солью","","60 г",190],
+  ["Шоколадное печенье с белым шоколадом и миндалём","","50 г",240],
+  ["Лимонно-базиликовое печенье","","60 г",160],
+  ["Конфета «Картошка»","","20 г",100],
+  ["Круассан","","70 г",240]],
+ "Кофе":[
+  ["Эспрессо","","30 / 60 мл","180 / 210"],["Американо","","250 мл",210],["Латте","","300 / 400 мл","275 / 285"],["Капучино","","200 / 300 / 400 мл","265 / 295 / 305"],["Флэт уайт","","180 мл",280],["Фильтр","","250 / 400 мл","230 / 300"],
+  ["V60","","300 мл",350],["Аэропресс","","",350],["Кемекс","","300 мл",350],["Лунго","","250 мл",270],
+  ["Латте пекан-синабон","","450 мл",390],["Латте ежевика-белый шоколад","","450 мл",390],["Латте фисташковый крем","","450 мл",390],["Латте клубника-солёный шоколад","","450 мл",390],
+  ["Раф груша-сыр","","450 мл",390],["Раф ореховый","","450 мл",390],["Раф солёная карамель","","450 мл",390],["Раф ванильный","","450 мл",390],["Раф манго-сыр","","450 мл",390]],
+ "Холодное":[
+  ["Смузи","манго-кокос, персик-манго, груша-базилик, чёрная ягода, юдзу-маракуйя, клубника-грейпфрут","350 мл",420],
+  ["Лимонад","классический, клюква-ананас, манго-мандарин, банан-лимон, гуава-маракуйя, щавель, маракуйя шприц, малина-лемонграсс","400 мл",400],
+  ["Колд брю","","300 мл",280],["Колд брю с ягодной пеной","","300 мл",340],["Колд брю тоник","","300 мл",380],["Гранатовый колд брю","","300 мл",390],["Эспрессо тоник","","300 мл",380],["Бамбл","","300 мл",380],
+  ["Свежевыжатый сок","грейпфрут / апельсин","250 мл",350],["Протеиновый коктейль","","300 мл",440],
+  ["Молочный коктейль","ваниль, банан, манго, вишня, малина, смородина, клубника, шоколад, кофе","400 мл",390]],
+ "Чай и другое":[
+  ["Матча латте","","300 мл",370],["Какао","","300 / 450 мл","370 / 410"],["Фильтр с ягодной пеной","","250 мл",280],
+  ["Чай классический","","450 мл",260],["Авторский чай","малина-имбирь, вишня-бергамот, смородина-каламанси, брусника-мандарин, пряный","450 мл",390]]
+};
+const tabs=document.getElementById('mtabs'),ml=document.getElementById('mlist');
+const p=v=>typeof v==='number'?v.toLocaleString('ru-RU').replace(/ /g,' '):v;
+function show(k){[...tabs.children].forEach(b=>b.classList.toggle('on',b.dataset.k===k));ml.innerHTML=MENU[k].map(([n,d,w,v])=>`<div class="mrow"><div><h3>${n}</h3>${d?`<p>${d}</p>`:''}</div><span class="w">${w}</span><b>${p(v)} ₽</b></div>`).join('')}
+tabs.innerHTML=Object.keys(MENU).map(k=>`<button type="button" data-k="${k}">${k}</button>`).join('');
+tabs.addEventListener('click',e=>{const b=e.target.closest('button');if(b)show(b.dataset.k)});show('Завтраки');
+
+const PH=[["i1.photo.2gis.com/images/branch/0/30258560067447424_316d","t","Вход в кофейню"],["i8.photo.2gis.com/photo-gallery/c29d224a-a094-4d60-b5a4-fff630ba401e","","Завтрак"],["i3.photo.2gis.com/photo-gallery/9f7c325e-aad4-4c87-9deb-3730439c9bab","","Завтрак"],["i5.photo.2gis.com/photo-gallery/998fa9b4-843f-4fbc-99b0-391d0fdb8d47","t","Красный чайник и цветы"],["i9.photo.2gis.com/photo-gallery/5d829614-62ae-488a-b5ba-2007e57c1de7","","Десерты"],["i3.photo.2gis.com/photo-gallery/eeced317-57d9-4b62-9fab-02b60d806493","","Сэндвич"],["i1.photo.2gis.com/photo-gallery/f8bb0f4d-1aba-4091-95d2-eb6763956576","","Сэндвич с лососем"],["i6.photo.2gis.com/photo-gallery/6c06446f-5dd7-4fac-9b4f-7539e179929a","t","Вывеска Cuba"],["i7.photo.2gis.com/photo-gallery/aa6e1920-6189-4e98-8a22-471da71d0c13","","Цветы на столах"],["i4.photo.2gis.com/images/branch/0/30258560094585754_224b","","Боул и напиток"],["i0.photo.2gis.com/images/branch/0/30258560094755702_6c3b","","Напитки"],["i8.photo.2gis.com/photo-gallery/ea1240f0-731d-415d-9da1-dce579911c7b","","Сэндвич"],["i4.photo.2gis.com/photo-gallery/c2968102-dc8a-4718-96ad-4661f4420120","","Смузи-боул"],["i2.photo.2gis.com/images/branch/0/30258560087496420_a552","","Брауни с ягодами"],["i7.photo.2gis.com/photo-gallery/d2b00553-6ac9-49ad-8bad-ed52cfd9d69b","","Летние столики"],["i1.photo.2gis.com/photo-gallery/eaffbbcd-a8d1-4158-a0f8-46280ad98462","","У входа"],["i0.photo.2gis.com/images/branch/0/30258560109272725_c2dc","","Вечер у кофейни"],["i3.photo.2gis.com/images/branch/0/30258560094591848_9856","","Брауни"],["i8.photo.2gis.com/images/branch/0/30258560094806587_2413","","Десерт с ягодами"],["i9.photo.2gis.com/photo-gallery/b375824a-98f7-4009-8ba5-e1e17b804adc","","Кофе с собой"]];
+document.getElementById('gal').innerHTML=PH.map(([s,c,a])=>`<div class="ph ${c}"><img src="https://${s}.jpg" alt="${a}" loading="lazy"></div>`).join('');
+
+const pages=[...document.querySelectorAll('.page')],links=[...document.querySelectorAll('.links a')],nav=document.getElementById('links');
+const titles={'/':'Cuba — coffee bar на Садовой, 20, Новосибирск','/menu':'Меню — coffee bar Cuba','/photos':'Фото — coffee bar Cuba','/reviews':'Отзывы — coffee bar Cuba','/contacts':'Контакты — coffee bar Cuba'};
+function route(){const p=location.hash.replace(/^#/,'')||'/';const t=pages.find(x=>x.dataset.page===p)||pages[0];pages.forEach(x=>x.classList.toggle('on',x===t));links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+t.dataset.page));nav.classList.remove('open');scrollTo(0,0);document.title=titles[t.dataset.page]}
+addEventListener('hashchange',route);route();
+document.getElementById('burger').onclick=()=>nav.classList.toggle('open');
+const lb=document.getElementById('lb'),li=lb.querySelector('img');
+document.getElementById('gal').addEventListener('click',e=>{const b=e.target.closest('.ph');if(b){li.src=b.querySelector('img').src;lb.classList.add('on')}});
+lb.onclick=()=>lb.classList.remove('on');addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+document.querySelectorAll('img').forEach(i=>i.addEventListener('error',()=>{i.style.visibility='hidden'}));
+</script>
+</body>
+</html>

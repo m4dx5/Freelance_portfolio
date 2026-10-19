@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Кудри.Нск — студия завивки в Новосибирске</title>
+<meta name="description" content="Кудри.Нск — студия завивки в Новосибирске: карвинг, динамичные кудри, афро и корейская завивка, стрижка Deva cut, реконструкция волос. Бесплатная онлайн-консультация в WhatsApp. Ул. Дуси Ковальчук, 250.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;600;700&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#fbf4ec; --sand:#f2e2d1; --caramel:#b8693a; --caramel2:#9a522a; --choc:#3a2218; --blush:#f3d4c6; --ink:#2c1a12; --mute:#7f6658; --line:rgba(58,34,24,.13);
+  --max:1200px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font:400 17.5px/1.65 Raleway,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:Comfortaa,sans-serif;font-weight:700;line-height:1.08;letter-spacing:-.02em}
+.hl{color:var(--caramel)}
+.tag{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:13.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--caramel2)}
+.tag svg{width:20px;height:20px;stroke:var(--caramel);fill:none;stroke-width:2;stroke-linecap:round}
+.ph{overflow:hidden;background:var(--sand)}
+.ph img{width:100%;height:100%;object-fit:cover}
+
+header{position:sticky;top:0;z-index:40;background:rgba(251,244,236,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font-family:Comfortaa;font-weight:700;font-size:25px;letter-spacing:-.02em}
+.logo svg{width:36px;height:36px;stroke:var(--caramel);fill:none;stroke-width:2.4;stroke-linecap:round}
+.logo i{font-style:normal;color:var(--caramel)}
+.links{display:flex;gap:2px}
+.links a{padding:9px 14px;border-radius:999px;font-weight:600;font-size:15px;color:var(--mute)}
+.links a:hover{color:var(--ink)}
+.links a.on{background:var(--choc);color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 26px;border-radius:999px;font:700 15.5px Raleway;transition:transform .2s,background .2s;white-space:nowrap;border:0;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.b-car{background:var(--caramel);color:#fff}
+.b-car:hover{background:var(--caramel2)}
+.b-choc{background:var(--choc);color:#fff}
+.b-line{border:2px solid var(--choc)}
+.b-line:hover{background:var(--choc);color:#fff}
+.b-cream{background:var(--cream);color:var(--ink)}
+.burger{display:none;width:46px;height:46px;border-radius:50%;border:0;background:var(--choc);color:#fff;font-size:18px;cursor:pointer}
+
+.page{display:none;animation:in .45s ease}
+.page.on{display:block}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+section{padding:92px 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:44px;flex-wrap:wrap}
+.head h2{font-size:clamp(34px,4.6vw,58px);margin-top:12px}
+.head p{max-width:420px;color:var(--mute)}
+.ptop{padding:70px 0 16px}
+.ptop h1{font-size:clamp(42px,6.6vw,90px);margin-top:14px;max-width:900px}
+.ptop p{max-width:620px;color:var(--mute);font-size:18.5px;margin-top:16px}
+
+/* hero */
+.hero{position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding-top:48px;padding-bottom:40px}
+.hero h1{font-size:clamp(46px,6.6vw,92px);margin:16px 0 0}
+.hero p{font-size:19px;color:var(--mute);max-width:510px;margin:22px 0 30px}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.hfacts{display:flex;gap:28px;flex-wrap:wrap;margin-top:36px}
+.hfacts b{display:block;font-family:Comfortaa;font-size:32px;line-height:1}
+.hfacts span{font-size:14px;color:var(--mute)}
+.hpic{position:relative;height:640px}
+.hpic .a{position:absolute;inset:0 0 0 12%;border-radius:300px 300px 40px 40px}
+.hpic .b{position:absolute;left:0;bottom:30px;width:42%;aspect-ratio:1;border-radius:50%;border:8px solid var(--cream)}
+.curl{position:absolute;right:-30px;top:-20px;width:150px;height:150px;stroke:var(--caramel);fill:none;stroke-width:3;opacity:.6}
+
+/* types */
+.types{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.ty{background:#fff;border-radius:28px;overflow:hidden;display:flex;flex-direction:column}
+.ty .ph{aspect-ratio:4/5}
+.ty .tx{padding:22px 22px 26px;display:flex;flex-direction:column;gap:6px;flex:1}
+.ty h3{font-size:24px}
+.ty p{color:var(--mute);font-size:15px;flex:1}
+.ty .meta{display:flex;justify-content:space-between;align-items:baseline;margin-top:8px}
+.ty b{font-family:Comfortaa;font-size:21px;color:var(--caramel2)}
+.ty small{color:var(--mute);font-size:13.5px}
+
+/* consult */
+.consult{background:var(--choc);color:#fff;border-radius:40px;padding:60px;display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;position:relative;overflow:hidden}
+.consult.edu{grid-template-columns:1fr auto}
+@media (max-width:1060px){.consult.edu{grid-template-columns:1fr}}
+.consult h2{font-size:clamp(34px,4.4vw,56px);margin:14px 0 16px}
+.consult .tag{color:var(--blush)}
+.consult .tag svg{stroke:var(--blush)}
+.consult p{color:#d8c4b8;margin-bottom:24px}
+.steps{display:grid;gap:12px}
+.st{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:18px 20px;display:flex;gap:14px}
+.st .n{flex:0 0 38px;height:38px;border-radius:50%;background:var(--caramel);display:grid;place-items:center;font-family:Comfortaa;font-weight:700}
+.st b{display:block}
+.st span{color:#c8b3a6;font-size:15px}
+
+/* why */
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.w{background:var(--sand);border-radius:26px;padding:30px}
+.w h3{font-size:22px;margin-bottom:8px}
+.w p{color:var(--mute);font-size:16px}
+
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rv{background:#fff;border-radius:26px;padding:30px;display:flex;flex-direction:column;justify-content:space-between;gap:18px}
+.rv p{font-size:16.5px}
+.rv footer{display:flex;justify-content:space-between;gap:10px;font-size:14px;font-weight:600;color:var(--mute)}
+.rv footer i{font-style:normal;color:var(--caramel);letter-spacing:2px}
+.rv.big{background:var(--caramel);color:#fff}
+.rv.big p{font-family:Comfortaa;font-size:21px;line-height:1.45}
+.rv.big footer,.rv.big footer i{color:#fbe2d3}
+
+/* services page */
+.slist{display:grid;gap:18px}
+.sv{background:#fff;border-radius:30px;display:grid;grid-template-columns:260px 1fr auto;gap:28px;align-items:center;padding:18px 32px 18px 18px}
+.sv .ph{aspect-ratio:1;border-radius:22px}
+.sv h2{font-size:30px;margin-bottom:6px}
+.sv p{color:var(--mute)}
+.sv ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.sv li{background:var(--cream);border-radius:999px;padding:6px 12px;font-size:14px;font-weight:600}
+.sv .pr{text-align:right}
+.sv .pr b{display:block;font-family:Comfortaa;font-size:28px;color:var(--caramel2);white-space:nowrap}
+.sv .pr span{font-size:14px;color:var(--mute)}
+.extra{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+.ex{background:var(--sand);border-radius:26px;padding:30px}
+.ex h3{font-size:24px;margin-bottom:12px}
+.ex .row{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line)}
+.ex .row:last-child{border-bottom:0}
+.ex .row b{font-family:Comfortaa;white-space:nowrap}
+
+/* gallery */
+.gal{columns:4;column-gap:12px}
+.gal .ph{break-inside:avoid;margin-bottom:12px;border-radius:22px;cursor:zoom-in}
+.gal .ph img{height:auto}
+.lb{position:fixed;inset:0;background:rgba(44,26,18,.94);display:none;place-items:center;z-index:80;padding:20px;cursor:zoom-out}
+.lb.on{display:grid}
+.lb img{max-width:92vw;max-height:88vh;border-radius:18px}
+
+/* team */
+.team{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.tm{background:#fff;border-radius:26px;padding:28px;text-align:center}
+.tm .av{width:84px;height:84px;margin:0 auto 14px;border-radius:50%;background:var(--sand);display:grid;place-items:center;font-family:Comfortaa;font-weight:700;font-size:32px;color:var(--caramel2)}
+.tm h3{font-size:22px}
+.tm p{color:var(--mute);font-size:15px;margin-top:8px}
+
+/* scores */
+.scores{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:22px}
+.sc{background:var(--choc);color:#fff;border-radius:28px;padding:32px;display:flex;gap:24px;align-items:center}
+.sc .big{font-family:Comfortaa;font-weight:700;font-size:72px;line-height:.9;color:var(--blush)}
+.sc h3{font-size:22px}
+.sc p{color:#c8b3a6;font-size:14.5px;margin:4px 0 8px}
+.sc a{font-weight:700;color:#fff;border-bottom:2px solid var(--caramel)}
+
+/* contacts */
+.cgrid{display:grid;grid-template-columns:1fr 1.15fr;gap:20px}
+.cbox{background:#fff;border-radius:30px;padding:40px}
+.kv{display:grid;gap:22px;margin-bottom:28px}
+.kv span{display:block;font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--caramel2);margin-bottom:4px}
+.kv b,.kv a.v{font-family:Comfortaa;font-weight:700;font-size:23px;line-height:1.25;display:block}
+.kv a.v:hover{color:var(--caramel)}
+.kv em{display:block;font-style:normal;color:var(--mute);font-size:15.5px;margin-top:4px}
+.soc{display:flex;gap:8px;flex-wrap:wrap}
+.map{border-radius:30px;overflow:hidden;min-height:540px;background:var(--sand)}
+.map iframe{width:100%;height:100%;min-height:540px;border:0;display:block}
+
+.foot{background:var(--choc);color:#c8b3a6;padding:60px 0 28px;margin-top:60px}
+.foot .g{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+.foot .logo{color:#fff}
+.foot h4{font-family:Comfortaa;color:#fff;font-size:17px;margin-bottom:12px}
+.foot .g a:not(.logo){display:block;margin-bottom:6px}
+.foot a:hover{color:#fff}
+.credit{margin-top:40px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13.5px;color:#a38c7f}
+.credit a{color:#f3e4da}
+
+.callbar{display:none}
+
+@media (max-width:1060px){
+  .hero .wrap,.consult,.cgrid{grid-template-columns:1fr}
+  .hpic{height:540px;max-width:560px}
+  .types,.team{grid-template-columns:1fr 1fr}
+  .why,.revs{grid-template-columns:1fr 1fr}
+  .sv{grid-template-columns:200px 1fr;padding-right:22px}
+  .sv .pr{grid-column:2;text-align:left}
+  .gal{columns:3}
+  .consult{padding:44px 34px}
+  .foot .g{grid-template-columns:1fr 1fr}
+}
+@media (max-width:880px){
+  .links{display:none;position:absolute;top:76px;left:0;right:0;flex-direction:column;background:var(--cream);padding:8px 16px 18px;border-bottom:1px solid var(--line)}
+  .links.open{display:flex}
+  .links a{font-size:18px;padding:13px 16px}
+  .nav>.btn{display:none}
+  .burger{display:block}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  section{padding:60px 0}
+  .hero .wrap{padding-top:28px;gap:30px}
+  .hpic{height:440px}
+  .curl{width:100px;height:100px;right:-10px}
+  .types,.why,.revs,.team,.scores,.extra{grid-template-columns:1fr}
+  .consult{padding:30px 20px;border-radius:28px}
+  .sv{grid-template-columns:1fr;padding:16px 16px 24px}
+  .sv .ph{aspect-ratio:16/10}
+  .sv .pr{grid-column:auto}
+  .gal{columns:2;column-gap:8px}
+  .gal .ph{margin-bottom:8px}
+  .sc{flex-direction:column;align-items:flex-start;gap:10px}
+  .cbox{padding:26px}
+  .foot .g{grid-template-columns:1fr}
+  .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:50;gap:8px}
+  .callbar .btn{flex:1;padding:15px 10px;box-shadow:0 12px 26px -12px rgba(0,0,0,.5)}
+  .foot{padding-bottom:100px}
+}
+@media (prefers-reduced-motion:reduce){.page{animation:none}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute"><symbol id="c" viewBox="0 0 40 40"><path d="M20 36c-8 0-14-6-14-13 0-6 5-11 11-11 5 0 9 4 9 9 0 4-3 7-7 7-3 0-5-2-5-5"/></symbol></svg>
+
+<header>
+  <div class="wrap nav">
+    <a href="#/" class="logo" aria-label="Кудри.Нск — на главную"><svg><use href="#c"/></svg>Кудри<i>.Нск</i></a>
+    <nav class="links" id="links">
+      <a href="#/">Главная</a>
+      <a href="#/services">Завивки и цены</a>
+      <a href="#/works">Работы</a>
+      <a href="#/team">Мастера</a>
+      <a href="#/reviews">Отзывы</a>
+      <a href="#/contacts">Контакты</a>
+    </nav>
+    <a href="https://wa.me/79831220237" target="_blank" rel="noopener" class="btn b-car">Консультация</a>
+    <button class="burger" id="burger" aria-label="Меню">☰</button>
+  </div>
+</header>
+
+<main>
+
+<!-- ГЛАВНАЯ -->
+<div class="page" data-page="/">
+  <section class="hero" style="padding:0">
+    <div class="wrap">
+      <div>
+        <span class="tag"><svg><use href="#c"/></svg>Студия завивки · Новосибирск</span>
+        <h1>Магия <span class="hl">кудрявых</span> волос</h1>
+        <p>Современная завивка: от лёгких натуральных кудрей до афро. Подбираем технику под структуру и состояние ваших волос, учим ухаживать и укладывать кудри дома.</p>
+        <div class="cta">
+          <a href="https://wa.me/79831220237" target="_blank" rel="noopener" class="btn b-car">Бесплатная консультация</a>
+          <a href="#/services" class="btn b-line">Виды завивки</a>
+        </div>
+        <div class="hfacts">
+          <div><b>5,0</b><span>2ГИС · 261 оценка</span></div>
+          <div><b>до 8 мес</b><span>держатся кудри</span></div>
+          <div><b>10–20</b><span>ежедневно</span></div>
+        </div>
+      </div>
+      <div class="hpic">
+        <div class="ph a"><img src="https://i6.photo.2gis.com/images/branch/0/30258560156952893_d5c9.jpg" alt="Кудри после завивки" loading="eager"></div>
+        <div class="ph b"><img src="https://i8.photo.2gis.com/images/branch/0/30258560099370697_3912.jpg" alt="Результат завивки" loading="eager"></div>
+        <svg class="curl" viewBox="0 0 40 40"><use href="#c"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head"><div><span class="tag"><svg><use href="#c"/></svg>Виды завивки</span><h2>Выберите <span class="hl">свои</span> кудри</h2></div><a href="#/services" class="btn b-line">Все услуги</a></div>
+      <div class="types">
+        <div class="ty"><div class="ph"><img src="https://i3.photo.2gis.com/images/branch/0/30258560175619719_31bd.jpg" alt="Карвинг" loading="lazy"></div><div class="tx"><h3>Карвинг</h3><p>Деликатный перманент, максимально натуральные кудри. Идеально для знакомства с кудрявой историей.</p><div class="meta"><b>от 12 500 ₽</b><small>2–5 мес</small></div></div></div>
+        <div class="ty"><div class="ph"><img src="https://i9.photo.2gis.com/images/branch/0/30258560156953125_5611.jpg" alt="Динамичные кудри" loading="lazy"></div><div class="tx"><h3>Динамика</h3><p>Динамичные кудри — естественный образ на любой длине. Очень удобны в укладке.</p><div class="meta"><b>от 13 500 ₽</b><small>4–7 мес</small></div></div></div>
+        <div class="ty"><div class="ph"><img src="https://i2.photo.2gis.com/photo-gallery/37294899-4ed4-4bc2-b7e4-bcdae3832050.jpg" alt="Афро завивка" loading="lazy"></div><div class="tx"><h3>Афро</h3><p>Вертикально-спиральные кудри разного диаметра. Только на длинные волосы, 5–7 часов.</p><div class="meta"><b>от 22 000 ₽</b><small>6–8 мес</small></div></div></div>
+        <div class="ty"><div class="ph"><img src="https://i4.photo.2gis.com/images/branch/0/30258560175619723_9ac9.jpg" alt="Корейская завивка" loading="lazy"></div><div class="tx"><h3>Корейская</h3><p>Не про кудри и объём: волны, завитые концы, основа под укладку.</p><div class="meta"><b>от 17 000 ₽</b><small>волны</small></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="consult">
+        <div>
+          <span class="tag"><svg><use href="#c"/></svg>С чего начать</span>
+          <h2>Консультация в WhatsApp — бесплатно</h2>
+          <p>Администратор задаст несколько вопросов, попросит фото волос и подробно сориентирует: возможна ли завивка, какие нюансы ухода и укладки, сколько времени и стоимость.</p>
+          <a href="https://wa.me/79831220237" target="_blank" rel="noopener" class="btn b-car">Получить консультацию</a>
+        </div>
+        <div class="steps">
+          <div class="st"><span class="n">1</span><div><b>Консультация</b><span>онлайн бесплатно или очно с мастером, 15–20 минут</span></div></div>
+          <div class="st"><span class="n">2</span><div><b>Завивка</b><span>мастер учитывает состояние волос и подбирает технику</span></div></div>
+          <div class="st"><span class="n">3</span><div><b>Уход и укладка</b><span>научим укладывать кудри дома и подберём средства</span></div></div>
+          <div class="st"><span class="n">4</span><div><b>Реконструкция</b><span>сервис-уход раз в 1,5–2 месяца между завивками</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><div><span class="tag"><svg><use href="#c"/></svg>Почему к нам</span><h2>Бережно к <span class="hl">волосам</span></h2></div></div>
+      <div class="why">
+        <div class="w"><h3>Без шаблонов</h3><p>Мастер оценивает структуру и качество волос и советует, как получить лучший результат, не испортив их.</p></div>
+        <div class="w"><h3>Учим ухаживать</h3><p>Во время процедуры показывают, чем пользоваться и как укладываться. Если средство пропало из продажи — подскажут замену.</p></div>
+        <div class="w"><h3>Не навязывают</h3><p>Если завивка вам не нужна, честно скажут и научат кудрявому методу для натуральных волос.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><div><span class="tag"><svg><use href="#c"/></svg>Отзывы</span><h2>Говорят <span class="hl">кудрявые</span></h2></div><a href="#/reviews" class="btn b-line">Все отзывы</a></div>
+      <div class="revs">
+        <blockquote class="rv big"><p>«Люди теперь удивляются, что это не родные кудри, а завивка»</p><footer>Арина Любовникова · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Уже четвёртый год доверяю свои волосы салону „Кудри НСК“. Здесь умеют не только создавать красивые и естественные кудри, но и бережно относятся к волосам»</p><footer>Евгения Аверина · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Не навязывают лишнего: отговорили от биозавивки и научили профессионально делать кудрявый метод. Подобрали средства именно для моих волос»</p><footer>Valentina S · 2ГИС <i>★★★★★</i></footer></blockquote>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- УСЛУГИ -->
+<div class="page" data-page="/services">
+  <div class="ptop"><div class="wrap"><span class="tag"><svg><use href="#c"/></svg>Услуги и цены</span><h1>Завивки, стрижка <span class="hl">и уход</span></h1><p>Цены «от» — итог зависит от длины и состояния волос. Точную стоимость назовут на консультации. Прайс из 2ГИС, обновлён 20 августа 2026.</p></div></div>
+  <section style="padding-top:40px">
+    <div class="wrap">
+      <div class="slist">
+        <div class="sv"><div class="ph"><img src="https://i3.photo.2gis.com/images/branch/0/30258560175619719_31bd.jpg" alt="Карвинг" loading="lazy"></div><div><h2>Карвинг</h2><p>Деликатный перманент — кудри максимально натуральные, с сохранением исходного качества волос. Возможен на любой длине и структуре, без возрастных нюансов.</p><ul><li>Эффект 2–5 месяцев</li><li>Любая длина</li></ul></div><div class="pr"><b>от 12 500 ₽</b></div></div>
+        <div class="sv"><div class="ph"><img src="https://i9.photo.2gis.com/images/branch/0/30258560156953125_5611.jpg" alt="Динамика" loading="lazy"></div><div><h2>Динамика</h2><p>Динамичные кудри — максимально естественный образ. Подходит для любой длины, очень удобна в укладке.</p><ul><li>Эффект 4–7 месяцев</li><li>Любая длина</li></ul></div><div class="pr"><b>от 13 500 ₽</b></div></div>
+        <div class="sv"><div class="ph"><img src="https://i4.photo.2gis.com/photo-gallery/c4666e89-5f76-45dd-b990-49dc56858a2f.jpg" alt="Корейская завивка" loading="lazy"></div><div><h2>Корейская завивка</h2><p>Эта история не про кудри и объём. Это изменение структуры волос в волны, в завитые концы, основу под укладку.</p><ul><li>Волны</li><li>Завитые концы</li></ul></div><div class="pr"><b>от 17 000 ₽</b></div></div>
+        <div class="sv"><div class="ph"><img src="https://i2.photo.2gis.com/photo-gallery/37294899-4ed4-4bc2-b7e4-bcdae3832050.jpg" alt="Афро завивка" loading="lazy"></div><div><h2>Афро завивка</h2><p>Вертикально-спиральные кудри разного диаметра. Выполняется только на длинные волосы. Потом кудри становятся крупнее, но полностью не «уходят».</p><ul><li>Эффект 6–8 месяцев</li><li>5–7 часов</li><li>Длинные волосы</li></ul></div><div class="pr"><b>от 22 000 ₽</b></div></div>
+      </div>
+      <div class="extra">
+        <div class="ex"><h3>Стрижка и уход</h3>
+          <div class="row"><span>Deva cut — стрижка кудрявых волос в сухой технике, 2 часа: стрижка, глубокое увлажнение, уход, укладка диффузором и обучение укладке</span><b>6 500 ₽</b></div>
+          <div class="row"><span>Реконструкция — сервис-уход после химической завивки, 1 раз в 1,5–2 месяца</span><b>от 6 500 ₽</b></div>
+        </div>
+        <div class="ex"><h3>Консультация</h3>
+          <div class="row"><span>Онлайн в WhatsApp — по фото волос</span><b>бесплатно</b></div>
+          <div class="row"><span>Очная в студии с мастером, 15–20 минут</span><b>350 ₽</b></div>
+          <p style="color:var(--mute);font-size:15px;margin-top:12px">Также в студии: прикорневой объём, холодное восстановление волос, женская и мужская химзавивка.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- РАБОТЫ -->
+<div class="page" data-page="/works">
+  <div class="ptop"><div class="wrap"><span class="tag"><svg><use href="#c"/></svg>Портфолио</span><h1>Кудри <span class="hl">наших гостей</span></h1><p>Работы мастеров студии. Нажмите на фото, чтобы открыть крупнее.</p></div></div>
+  <section style="padding-top:40px"><div class="wrap"><div class="gal" id="gal"></div></div></section>
+</div>
+
+<!-- МАСТЕРА -->
+<div class="page" data-page="/team">
+  <div class="ptop"><div class="wrap"><span class="tag"><svg><use href="#c"/></svg>Команда</span><h1>Мастера <span class="hl">кудрей</span></h1><p>Имена мастеров — из отзывов гостей в 2ГИС.</p></div></div>
+  <section style="padding-top:40px">
+    <div class="wrap">
+      <div class="team">
+        <div class="tm"><div class="av">Л</div><h3>Любовь</h3><p>«Мастер Любовь при завивке всё объяснила об уходе, поэтому когда я вернулась через 6 месяцев, кудряшки всё ещё кудрились»</p></div>
+        <div class="tm"><div class="av">Н</div><h3>Наталья</h3><p>«Мастер Наталья превращает кудряшки в произведение искусства. Волосы живые, блестящие, ухоженные»</p></div>
+        <div class="tm"><div class="av">И</div><h3>Ирэн</h3><p>«Выслушала все пожелания, оценила структуру и качество волос. Никаких шаблонных решений»</p></div>
+        <div class="tm"><div class="av">Е</div><h3>Елена</h3><p>«Мастер Елена просто волшебница, сделала всё так, как и хотелось»</p></div>
+      </div>
+      <div class="consult edu" style="margin-top:28px">
+        <div><span class="tag"><svg><use href="#c"/></svg>Для мастеров</span><h2 style="font-size:clamp(28px,3.4vw,42px)">Обучение завивке</h2><p style="margin:0">Студия проводит курсы и мастер-классы для мастеров. Подробности — у администратора.</p></div>
+        <a href="https://wa.me/79831220237" target="_blank" rel="noopener" class="btn b-car">Узнать об обучении</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ОТЗЫВЫ -->
+<div class="page" data-page="/reviews">
+  <div class="ptop"><div class="wrap"><span class="tag"><svg><use href="#c"/></svg>Отзывы</span><h1>223 <span class="hl">отзыва</span> в 2ГИС</h1></div></div>
+  <section style="padding-top:40px">
+    <div class="wrap">
+      <div class="scores">
+        <div class="sc"><div class="big">5,0</div><div><h3>2ГИС · «Номинант 2026»</h3><p>261 оценка · 223 отзыва</p><a href="https://2gis.ru/novosibirsk/firm/70000001043531437/tab/reviews" target="_blank" rel="noopener">Читать в 2ГИС →</a></div></div>
+        <div class="sc"><div class="big">4,7</div><div><h3>Яндекс · «Хорошее место 2026»</h3><p>43 оценки</p><a href="https://yandex.ru/maps/org/kudri_nsk/242119432774/reviews/" target="_blank" rel="noopener">Читать в Яндексе →</a></div></div>
+      </div>
+      <div class="revs">
+        <blockquote class="rv big"><p>«Делаю завивку раз в 6–8 месяцев. Это уже 5-я завивка, не могу представить, что променяю кудряшки на что-то другое. Для меня это идеальная причёска»</p><footer>Арина Любовникова <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Делаю биозавивку в этой потрясающей студии уже в 4-й раз. Волосы после процедуры живые, блестящие, ухоженные, завиток держится идеально и долго»</p><footer>Darya Bulgakova <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Осуществила свою давнюю мечту! Никаких шаблонных решений, всё грамотно подобрано, индивидуально, с заботой о здоровье волос. Девочки, хватит мечтать — запишитесь хотя бы на консультацию!»</p><footer>Юлия Сумина <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Предложили переодеться, чтобы не испортить одежду, создали комфортные условия для долгого пребывания»</p><footer>Екатерина Демидова <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Во время процедуры всё подробно объяснили, чем пользоваться показали, как укладываться тоже показали»</p><footer>Сонечка Полуэктова <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Являюсь постоянным клиентом уже несколько лет. Здесь всегда идеальная чистота и уютная обстановка. Лучшее место для создания кудрей в городе!»</p><footer>Анна Д. <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Второй раз хожу к мастеру Ирэн. Рассказала, как правильно ухаживать за кудрями дома и что делать при укладке»</p><footer>Виктория Дергачева <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Ухожу всегда с кудрями, в каком бы состоянии ни были волосы. Волосы восстановили, завили, подобрали уход»</p><footer>Евгения Карпич <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Уже второй раз делаю здесь завивку. Это полный восторг! Не вижу себя без кудрей теперь»</p><footer>Елизавета Баландина <i>★★★★★</i></footer></blockquote>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- КОНТАКТЫ -->
+<div class="page" data-page="/contacts">
+  <div class="ptop"><div class="wrap"><span class="tag"><svg><use href="#c"/></svg>Контакты</span><h1>Ждём <span class="hl">в студии</span></h1><p>Заельцовский район, цокольный этаж. Работаем по предварительной записи.</p></div></div>
+  <section style="padding-top:40px">
+    <div class="wrap cgrid">
+      <div class="cbox">
+        <div class="kv">
+          <div><span>Адрес</span><b>Новосибирск, ул. Дуси Ковальчук, 250</b><em>цокольный этаж</em></div>
+          <div><span>Телефон и WhatsApp</span><a class="v" href="tel:+79831220237">+7 983 122-02-37</a></div>
+          <div><span>Время работы</span><b>Ежедневно 10:00–20:00</b><em>по предварительной записи</em></div>
+          <div><span>Почта</span><a class="v" href="mailto:luba-novosib@mail.ru" style="font-size:19px">luba-novosib@mail.ru</a></div>
+        </div>
+        <div class="soc">
+          <a href="https://wa.me/79831220237" target="_blank" rel="noopener" class="btn b-car">WhatsApp</a>
+          <a href="https://t.me/fIUkCrXIIothNTcy" target="_blank" rel="noopener" class="btn b-line">Telegram</a>
+          <a href="https://vk.com/club211623174" target="_blank" rel="noopener" class="btn b-line">ВКонтакте</a>
+          <a href="https://max.ru/u/f9LHodD0cOLmACjjGPsQ0tSLwYl1CsmVXM79GnPCSdkx9i6MZJOudAn-aek" target="_blank" rel="noopener" class="btn b-line">MAX</a>
+        </div>
+      </div>
+      <div class="map"><iframe src="https://yandex.ru/map-widget/v1/?ll=82.90346%2C55.055139&z=16&pt=82.90346,55.055139,pm2orm" loading="lazy" title="Карта: ул. Дуси Ковальчук, 250"></iframe></div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="g">
+      <div><a href="#/" class="logo"><svg><use href="#c"/></svg>Кудри<i>.Нск</i></a><p style="margin-top:16px;max-width:320px">Студия завивки в Новосибирске. Ул. Дуси Ковальчук, 250.</p></div>
+      <div><h4>Разделы</h4><a href="#/services">Завивки и цены</a><a href="#/works">Работы</a><a href="#/team">Мастера</a><a href="#/reviews">Отзывы</a></div>
+      <div><h4>Связь</h4><a href="tel:+79831220237">+7 983 122-02-37</a><a href="https://wa.me/79831220237" target="_blank" rel="noopener">WhatsApp</a><a href="https://vk.com/club211623174" target="_blank" rel="noopener">ВКонтакте</a><span>Ежедневно 10:00–20:00</span></div>
+    </div>
+    <div class="credit"><span>© Студия завивки «Кудри.Нск», Новосибирск</span><span>Демо-сайт · разработка: Сергей Музыченко, Telegram <a href="https://t.me/spectator0011" target="_blank" rel="noopener">@spectator0011</a></span></div>
+  </div>
+</footer>
+
+<div class="callbar"><a href="https://wa.me/79831220237" target="_blank" rel="noopener" class="btn b-car">Консультация</a><a href="tel:+79831220237" class="btn b-cream" style="border:2px solid var(--choc)">Позвонить</a></div>
+<div class="lb" id="lb"><img alt=""></div>
+
+<script>
+const PH=["i6.photo.2gis.com/images/branch/0/30258560156952893_d5c9","i9.photo.2gis.com/images/branch/0/30258560156953125_5611","i1.photo.2gis.com/video-gallery/19ed5c68-0c15-4056-b3da-fbeb9be88ce1","i6.photo.2gis.com/photo-gallery/275aaa13-a3cb-463e-b42d-051505b372cb","i5.photo.2gis.com/photo-gallery/56ffc1b6-ecd6-4a83-a37b-74cf0a60f173","i8.photo.2gis.com/images/branch/0/30258560099370697_3912","i3.photo.2gis.com/images/branch/0/30258560175619719_31bd","i4.photo.2gis.com/images/branch/0/30258560175619723_9ac9","i8.photo.2gis.com/photo-gallery/d86b6a27-a7c7-49de-8f76-4a59a29edb02","i5.photo.2gis.com/images/branch/0/30258560156977767_b36f","i0.photo.2gis.com/images/branch/0/30258560175621602_f83b","i2.photo.2gis.com/photo-gallery/37294899-4ed4-4bc2-b7e4-bcdae3832050","i4.photo.2gis.com/images/branch/0/30258560156977693_bba3","i6.photo.2gis.com/images/branch/0/30258560169135717_5bc7","i0.photo.2gis.com/photo-gallery/e54eb6c6-03b3-4bd2-84fa-e5a04a2f1e3c","i4.photo.2gis.com/photo-gallery/e3e71fc2-2407-45b8-b28a-6622562d2f9f","i4.photo.2gis.com/photo-gallery/c4666e89-5f76-45dd-b990-49dc56858a2f","i5.photo.2gis.com/photo-gallery/4838c328-d544-4d23-8961-f22fdc0c2c02","i3.photo.2gis.com/photo-gallery/e78e6ad4-967a-4988-8cb4-c28df16c2b37","i2.photo.2gis.com/images/branch/0/30258560053418168_4b6a","i7.photo.2gis.com/photo-gallery/3c158a29-7528-4275-81c8-aede62343d21","i6.photo.2gis.com/photo-gallery/1dab4fe8-ff22-4fc4-a62e-cdcdd28f70ff"];
+document.getElementById('gal').innerHTML=PH.map(s=>`<div class="ph"><img src="https://${s}.jpg" alt="Завивка в студии Кудри.Нск" loading="lazy"></div>`).join('');
+
+const pages=[...document.querySelectorAll('.page')],links=[...document.querySelectorAll('.links a')],nav=document.getElementById('links');
+const titles={'/':'Кудри.Нск — студия завивки в Новосибирске','/services':'Завивки и цены — Кудри.Нск','/works':'Работы — Кудри.Нск','/team':'Мастера — Кудри.Нск','/reviews':'Отзывы — Кудри.Нск','/contacts':'Контакты — Кудри.Нск'};
+function route(){const p=location.hash.replace(/^#/,'')||'/';const t=pages.find(x=>x.dataset.page===p)||pages[0];pages.forEach(x=>x.classList.toggle('on',x===t));links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+t.dataset.page));nav.classList.remove('open');scrollTo(0,0);document.title=titles[t.dataset.page]}
+addEventListener('hashchange',route);route();
+document.getElementById('burger').onclick=()=>nav.classList.toggle('open');
+const lb=document.getElementById('lb'),li=lb.querySelector('img');
+document.getElementById('gal').addEventListener('click',e=>{const b=e.target.closest('.ph');if(b){li.src=b.querySelector('img').src;lb.classList.add('on')}});
+lb.onclick=()=>lb.classList.remove('on');addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+document.querySelectorAll('img').forEach(i=>i.addEventListener('error',()=>{i.style.visibility='hidden'}));
+</script>
+</body>
+</html>

@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>май — бистро на Столбова, Казань</title>
+<meta name="description" content="Бистро «май» на гастроулице Столбова в Казани: завтраки весь день, круассаны и выпечка собственного производства, горячее, кофе и авторские напитки. Ежедневно 8:30–21:00.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,700;0,800;1,500;1,700&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#fbf6ea; --butter:#f6ebcd; --sun:#f0c341; --sun2:#e6ae1c; --leaf:#4c7a3a; --leaf2:#3b6430; --wood:#c9a37a; --ink:#29271f; --mute:#7b7566; --line:rgba(41,39,31,.12);
+  --max:1200px; --r:26px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font:400 17px/1.6 Onest,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:Alegreya,Georgia,serif;font-weight:700;line-height:1.02;letter-spacing:-.01em}
+h1 em,h2 em{font-style:italic;color:var(--leaf);font-weight:700}
+.over{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--leaf)}
+.ph{overflow:hidden;background:var(--butter);border-radius:var(--r)}
+.ph img{width:100%;height:100%;object-fit:cover}
+
+header{position:sticky;top:0;z-index:40;background:rgba(251,246,234,.9);backdrop-filter:blur(10px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:78px;gap:18px}
+.logo{display:flex;align-items:center;gap:10px;font-family:Alegreya;font-weight:800;font-size:38px;line-height:1;letter-spacing:-.03em}
+.logo .sun{width:34px;height:34px;border-radius:50%;background:var(--sun);position:relative;box-shadow:0 0 0 6px rgba(240,195,65,.25)}
+.links{display:flex;gap:4px;background:#fff;border-radius:999px;padding:6px;box-shadow:0 2px 0 var(--line)}
+.links a{padding:9px 16px;border-radius:999px;font-weight:500;font-size:15px}
+.links a:hover{background:var(--butter)}
+.links a.on{background:var(--ink);color:var(--cream)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 26px;border-radius:999px;font:600 15px Onest;transition:transform .2s,background .2s;white-space:nowrap;border:0;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.b-sun{background:var(--sun);color:var(--ink)}
+.b-sun:hover{background:var(--sun2)}
+.b-leaf{background:var(--leaf);color:#fff}
+.b-leaf:hover{background:var(--leaf2)}
+.b-line{border:1.5px solid var(--ink)}
+.b-white{background:#fff;color:var(--ink)}
+.burger{display:none;width:46px;height:46px;border-radius:50%;border:0;background:var(--ink);color:var(--cream);font-size:18px;cursor:pointer}
+
+.page{display:none;animation:in .5s ease}
+.page.on{display:block}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+section{padding:96px 0}
+.ptop{padding:64px 0 24px;text-align:center}
+.ptop h1{font-size:clamp(56px,9vw,120px);margin-top:12px}
+.ptop p{max-width:580px;margin:16px auto 0;color:var(--mute);font-size:18px}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:44px;flex-wrap:wrap}
+.head h2{font-size:clamp(40px,5.6vw,72px);margin-top:10px}
+.head p{max-width:400px;color:var(--mute)}
+
+/* hero */
+.hero{padding:24px 0 80px}
+.hgrid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+.htxt{background:var(--butter);border-radius:36px;padding:56px 48px;display:flex;flex-direction:column;justify-content:space-between;gap:36px;position:relative;overflow:hidden}
+.htxt::after{content:"";position:absolute;right:-90px;top:-90px;width:260px;height:260px;border-radius:50%;background:var(--sun);opacity:.55}
+.htxt>*{position:relative;z-index:1}
+.hero h1{font-size:clamp(64px,9vw,136px)}
+.hero h1 em{display:block}
+.hero p{font-size:19px;color:#4d4a3f;max-width:460px;margin:20px 0 28px}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.awards{display:flex;gap:10px;flex-wrap:wrap}
+.awards span{background:#fff;border-radius:999px;padding:9px 15px;font-size:14px;font-weight:600}
+.awards b{color:var(--leaf)}
+.hpics{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1.15fr 1fr;gap:16px;min-height:620px}
+.hpics .ph:first-child{grid-column:span 2}
+
+/* marquee */
+.mq{overflow:hidden;padding:18px 0;background:var(--leaf);color:var(--cream)}
+.mq .t{display:flex;gap:44px;width:max-content;animation:mq 34s linear infinite;font-family:Alegreya;font-style:italic;font-size:28px}
+.mq span::after{content:"✿";margin-left:44px;color:var(--sun)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* day */
+.day{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.dcard{background:#fff;border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.dcard .ph{border-radius:0;aspect-ratio:4/3}
+.dcard .t{padding:24px 26px 28px}
+.dcard .time{font-size:13px;font-weight:600;color:var(--leaf);letter-spacing:.08em;text-transform:uppercase}
+.dcard h3{font-size:34px;margin:6px 0 8px}
+.dcard p{color:var(--mute);font-size:15.5px}
+.dcard ul{list-style:none;margin-top:14px;display:grid;gap:8px}
+.dcard li{display:flex;justify-content:space-between;gap:12px;font-size:15px;border-top:1px dashed var(--line);padding-top:8px}
+.dcard li b{font-weight:600;white-space:nowrap}
+
+/* croissants */
+.croi{background:var(--butter);border-radius:40px;padding:64px 56px}
+.cgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cr{background:#fff;border-radius:22px;overflow:hidden}
+.cr .ph{border-radius:0;aspect-ratio:1}
+.cr .t{padding:14px 16px;display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.cr h3{font-size:19px}
+.cr b{font-weight:600;white-space:nowrap}
+
+/* hospitality */
+.host{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.host .ph{aspect-ratio:1}
+.host h2{font-size:clamp(40px,5vw,64px);margin:10px 0 20px}
+.pts{display:grid;gap:16px}
+.pts>div{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start}
+.pts i{width:44px;height:44px;border-radius:50%;background:var(--butter);display:grid;place-items:center;font-style:normal;font-size:20px}
+.pts b{display:block;font-size:18px}
+.pts span{color:var(--mute);font-size:15.5px}
+
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rv{background:#fff;border-radius:var(--r);padding:30px;display:flex;flex-direction:column;justify-content:space-between;gap:20px}
+.rv p{font-family:Alegreya;font-size:21px;line-height:1.4}
+.rv footer{display:flex;justify-content:space-between;font-size:14px;color:var(--mute);font-weight:500}
+.rv footer i{font-style:normal;color:var(--sun2);letter-spacing:2px}
+.rv.sun{background:var(--sun)}
+.rv.sun footer{color:var(--ink)}
+.rv.sun footer i{color:var(--ink)}
+
+/* visit */
+.visit{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}
+.vbox{background:var(--leaf);color:var(--cream);border-radius:36px;padding:52px}
+.vbox h2{font-size:clamp(40px,5vw,64px);color:var(--cream)}
+.vbox h2 em{color:var(--sun)}
+.vbox p{color:#dbe6d2;margin:16px 0 26px;max-width:440px}
+.vbox .hrs{display:grid;gap:10px;margin-bottom:28px}
+.vbox .hrs div{display:flex;justify-content:space-between;border-bottom:1px solid rgba(251,246,234,.25);padding-bottom:10px;font-size:17px}
+.vbox .hrs b{font-family:Alegreya;font-size:24px}
+
+/* menu */
+.mtabs{position:sticky;top:78px;z-index:20;background:var(--cream);padding:12px 0 14px}
+.mtabs .wrap{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;justify-content:center}
+.mtabs .wrap::-webkit-scrollbar{display:none}
+.mt{flex:0 0 auto;padding:10px 18px;border-radius:999px;border:0;background:#fff;font:500 15px Onest;cursor:pointer;color:var(--ink)}
+.mt.on{background:var(--ink);color:var(--cream)}
+.mcat{padding-top:52px;scroll-margin-top:150px}
+.mcat .hd{display:flex;align-items:baseline;gap:16px;margin-bottom:22px}
+.mcat .hd h2{font-size:clamp(38px,5vw,60px)}
+.mcat .hd small{color:var(--mute)}
+.dishes{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.dish{background:#fff;border-radius:22px;padding:18px;display:grid;grid-template-columns:96px 1fr;gap:18px;align-items:start}
+.dish.noimg{grid-template-columns:1fr}
+.dish .ph{width:96px;height:96px;border-radius:16px}
+.dish h3{font-family:Onest;font-weight:600;font-size:17px;line-height:1.3;letter-spacing:0}
+.dish p{color:var(--mute);font-size:14.5px;margin-top:6px;line-height:1.5}
+.dish .pr{display:inline-block;margin-top:10px;background:var(--butter);border-radius:999px;padding:4px 12px;font-weight:700;font-size:15px}
+.simple{background:#fff;border-radius:22px;padding:8px 26px}
+.srow{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px dashed var(--line)}
+.srow:last-child{border-bottom:0}
+.srow small{display:block;color:var(--mute);font-size:13.5px}
+.srow b{font-weight:700;white-space:nowrap}
+.mnote{margin-top:44px;background:var(--sun);border-radius:28px;padding:28px 34px;display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}
+.mnote p{max-width:640px;font-weight:500}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about .ph{aspect-ratio:4/5}
+.about h2{font-size:clamp(40px,5vw,64px);margin:10px 0 20px}
+.about p{font-size:18px;color:#4d4a3f;margin-bottom:14px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.tags span{background:#fff;border-radius:999px;padding:8px 14px;font-size:14px;font-weight:500}
+.gal{columns:4;column-gap:14px}
+.gal .ph{margin-bottom:14px;break-inside:avoid;cursor:zoom-in;border-radius:20px}
+.gal .ph img{height:auto}
+.lb{position:fixed;inset:0;background:rgba(30,28,22,.92);display:none;place-items:center;z-index:80;padding:20px;cursor:zoom-out}
+.lb.on{display:grid}
+.lb img{max-width:92vw;max-height:88vh;border-radius:18px}
+
+/* scores */
+.scores{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:22px}
+.sc{background:#fff;border-radius:var(--r);padding:34px;display:flex;gap:26px;align-items:center}
+.sc .big{font-family:Alegreya;font-weight:800;font-size:92px;line-height:.85;color:var(--leaf)}
+.sc h3{font-size:28px}
+.sc p{color:var(--mute);font-size:14.5px;margin:4px 0 10px}
+.sc a{font-weight:600;text-decoration:underline;text-decoration-color:var(--sun);text-decoration-thickness:3px;text-underline-offset:4px}
+
+/* contacts */
+.cgrid2{display:grid;grid-template-columns:1fr 1.2fr;gap:20px}
+.cbox{background:#fff;border-radius:var(--r);padding:40px}
+.kv{display:grid;gap:22px;margin-bottom:28px}
+.kv span{display:block;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--leaf);margin-bottom:3px}
+.kv b,.kv a{font-family:Alegreya;font-weight:700;font-size:28px;line-height:1.15}
+.kv a:hover{color:var(--leaf)}
+.kv em{display:block;font-style:normal;color:var(--mute);font-size:15px;margin-top:3px}
+.map{border-radius:var(--r);overflow:hidden;min-height:500px;background:var(--butter)}
+.map iframe{width:100%;height:100%;min-height:500px;border:0;display:block}
+
+.foot{background:var(--ink);color:#b9b3a3;padding:60px 0 28px;margin-top:40px}
+.foot .g{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+.foot .logo{color:var(--cream)}
+.foot h4{font-family:Alegreya;font-size:22px;color:var(--cream);margin-bottom:12px}
+.foot a{display:block;margin-bottom:6px}
+.foot a:hover{color:var(--sun)}
+.credit{margin-top:40px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px;color:#857f70}
+.credit a{display:inline;color:#ddd6c4}
+
+.callbar{display:none}
+
+@media (max-width:1040px){
+  .hgrid,.host,.visit,.about,.cgrid2,.scores{grid-template-columns:1fr}
+  .hpics{min-height:520px}
+  .day,.revs{grid-template-columns:1fr 1fr}
+  .cgrid{grid-template-columns:repeat(3,1fr)}
+  .dishes{grid-template-columns:1fr}
+  .gal{columns:3}
+  .foot .g{grid-template-columns:1fr 1fr}
+  .mtabs .wrap{justify-content:flex-start}
+}
+@media (max-width:860px){
+  .links{display:none;position:absolute;top:78px;left:16px;right:16px;flex-direction:column;border-radius:24px;padding:10px}
+  .links.open{display:flex}
+  .links a{font-size:18px;padding:13px 16px}
+  .nav>.btn{display:none}
+  .burger{display:block}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  section{padding:64px 0}
+  .hero{padding-top:12px}
+  .htxt{padding:36px 24px;border-radius:28px}
+  .hpics{min-height:420px;gap:10px}
+  .day,.revs{grid-template-columns:1fr}
+  .croi{padding:36px 18px;border-radius:28px}
+  .cgrid{grid-template-columns:1fr 1fr;gap:10px}
+  .cr h3{font-size:16px}
+  .vbox,.cbox{padding:28px}
+  .dish{grid-template-columns:76px 1fr;gap:14px;padding:14px}
+  .dish .ph{width:76px;height:76px}
+  .simple{padding:4px 16px}
+  .gal{columns:2}
+  .sc{flex-direction:column;align-items:flex-start;gap:8px;padding:26px}
+  .foot .g{grid-template-columns:1fr}
+  .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:50;gap:8px}
+  .callbar .btn{flex:1;box-shadow:0 10px 26px -10px rgba(0,0,0,.4)}
+  .foot{padding-bottom:100px}
+}
+@media (prefers-reduced-motion:reduce){.mq .t{animation:none}.page{animation:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#/" class="logo" aria-label="май — на главную"><span class="sun"></span>май</a>
+    <nav class="links" id="links">
+      <a href="#/">Главная</a>
+      <a href="#/menu">Меню</a>
+      <a href="#/about">О нас</a>
+      <a href="#/reviews">Отзывы</a>
+      <a href="#/contacts">Контакты</a>
+    </nav>
+    <a href="tel:+79375710500" class="btn b-sun">Забронировать стол</a>
+    <button class="burger" id="burger" aria-label="Меню">☰</button>
+  </div>
+</header>
+
+<main>
+
+<!-- ГЛАВНАЯ -->
+<div class="page" data-page="/">
+  <section class="hero">
+    <div class="wrap hgrid">
+      <div class="htxt">
+        <div>
+          <div class="over">Бистро · гастроулица Столбова</div>
+          <h1 style="margin-top:16px">Всегда <em>май</em></h1>
+          <p>Завтраки весь день, круассаны и слойки, сезонная кухня и хороший кофе. В ЖК «Винсент», в 10 минутах от площади Тукая.</p>
+          <div class="cta">
+            <a href="#/menu" class="btn b-leaf">Смотреть меню</a>
+            <a href="tel:+79375710500" class="btn b-white">+7 937 571-05-00</a>
+          </div>
+        </div>
+        <div class="awards">
+          <span><b>4,9</b> в Яндекс Картах · 951 оценка</span>
+          <span>Хорошее место 2026</span>
+          <span>Ultima Guide</span>
+          <span><b>4,9</b> в 2ГИС · Номинант 2026</span>
+        </div>
+      </div>
+      <div class="hpics">
+        <div class="ph"><img src="https://i3.photo.2gis.com/images/branch/0/30258560090660455_7b75.jpg" alt="Светлый зал бистро «май»" loading="eager"></div>
+        <div class="ph"><img src="https://i9.photo.2gis.com/images/branch/0/30258560147271945_fd3e.jpg" alt="Круассан" loading="eager"></div>
+        <div class="ph"><img src="https://i8.photo.2gis.com/images/branch/0/30258560088683965_33bd.jpg" alt="Завтрак и кофе" loading="eager"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="mq" aria-hidden="true"><div class="t">
+    <span>Шакшука с фетой</span><span>Творожные пончики</span><span>Фундучный круассан</span><span>Сливочно-медовое какао</span><span>Рёшти с ростбифом</span><span>Сливочная уха</span><span>Айс-матча клубника</span>
+    <span>Шакшука с фетой</span><span>Творожные пончики</span><span>Фундучный круассан</span><span>Сливочно-медовое какао</span><span>Рёшти с ростбифом</span><span>Сливочная уха</span><span>Айс-матча клубника</span>
+  </div></div>
+
+  <section>
+    <div class="wrap">
+      <div class="head"><div><div class="over">С утра до вечера</div><h2>Целый день <em>в мае</em></h2></div><p>Завтракать можно хоть в обед: каши, сырники, рёшти и «майские завтраки» подаём весь день.</p></div>
+      <div class="day">
+        <div class="dcard">
+          <div class="ph"><img src="https://i3.photo.2gis.com/images/branch/0/30258560087064763_1a05.jpg" alt="Завтрак" loading="lazy"></div>
+          <div class="t"><div class="time">весь день</div><h3>Завтраки</h3><p>Шакшука, омлеты, сырники, каши и «майские завтраки» с хлебом дня.</p>
+            <ul><li>Шакшука с фетой <b>590 ₽</b></li><li>Сырники с томлёной вишней <b>540 ₽</b></li><li>Майский завтрак с лососем <b>830 ₽</b></li></ul></div>
+        </div>
+        <div class="dcard">
+          <div class="ph"><img src="https://i3.photo.2gis.com/images/branch/0/30258560089501038_2b99.jpg" alt="Салат с креветками" loading="lazy"></div>
+          <div class="t"><div class="time">днём</div><h3>Обед</h3><p>Салаты, супы, сэндвичи на фокачче и тартине.</p>
+            <ul><li>Сливочная уха <b>780 ₽</b></li><li>Салат с креветками и цитрусами <b>750 ₽</b></li><li>Сэндвич с тунцом <b>760 ₽</b></li></ul></div>
+        </div>
+        <div class="dcard">
+          <div class="ph"><img src="https://i5.photo.2gis.com/images/branch/0/30258560102482919_d78a.jpg" alt="Горячее" loading="lazy"></div>
+          <div class="t"><div class="time">вечером</div><h3>Ужин</h3><p>Паста, томлёное мясо, гребешки и стейк — к бокалу из винной карты.</p>
+            <ul><li>Томлёная телячья щёчка <b>890 ₽</b></li><li>Гребешки с кремом из сельдерея <b>950 ₽</b></li><li>Стейк бавет <b>1200 ₽</b></li></ul></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap croi">
+      <div class="head"><div><div class="over">С витрины</div><h2>Круассаны <em>и слойки</em></h2></div><a href="#/menu" class="btn b-leaf">Вся выпечка</a></div>
+      <div class="cgrid" id="croi"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap host">
+      <div class="ph"><img src="https://i5.photo.2gis.com/images/branch/0/30258560147266023_40c0.jpg" alt="Блюдо и напиток на солнце" loading="lazy"></div>
+      <div>
+        <div class="over">Гостеприимство</div>
+        <h2>Как дома, <em>только вкуснее</em></h2>
+        <div class="pts">
+          <div><i>🥖</i><div><b>Хлеб с маслом — комплимент</b><span>Тартин и масло, которое часто бывает каждый раз новым.</span></div></div>
+          <div><i>💧</i><div><b>Вода для гостей</b><span>Нальём, даже если вы зашли после пробежки.</span></div></div>
+          <div><i>☕</i><div><b>Кофе, который хвалят</b><span>Эспрессо, фильтр, воронка, раф, матча и какао bean-to-bar.</span></div></div>
+          <div><i>🌿</i><div><b>Веранда и навынос</b><span>Летняя веранда, кофе с собой, доставка. Можно с собакой.</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><div><div class="over">Отзывы</div><h2>Говорят <em>гости</em></h2></div><a href="#/reviews" class="btn b-line">Все отзывы</a></div>
+      <div class="revs">
+        <blockquote class="rv sun"><p>«Одно из лучших мест в России по разнообразию и вкусу кофе. Кухня роскошная, официанты знают меню и стоп-лист»</p><footer>Olga Pakhomova · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Самые лучшие слойки Казани, самые интересные сочетания и безумно вкусные! Ещё и комплимент — тартин с маслом»</p><footer>Карина Прохорова · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Привет из Екатеринбурга! Открывайтесь, пожалуйста, у нас! Круассаны — отвал всего. Каша, что рисовая, что овсяная — наше почтение»</p><footer>Анна · 2ГИС <i>★★★★★</i></footer></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap visit">
+      <div class="vbox">
+        <div class="over" style="color:var(--sun)">Приходите</div>
+        <h2 style="margin-top:12px">Столбова, <em>1/3</em></h2>
+        <p>ЖК «Винсент», первый этаж. Гастроулица Столбова, Вахитовский район — 10 минут пешком от метро «Площадь Тукая».</p>
+        <div class="hrs"><div><span>Каждый день</span><b>8:30 — 21:00</b></div></div>
+        <div class="cta"><a href="tel:+79375710500" class="btn b-sun">Позвонить</a><a href="https://wa.me/79375710500" target="_blank" rel="noopener" class="btn b-white">WhatsApp</a></div>
+      </div>
+      <div class="ph"><img src="https://i5.photo.2gis.com/images/branch/0/30258560067550638_a47d.jpg" alt="Вход в бистро с цветами" loading="lazy"></div>
+    </div>
+  </section>
+</div>
+
+<!-- МЕНЮ -->
+<div class="page" data-page="/menu">
+  <div class="wrap ptop">
+    <div class="over">Меню</div>
+    <h1>Что <em>поесть</em></h1>
+    <p>Цены по меню бистро на октябрь 2026. Есть сезонные позиции — спросите у официанта.</p>
+  </div>
+  <div class="mtabs"><div class="wrap" id="mtabs"></div></div>
+  <div class="wrap" id="menu"></div>
+  <div class="wrap"><div class="mnote"><p>Можно забрать с собой или заказать доставку. Чтобы забронировать стол, позвоните или напишите в WhatsApp.</p><a href="tel:+79375710500" class="btn b-white">+7 937 571-05-00</a></div></div>
+  <div style="height:80px"></div>
+</div>
+
+<!-- О НАС -->
+<div class="page" data-page="/about">
+  <div class="wrap ptop"><div class="over">О нас</div><h1>Про <em>май</em></h1></div>
+  <section style="padding-top:40px">
+    <div class="wrap about">
+      <div class="ph"><img src="https://i5.photo.2gis.com/images/branch/0/30258560089179577_a8ee.jpg" alt="Зал у окна" loading="lazy"></div>
+      <div>
+        <div class="over">Бистро на Столбова</div>
+        <h2>Маленькое бистро <em>с большим меню</em></h2>
+        <p>«май» — небольшое светлое бистро на первом этаже ЖК «Винсент», на гастроулице Столбова. Здесь весь день подают завтраки и выпечку — круассаны, слойки, улитки, — а к вечеру горячее и вино.</p>
+        <p>Гостей встречают комплиментом — тартином с маслом — и водой, а бариста и официанты помогают выбрать из меню и сезонных позиций.</p>
+        <div class="tags"><span>Завтраки весь день</span><span>Круассаны и слойки</span><span>Винная карта</span><span>Летняя веранда</span><span>Столики на улице</span><span>Бронь столов</span><span>Навынос и доставка</span><span>Можно с собакой</span><span>Wi-Fi</span><span>Доступный вход</span></div>
+      </div>
+    </div>
+  </section>
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><div><div class="over">Фото</div><h2>Загляните <em>к нам</em></h2></div><p>Нажмите на фото, чтобы открыть крупнее.</p></div>
+      <div class="gal" id="gal"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ОТЗЫВЫ -->
+<div class="page" data-page="/reviews">
+  <div class="wrap ptop"><div class="over">Отзывы</div><h1>Говорят <em>гости</em></h1><p>Почти 800 отзывов в двух картах — и 4,9 в каждой.</p></div>
+  <section style="padding-top:40px">
+    <div class="wrap">
+      <div class="scores">
+        <div class="sc"><div class="big">4,9</div><div><h3>Яндекс Карты</h3><p>951 оценка · 527 отзывов · Хорошее место 2026</p><a href="https://yandex.ru/maps/org/may/143706802517/reviews/" target="_blank" rel="noopener">Читать в Яндексе</a></div></div>
+        <div class="sc"><div class="big">4,9</div><div><h3>2ГИС</h3><p>266 отзывов · Номинант 2026</p><a href="https://2gis.ru/kazan/firm/70000001055387807/tab/reviews" target="_blank" rel="noopener">Читать в 2ГИС</a></div></div>
+      </div>
+      <div class="revs">
+        <blockquote class="rv sun"><p>«Это абсолютно прекрасное место с шикарным кофе и девушками-бариста, которые уверенно и профессионально владеют искусством кофе! Максимальный уют, комфорт, доброжелательность»</p><footer>Olga Pakhomova · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Круассан с кониной огонь. Свежее хрустящее тесто. Ещё стоит попробовать сливочно-медовое какао — в меру сладкое, очень нежное»</p><footer>Т — · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Зашли случайно, не пожалели. Пробовали спаржу из сезонного меню и завтрак с лососем. Обслуживал Эмиль — чуткий, внимательный и вежливый»</p><footer>Лейла Белялова · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Очень атмосферное и по-настоящему уютное место. Здесь приятно находиться и хочется задержаться подольше»</p><footer>Алена · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Изумительные десерты и прекрасный персонал. Всегда очень атмосферно и уютно»</p><footer>Рамиля С. · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Топ заведение для завтрака»</p><footer>Алексей И. · 2ГИС <i>★★★★★</i></footer></blockquote>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- КОНТАКТЫ -->
+<div class="page" data-page="/contacts">
+  <div class="wrap ptop"><div class="over">Контакты</div><h1>Ждём <em>в гости</em></h1></div>
+  <section style="padding-top:40px">
+    <div class="wrap cgrid2">
+      <div class="cbox">
+        <div class="kv">
+          <div><span>Адрес</span><b>Казань, ул. Николая Столбова, 1/3</b><em>ЖК «Винсент», 1 этаж · м. «Площадь Тукая», ~800 м</em></div>
+          <div><span>Телефон и бронь</span><a href="tel:+79375710500">+7 937 571-05-00</a></div>
+          <div><span>Время работы</span><b>Ежедневно 8:30–21:00</b></div>
+          <div><span>Оплата</span><b>Карта, наличные, QR</b></div>
+        </div>
+        <div class="cta"><a href="tel:+79375710500" class="btn b-sun">Позвонить</a><a href="https://wa.me/79375710500" target="_blank" rel="noopener" class="btn b-leaf">WhatsApp</a><a href="https://t.me/+79375710500" target="_blank" rel="noopener" class="btn b-line">Telegram</a></div>
+      </div>
+      <div class="map"><iframe src="https://yandex.ru/map-widget/v1/?ll=49.113252%2C55.786165&z=17&pt=49.113252,55.786165,pm2rdm" loading="lazy" title="Карта: ул. Николая Столбова, 1/3"></iframe></div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="g">
+      <div><a href="#/" class="logo"><span class="sun"></span>май</a><p style="margin-top:14px;max-width:340px">Бистро на гастроулице Столбова, Казань. Завтраки весь день, выпечка, кофе и вино.</p></div>
+      <div><h4>Разделы</h4><a href="#/menu">Меню</a><a href="#/about">О нас</a><a href="#/reviews">Отзывы</a><a href="#/contacts">Контакты</a></div>
+      <div><h4>Связаться</h4><a href="tel:+79375710500">+7 937 571-05-00</a><a href="https://wa.me/79375710500" target="_blank" rel="noopener">WhatsApp</a><a href="https://t.me/+79375710500" target="_blank" rel="noopener">Telegram</a><span style="display:block">Ежедневно 8:30–21:00</span></div>
+    </div>
+    <div class="credit"><span>© Бистро «май», Казань</span><span>Демо-сайт · разработка: Сергей Музыченко, Telegram <a href="https://t.me/spectator0011" target="_blank" rel="noopener">@spectator0011</a></span></div>
+  </div>
+</footer>
+
+<div class="callbar"><a href="tel:+79375710500" class="btn b-sun">Позвонить</a><a href="#/menu" class="btn b-leaf">Меню</a></div>
+<div class="lb" id="lb"><img alt=""></div>
+
+<script>
+const C='https://cachizer', IM=(s,u)=>u?`https://cachizer${s}.2gis.com/market/${u}.jpg?h=320&w=320`:'';
+// [name, price, description, image]
+const MENU=[
+ ["breakfast","Завтраки","весь день",[
+  ["Шакшука с фетой, пряными травами и тартином",590,"Пряная израильская яичница из трёх яиц с томатным соусом. Подаём с фетой, зеленью и хлебом тартин.",IM(1,"0c01a0a7-014a-4e54-8164-9db4e95fd2dd")],
+  ["Омлет с креветками, пармезаном и жёлтыми томатами",680,"Французский омлет на сливочном масле с креветками, обжаренными с тимьяном и чесноком.",IM(2,"9352aedb-1381-4e56-95ae-2743c6b82e99")],
+  ["Сырники со сметаной и томлёной вишней",540,"Три сырника — обжариваем до корочки и запекаем в духовке.",IM(3,"ba80d8c7-f805-4ad1-9625-7993f33ab4f8")],
+  ["Творожная запеканка с томлёной вишней",520,"Воздушная запеканка из творога, сливок и ванили с соусом из сметаны и сгущёнки.",IM(1,"1ce5cce1-c3dd-4b90-8de4-6cdaf88677b3")],
+  ["Творожные пончики с малиной",550,"Воздушные пончики с соусом из малины и сгущённого молока.",IM(3,"3fe4929a-cd57-40d3-8fd6-5cdfc197ce46")],
+  ["Овсяная каша с топпингом на выбор",450,"Манго, банан и кешью — или сливочное масло и ягодное компоте.",IM(1,"8bd042eb-7844-4e35-95cd-d072ef85a6d4")],
+  ["Рисовая каша с топпингом на выбор",450,"Манго, банан и кешью; томлёная вишня; малиновый джем и фисташка.",IM(2,"170ffc7f-0ba4-4606-a406-ee4b96374eb2")],
+  ["Майский завтрак с бужениной из курицы и маасдамом",710,"Буженина, яйцо всмятку, хлеб дня, взбитое масло, малиновое варенье и салат.",""],
+  ["Майский завтрак с ростбифом и маасдамом",780,"Ростбиф, яйцо всмятку, хлеб дня, взбитое масло, малиновое варенье и салат.",""],
+  ["Майский завтрак с лососем, авокадо и соусом кешью",830,"Лосось слабой соли, яйцо всмятку, хлеб дня, авокадо и свежий салат.",""],
+  ["Датская слойка с лососем, авокадо и голландским соусом",750,"Цельнозерновая слойка собственного производства, лосось, яйцо и голландский соус с эстрагоном.",""],
+  ["Рёшти с ростбифом и трюфельным голландским соусом",720,"Картофельный рёшти, ростбиф, яйцо всмятку, карамелизированный лук и песто.",""],
+  ["Рёшти с бужениной и соусом ремулад",690,"Картофельный рёшти, буженина, яйцо, шпинат и домашний ремулад.",""],
+  ["Утренний маффин с куриной котлетой и глазуньей",670,"Несладкий маффин, котлета, чеддер, моцарелла, карамелизированный лук и ремулад.",""],
+  ["Крок-месье с ростбифом и копчёным сыром",680,"Тостовая бриошь, ростбиф, копчёный сулугуни и бешамель с пармезаном.",""]
+ ]],
+ ["bakery","Выпечка","к кофе",[
+  ["Классический круассан",210,"",IM(3,"2f1bae2f-5d15-47b3-ab1b-ed2d4f108322")],
+  ["Ванильный круассан",370,"",IM(3,"0df76820-9eb4-49a7-8866-98593c33ca42")],
+  ["Маковый круассан",400,"",IM(1,"b13a33ae-f3a9-431d-8338-e30c40909715")],
+  ["Цитрусовый круассан",400,"",IM(2,"0ceba470-9fd6-41b0-9fbb-6899aff19c47")],
+  ["Круассан ваниль-малина",420,"Заварной крем и малиновое кули в хрустящем слоёном тесте.",IM(1,"a248fd32-8fc2-4318-9092-6c07767694f4")],
+  ["Фундучный круассан",550,"",IM(1,"d1eff441-5c6a-46f7-8ba2-f14f4540a1d2")],
+  ["Шоколадный круассан",550,"",IM(3,"a1883c03-b8a4-44ac-ba39-f51687b41171")],
+  ["Тропический круассан",550,"",IM(1,"6fb22db8-0bf8-4f45-bf70-3112a0676944")],
+  ["Апельсиновый круассан",550,"",IM(1,"03c4faa5-7294-434e-a192-d48117cf16a5")],
+  ["Круассан миндаль-груша",280,"",""],
+  ["Улитка пекан",500,"",IM(1,"94ad98a6-215f-452b-a628-a50e40030abd")],
+  ["Улитка яблоко-корица",420,"Пряная слойка с творожно-сливочным кремом и яблоками.",IM(3,"82854e8c-cea6-4afa-b1c2-478aeca60c5f")],
+  ["Маковая булочка",270,"",IM(3,"4ac9833b-1090-47e6-837f-9c2de09f34de")],
+  ["Пончик",270,"",IM(2,"ac494668-ab8f-4f09-b0ef-049c71f8664e")],
+  ["Банановый кекс",300,"",IM(1,"e8c9ba0a-f8d9-42e7-9751-3558730b2578")],
+  ["Кекс мак-лимон",260,"",""]
+ ]],
+ ["snacks","Закуски и сэндвичи","",[
+  ["Креветки с пармезаном, чесночным маслом и мятым авокадо",710,"Креветки на чесночном масле, маринованные томаты, авокадо и малиновый лук.",IM(1,"1a945886-230f-41b3-b7a9-66eb4b602587")],
+  ["Тартар из говядины с пармезаном и вялеными томатами",710,"Тартар из костреца с вялеными томатами и эстрагоном.",""],
+  ["Паштет из куриной печени с томлёной вишней",580,"Шелковистый паштет со сливками, мускатным орехом и коньяком, с солодовым хлебом.",IM(2,"ee57972d-ac2a-4069-bc85-4df3ff1deb4f")],
+  ["Хумус с маринованным перцем и тёплой лепёшкой",450,"Хумус с копчёной паприкой, запечённым перцем, зеленью и луком-фри.",IM(3,"d70bbf87-e2b4-4c2e-b2c0-99af40927f54")],
+  ["Сэндвич с тунцом, томатами и кунжутным майонезом",760,"Стейк тунца medium и домашний кунжутный майонез на тартине.",IM(1,"76f4603c-cebd-420f-8285-9f8e9e9be566")],
+  ["Сэндвич на фокачче с шницелем и соусом цезарь",690,"Хрустящий куриный шницель, романо и моцарелла на итальянской фокачче.",""],
+  ["Сэндвич на фокачче с шницелем и коул слоу",690,"Куриный шницель, моцарелла и свежий коул слоу на фокачче.",""]
+ ]],
+ ["salads","Салаты","",[
+  ["Салат с креветками в белом вине и цитрусами",750,"Креветки в чесночном масле с белым вином, цитрусы, руккола и шпинат.",IM(3,"e758c8af-83ca-452a-a290-c5a8fb4a6fab")],
+  ["Салат с тунцом конфи, овощами и картофелем",750,"Тунец конфи, шпинат, руккола, томаты, редис, бейби-картофель и яйцо.",""],
+  ["Зелёный салат с фенхелем, авокадо и фетой",710,"Огурец, авокадо, маринованный фенхель, молодой горошек и фета.",IM(3,"e8a547cf-e771-4c76-b7e3-67aeb1dc3b12")],
+  ["Греческий салат",690,"Крупно нарезанные томаты, огурцы, перец, красный лук и оливки каламата.",IM(3,"267f0664-10d0-4223-91d2-8113d4a17c59")],
+  ["Салат с цыплёнком, соусом из анчоусов и пармезаном",690,"Свежая вариация Цезаря: романо, шпинат с песто, курица су-вид и сухари.",""],
+  ["Салат с тыквой, рикоттой, голубым сыром и вяленой уткой",620,"Запечённая тыква, рикотта, вяленая утка, карамельный фундук и лимонный гель.",""],
+  ["Салат со свёклой, черносливом, фетой и кунжутным соусом",590,"Печёная свёкла, свекольные цукаты, руккола и пряный соус тахини.",""]
+ ]],
+ ["hot","Супы и горячее","",[
+  ["Сливочная уха",780,"Бульон из красной рыбы, лосось, лук-порей, томаты, сливки и шпинат.",IM(2,"20ca7d1f-ca9d-4dc2-bdd0-f9543d2672a5")],
+  ["Томатный крем-суп с фетой и гриль-чизом",670,"Томаты, шалот, чеснок, базилик и сливки.",""],
+  ["Стейк бавет с соусом антрекот и сезонными овощами",1200,"Бавет из костреца с фирменным соусом антрекот.",""],
+  ["Гребешки с кремом из сельдерея и соусом барблан",950,"Обжаренные гребешки, крем и конфи из корня сельдерея, трюфельная карамель.",""],
+  ["Томлёная телячья щёчка с картофельным кремом",890,"Щёчка в соусе на собственном бульоне, морковь и шалот конфи, шампиньоны.",""],
+  ["Бефстроганов с грибами и запечённым картофелем",850,"Говяжья вырезка с вешенками, шампиньонами, сливками и сметаной.",IM(3,"fde0d158-aacf-426f-886c-c2b0d1687d13")],
+  ["Паста ригатони с креветками и соусом из печёных перцев",790,"Креветки, черри и каперсы в креме из печёного перца с миндалём.",""],
+  ["Паста казаречче с томлёной щёчкой и чёрным перцем",790,"В стиле римской «качо-э-пепе» с томлёной телячьей щёчкой.",""],
+  ["Голубцы с томлёной уткой и соусом жу",730,"Голубцы из пекинской капусты с уткой, кабачком, морковью и пореем.",""],
+  ["Паста фетучини с брокколи в сливочно-лимонном соусе",620,"С мятой, фисташками, брокколи и пармезаном.",IM(2,"d87c55de-4109-4d61-ae55-4368ae4003b4")]
+ ]]
+];
+const DRINKS=[
+ ["Кофе",[["Эспрессо",230],["Американо 0,2 / 0,3","250 / 300"],["Фильтр 0,2 / 0,3","250 / 300"],["Воронка",310],["Капучино 0,2 / 0,3","290 / 330"],["Латте 0,3",330],["Флэт уайт 0,2",320],["Раф «Белый шоколад»",470]]],
+ ["Холодное",[["Эспрессо-тоник",390],["Бамбл",500],["Айс-капучино",350],["Матча-тоник",420],["Айс-матча латте",450],["Айс-матча клубника",500],["Фреш апельсин / грейпфрут",420]]],
+ ["Матча и какао",[["Матча латте",450],["Какао bean-to-bar",490],["Сливочно-медовое какао",400]]],
+ ["Чай и авторские",[["Маракуйя, облепиха, розмарин 0,5",500],["Клубника, цитрус, имбирь 0,5",500],["Азиатские чаи 0,5 / 0,8","380 / 450","Те гуань инь, жасминовый, Цзинь цзюнь мэй, Габа топаз"],["Чаи от «Нитки» 0,5 / 0,8","380 / 450","лист дикой черники, тибетская ромашка, чёрный с шалфеем и др."]]],
+ ["Хлеб",[["Тартин",270],["Чиабатта",270],["Бриошь",320],["Солодовый хлеб",320],["Цельнозерновой хлеб",320]]]
+];
+const tabs=document.getElementById('mtabs'),menu=document.getElementById('menu');
+const dish=([n,p,d,img])=>`<div class="dish${img?'':' noimg'}">${img?`<div class="ph"><img src="${img}" alt="${n}" loading="lazy"></div>`:''}<div><h3>${n}</h3>${d?`<p>${d}</p>`:''}<span class="pr">${p} ₽</span></div></div>`;
+MENU.forEach(([id,name,sub,items],i)=>{
+  tabs.insertAdjacentHTML('beforeend',`<button class="mt${i?'':' on'}" data-go="${id}">${name}</button>`);
+  menu.insertAdjacentHTML('beforeend',`<div class="mcat" id="${id}"><div class="hd"><h2>${name}</h2><small>${sub}</small></div><div class="dishes">${items.map(dish).join('')}</div></div>`);
+});
+tabs.insertAdjacentHTML('beforeend',`<button class="mt" data-go="drinks">Напитки и хлеб</button>`);
+menu.insertAdjacentHTML('beforeend',`<div class="mcat" id="drinks"><div class="hd"><h2>Напитки и хлеб</h2></div><div class="dishes">${DRINKS.map(([g,rows])=>`<div class="simple"><h3 style="font-size:28px;padding:16px 0 6px">${g}</h3>${rows.map(([n,p,s])=>`<div class="srow"><span>${n}${s?`<small>${s}</small>`:''}</span><b>${p} ₽</b></div>`).join('')}</div>`).join('')}</div></div>`);
+const mts=[...tabs.children];
+mts.forEach(b=>b.onclick=()=>document.getElementById(b.dataset.go).scrollIntoView({behavior:'smooth'}));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)mts.forEach(b=>{const on=b.dataset.go===e.target.id;b.classList.toggle('on',on);if(on)b.scrollIntoView({block:'nearest',inline:'center'})})}),{rootMargin:'-40% 0px -55% 0px'});
+document.querySelectorAll('.mcat').forEach(c=>io.observe(c));
+
+/* croissant strip on home */
+const cro=MENU[1][3].filter(x=>x[3]).slice(0,8);
+document.getElementById('croi').innerHTML=cro.map(([n,p,d,img])=>`<div class="cr"><div class="ph"><img src="${img}" alt="${n}" loading="lazy"></div><div class="t"><h3>${n.replace(' круассан','').replace('Круассан ','')}</h3><b>${p} ₽</b></div></div>`).join('');
+
+/* gallery */
+const G=["images/branch/0/30258560147266974_7f37","images/branch/0/30258560088575696_097e","images/branch/0/30258560080614003_1e9a","images/branch/0/30258560088575839_69b8","photo-gallery/a56780b3-4d6d-4131-be4d-9a3f834400d4","images/branch/0/30258560088575848_83cd","images/branch/0/30258560082795494_aaa1","images/branch/0/30258560147266949_8f1d","images/branch/0/30258560166126035_a12b","images/branch/0/30258560088575855_3944","images/branch/0/30258560089331913_e008","images/branch/0/30258560147271898_87f1","images/branch/0/30258560147265353_cd27","images/branch/0/30258560083358948_ddeb","images/branch/0/30258560089250389_590d","images/branch/0/30258560147271841_6f51","images/branch/0/30258560148098037_b51b","images/branch/0/30258560147266960_f377","images/branch/0/30258560147265058_751a","images/branch/0/30258560090660502_692e"];
+const H=[4,2,9,7,9,8,3,6,3,0,5,6,5,4,9,0,9,9,1,9];
+document.getElementById('gal').innerHTML=G.map((p,i)=>`<div class="ph"><img src="https://i${H[i]}.photo.2gis.com/${p}.jpg" alt="Фото бистро «май»" loading="lazy"></div>`).join('');
+
+const pages=[...document.querySelectorAll('.page')],links=[...document.querySelectorAll('.links a')],nav=document.getElementById('links');
+const titles={'/':'май — бистро на Столбова, Казань','/menu':'Меню — бистро «май»','/about':'О нас — бистро «май»','/reviews':'Отзывы — бистро «май»','/contacts':'Контакты — бистро «май»'};
+function route(){const p=location.hash.replace(/^#/,'')||'/';const t=pages.find(x=>x.dataset.page===p)||pages[0];pages.forEach(x=>x.classList.toggle('on',x===t));links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+t.dataset.page));nav.classList.remove('open');scrollTo(0,0);document.title=titles[t.dataset.page]}
+addEventListener('hashchange',route);route();
+document.getElementById('burger').onclick=()=>nav.classList.toggle('open');
+const lb=document.getElementById('lb'),li=lb.querySelector('img');
+document.getElementById('gal').addEventListener('click',e=>{const i=e.target.closest('.ph')?.querySelector('img');if(i){li.src=i.src;lb.classList.add('on')}});
+lb.onclick=()=>lb.classList.remove('on');addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+document.querySelectorAll('img').forEach(i=>i.addEventListener('error',()=>{i.style.visibility='hidden'}));
+</script>
+</body>
+</html>

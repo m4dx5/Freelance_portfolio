@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Carta — автосервис в Казани, Аметьево</title>
+<meta name="description" content="Автосервис Carta в Казани: ремонт и обслуживание китайских и других автомобилей, 3D развал-схождение, замена масла в ДВС и АКПП, заправка кондиционера. Магаданская ул., 18в, ежедневно 9:00–19:00 по записи.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#2340d0; --blue2:#1a31a8; --blue3:#0f1d6b; --sky:#e9eefc; --white:#fff; --bg:#f6f7fb; --ink:#0d1330; --mute:#5e6684; --red:#e5343a; --line:rgba(13,19,48,.1);
+  --max:1200px; --r:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:Unbounded,sans-serif;font-weight:700;line-height:1.05;letter-spacing:-.02em}
+.kick{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+.kick::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--red)}
+.ph{overflow:hidden;background:var(--sky);border-radius:var(--r)}
+.ph img{width:100%;height:100%;object-fit:cover}
+
+header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px;gap:18px}
+.logo{display:inline-flex;align-items:center;background:var(--blue);color:#fff;padding:8px 16px 8px 14px;border-radius:12px;font-family:Unbounded;font-weight:900;font-style:italic;font-size:22px;letter-spacing:.02em;transform:skewX(-8deg)}
+.logo span{transform:skewX(8deg);display:block}
+.links{display:flex;gap:4px}
+.links a{padding:10px 14px;border-radius:10px;font-weight:500;font-size:15px;color:var(--mute)}
+.links a:hover{background:var(--sky);color:var(--ink)}
+.links a.on{background:var(--sky);color:var(--blue)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 24px;border-radius:12px;font:600 15px Inter;transition:transform .2s,background .2s;white-space:nowrap;border:0;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.b-blue{background:var(--blue);color:#fff}
+.b-blue:hover{background:var(--blue2)}
+.b-white{background:#fff;color:var(--blue)}
+.b-ghost{border:1.5px solid rgba(255,255,255,.5);color:#fff}
+.b-line{border:1.5px solid var(--blue);color:var(--blue)}
+.burger{display:none;width:46px;height:46px;border-radius:12px;border:0;background:var(--blue);color:#fff;font-size:18px;cursor:pointer}
+
+.page{display:none;animation:in .4s ease}
+.page.on{display:block}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+section{padding:96px 0}
+.ptop{background:var(--blue);color:#fff;padding:72px 0 64px;position:relative;overflow:hidden}
+.ptop::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;border:60px solid rgba(255,255,255,.08)}
+.ptop .kick{color:#c9d3ff}
+.ptop h1{font-size:clamp(40px,6.6vw,88px);margin-top:16px;max-width:800px;position:relative;z-index:1}
+.ptop p{max-width:560px;color:#d6ddff;margin-top:16px;font-size:18px;position:relative;z-index:1}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:44px;flex-wrap:wrap}
+.head h2{font-size:clamp(32px,4.6vw,56px);margin-top:12px}
+.head p{max-width:400px;color:var(--mute)}
+
+/* hero */
+.hero{background:var(--blue);color:#fff;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding-top:72px;padding-bottom:80px;position:relative;z-index:1}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,transparent 0 60px,rgba(255,255,255,.04) 60px 62px)}
+.hero .kick{color:#c9d3ff}
+.hero h1{font-size:clamp(46px,7vw,96px);margin:18px 0 0}
+.hero h1 span{color:#ffd1d3}
+.hero p{font-size:19px;color:#d6ddff;max-width:520px;margin:22px 0 30px}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:32px}
+.chips span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:8px 14px;font-size:14px;font-weight:500}
+.hcard{background:#fff;color:var(--ink);border-radius:28px;padding:14px;box-shadow:0 30px 60px -30px rgba(0,0,0,.5)}
+.hcard .ph{aspect-ratio:4/3;border-radius:18px}
+.hcard .row{display:grid;grid-template-columns:repeat(3,1fr);padding:18px 10px 6px}
+.hcard b{display:block;font-family:Unbounded;font-size:26px;line-height:1.1;color:var(--blue)}
+.hcard span{font-size:13px;color:var(--mute)}
+
+/* price cards */
+.prices3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pc{background:#fff;border-radius:var(--r);padding:30px;display:flex;flex-direction:column;gap:12px;border:1px solid var(--line)}
+.pc .ic{width:52px;height:52px;border-radius:14px;background:var(--sky);display:grid;place-items:center}
+.pc .ic svg{width:28px;height:28px;stroke:var(--blue);fill:none;stroke-width:2}
+.pc h3{font-size:20px}
+.pc p{color:var(--mute);font-size:15px;flex:1}
+.pc .pr{font-family:Unbounded;font-size:32px;color:var(--blue)}
+.pc .pr small{font-family:Inter;font-size:14px;color:var(--mute);font-weight:500;margin-left:6px}
+.pc .gift{display:inline-block;background:#ffe8e9;color:var(--red);font-weight:600;font-size:13px;padding:4px 10px;border-radius:999px;align-self:flex-start}
+
+/* china */
+.china{background:var(--blue3);color:#fff;border-radius:32px;padding:64px 56px;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;position:relative;overflow:hidden}
+.china h2{font-size:clamp(34px,4.4vw,58px)}
+.china h2 span{color:#ffb3b6}
+.china p{color:#c3cbf2;margin:18px 0 24px;max-width:520px}
+.brandrow{display:flex;flex-wrap:wrap;gap:8px}
+.brandrow span{background:rgba(255,255,255,.1);border-radius:10px;padding:9px 14px;font-weight:600;font-size:14px}
+.china .ph{aspect-ratio:1}
+
+/* services list */
+.sl{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.s{background:#fff;border-radius:16px;padding:22px;border:1px solid var(--line)}
+.s b{display:block;font-size:16.5px;margin-bottom:4px}
+.s span{color:var(--mute);font-size:14.5px}
+
+/* comfort */
+.comfort{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.cf{background:#fff;border-radius:var(--r);padding:36px;border:1px solid var(--line)}
+.cf h2{font-size:clamp(30px,3.8vw,46px);margin:10px 0 18px}
+.cf ul{list-style:none;display:grid;gap:12px}
+.cf li{display:flex;gap:12px;align-items:flex-start}
+.cf li::before{content:"✓";flex:0 0 26px;height:26px;border-radius:8px;background:var(--sky);color:var(--blue);display:grid;place-items:center;font-weight:700;font-size:14px}
+.team{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
+.team div{background:var(--sky);border-radius:14px;padding:14px 16px}
+.team b{display:block;font-family:Unbounded;font-size:17px}
+.team span{font-size:13.5px;color:var(--mute)}
+
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rv{background:#fff;border-radius:var(--r);padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:18px;border:1px solid var(--line)}
+.rv p{font-size:16.5px}
+.rv footer{display:flex;justify-content:space-between;font-size:14px;font-weight:600;color:var(--mute)}
+.rv footer i{font-style:normal;color:var(--blue);letter-spacing:2px}
+.rv.hl{background:var(--blue);color:#fff;border:0}
+.rv.hl footer,.rv.hl footer i{color:#c9d3ff}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:230px;gap:12px}
+.gal .ph{cursor:zoom-in;border-radius:16px}
+.gal .w{grid-column:span 2}
+.gal .t{grid-row:span 2}
+.lb{position:fixed;inset:0;background:rgba(8,12,34,.93);display:none;place-items:center;z-index:80;padding:20px;cursor:zoom-out}
+.lb.on{display:grid}
+.lb img{max-width:92vw;max-height:88vh;border-radius:14px}
+
+/* services page */
+.groups{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grp{background:#fff;border-radius:var(--r);padding:30px;border:1px solid var(--line)}
+.grp h2{font-size:24px;margin-bottom:14px}
+.grp ul{list-style:none;display:grid;gap:8px}
+.grp li{padding-left:20px;position:relative}
+.grp li::before{content:"";position:absolute;left:0;top:10px;width:8px;height:8px;border-radius:2px;background:var(--blue)}
+.ptable{background:#fff;border-radius:var(--r);border:1px solid var(--line);overflow:hidden;margin-bottom:24px}
+.prow{display:grid;grid-template-columns:1fr auto;gap:20px;padding:20px 28px;border-bottom:1px solid var(--line);align-items:center}
+.prow:last-child{border-bottom:0}
+.prow small{display:block;color:var(--mute);font-size:14px}
+.prow b{font-family:Unbounded;font-size:22px;color:var(--blue);white-space:nowrap}
+.pnote{margin-top:24px;background:var(--blue);color:#fff;border-radius:var(--r);padding:28px 32px;display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}
+.pnote p{max-width:640px;color:#d6ddff}
+
+/* scores */
+.scores{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:22px}
+.sc{background:#fff;border-radius:var(--r);padding:32px;display:flex;gap:24px;align-items:center;border:1px solid var(--line)}
+.sc .big{font-family:Unbounded;font-weight:900;font-size:78px;line-height:.9;color:var(--blue)}
+.sc h3{font-size:22px}
+.sc p{color:var(--mute);font-size:14.5px;margin:4px 0 10px}
+.sc a{font-weight:600;color:var(--blue)}
+
+/* contacts */
+.cgrid{display:grid;grid-template-columns:1fr 1.2fr;gap:20px}
+.cbox{background:#fff;border-radius:var(--r);padding:38px;border:1px solid var(--line)}
+.kv{display:grid;gap:22px;margin-bottom:28px}
+.kv span{display:block;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:3px}
+.kv b,.kv a{font-family:Unbounded;font-weight:700;font-size:21px;line-height:1.25}
+.kv a:hover{color:var(--blue)}
+.kv em{display:block;font-style:normal;color:var(--mute);font-size:15px;margin-top:3px}
+.map{border-radius:var(--r);overflow:hidden;min-height:480px;background:var(--sky)}
+.map iframe{width:100%;height:100%;min-height:480px;border:0;display:block}
+
+.foot{background:var(--blue3);color:#aab4e6;padding:56px 0 28px;margin-top:40px}
+.foot .g{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+.foot h4{font-family:Unbounded;color:#fff;font-size:15px;margin-bottom:12px}
+.foot a{display:block;margin-bottom:6px}
+.foot a.logo{display:inline-flex}
+.foot a:hover{color:#fff}
+.credit{margin-top:40px;padding-top:18px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px;color:#7f8bc2}
+.credit a{display:inline;color:#dfe5ff}
+
+.callbar{display:none}
+
+@media (max-width:1040px){
+  .hero .wrap,.china,.comfort,.cgrid,.scores,.groups{grid-template-columns:1fr}
+  .prices3,.revs{grid-template-columns:1fr 1fr}
+  .sl{grid-template-columns:1fr 1fr}
+  .gal{grid-template-columns:1fr 1fr 1fr}
+  .china{padding:44px 32px}
+  .foot .g{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  .links{display:none;position:absolute;top:74px;left:0;right:0;flex-direction:column;background:#fff;padding:8px 16px 18px;border-bottom:1px solid var(--line)}
+  .links.open{display:flex}
+  .links a{font-size:18px;padding:13px 14px}
+  .nav>.btn{display:none}
+  .burger{display:block}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  section{padding:64px 0}
+  .hero .wrap{padding-top:44px;padding-bottom:56px}
+  .hcard b{font-size:20px}
+  .prices3,.revs,.sl{grid-template-columns:1fr}
+  .china{padding:32px 22px;border-radius:24px}
+  .cf,.cbox,.grp{padding:24px}
+  .team{grid-template-columns:1fr 1fr}
+  .gal{grid-template-columns:1fr 1fr;grid-auto-rows:150px}
+  .prow{padding:16px 18px}
+  .sc{flex-direction:column;align-items:flex-start;gap:8px}
+  .foot .g{grid-template-columns:1fr}
+  .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:50;gap:8px}
+  .callbar .btn{flex:1;box-shadow:0 10px 26px -10px rgba(0,0,0,.45)}
+  .foot{padding-bottom:100px}
+}
+@media (prefers-reduced-motion:reduce){.page{animation:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#/" class="logo" aria-label="Carta — на главную"><span>CARTA</span></a>
+    <nav class="links" id="links">
+      <a href="#/">Главная</a>
+      <a href="#/services">Услуги и цены</a>
+      <a href="#/photos">Сервис</a>
+      <a href="#/reviews">Отзывы</a>
+      <a href="#/contacts">Контакты</a>
+    </nav>
+    <a href="tel:+79196452487" class="btn b-blue">+7 919 645-24-87</a>
+    <button class="burger" id="burger" aria-label="Меню">☰</button>
+  </div>
+</header>
+
+<main>
+
+<!-- ГЛАВНАЯ -->
+<div class="page" data-page="/">
+  <section class="hero" style="padding:0">
+    <div class="wrap">
+      <div>
+        <span class="kick">Автосервис · Казань, Аметьево</span>
+        <h1>Знаем про китайские авто <span>всё</span></h1>
+        <p>Ремонт и обслуживание китайских и любых других автомобилей. 3D-развал-схождение, замена масла в ДВС и АКПП, ходовая и электрика. Запчасти — в наличии или под заказ.</p>
+        <div class="cta">
+          <a href="tel:+79196452487" class="btn b-white">Записаться</a>
+          <a href="https://t.me/+79196452487" target="_blank" rel="noopener" class="btn b-ghost">Написать в Telegram</a>
+        </div>
+        <div class="chips"><span>3D развал-схождение</span><span>Масло ДВС — 750 ₽</span><span>Зона ожидания с чаем</span><span>Wi-Fi</span></div>
+      </div>
+      <div class="hcard">
+        <div class="ph"><img src="https://i9.photo.2gis.com/photo-gallery/f9cba37c-9104-4d83-80ac-73f4f3b6f1dc.jpg" alt="Синее здание автосервиса Carta" loading="eager"></div>
+        <div class="row">
+          <div><b>5,0</b><span>2ГИС · 84 оценки</span></div>
+          <div><b>4,8</b><span>Яндекс · 92 оценки</span></div>
+          <div><b>9–19</b><span>ежедневно</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head"><div><span class="kick">Популярное</span><h2>Цены, которые известны заранее</h2></div><p>Стоимость остальных работ назовём после осмотра — позвоните или напишите.</p></div>
+      <div class="prices3">
+        <div class="pc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3c3 4 5 6.5 5 9a5 5 0 0 1-10 0c0-2.5 2-5 5-9z"/></svg></div><h3>Замена масла в двигателе</h3><span class="gift">+ осмотр в подарок</span><p>Масло и фильтры — в наличии, можно приехать со своими.</p><div class="pr">750 ₽<small>работа</small></div></div>
+        <div class="pc"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="7" cy="12" r="3"/><circle cx="17" cy="12" r="3"/><path d="M10 12h4"/></svg></div><h3>Замена масла в АКПП</h3><p>Частый запрос владельцев Geely и Chery — механики знают эти коробки.</p><div class="pr">1 800 ₽<small>работа</small></div></div>
+        <div class="pc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19"/></svg></div><h3>Заправка кондиционера</h3><p>Проверка системы и заправка хладагентом.</p><div class="pr">3 500 ₽</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="china">
+        <div>
+          <span class="kick" style="color:#c9d3ff">Специализация</span>
+          <h2 style="margin-top:14px">Китайские машины — <span>наш профиль</span></h2>
+          <p>Механики Андрей и Рахим, по словам клиентов, «знают китайские машины от и до». Подберём запчасти по соотношению цена/качество и привезём их к дате ремонта — чтобы вы приехали и сразу уехали.</p>
+          <div class="brandrow"><span>Запчасти в наличии и под заказ</span><span>Можно со своими запчастями</span><span>Новое оборудование</span><span>Любые марки</span></div>
+        </div>
+        <div class="ph"><img src="https://avatars.mds.yandex.net/get-altay/10834132/2a0000018e4369cd4f4affd59ad671d1d4fd/L" alt="Подъёмники в боксе" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head"><div><span class="kick">Что делаем</span><h2>Все основные работы</h2></div><a href="#/services" class="btn b-line">Все услуги</a></div>
+      <div class="sl">
+        <div class="s"><b>Диагностика</b><span>компьютерная, ходовой, эндоскопия двигателя</span></div>
+        <div class="s"><b>3D развал-схождение</b><span>на современном стенде</span></div>
+        <div class="s"><b>Ходовая</b><span>подвеска, рулевые рейки, тормоза</span></div>
+        <div class="s"><b>Двигатель</b><span>ГРМ, турбина, раскоксовка, топливная</span></div>
+        <div class="s"><b>Масла и ТО</b><span>ДВС, АКПП, расходники</span></div>
+        <div class="s"><b>Электрика</b><span>проводка, стартеры, генераторы</span></div>
+        <div class="s"><b>Кондиционер</b><span>заправка и ремонт</span></div>
+        <div class="s"><b>Шиномонтаж</b><span>и ремонт проколов</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap comfort">
+      <div class="cf">
+        <span class="kick">Пока вы ждёте</span>
+        <h2>Зона ожидания на втором этаже</h2>
+        <ul>
+          <li>Чай с угощениями и Wi-Fi</li>
+          <li>Чистый туалет</li>
+          <li>Принимаем вовремя — работаем по записи</li>
+          <li>Покажем и объясним, что сделали</li>
+          <li>Оплата картой</li>
+        </ul>
+      </div>
+      <div class="cf">
+        <span class="kick">Команда</span>
+        <h2>Кого благодарят клиенты</h2>
+        <div class="team">
+          <div><b>Марсель</b><span>руководитель</span></div>
+          <div><b>Андрей</b><span>механик</span></div>
+          <div><b>Рахим</b><span>механик</span></div>
+          <div><b>Руслан, Тимур</b><span>приёмка</span></div>
+        </div>
+        <p style="color:var(--mute);margin-top:14px;font-size:15px">Имена — из отзывов клиентов в Яндекс Картах.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><div><span class="kick">Отзывы</span><h2>Что говорят клиенты</h2></div><a href="#/reviews" class="btn b-line">Все отзывы</a></div>
+      <div class="revs">
+        <blockquote class="rv hl"><p>«Делал замену масла в АКПП на своей Geely — всё чётко, без лишних накруток. Андрей и Рахим знают китайские машины от и до. Руслан на ресепшене объяснил все работы заранее»</p><footer>Тимофей · Яндекс <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Помогли подобрать запчасти по соотношению цена/качество, согласовали дату ремонта, и все запчасти были уже в сервисе — мне осталось только приехать»</p><footer>Раиль Махмутов · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Лучший сервис в городе! Только им доверяю свою машину, не раз помогали со сложной ситуацией на дороге»</p><footer>Камилла Гарайшина · 2ГИС <i>★★★★★</i></footer></blockquote>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- УСЛУГИ -->
+<div class="page" data-page="/services">
+  <div class="ptop"><div class="wrap"><span class="kick">Услуги и цены</span><h1>Ремонт и обслуживание</h1><p>Три цены, которые сервис публикует сам. Остальное — после осмотра: позвоните, и мастер сориентирует по стоимости.</p></div></div>
+  <section style="padding-top:56px">
+    <div class="wrap">
+      <div class="ptable">
+        <div class="prow"><div>Замена масла в двигателе<small>осмотр автомобиля — в подарок</small></div><b>750 ₽</b></div>
+        <div class="prow"><div>Замена масла в АКПП<small>стоимость работы</small></div><b>1 800 ₽</b></div>
+        <div class="prow"><div>Заправка автокондиционера</div><b>3 500 ₽</b></div>
+      </div>
+      <div class="groups">
+        <div class="grp"><h2>Диагностика</h2><ul><li>Компьютерная диагностика</li><li>Диагностика ходовой</li><li>Эндоскопия двигателя</li><li>Поиск стуков, скрипов и шумов</li></ul></div>
+        <div class="grp"><h2>Ходовая и рулевое</h2><ul><li>3D развал-схождение</li><li>Ремонт подвески, подушки двигателя</li><li>Ремонт рулевых реек</li><li>Ремонт тормозной системы</li></ul></div>
+        <div class="grp"><h2>Двигатель и трансмиссия</h2><ul><li>Ремонт двигателя, замена ГРМ</li><li>Ремонт турбокомпрессора, раскоксовка</li><li>Ремонт топливной системы</li><li>Ремонт сцепления</li><li>Замена масла в ДВС и АКПП</li></ul></div>
+        <div class="grp"><h2>Электрика</h2><ul><li>Ремонт проводки и автоэлектроники</li><li>Стартеры и генераторы</li><li>Сигнализации и парктроники</li><li>Заправка и ремонт кондиционера</li></ul></div>
+        <div class="grp"><h2>Шины и выхлоп</h2><ul><li>Шиномонтаж, ремонт проколов</li><li>Ремонт выхлопной системы</li></ul></div>
+        <div class="grp"><h2>Запчасти и автохимия</h2><ul><li>Подбор и заказ запчастей</li><li>Масла и фильтры в наличии</li><li>Можно со своими запчастями</li></ul></div>
+      </div>
+      <div class="pnote"><p>Работаем ежедневно с 9 до 19 по предварительной записи. Позвоните или напишите в Telegram — подберём время и запчасти.</p><a href="tel:+79196452487" class="btn b-white">+7 919 645-24-87</a></div>
+    </div>
+  </section>
+</div>
+
+<!-- ФОТО -->
+<div class="page" data-page="/photos">
+  <div class="ptop"><div class="wrap"><span class="kick">Сервис</span><h1>Синее здание на Магаданской</h1><p>Боксы с подъёмниками, стенд развал-схождения и склад расходников. Нажмите на фото, чтобы открыть крупнее.</p></div></div>
+  <section style="padding-top:56px">
+    <div class="wrap">
+      <div class="gal" id="gal"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ОТЗЫВЫ -->
+<div class="page" data-page="/reviews">
+  <div class="ptop"><div class="wrap"><span class="kick">Отзывы</span><h1>Что говорят клиенты</h1><p>Больше сотни отзывов в двух картах.</p></div></div>
+  <section style="padding-top:56px">
+    <div class="wrap">
+      <div class="scores">
+        <div class="sc"><div class="big">5,0</div><div><h3>2ГИС</h3><p>84 оценки · 52 отзыва</p><a href="https://2gis.ru/kazan/firm/70000001060554336/tab/reviews" target="_blank" rel="noopener">Читать в 2ГИС →</a></div></div>
+        <div class="sc"><div class="big">4,8</div><div><h3>Яндекс Карты</h3><p>92 оценки · 58 отзывов</p><a href="https://yandex.ru/maps/org/karta/141219101327/reviews/" target="_blank" rel="noopener">Читать в Яндексе →</a></div></div>
+      </div>
+      <div class="revs">
+        <blockquote class="rv hl"><p>«Ремонтировал электрику на китайской машине — сделали быстро и без косяков. Отдельно порадовало новое оборудование: видно, что не халтурят»</p><footer>Питер Грифен · Яндекс <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Работу сделали быстро и аккуратно, цены — честные и прозрачные. Мастер подробно объяснил всё необходимое и ответил на мои вопросы»</p><footer>Ангелина Д. · Яндекс <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«В Уфе поменяли колодки и ступичные, после них всё свистело и гремело. Здесь нашли причину и устранили. Ничего не гремит, не свистит»</p><footer>Алина Ильдаровна · Яндекс <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Пропала зарядка аккумулятора. Приняли в тот же день, устранили всё за пару часов, ещё и проверили, чтобы проблема не повторилась»</p><footer>Михаил Савка · Яндекс <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Руководитель Марсель старается помочь в любой ситуации с машиной — подобрать запчасти и выполнить работу в кратчайшие сроки»</p><footer>Галия Адгамова · Яндекс <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Запчасти можно заказывать прямо на месте, и привозят их быстро. Ребята молодцы, делают всё качественно»</p><footer>Рамис Салемгареев · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Были стуки в рулевой рейке на Santa Fe — механики всё быстро исправили. Цена приемлемая, качество на высоте»</p><footer>Роман Курьят · Яндекс <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Лишних услуг не навязывают, общаются вежливо, работа выполнена добросовестно»</p><footer>Павел Зулин · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Сделали сход-развал, ребята супер, всё прекрасно и быстро сделали»</p><footer>Анфиса · 2ГИС <i>★★★★★</i></footer></blockquote>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- КОНТАКТЫ -->
+<div class="page" data-page="/contacts">
+  <div class="ptop"><div class="wrap"><span class="kick">Контакты</span><h1>Запись и адрес</h1><p>Синее здание на Магаданской, 18в — у метро «Аметьево».</p></div></div>
+  <section style="padding-top:56px">
+    <div class="wrap cgrid">
+      <div class="cbox">
+        <div class="kv">
+          <div><span>Адрес</span><b>Казань, Магаданская ул., 18в</b><em>Аметьево, Вахитовский район · м. «Аметьево», ~460 м</em></div>
+          <div><span>Телефон и запись</span><a href="tel:+79196452487">+7 919 645-24-87</a></div>
+          <div><span>Режим работы</span><b>Ежедневно 9:00–19:00</b><em>по предварительной записи</em></div>
+          <div><span>Почта</span><a href="mailto:cartakzn@yandex.ru">cartakzn@yandex.ru</a></div>
+        </div>
+        <div class="cta"><a href="tel:+79196452487" class="btn b-blue">Позвонить</a><a href="https://t.me/+79196452487" target="_blank" rel="noopener" class="btn b-line">Telegram</a></div>
+      </div>
+      <div class="map"><iframe src="https://yandex.ru/map-widget/v1/?ll=49.165075%2C55.768608&z=17&pt=49.165075,55.768608,pm2blm" loading="lazy" title="Карта: Магаданская ул., 18в"></iframe></div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="g">
+      <div><a href="#/" class="logo"><span>CARTA</span></a><p style="margin-top:16px;max-width:340px">Автосервис в Казани: китайские и любые другие автомобили. Магаданская ул., 18в.</p></div>
+      <div><h4>Разделы</h4><a href="#/services">Услуги и цены</a><a href="#/photos">Сервис</a><a href="#/reviews">Отзывы</a><a href="#/contacts">Контакты</a></div>
+      <div><h4>Связь</h4><a href="tel:+79196452487">+7 919 645-24-87</a><a href="https://t.me/+79196452487" target="_blank" rel="noopener">Telegram</a><a href="mailto:cartakzn@yandex.ru">cartakzn@yandex.ru</a><span style="display:block">Ежедневно 9:00–19:00</span></div>
+    </div>
+    <div class="credit"><span>© Автосервис Carta, Казань</span><span>Демо-сайт · разработка: Сергей Музыченко, Telegram <a href="https://t.me/spectator0011" target="_blank" rel="noopener">@spectator0011</a></span></div>
+  </div>
+</footer>
+
+<div class="callbar"><a href="tel:+79196452487" class="btn b-blue">Позвонить</a><a href="https://t.me/+79196452487" class="btn b-line" style="background:#fff">Telegram</a></div>
+<div class="lb" id="lb"><img alt=""></div>
+
+<script>
+const Y=s=>`https://avatars.mds.yandex.net/get-altay/${s}/L`, G=s=>`https://${s}.jpg`;
+const PH=[
+ [G("i9.photo.2gis.com/photo-gallery/f9cba37c-9104-4d83-80ac-73f4f3b6f1dc"),"w t","Здание сервиса"],
+ [Y("13091609/2a0000018e89bf9b3a5514964d8ef86f5d86"),"","Автомобиль на подъёмнике"],
+ [Y("10834132/2a0000018e4369cd4f4affd59ad671d1d4fd"),"","Боксы"],
+ [G("i8.photo.2gis.com/photo-gallery/a8f4b5fb-7cd0-4d5a-879c-0fcd2c501697"),"w","Кроссовер на подъёмнике"],
+ [Y("13207207/2a00000191d1762bf9c7bff5c0459dbb87c9"),"","Стенд развал-схождения"],
+ [Y("14193233/2a00000191d177d2148a6227a24b10fda95e"),"","Склад масел и расходников"],
+ [G("i8.photo.2gis.com/images/branch/0/30258560128755124_09de"),"t","Работа механика"],
+ [Y("13052575/2a00000191d1786a1de2d7c6c5f76cdbc305"),"","Ремонт под капотом"],
+ [Y("11420721/2a0000018e436c09351ffdfbfa7d53536851"),"","Оборудование для диагностики"],
+ [Y("5496626/2a0000017d9f8821c204bfaefba99a3dad96"),"","Ремонт двигателя"],
+ [G("i7.photo.2gis.com/photo-gallery/7513d27a-2e21-4499-90ce-6c54b1446fcc"),"","Въезд в бокс"],
+ [Y("6928818/2a000001851ab0de5a1e2d08709ccb69cf20"),"w","Зона ремонта"],
+ [G("i2.photo.2gis.com/images/branch/0/30258560128755133_c62c"),"","Механики за работой"],
+ [Y("11420721/2a0000018e436b253a4133743df19a5acaff"),"","Логотип Carta"]
+];
+document.getElementById('gal').innerHTML=PH.map(([s,c,a])=>`<div class="ph ${c}"><img src="${s}" alt="${a}" loading="lazy"></div>`).join('');
+
+const pages=[...document.querySelectorAll('.page')],links=[...document.querySelectorAll('.links a')],nav=document.getElementById('links');
+const titles={'/':'Carta — автосервис в Казани','/services':'Услуги и цены — Carta','/photos':'Сервис — Carta','/reviews':'Отзывы — Carta','/contacts':'Контакты — Carta'};
+function route(){const p=location.hash.replace(/^#/,'')||'/';const t=pages.find(x=>x.dataset.page===p)||pages[0];pages.forEach(x=>x.classList.toggle('on',x===t));links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+t.dataset.page));nav.classList.remove('open');scrollTo(0,0);document.title=titles[t.dataset.page]}
+addEventListener('hashchange',route);route();
+document.getElementById('burger').onclick=()=>nav.classList.toggle('open');
+const lb=document.getElementById('lb'),li=lb.querySelector('img');
+document.getElementById('gal').addEventListener('click',e=>{const i=e.target.closest('.ph')?.querySelector('img');if(i){li.src=i.src.replace(/\/L$/,'/XXL');lb.classList.add('on')}});
+lb.onclick=()=>lb.classList.remove('on');addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+document.querySelectorAll('img').forEach(i=>i.addEventListener('error',()=>{i.style.visibility='hidden'}));
+</script>
+</body>
+</html>

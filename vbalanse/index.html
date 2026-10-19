@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>ВБалансе — женская фитнес-студия в Екатеринбурге</title>
+<meta name="description" content="ВБалансе — уютная женская студия фитнеса на Громова, 26/4 (ЖК «Миллениум»). Мини-группы до 3 человек, персональные тренировки, «Сила женственности», йога в гамаках, восстановление после родов. Тренер Екатерина Ширяева.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#faf6f2; --sand:#f1e9e1; --lav:#8c74d9; --lav2:#6f57c2; --lilac:#ece6fb; --blush:#f6dfe6; --ink:#2b2340; --mute:#776f86; --line:rgba(43,35,64,.12);
+  --max:1180px; --r:28px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 17.5px/1.65 Figtree,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:400;line-height:1.05;letter-spacing:-.015em}
+h1 i,h2 i{font-style:italic;color:var(--lav)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:13.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--lav2)}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--lav)}
+.ph{overflow:hidden;background:var(--sand);border-radius:var(--r)}
+.ph img{width:100%;height:100%;object-fit:cover}
+
+header{position:sticky;top:0;z-index:40;background:rgba(250,246,242,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px;gap:16px}
+.logo{font-family:Fraunces;font-size:27px;letter-spacing:-.02em;line-height:1}
+.logo i{color:var(--lav)}
+.logo small{display:block;font-family:Figtree;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);margin-top:2px}
+.links{display:flex;gap:2px}
+.links a{padding:9px 14px;border-radius:999px;font-weight:500;font-size:15.5px;color:var(--mute)}
+.links a:hover{color:var(--ink)}
+.links a.on{background:var(--lilac);color:var(--lav2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 26px;border-radius:999px;font:600 15.5px Figtree;transition:transform .2s,background .2s;white-space:nowrap;border:0;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.b-lav{background:var(--lav);color:#fff}
+.b-lav:hover{background:var(--lav2)}
+.b-ink{background:var(--ink);color:#fff}
+.b-soft{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
+.b-soft:hover{border-color:var(--lav)}
+.burger{display:none;width:46px;height:46px;border-radius:50%;border:0;background:var(--lilac);color:var(--lav2);font-size:18px;cursor:pointer}
+
+.page{display:none;animation:in .45s ease}
+.page.on{display:block}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+section{padding:92px 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:44px;flex-wrap:wrap}
+.head h2{font-size:clamp(36px,5vw,62px);margin-top:12px}
+.head p{max-width:420px;color:var(--mute)}
+.ptop{padding:76px 0 20px;text-align:center}
+.ptop h1{font-size:clamp(46px,7vw,96px);margin-top:14px}
+.ptop p{max-width:580px;margin:18px auto 0;color:var(--mute);font-size:18.5px}
+
+/* hero */
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding-top:56px;padding-bottom:40px}
+.hero h1{font-size:clamp(48px,6.8vw,92px);margin:16px 0 0}
+.hero p{font-size:19px;color:var(--mute);max-width:500px;margin:22px 0 30px}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.trust{display:flex;align-items:center;gap:14px;margin-top:34px;font-size:15px;color:var(--mute)}
+.trust b{font-family:Fraunces;font-size:36px;font-weight:600;color:var(--ink);line-height:1}
+.trust i{font-style:normal;color:var(--lav);letter-spacing:2px}
+.hpics{position:relative;height:620px}
+.hpics .ph{position:absolute}
+.hpics .a{inset:0 18% 12% 0;border-radius:200px 200px var(--r) var(--r)}
+.hpics .b{right:0;bottom:0;width:44%;height:46%;border:8px solid var(--bg)}
+.hpics .badge{position:absolute;left:-18px;bottom:20%;background:#fff;border-radius:20px;padding:16px 20px;box-shadow:0 20px 40px -24px rgba(43,35,64,.45);font-size:14.5px;color:var(--mute);max-width:220px}
+.hpics .badge b{display:block;font-family:Fraunces;font-size:26px;color:var(--ink);font-weight:600}
+
+/* why */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.w{background:#fff;border-radius:22px;padding:28px 24px;border:1px solid var(--line)}
+.w .ic{width:48px;height:48px;border-radius:50%;background:var(--lilac);display:grid;place-items:center;font-family:Fraunces;font-size:20px;color:var(--lav2);margin-bottom:16px}
+.w h3{font-size:22px;margin-bottom:8px}
+.w p{color:var(--mute);font-size:15.5px}
+
+/* signature */
+.sig{background:var(--ink);color:#fff;border-radius:36px;display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
+.sig .tx{padding:64px 56px}
+.sig .eyebrow{color:#c9bbf3}
+.sig h2{font-size:clamp(36px,4.4vw,58px);margin:16px 0 18px}
+.sig h2 i{color:#c9bbf3}
+.sig p{color:#c7c0d6;margin-bottom:22px}
+.sig ul{list-style:none;display:grid;gap:10px;margin-bottom:30px}
+.sig li{display:flex;gap:12px}
+.sig li::before{content:"✦";color:#c9bbf3}
+.sig .ph{border-radius:0;min-height:480px}
+
+/* directions */
+.dirs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.dir{background:#fff;border-radius:24px;padding:30px;border:1px solid var(--line);display:flex;flex-direction:column;gap:10px}
+.dir .n{font-family:Fraunces;font-style:italic;color:var(--lav);font-size:18px}
+.dir h3{font-size:27px}
+.dir p{color:var(--mute);font-size:16px;flex:1}
+.dir .pr{font-weight:700;color:var(--lav2)}
+.dir.pink{background:var(--blush);border:0}
+.dir.lil{background:var(--lilac);border:0}
+
+/* prices */
+.plist{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.pcard{background:#fff;border-radius:26px;padding:34px;border:1px solid var(--line)}
+.pcard h2{font-size:30px;margin-bottom:14px}
+.prow{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px dashed var(--line);align-items:baseline}
+.prow:last-child{border-bottom:0}
+.prow small{display:block;color:var(--mute);font-size:14px}
+.prow b{font-family:Fraunces;font-weight:600;font-size:24px;white-space:nowrap}
+.trial{grid-column:1/-1;background:var(--lav);color:#fff;border-radius:26px;padding:34px 40px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.trial h2{font-size:clamp(28px,3.4vw,42px)}
+.trial p{color:#ece6fb;margin-top:6px}
+.trial .num{font-family:Fraunces;font-weight:600;font-size:clamp(46px,5.6vw,72px);line-height:1}
+
+/* coach */
+.coach{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.coach .ph{aspect-ratio:4/5;border-radius:240px 240px var(--r) var(--r)}
+.coach h2{font-size:clamp(38px,4.8vw,62px);margin:14px 0 20px}
+.coach p{color:var(--mute);margin-bottom:14px}
+.coach blockquote{font-family:Fraunces;font-style:italic;font-size:22px;line-height:1.4;border-left:3px solid var(--lav);padding-left:22px;margin:26px 0;color:var(--ink)}
+
+/* reviews */
+.revs{columns:3;column-gap:18px}
+.rv{break-inside:avoid;background:#fff;border-radius:22px;padding:28px;margin-bottom:18px;border:1px solid var(--line)}
+.rv p{font-size:16.5px}
+.rv footer{display:flex;justify-content:space-between;margin-top:16px;font-size:14px;font-weight:600;color:var(--mute)}
+.rv footer i{font-style:normal;color:var(--lav);letter-spacing:2px}
+.rv.hl{background:var(--lilac);border:0}
+.rv.hl p{font-family:Fraunces;font-size:22px;line-height:1.35}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:240px;gap:12px}
+.gal .ph{border-radius:20px;cursor:zoom-in}
+.gal .t{grid-row:span 2}
+.lb{position:fixed;inset:0;background:rgba(43,35,64,.92);display:none;place-items:center;z-index:80;padding:20px;cursor:zoom-out}
+.lb.on{display:grid}
+.lb img{max-width:92vw;max-height:88vh;border-radius:18px}
+
+/* contacts */
+.cgrid{display:grid;grid-template-columns:1fr 1.15fr;gap:20px}
+.cbox{background:#fff;border-radius:28px;padding:40px;border:1px solid var(--line)}
+.kv{display:grid;gap:22px;margin-bottom:28px}
+.kv span{display:block;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--lav2);margin-bottom:4px}
+.kv b,.kv a.v{font-family:Fraunces;font-weight:400;font-size:25px;line-height:1.2;display:block}
+.kv a.v:hover{color:var(--lav)}
+.kv em{display:block;font-style:normal;color:var(--mute);font-size:15.5px;margin-top:4px}
+.soc{display:flex;gap:8px;flex-wrap:wrap}
+.map{border-radius:28px;overflow:hidden;min-height:520px;background:var(--sand)}
+.map iframe{width:100%;height:100%;min-height:520px;border:0;display:block}
+
+.foot{background:var(--ink);color:#b7afc7;padding:60px 0 28px;margin-top:60px}
+.foot .g{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+.foot .logo{color:#fff}
+.foot .logo small{color:#8f86a3}
+.foot h4{font-family:Fraunces;font-weight:600;color:#fff;font-size:18px;margin-bottom:12px}
+.foot .g a:not(.logo){display:block;margin-bottom:6px}
+.foot a:hover{color:#fff}
+.credit{margin-top:40px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13.5px;color:#8f86a3}
+.credit a{color:#e5dff2}
+
+.callbar{display:none}
+
+@media (max-width:1040px){
+  .hero .wrap,.sig,.coach,.cgrid,.plist{grid-template-columns:1fr}
+  .hpics{height:520px}
+  .why{grid-template-columns:1fr 1fr}
+  .dirs{grid-template-columns:1fr 1fr}
+  .revs{columns:2}
+  .gal{grid-template-columns:repeat(3,1fr)}
+  .sig .tx{padding:48px 36px}
+  .sig .ph{min-height:360px}
+  .coach .ph{max-width:460px}
+  .foot .g{grid-template-columns:1fr 1fr}
+}
+@media (max-width:880px){
+  .links{display:none;position:absolute;top:74px;left:0;right:0;flex-direction:column;background:var(--bg);padding:8px 16px 18px;border-bottom:1px solid var(--line)}
+  .links.open{display:flex}
+  .links a{font-size:18px;padding:13px 16px}
+  .nav>.btn{display:none}
+  .burger{display:block}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  section{padding:60px 0}
+  .hero .wrap{padding-top:32px;gap:36px}
+  .hpics{height:440px}
+  .hpics .badge{left:8px;bottom:8px}
+  .why,.dirs{grid-template-columns:1fr}
+  .revs{columns:1}
+  .sig{border-radius:26px}
+  .sig .tx{padding:36px 22px}
+  .pcard,.cbox{padding:24px}
+  .trial{padding:28px 24px}
+  .gal{grid-template-columns:1fr 1fr;grid-auto-rows:170px}
+  .foot .g{grid-template-columns:1fr}
+  .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:50;gap:8px}
+  .callbar .btn{flex:1;box-shadow:0 12px 26px -12px rgba(43,35,64,.6)}
+  .foot{padding-bottom:100px}
+}
+@media (prefers-reduced-motion:reduce){.page{animation:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#/" class="logo" aria-label="ВБалансе — на главную">В<i>Балансе</i><small>женская студия</small></a>
+    <nav class="links" id="links">
+      <a href="#/">Главная</a>
+      <a href="#/directions">Направления</a>
+      <a href="#/prices">Цены</a>
+      <a href="#/coach">Тренер</a>
+      <a href="#/reviews">Отзывы</a>
+      <a href="#/contacts">Контакты</a>
+    </nav>
+    <a href="https://mst.link/kate_vbalance" target="_blank" rel="noopener" class="btn b-lav">Записаться</a>
+    <button class="burger" id="burger" aria-label="Меню">☰</button>
+  </div>
+</header>
+
+<main>
+
+<!-- ГЛАВНАЯ -->
+<div class="page" data-page="/">
+  <section class="hero" style="padding:0">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Фитнес-студия для женщин · Екатеринбург</span>
+        <h1>Сила <i>без стресса</i>, в своём темпе</h1>
+        <p>Уютная студия в ЖК «Миллениум» на Громова. Занятия в мини-группах по 2–3 девушки и персональные тренировки — с вниманием к технике и особенностям тела.</p>
+        <div class="cta">
+          <a href="https://mst.link/kate_vbalance" target="_blank" rel="noopener" class="btn b-lav">Пробная тренировка — 650 ₽</a>
+          <a href="#/directions" class="btn b-soft">Направления</a>
+        </div>
+        <div class="trust"><b>5,0</b><div><i>★★★★★</i><br>9 оценок в 2ГИС</div></div>
+      </div>
+      <div class="hpics">
+        <div class="ph a"><img src="https://i1.photo.2gis.com/video-gallery/913db04a-eb17-416f-baeb-2ccaa4a3478e.jpg" alt="Занятие в студии ВБалансе" loading="eager"></div>
+        <div class="ph b"><img src="https://i6.photo.2gis.com/photo-gallery/d679558b-6bde-42ab-8567-bc5b9c5f6f6b.jpg" alt="Зал студии" loading="eager"></div>
+        <div class="badge"><b>2–3</b>девушки в мини-группе — тренер видит каждую</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head"><div><span class="eyebrow">Почему ВБалансе</span><h2>Камерно, бережно, <i>рядом с домом</i></h2></div></div>
+      <div class="why">
+        <div class="w"><div class="ic">1</div><h3>Мини-группы</h3><p>Всегда 2–3 человека, только девушки. Каждая занимается по своей программе.</p></div>
+        <div class="w"><div class="ic">2</div><h3>Техника</h3><p>Тренер следит за выполнением и при необходимости корректирует нагрузку.</p></div>
+        <div class="w"><div class="ic">3</div><h3>Без давления</h3><p>Никакой гонки за результатом — тренировки в спокойной атмосфере.</p></div>
+        <div class="w"><div class="ic">4</div><h3>После родов</h3><p>Восстанавливаем тело после родов — в своём темпе, без стресса.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="sig">
+        <div class="tx">
+          <span class="eyebrow">Авторская методика</span>
+          <h2>«Сила <i>женственности</i>»</h2>
+          <p>Групповая тренировка, которую Екатерина создала для укрепления тела и раскрытия внутренней силы.</p>
+          <ul>
+            <li>Динамический стретчинг</li>
+            <li>Диафрагмальное дыхание</li>
+            <li>Укрепление позвоночника</li>
+            <li>Мышцы тазового дна</li>
+          </ul>
+          <a href="#/prices" class="btn b-lav">от 1 000 ₽ за занятие</a>
+        </div>
+        <div class="ph"><img src="https://i1.photo.2gis.com/video-gallery/55a57922-b322-48ff-9108-bc0ae0aa209d.jpg" alt="Тренировка «Сила женственности»" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><div><span class="eyebrow">Отзывы</span><h2>Что говорят <i>девушки</i></h2></div><a href="#/reviews" class="btn b-soft">Все отзывы</a></div>
+      <div class="revs">
+        <div class="rv hl"><p>«Спортивное пространство для девочек, где красиво, уютно, комфортно! Спорт стал ещё ближе»</p><footer>Татьяна Габбо · 2ГИС <i>★★★★★</i></footer></div>
+        <div class="rv"><p>«Особенно понравился подход Екатерины — без давления и гонки за результатом. После занятий появляется лёгкость в теле и ощущение, что действительно позаботилась о себе»</p><footer>Вероника Миллер · 2ГИС <i>★★★★★</i></footer></div>
+        <div class="rv"><p>«Очень комфортно заниматься, всегда 2–3 человека, очень спокойная обстановка, как дома!»</p><footer>Ирина Кузнецова · 2ГИС <i>★★★★★</i></footer></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- НАПРАВЛЕНИЯ -->
+<div class="page" data-page="/directions">
+  <div class="ptop"><div class="wrap"><span class="eyebrow">Направления</span><h1>Чем <i>занимаемся</i></h1><p>Силовые, мягкие и танцевальные форматы — подберём под цель, уровень подготовки и самочувствие.</p></div></div>
+  <section style="padding-top:40px">
+    <div class="wrap">
+      <div class="dirs">
+        <div class="dir lil"><span class="n">01</span><h3>Силовая в мини-группе</h3><p>До 3 человек. Укрепление тела без изнуряющих нагрузок — каждая по своей программе.</p><span class="pr">от 1 000 ₽</span></div>
+        <div class="dir"><span class="n">02</span><h3>«Сила женственности»</h3><p>Авторская групповая тренировка: стретчинг, дыхание, позвоночник и тазовое дно.</p><span class="pr">от 1 000 ₽</span></div>
+        <div class="dir pink"><span class="n">03</span><h3>Персональные</h3><p>Программа под ваши цели и особенности тела. Можно онлайн.</p><span class="pr">от 1 350 ₽</span></div>
+        <div class="dir"><span class="n">04</span><h3>Восстановление после родов</h3><p>Восстанавливаем тело после родов. Силовые группы до 3 человек.</p><span class="pr">по записи</span></div>
+        <div class="dir"><span class="n">05</span><h3>Йога в гамаках</h3><p>Занятия в подвесных гамаках.</p><span class="pr">по записи</span></div>
+        <div class="dir lil"><span class="n">06</span><h3>Хай хиллс</h3><p>Танцы на каблуках.</p><span class="pr">по записи</span></div>
+        <div class="dir"><span class="n">07</span><h3>Пилатес и стретчинг</h3><p>Спокойные мягкие тренировки.</p><span class="pr">по записи</span></div>
+        <div class="dir pink"><span class="n">08</span><h3>Фитнес для беременных</h3><p>Занятия для будущих мам.</p><span class="pr">по записи</span></div>
+        <div class="dir"><span class="n">09</span><h3>Аренда зала</h3><p>Почасовая аренда студии — для йоги, пилатеса, мастер-классов и индивидуальных занятий.</p><span class="pr">брони от 1 часа</span></div>
+      </div>
+    </div>
+  </section>
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><div><span class="eyebrow">Студия</span><h2>Светлый зал <i>с видом</i></h2></div></div>
+      <div class="gal" id="gal"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ЦЕНЫ -->
+<div class="page" data-page="/prices">
+  <div class="ptop"><div class="wrap"><span class="eyebrow">Стоимость</span><h1>Цены</h1><p>Актуальные цены из онлайн-записи студии. Записаться можно онлайн, по телефону или в мессенджере.</p></div></div>
+  <section style="padding-top:40px">
+    <div class="wrap plist">
+      <div class="trial">
+        <div><h2>Пробная тренировка-знакомство</h2><p>Познакомиться со студией, тренером и форматом — 1 час</p></div>
+        <div style="display:flex;align-items:center;gap:22px;flex-wrap:wrap"><span class="num">650 ₽</span><a href="https://mst.link/kate_vbalance" target="_blank" rel="noopener" class="btn b-ink">Записаться</a></div>
+      </div>
+      <div class="pcard">
+        <h2>Группы</h2>
+        <div class="prow"><div>Силовая тренировка в мини-группе<small>1 час, до 3 человек</small></div><b>от 1 000 ₽</b></div>
+        <div class="prow"><div>Групповая «Сила женственности»<small>1 час</small></div><b>от 1 000 ₽</b></div>
+        <div class="prow"><div>Разовая групповая тренировка<small>1 час</small></div><b>от 1 500 ₽</b></div>
+      </div>
+      <div class="pcard">
+        <h2>Персонально</h2>
+        <div class="prow"><div>Персональная тренировка<small>1 час</small></div><b>от 1 350 ₽</b></div>
+        <div class="prow"><div>Персональная тренировка онлайн<small>1 час</small></div><b>от 1 350 ₽</b></div>
+        <div class="prow"><div>Разовая персональная тренировка<small>1 час</small></div><b>от 1 800 ₽</b></div>
+      </div>
+      <div class="pcard" style="grid-column:1/-1">
+        <h2>Аренда студии</h2>
+        <div class="prow"><div>Бронь зала на 1, 2 или 3 часа<small>для йоги, пилатеса, мастер-классов и индивидуальных занятий</small></div><b>по запросу</b></div>
+        <p style="color:var(--mute);font-size:15px;margin-top:10px">Оплата наличными или переводом с карты.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ТРЕНЕР -->
+<div class="page" data-page="/coach">
+  <section>
+    <div class="wrap coach">
+      <div class="ph"><img src="https://i5.photo.2gis.com/photo-gallery/9539666d-cbfa-42a3-9cbe-ec22f96f964e.jpg" alt="Зал студии ВБалансе" loading="lazy"></div>
+      <div>
+        <span class="eyebrow">Тренер и основательница</span>
+        <h2>Екатерина <i>Ширяева</i></h2>
+        <p>Женский тренер и создательница студии ВБалансе. Проводит персональные тренировки и занятия в мини-группах, разработанные с учётом целей, особенностей тела и уровня подготовки.</p>
+        <p>Автор групповой методики «Сила женственности». Ведёт йогу в гамаках и хай хиллс.</p>
+        <blockquote>«Если вам хочется изменить своё тело и жизнь к лучшему, но боитесь изнуряющих нагрузок — я с удовольствием вам помогу!»</blockquote>
+        <div class="cta"><a href="https://mst.link/kate_vbalance" target="_blank" rel="noopener" class="btn b-lav">Записаться к Екатерине</a><a href="https://t.me/Koshka_Shi" target="_blank" rel="noopener" class="btn b-soft">Написать в Telegram</a></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ОТЗЫВЫ -->
+<div class="page" data-page="/reviews">
+  <div class="ptop"><div class="wrap"><span class="eyebrow">Отзывы</span><h1>5,0 <i>в 2ГИС</i></h1><p>Все отзывы — с пятью звёздами. <a href="https://2gis.ru/ekaterinburg/firm/70000001113930599/tab/reviews" target="_blank" rel="noopener" style="color:var(--lav2);font-weight:600">Читать в 2ГИС →</a></p></div></div>
+  <section style="padding-top:40px">
+    <div class="wrap">
+      <div class="revs">
+        <div class="rv hl"><p>«Сходил на пробную тренировку и влюбился в атмосферу зала! Катя отличный и компетентный тренер. Хожу уже 3 месяца!»</p><footer>Сергей Козик · 2ГИС <i>★★★★★</i></footer></div>
+        <div class="rv"><p>«В студии проходят занятия в мини-группе по 2–3 человека, только девочки. Всё необходимое есть, места всем хватает. Каждая занимается по своей программе под руководством тренера Екатерины. Она чётко следит за техникой, даёт обратную связь и, если требуется, корректирует нагрузку»</p><footer>Татьяна Габбо <i>★★★★★</i></footer></div>
+        <div class="rv"><p>«Пространство светлое, чистое, всё продумано до мелочей. Ещё большой плюс — студию можно арендовать: отлично подходит для индивидуальных тренировок, йоги, пилатеса, мастер-классов»</p><footer>Вероника Миллер <i>★★★★★</i></footer></div>
+        <div class="rv"><p>«Чудесная уютная студия, при этом есть всё необходимое для разного вида тренировок. Чувствуется, что Екатерина создала её с душой. Катя — внимательный и грамотный тренер»</p><footer>Юлия Филиппова <i>★★★★★</i></footer></div>
+        <div class="rv"><p>«Очень нравится камерная атмосфера и заботливый, индивидуальный подход! Всегда разнообразные и интересные тренировки. Здесь вас точно научат чувствовать своё тело!»</p><footer>Анна Споршева <i>★★★★★</i></footer></div>
+        <div class="rv"><p>«Хожу заниматься давно, очень нравится индивидуальный подход и разнообразие тренировок. А ещё рядом с домом — это вообще отлично»</p><footer>Вероника <i>★★★★★</i></footer></div>
+        <div class="rv"><p>«Уютная студия, рекомендую. Индивидуальный бережный подход к каждому»</p><footer>Татьяна Бобикова <i>★★★★★</i></footer></div>
+        <div class="rv"><p>«Очень нравятся тренировки у Кати. Очень комфортно заниматься, всегда 2–3 человека»</p><footer>Ирина Кузнецова <i>★★★★★</i></footer></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- КОНТАКТЫ -->
+<div class="page" data-page="/contacts">
+  <div class="ptop"><div class="wrap"><span class="eyebrow">Контакты</span><h1>Ждём <i>в гости</i></h1><p>ЖК «Миллениум», Юго-Западный район. Занятия — по предварительной записи.</p></div></div>
+  <section style="padding-top:40px">
+    <div class="wrap cgrid">
+      <div class="cbox">
+        <div class="kv">
+          <div><span>Адрес</span><b>Екатеринбург, ул. Громова, 26/4</b><em>помещение 7, 1 этаж · домофон 5007</em></div>
+          <div><span>Телефон</span><a class="v" href="tel:+79326090123">+7 932 609-01-23</a></div>
+          <div><span>Время</span><b>Пн–Чт и Вс, 9:00–21:00</b><em>по предварительному звонку</em></div>
+        </div>
+        <div class="soc">
+          <a href="https://mst.link/kate_vbalance" target="_blank" rel="noopener" class="btn b-lav">Онлайн-запись</a>
+          <a href="https://t.me/Koshka_Shi" target="_blank" rel="noopener" class="btn b-soft">Telegram</a>
+          <a href="https://vk.com/vbalance.kate" target="_blank" rel="noopener" class="btn b-soft">ВКонтакте</a>
+          <a href="https://max.ru/join/7kctS5fG3QmNymS-WbfnpE9AMfKAaMn6CXRwulbwKwc" target="_blank" rel="noopener" class="btn b-soft">MAX</a>
+        </div>
+      </div>
+      <div class="map"><iframe src="https://yandex.ru/map-widget/v1/?ll=60.570656%2C56.811495&z=16&pt=60.570656,56.811495,pm2vvm" loading="lazy" title="Карта: ул. Громова, 26/4"></iframe></div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="g">
+      <div><a href="#/" class="logo">В<i>Балансе</i><small>женская студия</small></a><p style="margin-top:16px;max-width:320px">Студия фитнеса для женщин. Екатеринбург, ул. Громова, 26/4.</p></div>
+      <div><h4>Разделы</h4><a href="#/directions">Направления</a><a href="#/prices">Цены</a><a href="#/coach">Тренер</a><a href="#/reviews">Отзывы</a></div>
+      <div><h4>Связь</h4><a href="tel:+79326090123">+7 932 609-01-23</a><a href="https://t.me/Koshka_Shi" target="_blank" rel="noopener">Telegram</a><a href="https://vk.com/vbalance.kate" target="_blank" rel="noopener">ВКонтакте</a><a href="https://mst.link/kate_vbalance" target="_blank" rel="noopener">Онлайн-запись</a></div>
+    </div>
+    <div class="credit"><span>© Студия ВБалансе, Екатеринбург</span><span>Демо-сайт · разработка: Сергей Музыченко, Telegram <a href="https://t.me/spectator0011" target="_blank" rel="noopener">@spectator0011</a></span></div>
+  </div>
+</footer>
+
+<div class="callbar"><a href="https://mst.link/kate_vbalance" target="_blank" rel="noopener" class="btn b-lav">Записаться</a><a href="tel:+79326090123" class="btn b-soft">Позвонить</a></div>
+<div class="lb" id="lb"><img alt=""></div>
+
+<script>
+const PH=[
+ ["i1.photo.2gis.com/video-gallery/55a57922-b322-48ff-9108-bc0ae0aa209d","t","Тренировка в студии"],
+ ["i6.photo.2gis.com/photo-gallery/d679558b-6bde-42ab-8567-bc5b9c5f6f6b","","Зал и инвентарь"],
+ ["i9.photo.2gis.com/photo-gallery/f95d183e-9b9a-4bc2-b5aa-8581a897b38d","","Светлый зал с окнами"],
+ ["i9.photo.2gis.com/photo-gallery/f9015b3f-3a9f-473e-83e0-9e55d1096be1","t","Общий вид студии"],
+ ["i5.photo.2gis.com/photo-gallery/9539666d-cbfa-42a3-9cbe-ec22f96f964e","","Силовая зона"],
+ ["i8.photo.2gis.com/photo-gallery/e8688998-c5f3-410e-acc1-b647d7bbaa41","","Шведская стенка"],
+ ["i3.photo.2gis.com/photo-gallery/7eed2087-226c-474b-9643-a1ee6e651045","","Зал"],
+ ["i4.photo.2gis.com/photo-gallery/8eb05ff5-1b32-495a-b79b-2d5b3705afdd","","Ресепшен"]
+];
+document.getElementById('gal').innerHTML=PH.map(([s,c,a])=>`<div class="ph ${c}"><img src="https://${s}.jpg" alt="${a}" loading="lazy"></div>`).join('');
+
+const pages=[...document.querySelectorAll('.page')],links=[...document.querySelectorAll('.links a')],nav=document.getElementById('links');
+const titles={'/':'ВБалансе — женская фитнес-студия в Екатеринбурге','/directions':'Направления — ВБалансе','/prices':'Цены — ВБалансе','/coach':'Тренер Екатерина Ширяева — ВБалансе','/reviews':'Отзывы — ВБалансе','/contacts':'Контакты — ВБалансе'};
+function route(){const p=location.hash.replace(/^#/,'')||'/';const t=pages.find(x=>x.dataset.page===p)||pages[0];pages.forEach(x=>x.classList.toggle('on',x===t));links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+t.dataset.page));nav.classList.remove('open');scrollTo(0,0);document.title=titles[t.dataset.page]}
+addEventListener('hashchange',route);route();
+document.getElementById('burger').onclick=()=>nav.classList.toggle('open');
+const lb=document.getElementById('lb'),li=lb.querySelector('img');
+document.getElementById('gal').addEventListener('click',e=>{const b=e.target.closest('.ph');if(b){li.src=b.querySelector('img').src;lb.classList.add('on')}});
+lb.onclick=()=>lb.classList.remove('on');addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+document.querySelectorAll('img').forEach(i=>i.addEventListener('error',()=>{i.style.visibility='hidden'}));
+</script>
+</body>
+</html>

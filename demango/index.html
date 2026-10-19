@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>De`Mango — салон красоты в ЖК «Листва», Санкт-Петербург</title>
+<meta name="description" content="De`Mango — салон красоты на Лиственной, 20 к2: маникюр, педикюр, стрижки, укладки, массаж и SPA. Ежедневно 10:00–22:00. 5,0 в 2ГИС и Яндекс Картах.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sand:#f1ebe4; --sand2:#e6ddd3; --milk:#fbf8f4; --taupe:#b7a697; --cocoa:#4a3a31; --ink:#2b221d; --mute:#86786d;
+  --berry:#b42347; --berry2:#951a3a; --line:rgba(74,58,49,.14);
+  --r:28px; --max:1200px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--sand);color:var(--ink);font:400 17px/1.65 Raleway,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+h1,h2,h3,.ts{font-family:"Tenor Sans",sans-serif;font-weight:400;letter-spacing:.01em;line-height:1.08}
+.eb{font-size:12px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--taupe)}
+.ph{overflow:hidden;background:var(--sand2);border-radius:var(--r)}
+.ph img{width:100%;height:100%;object-fit:cover}
+
+/* header */
+header{position:sticky;top:0;z-index:40;background:rgba(241,235,228,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:80px;gap:20px}
+.logo{font-family:"Tenor Sans";font-size:26px;letter-spacing:.06em;color:var(--cocoa);display:flex;align-items:center;gap:10px}
+.logo i{width:12px;height:12px;border-radius:50%;background:var(--berry);display:inline-block}
+.links{display:flex;gap:30px;font-size:15px;font-weight:500}
+.links a{color:var(--mute);position:relative;padding:6px 0}
+.links a:hover,.links a.on{color:var(--cocoa)}
+.links a.on::after{content:"";position:absolute;left:50%;bottom:-6px;width:5px;height:5px;border-radius:50%;background:var(--berry);transform:translateX(-50%)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 26px;border-radius:999px;font:600 15px Raleway;transition:transform .2s,background .2s;white-space:nowrap;border:0;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.b-berry{background:var(--berry);color:#fff}
+.b-berry:hover{background:var(--berry2)}
+.b-cocoa{background:var(--cocoa);color:var(--milk)}
+.b-line{border:1.5px solid var(--cocoa);color:var(--cocoa)}
+.b-milk{background:var(--milk);color:var(--cocoa)}
+.burger{display:none;width:46px;height:46px;border-radius:50%;border:1.5px solid var(--cocoa);background:transparent;color:var(--cocoa);font-size:18px;cursor:pointer}
+
+.page{display:none;animation:in .5s ease}
+.page.on{display:block}
+@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+section{padding:100px 0}
+.ptop{padding:76px 0 24px}
+.ptop h1{font-size:clamp(48px,7.5vw,100px);margin-top:14px;color:var(--cocoa)}
+.ptop p{max-width:560px;color:var(--mute);margin-top:16px;font-size:18px}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:48px;flex-wrap:wrap}
+.head h2{font-size:clamp(38px,5vw,64px);color:var(--cocoa);margin-top:12px}
+.head p{max-width:380px;color:var(--mute)}
+
+/* hero */
+.hero{padding:40px 0 80px}
+.hgrid{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:stretch}
+.hcard{background:var(--milk);border-radius:var(--r);padding:56px 52px;display:flex;flex-direction:column;justify-content:space-between;gap:36px}
+.hcard h1{font-size:clamp(42px,5vw,74px);color:var(--cocoa)}
+.hcard h1 em{font-style:normal;color:var(--berry)}
+.hcard p{font-size:19px;color:#5d4e45;max-width:470px;margin:22px 0 30px}
+.offer{display:flex;gap:14px;align-items:center;background:var(--sand);border-radius:20px;padding:16px 18px}
+.offer b{font-family:"Tenor Sans";font-weight:400;font-size:30px;color:var(--berry);line-height:1}
+.offer span{font-size:14.5px;color:#5d4e45}
+.hpics{display:grid;grid-template-rows:1.3fr 1fr;gap:16px;min-height:640px}
+.hpics .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.rate{display:flex;gap:28px;flex-wrap:wrap}
+.rate div{font-size:13.5px;color:var(--mute)}
+.rate b{display:block;font-family:"Tenor Sans";font-weight:400;font-size:30px;color:var(--cocoa);line-height:1.1}
+
+/* services tiles */
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tile{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/5;background:var(--sand2);color:#fff;display:block}
+.tile img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.tile:hover img{transform:scale(1.04)}
+.tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(43,34,29,.72))}
+.tile .t{position:absolute;left:26px;right:26px;bottom:24px;z-index:1}
+.tile h3{font-size:32px}
+.tile span{font-size:15px;opacity:.9}
+
+/* care */
+.care{background:var(--cocoa);color:#e9dfd6;border-radius:40px;padding:72px 64px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.care h2{color:var(--milk);font-size:clamp(38px,4.6vw,60px);margin:12px 0 20px}
+.care h2 em{font-style:normal;color:#f0a9bb}
+.care ul{list-style:none;display:grid;gap:14px}
+.care li{display:flex;gap:14px;align-items:flex-start;font-size:17px}
+.care li::before{content:"";flex:0 0 10px;height:10px;border-radius:50%;background:var(--berry);margin-top:8px}
+.care .ph{aspect-ratio:1;border-radius:24px}
+
+/* masters */
+.masters{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.m{background:var(--milk);border-radius:22px;padding:26px 22px;text-align:center}
+.m .av{width:72px;height:72px;border-radius:50%;margin:0 auto 14px;display:grid;place-items:center;background:var(--sand2);font-family:"Tenor Sans";font-size:28px;color:var(--berry)}
+.m h3{font-size:22px;color:var(--cocoa)}
+.m p{font-size:14px;color:var(--mute)}
+
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rv{background:var(--milk);border-radius:var(--r);padding:32px;display:flex;flex-direction:column;justify-content:space-between;gap:22px}
+.rv p{font-size:17.5px;line-height:1.6;color:#4d3f37}
+.rv footer{display:flex;justify-content:space-between;align-items:center;font-size:14px;color:var(--mute);font-weight:600}
+.rv footer i{font-style:normal;color:var(--berry);letter-spacing:2px}
+
+/* prices */
+.pcats{display:grid;gap:16px}
+details.pc{background:var(--milk);border-radius:var(--r);overflow:hidden}
+details.pc summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:28px 32px}
+details.pc summary::-webkit-details-marker{display:none}
+details.pc summary h2{font-size:clamp(28px,3.4vw,40px);color:var(--cocoa)}
+details.pc summary small{color:var(--mute);font-size:15px;margin-left:12px;font-family:Raleway}
+details.pc summary .pl{width:44px;height:44px;border-radius:50%;background:var(--sand);display:grid;place-items:center;font-size:22px;color:var(--berry);transition:transform .3s;flex:0 0 auto}
+details.pc[open] summary .pl{transform:rotate(45deg)}
+.plist{padding:0 32px 22px}
+.pi{display:grid;grid-template-columns:1fr auto;gap:20px;padding:15px 0;border-top:1px solid var(--line);align-items:baseline}
+.pi span{font-size:16.5px}
+.pi b{font-family:"Tenor Sans";font-weight:400;font-size:20px;color:var(--cocoa);white-space:nowrap}
+.extra{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+.extra div{background:var(--sand2);border-radius:22px;padding:24px}
+.extra h3{font-size:24px;color:var(--cocoa);margin-bottom:6px}
+.extra p{color:var(--mute);font-size:15px}
+.pnote{margin-top:22px;background:var(--cocoa);color:#e9dfd6;border-radius:var(--r);padding:28px 32px;display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about .ph{aspect-ratio:4/5}
+.about h2{font-size:clamp(38px,4.8vw,62px);color:var(--cocoa);margin:12px 0 22px}
+.about p{font-size:18px;color:#4d3f37;margin-bottom:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chips span{background:var(--milk);border-radius:999px;padding:9px 15px;font-size:14px;font-weight:600;color:var(--cocoa)}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:240px;gap:14px}
+.gal .ph{cursor:zoom-in;border-radius:22px}
+.gal .w{grid-column:span 2}
+.gal .t{grid-row:span 2}
+.lb{position:fixed;inset:0;background:rgba(30,22,18,.93);display:none;place-items:center;z-index:80;padding:20px;cursor:zoom-out}
+.lb.on{display:grid}
+.lb img{max-width:92vw;max-height:88vh;border-radius:18px}
+
+/* scores */
+.scores{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:22px}
+.sc{background:var(--milk);border-radius:var(--r);padding:36px;display:flex;align-items:center;gap:28px}
+.sc .big{font-family:"Tenor Sans";font-size:90px;line-height:.9;color:var(--berry)}
+.sc h3{font-size:28px;color:var(--cocoa)}
+.sc p{color:var(--mute);font-size:15px;margin:4px 0 10px}
+.sc a{color:var(--berry);font-weight:700}
+
+/* contacts */
+.cgrid{display:grid;grid-template-columns:1fr 1.2fr;gap:18px}
+.cbox{background:var(--milk);border-radius:var(--r);padding:42px}
+.kv{display:grid;gap:24px;margin-bottom:30px}
+.kv span{display:block;font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--taupe);margin-bottom:4px}
+.kv b,.kv a{font-family:"Tenor Sans";font-weight:400;font-size:26px;color:var(--cocoa);line-height:1.2}
+.kv a:hover{color:var(--berry)}
+.kv em{display:block;font-style:normal;color:var(--mute);font-size:15px;margin-top:2px}
+.map{border-radius:var(--r);overflow:hidden;min-height:500px;background:var(--sand2)}
+.map iframe{width:100%;height:100%;min-height:500px;border:0;display:block}
+
+/* footer */
+.foot{background:var(--ink);color:#bfb2a7;padding:60px 0 28px;margin-top:40px}
+.foot .g{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+.foot .logo{color:var(--milk)}
+.foot h4{font-family:"Tenor Sans";font-weight:400;color:var(--milk);font-size:20px;margin-bottom:12px}
+.foot a{display:block;margin-bottom:6px}
+.foot a:hover{color:#fff}
+.credit{margin-top:40px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px;color:#8f8278}
+.credit a{display:inline;color:#d6cabf}
+
+.callbar{display:none}
+
+@media (max-width:1040px){
+  .hgrid,.care,.about,.cgrid,.scores{grid-template-columns:1fr}
+  .hpics{min-height:520px}
+  .tiles{grid-template-columns:1fr 1fr}
+  .masters{grid-template-columns:repeat(3,1fr)}
+  .revs{grid-template-columns:1fr 1fr}
+  .extra{grid-template-columns:1fr}
+  .gal{grid-template-columns:1fr 1fr}
+  .care{padding:48px 36px}
+  .foot .g{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  .links{display:none;position:absolute;top:80px;left:0;right:0;flex-direction:column;gap:0;background:var(--sand);padding:10px 20px 20px;border-bottom:1px solid var(--line)}
+  .links.open{display:flex}
+  .links a{font-size:20px;padding:12px 0;font-family:"Tenor Sans";color:var(--cocoa)}
+  .links a.on::after{display:none}
+  .nav>.btn{display:none}
+  .burger{display:block}
+}
+@media (max-width:560px){
+  .wrap{padding:0 16px}
+  section{padding:64px 0}
+  .ptop{padding:48px 0 8px}
+  .hero{padding:20px 0 56px}
+  .hcard{padding:34px 24px}
+  .hpics{min-height:420px}
+  .tiles{grid-template-columns:1fr}
+  .tile{aspect-ratio:4/3}
+  .masters{grid-template-columns:1fr 1fr}
+  .revs{grid-template-columns:1fr}
+  .care{padding:36px 22px;border-radius:28px}
+  details.pc summary{padding:22px 20px}
+  details.pc summary small{display:block;margin:4px 0 0}
+  .plist{padding:0 20px 16px}
+  .sc{flex-direction:column;align-items:flex-start;gap:8px;padding:26px}
+  .cbox{padding:26px}
+  .gal{grid-auto-rows:160px}
+  .foot .g{grid-template-columns:1fr}
+  .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:50;gap:8px}
+  .callbar .btn{flex:1;box-shadow:0 10px 26px -10px rgba(0,0,0,.45)}
+  .foot{padding-bottom:100px}
+}
+@media (prefers-reduced-motion:reduce){.page{animation:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#/" class="logo" aria-label="De`Mango — на главную"><i></i>De`Mango</a>
+    <nav class="links" id="links">
+      <a href="#/">Главная</a>
+      <a href="#/prices">Услуги и цены</a>
+      <a href="#/about">О салоне</a>
+      <a href="#/reviews">Отзывы</a>
+      <a href="#/contacts">Контакты</a>
+    </nav>
+    <a href="tel:+79213701115" class="btn b-berry">Записаться</a>
+    <button class="burger" id="burger" aria-label="Меню">☰</button>
+  </div>
+</header>
+
+<main>
+
+<!-- ГЛАВНАЯ -->
+<div class="page" data-page="/">
+  <section class="hero">
+    <div class="wrap hgrid">
+      <div class="hcard">
+        <div>
+          <div class="eb">Салон красоты · ЖК «Листва»</div>
+          <h1 style="margin-top:18px">Красота <em>без спешки</em> — рядом с домом</h1>
+          <p>Маникюр и педикюр, стрижки и укладки, массаж и SPA — в уютном салоне на Лиственной. С кофе, чаем и мастерами, к которым возвращаются.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <a href="tel:+79213701115" class="btn b-berry">Записаться по телефону</a>
+            <a href="#/prices" class="btn b-line">Цены</a>
+          </div>
+        </div>
+        <div style="display:grid;gap:22px">
+          <div class="offer"><b>−10%</b><span>на первое посещение салона</span></div>
+          <div class="rate">
+            <div><b>5,0</b>2ГИС · 214 оценок</div>
+            <div><b>5,0</b>Яндекс · 191 оценка</div>
+            <div><b>10–22</b>без выходных</div>
+          </div>
+        </div>
+      </div>
+      <div class="hpics">
+        <div class="ph"><img src="https://i3.photo.2gis.com/photo-gallery/a90fc116-0eb6-4e7c-831c-49c76d5db7e6.jpg" alt="Зал салона De`Mango" loading="eager"></div>
+        <div class="row">
+          <div class="ph"><img src="https://i2.photo.2gis.com/photo-gallery/2036f4d4-bb25-48be-a3c1-c4df8a8dc68c.jpg" alt="Маникюр" loading="eager"></div>
+          <div class="ph"><img src="https://i9.photo.2gis.com/photo-gallery/16ae53bc-bde3-451d-bb4e-6d68fbd005f0.jpg" alt="Вход в салон с цветами" loading="eager"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><div><div class="eb">Услуги</div><h2>Всё в одном салоне</h2></div><p>Прайс на маникюр, педикюр, стрижки и укладки — на странице цен. Массаж, SPA и брови — по записи.</p></div>
+      <div class="tiles">
+        <a class="tile" href="#/prices"><img src="https://i2.photo.2gis.com/photo-gallery/f268a200-2785-415b-8a90-1e4788dc0d7f.jpg" alt="Ногтевой сервис" loading="lazy"><div class="t"><h3>Ногтевой сервис</h3><span>маникюр от 2 000 ₽</span></div></a>
+        <a class="tile" href="#/prices"><img src="https://i7.photo.2gis.com/photo-gallery/b8efa936-3cde-4c2d-a5a7-ffa8c9f73948.jpg" alt="Волосы" loading="lazy"><div class="t"><h3>Стрижки и укладки</h3><span>женские, мужские, детские</span></div></a>
+        <a class="tile" href="#/prices"><img src="https://i4.photo.2gis.com/photo-gallery/d27752a2-e61c-45a0-883d-3c91234c3afe.jpg" alt="Кабинет" loading="lazy"><div class="t"><h3>Массаж и SPA</h3><span>цены по телефону</span></div></a>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="care">
+        <div>
+          <div class="eb">Почему возвращаются</div>
+          <h2>Приходишь <em>как домой</em></h2>
+          <ul>
+            <li>Кофе — можно на альтернативном молоке — и ароматный чай, пока ждёте мастера</li>
+            <li>Клиентские дни с угощениями</li>
+            <li>Можно прийти с ребёнком — стрижём детей и делаем «папа + сын»</li>
+            <li>Можно с собакой, есть Wi-Fi и парковка рядом</li>
+            <li>Оплата картой, наличными, по QR или частями</li>
+          </ul>
+        </div>
+        <div class="ph"><img src="https://i2.photo.2gis.com/photo-gallery/8046e119-af89-4c91-8a06-0d6e9db90183.jpg" alt="Чай для гостей салона" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><div><div class="eb">Мастера</div><h2>Кого благодарят в отзывах</h2></div><p>Имена мастеров, которых гости чаще всего отмечают в 2ГИС.</p></div>
+      <div class="masters">
+        <div class="m"><div class="av">Л</div><h3>Лилит</h3><p>маникюр</p></div>
+        <div class="m"><div class="av">А</div><h3>Аня</h3><p>маникюр</p></div>
+        <div class="m"><div class="av">А</div><h3>Армине</h3><p>стрижки</p></div>
+        <div class="m"><div class="av">Э</div><h3>Эмми</h3><p>стрижки</p></div>
+        <div class="m"><div class="av">И</div><h3>Ирина</h3><p>массаж</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><div><div class="eb">Отзывы</div><h2>Что говорят гости</h2></div><a href="#/reviews" class="btn b-line">Все отзывы</a></div>
+      <div class="revs">
+        <blockquote class="rv"><p>«Очень нравится все! И сервис, и мастера и качество оказываемых услуг! Приходишь как домой, всегда радушно встречают, можно прийти даже с ребенком»</p><footer>Mila М · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Очень уютный красивый салон. Была на маникюре у Ани. В приятном удивлении, очень аккуратно и качественно!»</p><footer>Яна Мировская · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Мастер Ирина по массажу просто лучшая, внимательная и приятная»</p><footer>Анастасия Внукова · 2ГИС <i>★★★★★</i></footer></blockquote>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ЦЕНЫ -->
+<div class="page" data-page="/prices">
+  <div class="wrap ptop">
+    <div class="eb">Услуги и цены</div>
+    <h1>Прайс салона</h1>
+    <p>Цены по прайсу салона на октябрь 2026. Итоговая стоимость зависит от длины, сложности и мастера — уточняйте при записи.</p>
+  </div>
+  <section style="padding-top:36px">
+    <div class="wrap">
+      <div class="pcats" id="pcats"></div>
+      <div class="extra">
+        <div><h3>Массаж и SPA</h3><p>Оздоровительный, релаксирующий, антицеллюлитный, лимфодренаж, массаж лица, детский массаж, обёртывания, SPA для головы.</p></div>
+        <div><h3>Волосы</h3><p>Сложное окрашивание, кератиновое выпрямление, прикорневой объём, плетение кос, свадебные и вечерние причёски.</p></div>
+        <div><h3>Лицо и тело</h3><p>Брови и ресницы, ламинирование ресниц, чистка и пилинг, шугаринг и восковая депиляция. Возможен выезд на дом.</p></div>
+      </div>
+      <div class="pnote"><span>Цены на эти услуги — по телефону. Первое посещение — со скидкой 10%.</span><a href="tel:+79213701115" class="btn b-berry">+7 921 370-11-15</a></div>
+    </div>
+  </section>
+</div>
+
+<!-- О САЛОНЕ -->
+<div class="page" data-page="/about">
+  <div class="wrap ptop">
+    <div class="eb">О салоне</div>
+    <h1>Спокойно, чисто, красиво</h1>
+  </div>
+  <section style="padding-top:36px">
+    <div class="wrap about">
+      <div class="ph"><img src="https://i1.photo.2gis.com/photo-gallery/1686dea6-0b98-43f2-9c68-5e7fd10601b2.jpg" alt="Ресепшн салона" loading="lazy"></div>
+      <div>
+        <div class="eb">De`Mango</div>
+        <h2>Салон в ЖК «Листва»</h2>
+        <p>De`Mango — салон красоты в Выборгском районе, на Лиственной улице. Тёплый интерьер, мягкий свет и мастера, к которым возвращаются: на маникюр, стрижку, массаж или всё сразу.</p>
+        <p>Гостей встречают кофе и чаем, для постоянных клиентов устраивают клиентские дни с угощениями. Приходите с детьми — для них есть отдельные стрижки и маникюр.</p>
+        <div class="chips"><span>Маникюр и педикюр</span><span>Наращивание</span><span>Стрижки</span><span>Укладки</span><span>Окрашивание</span><span>Массаж</span><span>SPA</span><span>Брови и ресницы</span><span>Детский маникюр</span><span>Выезд на дом</span></div>
+      </div>
+    </div>
+  </section>
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><div><div class="eb">Фото</div><h2>Интерьер и работы</h2></div><p>Нажмите на фото, чтобы открыть крупнее.</p></div>
+      <div class="gal">
+        <div class="ph w t"><img src="https://i3.photo.2gis.com/photo-gallery/a90fc116-0eb6-4e7c-831c-49c76d5db7e6.jpg" alt="Зал салона" loading="lazy"></div>
+        <div class="ph"><img src="https://i6.photo.2gis.com/photo-gallery/00debdbe-a88e-4fc8-93b9-f66f7e010077.jpg" alt="Полки с косметикой" loading="lazy"></div>
+        <div class="ph"><img src="https://i4.photo.2gis.com/photo-gallery/82300346-850d-4490-9b51-fe6159a2dcee.jpg" alt="Маникюр" loading="lazy"></div>
+        <div class="ph"><img src="https://i0.photo.2gis.com/photo-gallery/7ccf7b56-53a0-4407-8052-b24ac57994e4.jpg" alt="Ниши в интерьере" loading="lazy"></div>
+        <div class="ph"><img src="https://i3.photo.2gis.com/photo-gallery/ac659625-932b-4d89-9113-cd8a6240b202.jpg" alt="Маникюр с ромашками" loading="lazy"></div>
+        <div class="ph w"><img src="https://i2.photo.2gis.com/photo-gallery/9e9fe11f-4563-43e8-9a0c-593322975fc4.jpg" alt="Рабочие места" loading="lazy"></div>
+        <div class="ph"><img src="https://i2.photo.2gis.com/photo-gallery/589815d8-ee3c-44cd-9c09-d935feda447c.jpg" alt="Окрашивание" loading="lazy"></div>
+        <div class="ph"><img src="https://i5.photo.2gis.com/photo-gallery/cc288ba7-14f3-4a8a-8587-33077727b3ba.jpg" alt="Педикюрная зона" loading="lazy"></div>
+        <div class="ph"><img src="https://i8.photo.2gis.com/photo-gallery/f157ea0c-50e7-40bb-8bfc-85d68b0edd5d.jpg" alt="Нюдовый маникюр" loading="lazy"></div>
+        <div class="ph"><img src="https://i6.photo.2gis.com/photo-gallery/0b81aa71-10c9-4814-ad84-089d67e99ade.jpg" alt="Декор" loading="lazy"></div>
+        <div class="ph w"><img src="https://i3.photo.2gis.com/photo-gallery/9eabfbd8-b2c1-4e96-8057-9ce01017836b.jpg" alt="Интерьер" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ОТЗЫВЫ -->
+<div class="page" data-page="/reviews">
+  <div class="wrap ptop">
+    <div class="eb">Отзывы</div>
+    <h1>Нам доверяют</h1>
+    <p>Почти 400 отзывов в двух картах — и средняя оценка 5,0.</p>
+  </div>
+  <section style="padding-top:36px">
+    <div class="wrap">
+      <div class="scores">
+        <div class="sc"><div class="big">5,0</div><div><h3>2ГИС</h3><p>214 оценок · 209 отзывов</p><a href="https://2gis.ru/spb/firm/70000001100759134/tab/reviews" target="_blank" rel="noopener">Читать в 2ГИС →</a></div></div>
+        <div class="sc"><div class="big">5,0</div><div><h3>Яндекс Карты</h3><p>191 оценка · 165 отзывов</p><a href="https://yandex.ru/maps/org/de_mango/72199298794/reviews/" target="_blank" rel="noopener">Читать в Яндексе →</a></div></div>
+      </div>
+      <div class="revs">
+        <blockquote class="rv"><p>«Очень нравится этот салон! Хожу регулярно, была на ламинировании ресниц, стрижке, делала уход для волос и вот теперь сходила на маникюр. Все мастера очень вежливые, приятные, качество на высоте»</p><footer>Валерия Тартышева · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Не раз посещаю салон. Лучший персонал. Все отзывчивые, эмпатичные и тактичные. Всегда красиво, подача как в ресторане! Ароматный чай. Капучино с воздушной пенкой»</p><footer>Екатерина Федорова · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Отличный салон, прекрасный интерьер, всегда чисто и уютно. Предлагают напитки с угощениями, устраивают клиентские дни с вкусностями. Маникюр прекрасного качества, долго держится»</p><footer>Евгения Кис · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Очень рекомендую! Все приятные и отзывчивые специалисты! Можно угоститься кофе на альтернативном молоке»</p><footer>Лада Якунова · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Очень красивый салон. Приятно даже просто в нём находиться. Я пришла первый раз на массаж, всё очень понравилось»</p><footer>Инна Петрова · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Приходила на маникюр, осталась очень довольна, было важно без боли и всё прошло хорошо. Качественно, красиво и приятная атмосфера в салоне»</p><footer>Татьяна S. · 2ГИС <i>★★★★★</i></footer></blockquote>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- КОНТАКТЫ -->
+<div class="page" data-page="/contacts">
+  <div class="wrap ptop">
+    <div class="eb">Контакты</div>
+    <h1>Ждём вас в «Листве»</h1>
+  </div>
+  <section style="padding-top:36px">
+    <div class="wrap cgrid">
+      <div class="cbox">
+        <div class="kv">
+          <div><span>Адрес</span><b>Санкт-Петербург, Лиственная ул., 20 к2</b><em>ЖК «Листва», Выборгский район · метро «Озерки»</em></div>
+          <div><span>Телефон и запись</span><a href="tel:+79213701115">+7 921 370-11-15</a></div>
+          <div><span>Режим работы</span><b>Ежедневно 10:00–22:00</b></div>
+          <div><span>Оплата</span><b>Карта, наличные, QR, частями</b></div>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a href="tel:+79213701115" class="btn b-berry">Позвонить</a>
+          <a href="https://yandex.ru/maps/org/de_mango/72199298794/" target="_blank" rel="noopener" class="btn b-line">Маршрут</a>
+        </div>
+      </div>
+      <div class="map"><iframe src="https://yandex.ru/map-widget/v1/?ll=30.338149%2C60.028986&z=17&pt=30.338149,60.028986,pm2rdm" loading="lazy" title="Карта: Лиственная ул., 20 к2"></iframe></div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="g">
+      <div><a href="#/" class="logo"><i></i>De`Mango</a><p style="margin-top:14px;max-width:340px">Салон красоты в ЖК «Листва», Санкт-Петербург. Ногти, волосы, массаж и SPA.</p></div>
+      <div><h4>Разделы</h4><a href="#/prices">Услуги и цены</a><a href="#/about">О салоне</a><a href="#/reviews">Отзывы</a><a href="#/contacts">Контакты</a></div>
+      <div><h4>Запись</h4><a href="tel:+79213701115">+7 921 370-11-15</a><span style="display:block">Ежедневно 10:00–22:00</span><span style="display:block">Лиственная ул., 20 к2</span></div>
+    </div>
+    <div class="credit"><span>© De`Mango, Санкт-Петербург</span><span>Демо-сайт · разработка: Сергей Музыченко, Telegram <a href="https://t.me/spectator0011" target="_blank" rel="noopener">@spectator0011</a></span></div>
+  </div>
+</footer>
+
+<div class="callbar"><a href="tel:+79213701115" class="btn b-berry">Записаться</a><a href="#/prices" class="btn b-cocoa">Цены</a></div>
+<div class="lb" id="lb"><img alt=""></div>
+
+<script>
+const PRICES=[
+ ["Маникюр","ногтевой сервис",[["Маникюр без покрытия","от 2 000"],["Маникюр с покрытием гель-лаком","от 2 600"],["Маникюр со снятием и покрытием гель-лаком","от 2 900"],["Японский маникюр","от 1 900"],["Мужской маникюр","2 000"],["Наращивание ногтей","от 4 500"],["Коррекция наращивания","4 000"],["Наращивание одного ногтя","от 500"],["Ремонт одного ногтя","200"],["Укрепление ногтей","500"],["Френч","500"],["Втирка","400"],["Дизайн одного ногтя — простой","50"],["Дизайн одного ногтя — сложный","100"]]],
+ ["Педикюр","",[["Экспресс-педикюр","от 1 800"],["Педикюр женский без покрытия","от 2 400"],["Педикюр женский с покрытием","от 3 900"],["Снятие + педикюр + покрытие гель-лаком","от 4 300"],["Педикюр мужской","от 3 200"],["Обработка стоп","от 1 700"],["Покрытие гель-лаком","от 1 400"],["Снятие гель-лака","от 700"],["Скраб для ног","300"]]],
+ ["Женские стрижки","",[["Стрижка до плеч","от 2 500"],["Стрижка ниже плеч","от 3 000"],["Стрижка ниже лопаток","от 3 500"],["Стрижка кончиков","1 300"],["Стрижка чёлки","700"]]],
+ ["Укладки","",[["Волосы до плеч","1 500"],["Волосы ниже плеч","1 800"],["Волосы ниже лопаток","2 200"]]],
+ ["Мужские и детские стрижки","",[["Стрижка ножницами","1 900"],["Стрижка с насадками (1–3 насадки)","1 300"],["Стрижка под ноль машинкой","1 100"],["Детская стрижка до 7 лет","1 200"],["Детская стрижка до 12 лет","1 400"],["Стрижка «папа + сын» (до 12 лет)","2 700"]]]
+];
+const pc=document.getElementById('pcats');
+PRICES.forEach(([n,s,items],i)=>pc.insertAdjacentHTML('beforeend',`<details class="pc"${i===0?' open':''}><summary><h2>${n}<small>${items.length} ${items.length<5?'позиции':'позиций'}</small></h2><span class="pl">+</span></summary><div class="plist">${items.map(([a,b])=>`<div class="pi"><span>${a}</span><b>${b} ₽</b></div>`).join('')}</div></details>`));
+
+const pages=[...document.querySelectorAll('.page')],links=[...document.querySelectorAll('.links a')],nav=document.getElementById('links');
+const titles={'/':'De`Mango — салон красоты в ЖК «Листва»','/prices':'Услуги и цены — De`Mango','/about':'О салоне — De`Mango','/reviews':'Отзывы — De`Mango','/contacts':'Контакты — De`Mango'};
+function route(){const p=location.hash.replace(/^#/,'')||'/';const t=pages.find(x=>x.dataset.page===p)||pages[0];pages.forEach(x=>x.classList.toggle('on',x===t));links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+t.dataset.page));nav.classList.remove('open');scrollTo(0,0);document.title=titles[t.dataset.page]}
+addEventListener('hashchange',route);route();
+document.getElementById('burger').onclick=()=>nav.classList.toggle('open');
+const lb=document.getElementById('lb'),li=lb.querySelector('img');
+document.querySelectorAll('.gal .ph').forEach(p=>p.onclick=()=>{const i=p.querySelector('img');li.src=i.src;li.alt=i.alt;lb.classList.add('on')});
+lb.onclick=()=>lb.classList.remove('on');addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+document.querySelectorAll('img').forEach(i=>i.addEventListener('error',()=>{i.style.visibility='hidden'}));
+</script>
+</body>
+</html>

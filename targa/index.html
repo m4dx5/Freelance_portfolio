@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Тарга — автосервис в Старой-Разметелево</title>
+<meta name="description" content="Автосервис «Тарга»: кузовной ремонт и покраска, ремонт двигателя и ходовой, диагностика, ТО, тюнинг. Старая-Разметелево, 1689 (Колтуши, Всеволожский район). Пн–Сб 11:00–20:00.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --chalk:#f4f1ec; --chalk2:#e7e2da; --ink:#141312; --ink2:#262422; --rust:#c2412a; --rust2:#de5a3f; --sand:#d8c7a6; --mute:#77716a; --line:rgba(20,19,18,.14);
+  --max:1220px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--chalk);color:var(--ink);font:400 17px/1.6 Rubik,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+.mono1{font-family:"Rubik Mono One",sans-serif;font-weight:400;text-transform:uppercase;line-height:.98;letter-spacing:-.01em}
+h1,h2{font-family:"Rubik Mono One",sans-serif;font-weight:400;text-transform:uppercase;line-height:1;letter-spacing:-.01em}
+h3{font-weight:700;font-size:22px;line-height:1.2}
+.lab{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;background:var(--ink);color:var(--chalk);padding:6px 10px}
+.ph{overflow:hidden;background:var(--chalk2)}
+.ph img{width:100%;height:100%;object-fit:cover}
+
+/* tape stripe */
+.tape{height:14px;background:repeating-linear-gradient(-45deg,var(--rust) 0 18px,var(--ink) 18px 36px)}
+
+header{position:sticky;top:0;z-index:40;background:var(--chalk);border-bottom:2px solid var(--ink)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px;gap:18px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo .mk{width:44px;height:44px;background:var(--rust);color:#fff;display:grid;place-items:center;font-family:"Rubik Mono One";font-size:22px}
+.logo b{font-family:"Rubik Mono One";font-weight:400;font-size:22px}
+.logo small{display:block;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.links{display:flex;gap:2px}
+.links a{padding:10px 14px;font-weight:600;font-size:15px}
+.links a:hover{background:var(--chalk2)}
+.links a.on{background:var(--ink);color:var(--chalk)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 24px;font:700 15px Rubik;letter-spacing:.02em;border:2px solid var(--ink);cursor:pointer;transition:transform .15s,box-shadow .15s;white-space:nowrap;box-shadow:4px 4px 0 var(--ink)}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.b-rust{background:var(--rust);color:#fff}
+.b-ink{background:var(--ink);color:var(--chalk)}
+.b-chalk{background:var(--chalk);color:var(--ink)}
+.burger{display:none;width:46px;height:46px;border:2px solid var(--ink);background:var(--chalk);font-size:18px;cursor:pointer}
+
+.page{display:none}
+.page.on{display:block}
+section{padding:96px 0}
+.ptop{padding:64px 0 40px;border-bottom:2px solid var(--ink)}
+.ptop h1{font-size:clamp(40px,7vw,92px);margin-top:18px}
+.ptop p{max-width:600px;color:var(--mute);margin-top:18px;font-size:18px}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:44px;flex-wrap:wrap}
+.head h2{font-size:clamp(30px,4.6vw,56px);margin-top:14px}
+.head p{max-width:400px;color:var(--mute)}
+
+/* hero */
+.hero{padding:56px 0 0}
+.hgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end}
+.hero h1{font-size:clamp(48px,8.6vw,124px)}
+.hero h1 span{color:var(--rust)}
+.hero p{font-size:19px;max-width:520px;margin:26px 0 30px;color:#3c3834}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.hcard{border:2px solid var(--ink);background:#fff;box-shadow:8px 8px 0 var(--ink)}
+.hcard .ph{aspect-ratio:4/3;border-bottom:2px solid var(--ink)}
+.hcard .t{padding:20px 22px;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.hcard .t b{font-size:15px}
+.hcard .t span{font-size:13px;color:var(--mute)}
+.hstrip{margin-top:56px;display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+.hstrip div{padding:22px 20px;border-right:2px solid var(--ink)}
+.hstrip div:last-child{border-right:0}
+.hstrip b{display:block;font-family:"Rubik Mono One";font-weight:400;font-size:24px;line-height:1.1}
+.hstrip span{font-size:14px;color:var(--mute)}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.sv{border:2px solid var(--ink);background:#fff;display:flex;flex-direction:column}
+.sv .ph{aspect-ratio:16/10;border-bottom:2px solid var(--ink)}
+.sv .t{padding:22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.sv .n{font-family:"Rubik Mono One";color:var(--rust);font-size:14px}
+.sv p{color:var(--mute);font-size:15.5px}
+.sv ul{list-style:none;margin-top:6px;display:grid;gap:4px}
+.sv li{font-size:15px;padding-left:18px;position:relative}
+.sv li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;background:var(--rust)}
+
+/* owner band */
+.band{background:var(--ink);color:var(--chalk)}
+.band .g{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.band h2{font-size:clamp(30px,4.4vw,54px);color:var(--chalk)}
+.band h2 span{color:var(--rust2)}
+.band p{color:#bdb6ad;margin:18px 0 0;font-size:17.5px}
+.band ol{list-style:none;counter-reset:x;display:grid;gap:0}
+.band li{counter-increment:x;display:grid;grid-template-columns:56px 1fr;gap:14px;padding:18px 0;border-bottom:1px solid rgba(244,241,236,.15)}
+.band li::before{content:counter(x,decimal-leading-zero);font-family:"Rubik Mono One";color:var(--rust2);font-size:20px}
+.band li b{display:block;font-size:18px;color:#fff}
+.band li span{color:#bdb6ad;font-size:15px}
+
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rv{border:2px solid var(--ink);background:#fff;padding:26px;display:flex;flex-direction:column;justify-content:space-between;gap:18px}
+.rv p{font-size:17px}
+.rv footer{display:flex;justify-content:space-between;font-size:14px;font-weight:600;color:var(--mute)}
+.rv footer i{font-style:normal;color:var(--rust);letter-spacing:2px}
+.rv.big{grid-column:span 2;background:var(--sand)}
+.rv.big p{font-size:20px}
+
+/* route */
+.route{display:grid;grid-template-columns:1fr 1.1fr;gap:24px}
+.warn{border:2px solid var(--ink);background:#fff}
+.warn .top{background:var(--rust);color:#fff;padding:14px 20px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:14px}
+.warn .b{padding:24px 22px;display:grid;gap:14px}
+.warn .b p{font-size:16.5px}
+.map{border:2px solid var(--ink);min-height:440px;background:var(--chalk2)}
+.map iframe{width:100%;height:100%;min-height:436px;border:0;display:block}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:10px}
+.gal .ph{border:2px solid var(--ink);cursor:zoom-in;position:relative}
+.gal .ph span{position:absolute;left:10px;top:10px;background:var(--chalk);border:2px solid var(--ink);font-size:12px;font-weight:700;padding:3px 8px;text-transform:uppercase;letter-spacing:.08em}
+.gal .w{grid-column:span 2}
+.gal .t{grid-row:span 2}
+.lb{position:fixed;inset:0;background:rgba(20,19,18,.94);display:none;place-items:center;z-index:80;padding:20px;cursor:zoom-out}
+.lb.on{display:grid}
+.lb img{max-width:92vw;max-height:88vh;border:2px solid var(--chalk)}
+
+/* services page */
+.slist{display:grid;gap:0;border-top:2px solid var(--ink)}
+.srow{display:grid;grid-template-columns:90px 1fr 1.2fr auto;gap:24px;padding:30px 0;border-bottom:2px solid var(--ink);align-items:start}
+.srow .n{font-family:"Rubik Mono One";color:var(--rust);font-size:30px;line-height:1}
+.srow h2{font-size:clamp(22px,2.6vw,32px)}
+.srow p{color:#3c3834}
+.srow .pr{font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;border:2px solid var(--ink);padding:8px 12px;white-space:nowrap}
+.pnote{margin-top:36px;background:var(--rust);color:#fff;border:2px solid var(--ink);box-shadow:8px 8px 0 var(--ink);padding:28px 30px;display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}
+.pnote p{max-width:640px;font-size:18px}
+
+/* scores */
+.scores{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:28px}
+.sc{border:2px solid var(--ink);background:#fff;padding:30px;display:flex;gap:24px;align-items:center}
+.sc .big{font-family:"Rubik Mono One";font-size:64px;color:var(--rust);line-height:1}
+.sc h3{font-size:22px}
+.sc p{color:var(--mute);font-size:14.5px;margin:4px 0 10px}
+.sc a{font-weight:700;text-decoration:underline;text-underline-offset:4px}
+
+/* contacts */
+.cgrid{display:grid;grid-template-columns:1fr 1.2fr;gap:24px}
+.cbox{border:2px solid var(--ink);background:#fff;padding:36px}
+.kv{display:grid;gap:22px;margin-bottom:28px}
+.kv span{display:block;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--rust);margin-bottom:4px}
+.kv b,.kv a{font-size:22px;font-weight:700;line-height:1.25}
+.kv a:hover{color:var(--rust)}
+.kv em{display:block;font-style:normal;color:var(--mute);font-size:15px;margin-top:2px}
+
+.foot{background:var(--ink);color:#a8a199;padding:56px 0 28px}
+.foot .g{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+.foot .logo b{color:#fff}
+.foot h4{font-family:"Rubik Mono One";font-weight:400;color:#fff;font-size:14px;margin-bottom:14px}
+.foot a{display:block;margin-bottom:6px}
+.foot a:hover{color:#fff}
+.credit{margin-top:40px;padding-top:18px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px;color:#7d776f}
+.credit a{display:inline;color:#d6cfc6}
+
+.callbar{display:none}
+
+@media (max-width:1040px){
+  .hgrid,.band .g,.route,.cgrid,.scores{grid-template-columns:1fr}
+  .svc,.revs{grid-template-columns:1fr 1fr}
+  .rv.big{grid-column:span 2}
+  .hstrip{grid-template-columns:1fr 1fr}
+  .hstrip div:nth-child(2){border-right:0}
+  .hstrip div:nth-child(-n+2){border-bottom:2px solid var(--ink)}
+  .gal{grid-template-columns:1fr 1fr 1fr}
+  .srow{grid-template-columns:70px 1fr;gap:12px 20px}
+  .srow p,.srow .pr{grid-column:2}
+  .srow .pr{justify-self:start}
+  .foot .g{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  .links{display:none;position:absolute;top:74px;left:0;right:0;flex-direction:column;background:var(--chalk);padding:8px 16px 18px;border-bottom:2px solid var(--ink)}
+  .links.open{display:flex}
+  .links a{font-size:18px;padding:13px 12px}
+  .nav>.btn{display:none}
+  .burger{display:block}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  section{padding:64px 0}
+  .hero{padding-top:36px}
+  .svc,.revs{grid-template-columns:1fr}
+  .rv.big{grid-column:auto}
+  .hstrip b{font-size:18px}
+  .gal{grid-template-columns:1fr 1fr;grid-auto-rows:150px}
+  .srow{grid-template-columns:1fr}
+  .srow p,.srow .pr{grid-column:1}
+  .sc{flex-direction:column;align-items:flex-start;gap:8px}
+  .cbox{padding:24px}
+  .foot .g{grid-template-columns:1fr}
+  .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:50;gap:10px}
+  .callbar .btn{flex:1;padding:15px 10px}
+  .foot{padding-bottom:100px}
+}
+</style>
+</head>
+<body>
+
+<div class="tape"></div>
+<header>
+  <div class="wrap nav">
+    <a href="#/" class="logo" aria-label="Тарга — на главную"><span class="mk">Т</span><div><b>ТАРГА</b><small>автосервис · Колтуши</small></div></a>
+    <nav class="links" id="links">
+      <a href="#/">Главная</a>
+      <a href="#/services">Услуги</a>
+      <a href="#/works">Работы</a>
+      <a href="#/reviews">Отзывы</a>
+      <a href="#/contacts">Как добраться</a>
+    </nav>
+    <a href="tel:+79117580711" class="btn b-rust">+7 911 758-07-11</a>
+    <button class="burger" id="burger" aria-label="Меню">☰</button>
+  </div>
+</header>
+
+<main>
+
+<!-- ГЛАВНАЯ -->
+<div class="page" data-page="/">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hgrid">
+        <div>
+          <span class="lab">Старая-Разметелево · Всеволожский район</span>
+          <h1 style="margin-top:22px">Кузов, мотор, <span>ходовая</span></h1>
+          <p>Автосервис «Тарга» под Колтушами: кузовной ремонт и покраска в своей камере, ремонт двигателя и подвески, диагностика, ТО и тюнинг. Можно наблюдать за работой.</p>
+          <div class="cta">
+            <a href="tel:+79117580711" class="btn b-rust">Позвонить</a>
+            <a href="https://wa.me/79117580711" target="_blank" rel="noopener" class="btn b-chalk">Написать в WhatsApp</a>
+          </div>
+        </div>
+        <div class="hcard">
+          <div class="ph"><img src="https://i5.photo.2gis.com/photo-gallery/aaa24de6-8e7e-4a9d-9b1e-74373f688381.jpg" alt="Здание автосервиса Тарга" loading="eager"></div>
+          <div class="t"><b>Старая-Разметелево, 1689</b><span>Пн–Сб 11:00–20:00</span></div>
+        </div>
+      </div>
+      <div class="hstrip">
+        <div><b>Кузов</b><span>стапель и покрасочная камера</span></div>
+        <div><b>Мотор</b><span>ремонт бензиновых двигателей</span></div>
+        <div><b>Ходовая</b><span>подвеска, диагностика, ТО</span></div>
+        <div><b>Тюнинг</b><span>доп. оборудование и электрика</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head"><div><span class="lab">Что делаем</span><h2>Шесть направлений</h2></div><p>Стоимость считаем после осмотра — позвоните или пришлите фото в WhatsApp.</p></div>
+      <div class="svc">
+        <div class="sv"><div class="ph"><img src="https://i5.photo.2gis.com/photo-gallery/3760be56-1d37-4652-96b9-3af40227e232.jpg" alt="Кузов на стапеле" loading="lazy"></div><div class="t"><span class="n">01</span><h3>Кузовной ремонт</h3><p>Восстановление после ДТП, стапельные работы, замена элементов.</p></div></div>
+        <div class="sv"><div class="ph"><img src="https://i4.photo.2gis.com/photo-gallery/25cfab59-86eb-4422-987f-60f7e8254972.jpg" alt="Покрасочная камера" loading="lazy"></div><div class="t"><span class="n">02</span><h3>Покраска</h3><p>Своя покрасочная камера — окрашивание деталей и кузова.</p></div></div>
+        <div class="sv"><div class="ph"><img src="https://i6.photo.2gis.com/photo-gallery/3c736df1-6fbe-483f-9d4b-d0b6168224a5.jpg" alt="Внедорожник в ремонте" loading="lazy"></div><div class="t"><span class="n">03</span><h3>Двигатель</h3><p>Ремонт бензиновых моторов: поиск неисправности и замена узлов.</p></div></div>
+        <div class="sv"><div class="ph"><img src="https://i8.photo.2gis.com/photo-gallery/c6c70104-9afa-47b2-b1d4-1bc50d4086c0.jpg" alt="Автомобиль на подъёмнике" loading="lazy"></div><div class="t"><span class="n">04</span><h3>Ходовая</h3><p>Ремонт подвески и рулевого — на подъёмнике, при вас.</p></div></div>
+        <div class="sv"><div class="ph"><img src="https://i1.photo.2gis.com/photo-gallery/76f79d21-3386-48c2-9fa2-395caca4e49b.jpg" alt="Автомобиль в боксе" loading="lazy"></div><div class="t"><span class="n">05</span><h3>Диагностика и ТО</h3><p>Компьютерная диагностика, замена масла и фильтров, плановое ТО.</p></div></div>
+        <div class="sv"><div class="ph"><img src="https://i5.photo.2gis.com/images/branch/0/30258560084524741_9750.jpg" alt="Тюнинг салона — дополнительные приборы" loading="lazy"></div><div class="t"><span class="n">06</span><h3>Тюнинг</h3><p>Дополнительные приборы, проводка, установка оборудования.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap g">
+      <div>
+        <span class="lab" style="background:var(--rust)">Почему «Тарга»</span>
+        <h2 style="margin-top:16px">Как для <span>себя</span></h2>
+        <p>Небольшой сервис, где с вами говорит хозяин, а не колл-центр. Берём машины и «с дороги», если сломались неподалёку.</p>
+      </div>
+      <ol>
+        <li><div><b>Можно смотреть</b><span>Наблюдайте за работой — от вас ничего не прячут.</span></div></li>
+        <li><div><b>Срочно — тоже можно</b><span>Сломались в дороге? Звоните — постараемся взять сразу и найти запчасть.</span></div></li>
+        <li><div><b>Всё в одном месте</b><span>Кузов, покраска, мотор и электрика — не нужно ездить по разным сервисам.</span></div></li>
+        <li><div><b>Оплата</b><span>Наличными или безналичным переводом.</span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head"><div><span class="lab">Отзывы</span><h2>Говорят клиенты</h2></div><a href="#/reviews" class="btn b-chalk">Все отзывы</a></div>
+      <div class="revs">
+        <blockquote class="rv big"><p>«У нас машина сломалась в дороге и это единственная мастерская, которая согласилась сразу взять и сразу отремонтировать. Несмотря на сумасшедшие пробки и вечер пятницы ребята купили нужную запчасть и сделали машину»</p><footer>Любовь Сорокина · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Приехал на Дастере. Очень гуманно, всё сделали качественно и быстро, можно было наблюдать за работой»</p><footer>Влад Серганов · 2ГИС <i>★★★★★</i></footer></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap route">
+      <div class="warn">
+        <div class="top">⚠ Важно перед поездкой</div>
+        <div class="b">
+          <p><b>Метка в навигаторах может стоять неточно</b> — сервис находится чуть дальше. Позвоните перед выездом — подскажем, как проехать.</p>
+          <p>Адрес: Ленинградская область, Всеволожский район, Колтушское поселение, Старая-Разметелево, 1689.</p>
+          <p>Работаем с понедельника по субботу, 11:00–20:00. Воскресенье — выходной.</p>
+          <div class="cta"><a href="tel:+79117580711" class="btn b-rust">Позвонить</a><a href="https://wa.me/79117580711" target="_blank" rel="noopener" class="btn b-chalk">WhatsApp</a></div>
+        </div>
+      </div>
+      <div class="map"><iframe src="https://yandex.ru/map-widget/v1/?ll=30.632545%2C59.897065&z=14&pt=30.632545,59.897065,pm2rdm" loading="lazy" title="Карта: Старая-Разметелево"></iframe></div>
+    </div>
+  </section>
+</div>
+
+<!-- УСЛУГИ -->
+<div class="page" data-page="/services">
+  <div class="wrap ptop">
+    <span class="lab">Услуги</span>
+    <h1>Что ремонтируем</h1>
+    <p>Цены зависят от машины и объёма работ, поэтому называем их после осмотра. Можно прислать фото повреждений в WhatsApp — прикинем заранее.</p>
+  </div>
+  <section style="padding-top:48px">
+    <div class="wrap">
+      <div class="slist">
+        <div class="srow"><span class="n">01</span><h2>Кузовной ремонт</h2><p>Восстановление геометрии на стапеле, рихтовка, замена и подгонка кузовных деталей после ДТП.</p><span class="pr">по осмотру</span></div>
+        <div class="srow"><span class="n">02</span><h2>Покраска</h2><p>Окраска отдельных элементов и кузова в собственной покрасочной камере.</p><span class="pr">по осмотру</span></div>
+        <div class="srow"><span class="n">03</span><h2>Ремонт двигателя</h2><p>Ремонт бензиновых двигателей: поиск неисправности и замена узлов.</p><span class="pr">по осмотру</span></div>
+        <div class="srow"><span class="n">04</span><h2>Ходовая часть</h2><p>Подвеска, рулевое управление, тормоза — диагностика и ремонт на подъёмнике.</p><span class="pr">по осмотру</span></div>
+        <div class="srow"><span class="n">05</span><h2>Диагностика</h2><p>Компьютерная диагностика систем автомобиля и поиск ошибок.</p><span class="pr">по телефону</span></div>
+        <div class="srow"><span class="n">06</span><h2>ТО и замена масла</h2><p>Плановое обслуживание, замена масла и фильтров.</p><span class="pr">по телефону</span></div>
+        <div class="srow"><span class="n">07</span><h2>Тюнинг</h2><p>Установка дополнительных приборов и оборудования, работы с проводкой.</p><span class="pr">по осмотру</span></div>
+      </div>
+      <div class="pnote"><p>Пришлите фото и марку машины в WhatsApp — ответим, что можно сделать и примерно сколько это стоит.</p><a href="https://wa.me/79117580711" target="_blank" rel="noopener" class="btn b-chalk">Написать в WhatsApp</a></div>
+    </div>
+  </section>
+</div>
+
+<!-- РАБОТЫ -->
+<div class="page" data-page="/works">
+  <div class="wrap ptop">
+    <span class="lab">Работы</span>
+    <h1>Цех и машины</h1>
+    <p>Фото из сервиса: стапель, покрасочная камера, боксы и машины в ремонте. Нажмите на фото, чтобы открыть крупнее.</p>
+  </div>
+  <section style="padding-top:48px">
+    <div class="wrap">
+      <div class="gal">
+        <div class="ph w t"><img src="https://i5.photo.2gis.com/photo-gallery/3760be56-1d37-4652-96b9-3af40227e232.jpg" alt="Стапель" loading="lazy"><span>Стапель</span></div>
+        <div class="ph"><img src="https://i4.photo.2gis.com/photo-gallery/25cfab59-86eb-4422-987f-60f7e8254972.jpg" alt="Покрасочная камера" loading="lazy"><span>Камера</span></div>
+        <div class="ph"><img src="https://i0.photo.2gis.com/photo-gallery/de2c86e7-4f7b-42bb-8f4e-4146245ed352.jpg" alt="Внедорожник в боксе" loading="lazy"></div>
+        <div class="ph"><img src="https://i5.photo.2gis.com/photo-gallery/fc7625ec-29e1-4550-9511-95ac3e3993a9.jpg" alt="Кузовные повреждения" loading="lazy"><span>До</span></div>
+        <div class="ph"><img src="https://i8.photo.2gis.com/photo-gallery/c1764181-a71e-4334-ba89-dca9a44c4fa4.jpg" alt="Машина на подъёмнике" loading="lazy"></div>
+        <div class="ph w"><img src="https://i5.photo.2gis.com/images/branch/0/30258560084524741_9750.jpg" alt="Дополнительные приборы" loading="lazy"><span>Тюнинг</span></div>
+        <div class="ph"><img src="https://i3.photo.2gis.com/images/branch/0/30258560084582707_6b6c.jpg" alt="Работа с проводкой" loading="lazy"></div>
+        <div class="ph"><img src="https://i1.photo.2gis.com/photo-gallery/803b9b49-d558-41e6-841c-cb916f3010e5.jpg" alt="Цех" loading="lazy"></div>
+        <div class="ph"><img src="https://i0.photo.2gis.com/images/branch/0/30258560083221075_3fce.jpg" alt="Автомобиль после ДТП" loading="lazy"></div>
+        <div class="ph"><img src="https://i2.photo.2gis.com/photo-gallery/61af2d31-37a6-4a72-95b5-65e386e6aca4.jpg" alt="Кузовной ремонт" loading="lazy"></div>
+        <div class="ph w"><img src="https://i3.photo.2gis.com/photo-gallery/b7ed617b-4ebe-40e0-8452-f71139de2b0b.jpg" alt="Подготовка к покраске" loading="lazy"></div>
+        <div class="ph"><img src="https://i8.photo.2gis.com/photo-gallery/132d5a5b-211d-4e2a-9eef-79cdc22fd4bc.jpg" alt="Седан в ремонте" loading="lazy"></div>
+        <div class="ph"><img src="https://i3.photo.2gis.com/photo-gallery/5f9b8db3-c633-454a-9d3e-f3a8d5a971ea.jpg" alt="Боксы" loading="lazy"></div>
+        <div class="ph"><img src="https://i8.photo.2gis.com/photo-gallery/e6603af7-fbd3-4f72-972d-d9bbd658398a.jpg" alt="Готовые машины" loading="lazy"><span>Готово</span></div>
+        <div class="ph"><img src="https://i5.photo.2gis.com/photo-gallery/3a6f9ea2-deb8-420c-ad18-edc7974b6248.jpg" alt="Машина в боксе" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ОТЗЫВЫ -->
+<div class="page" data-page="/reviews">
+  <div class="wrap ptop">
+    <span class="lab">Отзывы</span>
+    <h1>Что говорят</h1>
+  </div>
+  <section style="padding-top:48px">
+    <div class="wrap">
+      <div class="scores">
+        <div class="sc"><div class="big">5,0</div><div><h3>2ГИС</h3><p>2 оценки · 2 отзыва</p><a href="https://2gis.ru/spb/firm/70000001048124088/tab/reviews" target="_blank" rel="noopener">Читать в 2ГИС</a></div></div>
+        <div class="sc"><div class="big">4,4</div><div><h3>Яндекс Карты</h3><p>17 оценок · 6 отзывов</p><a href="https://yandex.ru/maps/org/targa_servis/61239828684/reviews/" target="_blank" rel="noopener">Читать в Яндексе</a></div></div>
+      </div>
+      <div class="revs">
+        <blockquote class="rv big"><p>«Спасибо хозяину Артёму, помог добраться. У нас машина сломалась в дороге и это единственная мастерская, которая согласилась сразу взять и сразу отремонтировать. Благодарим сердечно и рекомендуем!»</p><footer>Любовь Сорокина · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Приехал на Дастере. Очень гуманно, всё сделали качественно и быстро, можно было наблюдать за работой»</p><footer>Влад Серганов · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Делал ремонт мотора на Киа, всё прошло замечательно!»</p><footer>Артём · Яндекс</footer></blockquote>
+        <blockquote class="rv"><p>«Чинил печку Фиат Альбеа. Всё сделали быстро и качественно!»</p><footer>Дима Тимофеев · Яндекс</footer></blockquote>
+        <blockquote class="rv"><p>«Сервис отличный и недорогой. Всё сделали оперативно»</p><footer>k0nstantin · Яндекс</footer></blockquote>
+        <blockquote class="rv"><p>«Молодцы ребята, машины ремонтируют как для себя»</p><footer>JC · Яндекс</footer></blockquote>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- КОНТАКТЫ -->
+<div class="page" data-page="/contacts">
+  <div class="wrap ptop">
+    <span class="lab">Как добраться</span>
+    <h1>Контакты</h1>
+    <p>Перед первым визитом лучше позвонить: метка в навигаторах может стоять неточно, подскажем дорогу.</p>
+  </div>
+  <section style="padding-top:48px">
+    <div class="wrap cgrid">
+      <div class="cbox">
+        <div class="kv">
+          <div><span>Адрес</span><b>Старая-Разметелево, 1689</b><em>Ленинградская обл., Всеволожский район, Колтушское поселение</em></div>
+          <div><span>Телефон</span><a href="tel:+79117580711">+7 911 758-07-11</a></div>
+          <div><span>Режим работы</span><b>Пн–Сб 11:00–20:00</b><em>Воскресенье — выходной</em></div>
+          <div><span>Почта</span><a href="mailto:targasto@mail.ru">targasto@mail.ru</a></div>
+        </div>
+        <div class="cta"><a href="tel:+79117580711" class="btn b-rust">Позвонить</a><a href="https://wa.me/79117580711" target="_blank" rel="noopener" class="btn b-chalk">WhatsApp</a></div>
+      </div>
+      <div class="map"><iframe src="https://yandex.ru/map-widget/v1/?ll=30.632545%2C59.897065&z=14&pt=30.632545,59.897065,pm2rdm" loading="lazy" title="Карта: Старая-Разметелево, 1689"></iframe></div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="g">
+      <div><a href="#/" class="logo"><span class="mk">Т</span><div><b>ТАРГА</b><small>автосервис · Колтуши</small></div></a><p style="margin-top:14px;max-width:340px">Кузовной ремонт и покраска, двигатель, ходовая, диагностика, ТО и тюнинг. Старая-Разметелево, 1689.</p></div>
+      <div><h4>Разделы</h4><a href="#/services">Услуги</a><a href="#/works">Работы</a><a href="#/reviews">Отзывы</a><a href="#/contacts">Как добраться</a></div>
+      <div><h4>Связь</h4><a href="tel:+79117580711">+7 911 758-07-11</a><a href="https://wa.me/79117580711" target="_blank" rel="noopener">WhatsApp</a><a href="mailto:targasto@mail.ru">targasto@mail.ru</a><span style="display:block">Пн–Сб 11:00–20:00</span></div>
+    </div>
+    <div class="credit"><span>© Автосервис «Тарга»</span><span>Демо-сайт · разработка: Сергей Музыченко, Telegram <a href="https://t.me/spectator0011" target="_blank" rel="noopener">@spectator0011</a></span></div>
+  </div>
+</footer>
+
+<div class="callbar"><a href="tel:+79117580711" class="btn b-rust">Позвонить</a><a href="https://wa.me/79117580711" class="btn b-chalk">WhatsApp</a></div>
+<div class="lb" id="lb"><img alt=""></div>
+
+<script>
+const pages=[...document.querySelectorAll('.page')],links=[...document.querySelectorAll('.links a')],menu=document.getElementById('links');
+const titles={'/':'Тарга — автосервис в Старой-Разметелево','/services':'Услуги — Тарга','/works':'Работы — Тарга','/reviews':'Отзывы — Тарга','/contacts':'Как добраться — Тарга'};
+function route(){const p=location.hash.replace(/^#/,'')||'/';const t=pages.find(x=>x.dataset.page===p)||pages[0];pages.forEach(x=>x.classList.toggle('on',x===t));links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+t.dataset.page));menu.classList.remove('open');scrollTo(0,0);document.title=titles[t.dataset.page]}
+addEventListener('hashchange',route);route();
+document.getElementById('burger').onclick=()=>menu.classList.toggle('open');
+const lb=document.getElementById('lb'),li=lb.querySelector('img');
+document.querySelectorAll('.gal .ph').forEach(p=>p.onclick=()=>{const i=p.querySelector('img');li.src=i.src;li.alt=i.alt;lb.classList.add('on')});
+lb.onclick=()=>lb.classList.remove('on');addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+document.querySelectorAll('img').forEach(i=>i.addEventListener('error',()=>{i.style.visibility='hidden'}));
+</script>
+</body>
+</html>

@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>VAGNERline — ремонт VAG, Kia и Hyundai в Казани</title>
+<meta name="description" content="VAGNERline — два автотехцентра в Казани: Сибирский тракт, 44а и 2-я Азинская, 7г. Ремонт и ТО Audi, Volkswagen, Skoda, Porsche, SEAT, Kia, Hyundai. Ежедневно 10:00–20:00.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112,700;112,800;125,900&family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f7fa; --white:#fff; --ink:#0b1220; --mute:#5b6577; --line:#e1e6ee;
+  --blue:#1d5bff; --blue2:#0f44d6; --navy:#0b1220; --ice:#e8efff;
+  --max:1220px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 Mulish,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:Archivo,sans-serif;font-stretch:112%;font-weight:800;line-height:1;letter-spacing:-.02em}
+.tag{display:inline-block;font-size:12.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);background:var(--ice);padding:7px 12px;border-radius:6px}
+.ph{overflow:hidden;background:#dfe4ec;border-radius:14px}
+.ph img{width:100%;height:100%;object-fit:cover}
+
+header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.logo{display:flex;align-items:center;font-family:Archivo;font-stretch:125%;font-weight:900;font-size:24px;letter-spacing:-.01em;font-style:italic}
+.logo b{color:var(--blue);font-weight:900}
+.logo span{font-stretch:100%;font-weight:700;font-style:normal;color:var(--mute);margin-left:2px}
+.links{display:flex;gap:2px}
+.links a{padding:9px 13px;border-radius:8px;font-weight:700;font-size:15px;color:var(--mute)}
+.links a:hover{color:var(--ink);background:var(--bg)}
+.links a.on{color:#fff;background:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 24px;border-radius:10px;font:800 15px Mulish;transition:transform .2s,background .2s;white-space:nowrap;border:0;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.b-blue{background:var(--blue);color:#fff}
+.b-blue:hover{background:var(--blue2)}
+.b-dark{background:var(--ink);color:#fff}
+.b-white{background:#fff;color:var(--ink)}
+.b-line{border:2px solid var(--line);background:#fff}
+.b-line:hover{border-color:var(--ink)}
+.b-glass{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.35)}
+.burger{display:none;width:46px;height:46px;border-radius:10px;border:0;background:var(--ink);color:#fff;font-size:18px;cursor:pointer}
+
+.page{display:none;animation:in .35s ease}
+.page.on{display:block}
+@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+section{padding:92px 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:40px;flex-wrap:wrap}
+.head h2{font-size:clamp(34px,4.8vw,60px);margin-top:16px}
+.head p{max-width:420px;color:var(--mute)}
+
+.ptop{padding:64px 0 8px}
+.ptop h1{font-size:clamp(44px,7.4vw,100px);margin-top:18px}
+.ptop p{max-width:620px;color:var(--mute);margin-top:16px;font-size:18px}
+
+/* hero */
+.hero{padding:28px 0 0}
+.hbox{position:relative;border-radius:28px;overflow:hidden;min-height:640px;display:flex;align-items:flex-end;color:#fff;background:var(--navy)}
+.hbox>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hbox::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,18,32,.92) 0%,rgba(11,18,32,.6) 50%,rgba(11,18,32,.1) 100%)}
+.hin{position:relative;z-index:1;padding:56px;max-width:760px}
+.hin .tag{background:rgba(255,255,255,.14);color:#fff}
+.hin h1{font-size:clamp(46px,7vw,94px);margin:20px 0 0}
+.hin h1 i{color:#8fb0ff;font-style:italic}
+.hin p{font-size:19px;color:#d4dbe8;max-width:560px;margin:20px 0 28px}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.brands{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.brands span{font-family:Archivo;font-stretch:112%;font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:9px 13px;border-radius:8px;background:#fff;border:1px solid var(--line)}
+
+/* two branches teaser */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.br{background:#fff;border-radius:20px;overflow:hidden;border:1px solid var(--line);display:grid;grid-template-columns:.9fr 1.1fr}
+.br .ph{border-radius:0;min-height:100%}
+.br .tx{padding:28px}
+.br h3{font-size:26px;margin:12px 0 6px}
+.br p{color:var(--mute);font-size:15.5px}
+.br .meta{margin-top:14px;display:grid;gap:4px;font-weight:700;font-size:15px}
+.br .meta a{color:var(--blue)}
+.br .rt{display:inline-flex;gap:6px;align-items:center;font-weight:800;font-size:14px;margin-top:12px}
+.br .rt b{background:var(--ink);color:#fff;border-radius:6px;padding:2px 8px}
+
+/* price teaser */
+.pt{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.pi{background:#fff;border-radius:16px;padding:24px;border:1px solid var(--line);display:flex;flex-direction:column;gap:6px}
+.pi span{color:var(--mute);font-size:15px;font-weight:600;flex:1}
+.pi b{font-family:Archivo;font-stretch:112%;font-weight:800;font-size:28px}
+.pi b small{font-family:Mulish;font-size:14px;color:var(--mute);font-weight:700;margin-right:4px}
+.pi.free{background:var(--blue);color:#fff;border:0}
+.pi.free span{color:#d6e2ff}
+
+/* feature band */
+.band{background:var(--navy);color:#fff;border-radius:28px;padding:56px;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.band h2{font-size:clamp(34px,4.4vw,56px);margin:16px 0}
+.band .tag{background:rgba(255,255,255,.12);color:#fff}
+.band p{color:#b9c2d3}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px}
+.feat>div{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:16px 18px}
+.feat b{display:block;font-size:16px}
+.feat span{color:#9aa6bb;font-size:14px}
+.band .pics{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:220px 220px;gap:12px}
+.band .pics .ph:first-child{grid-row:span 2}
+
+/* team */
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.tm{background:#fff;border-radius:16px;padding:26px;border:1px solid var(--line)}
+.tm b{display:block;font-family:Archivo;font-stretch:112%;font-weight:800;font-size:24px}
+.tm span{color:var(--blue);font-weight:800;font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+.tm p{color:var(--mute);font-size:15px;margin-top:10px}
+
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rv{background:#fff;border-radius:18px;padding:28px;border:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;gap:18px}
+.rv p{font-size:16.5px}
+.rv footer{display:flex;justify-content:space-between;gap:10px;font-size:14px;font-weight:800;color:var(--mute)}
+.rv footer i{font-style:normal;color:var(--blue);letter-spacing:2px}
+.rv.hl{background:var(--blue);color:#fff;border:0}
+.rv.hl footer,.rv.hl footer i{color:#d6e2ff}
+
+/* price page */
+.ptabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.ptabs button{border:2px solid var(--line);background:#fff;border-radius:10px;padding:11px 18px;font:800 15px Mulish;cursor:pointer;color:var(--mute)}
+.ptabs button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.plist{background:#fff;border-radius:20px;border:1px solid var(--line);overflow:hidden}
+.pr{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;padding:20px 28px;border-bottom:1px solid var(--line);align-items:center}
+.pr:last-child{border-bottom:0}
+.pr small{display:block;color:var(--mute);font-size:14px;margin-top:2px}
+.pr b{font-family:Archivo;font-stretch:112%;font-weight:800;font-size:22px;white-space:nowrap}
+.pr b.f{color:var(--blue)}
+.pnote{margin-top:20px;color:var(--mute);font-size:14.5px}
+
+/* branches page */
+.bpage{display:grid;gap:22px}
+.bcard{background:#fff;border-radius:24px;border:1px solid var(--line);overflow:hidden;display:grid;grid-template-columns:1fr 1fr}
+.bcard .tx{padding:40px}
+.bcard h2{font-size:clamp(30px,3.6vw,44px);margin:14px 0 10px}
+.bcard ul{list-style:none;display:grid;gap:10px;margin:18px 0 24px}
+.bcard li{display:flex;gap:10px}
+.bcard li::before{content:"→";color:var(--blue);font-weight:800}
+.bcard .map{min-height:420px}
+.bcard .map iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:230px;gap:10px}
+.gal .ph{cursor:zoom-in}
+.gal .w{grid-column:span 2}
+.gal .t{grid-row:span 2}
+.lb{position:fixed;inset:0;background:rgba(11,18,32,.94);display:none;place-items:center;z-index:80;padding:20px;cursor:zoom-out}
+.lb.on{display:grid}
+.lb img{max-width:92vw;max-height:88vh;border-radius:12px}
+
+/* scores */
+.scores{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:22px}
+.sc{background:var(--navy);color:#fff;border-radius:20px;padding:28px}
+.sc .big{font-family:Archivo;font-stretch:125%;font-weight:900;font-size:64px;line-height:1}
+.sc h3{font-size:19px;margin-top:8px}
+.sc p{color:#9aa6bb;font-size:14px;margin:2px 0 10px}
+.sc a{font-weight:800;color:#8fb0ff}
+
+/* contacts */
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.cb{background:#fff;border-radius:22px;border:1px solid var(--line);padding:34px}
+.cb h2{font-size:30px;margin:14px 0 18px}
+.kv{display:grid;gap:16px}
+.kv span{display:block;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.kv a,.kv b{font-family:Archivo;font-stretch:112%;font-weight:800;font-size:22px}
+.kv a:hover{color:var(--blue)}
+.soc{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+
+.foot{background:var(--navy);color:#9aa6bb;padding:56px 0 28px;margin-top:60px}
+.foot .g{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:28px}
+.foot .logo{color:#fff}
+.foot h4{font-family:Archivo;font-stretch:112%;color:#fff;font-size:16px;margin-bottom:12px}
+.foot .g a:not(.logo){display:block;margin-bottom:6px}
+.foot a:hover{color:#fff}
+.credit{margin-top:40px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px;color:#6f7a8e}
+.credit a{color:#d4dbe8}
+
+.callbar{display:none}
+
+@media (max-width:1060px){
+  .two,.band,.cgrid,.bcard{grid-template-columns:1fr}
+  .pt{grid-template-columns:1fr 1fr}
+  .revs,.team,.scores{grid-template-columns:1fr 1fr}
+  .gal{grid-template-columns:repeat(3,1fr)}
+  .foot .g{grid-template-columns:1fr 1fr}
+}
+@media (max-width:900px){
+  .links{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;background:#fff;padding:8px 16px 18px;border-bottom:1px solid var(--line)}
+  .links.open{display:flex}
+  .links a{font-size:18px;padding:13px 14px}
+  .nav>.btn{display:none}
+  .burger{display:block}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  section{padding:60px 0}
+  .hero{padding-top:12px}
+  .hbox{min-height:600px;border-radius:20px}
+  .hbox::after{background:linear-gradient(180deg,rgba(11,18,32,.2) 0%,rgba(11,18,32,.75) 45%,rgba(11,18,32,.95) 100%)}
+  .hin{padding:26px 22px}
+  .br{grid-template-columns:1fr}
+  .br .ph{height:200px}
+  .pt,.revs,.team,.scores{grid-template-columns:1fr}
+  .band{padding:30px 20px;border-radius:20px}
+  .band .pics{grid-template-rows:150px 150px}
+  .feat{grid-template-columns:1fr}
+  .pr{padding:16px 18px}
+  .pr b{font-size:19px}
+  .bcard .tx,.cb{padding:24px}
+  .gal{grid-template-columns:1fr 1fr;grid-auto-rows:150px}
+  .foot .g{grid-template-columns:1fr}
+  .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:50;gap:8px}
+  .callbar .btn{flex:1;box-shadow:0 10px 26px -10px rgba(0,0,0,.5)}
+  .foot{padding-bottom:100px}
+}
+@media (prefers-reduced-motion:reduce){.page{animation:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#/" class="logo" aria-label="VAGNERline — на главную"><b>VAGNER</b><span>line</span></a>
+    <nav class="links" id="links">
+      <a href="#/">Главная</a>
+      <a href="#/prices">Цены</a>
+      <a href="#/branches">Два сервиса</a>
+      <a href="#/photos">Фото</a>
+      <a href="#/reviews">Отзывы</a>
+      <a href="#/contacts">Контакты</a>
+    </nav>
+    <a href="tel:+78435587870" class="btn b-blue">+7 843 558-78-70</a>
+    <button class="burger" id="burger" aria-label="Меню">☰</button>
+  </div>
+</header>
+
+<main>
+
+<!-- ГЛАВНАЯ -->
+<div class="page" data-page="/">
+  <section class="hero" style="padding-bottom:0">
+    <div class="wrap">
+      <div class="hbox">
+        <img src="https://i3.photo.2gis.com/images/branch/0/30258560097046210_f39e.jpg" alt="Porsche Cayenne в боксе VAGNERline" loading="eager">
+        <div class="hin">
+          <span class="tag">Автотехцентр · Казань · 2 адреса</span>
+          <h1>Ремонт <i>VAG</i>, Kia и Hyundai</h1>
+          <p>Обслуживание и ремонт Audi, Volkswagen, Skoda, Porsche и SEAT, а также Kia и Hyundai. Двигатели, коробки, подвеска, электрика. Запчасти в наличии.</p>
+          <div class="cta">
+            <a href="tel:+78435587870" class="btn b-blue">Записаться</a>
+            <a href="#/prices" class="btn b-glass">Цены на работы</a>
+          </div>
+        </div>
+      </div>
+      <div class="brands"><span>Audi</span><span>Volkswagen</span><span>Skoda</span><span>Porsche</span><span>SEAT</span><span>Kia</span><span>Hyundai</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head"><div><span class="tag">Цены</span><h2>Стоимость работ</h2></div><p>Цены — «от», точную сумму назовём по телефону: она зависит от модели и двигателя.</p></div>
+      <div class="pt">
+        <div class="pi free"><span>Диагностика ходовой при выполнении работ</span><b>Бесплатно</b></div>
+        <div class="pi"><span>Компьютерная диагностика</span><b><small>от</small>1 000 ₽</b></div>
+        <div class="pi"><span>Замена масла в ДВС</span><b><small>от</small>1 200 ₽</b></div>
+        <div class="pi"><span>Регламентное ТО</span><b><small>от</small>1 600 ₽</b></div>
+        <div class="pi"><span>Замена масла в АКПП</span><b><small>от</small>6 000 ₽</b></div>
+        <div class="pi"><span>Замена ремня ГРМ</span><b><small>от</small>7 500 ₽</b></div>
+        <div class="pi"><span>Замена цепи ГРМ</span><b><small>от</small>15 000 ₽</b></div>
+        <div class="pi"><span>Замена сцепления</span><b><small>от</small>12 000 ₽</b></div>
+      </div>
+      <div style="margin-top:22px"><a href="#/prices" class="btn b-dark">Весь прайс — 32 позиции</a></div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><div><span class="tag">Адреса</span><h2>Два сервиса в Советском районе</h2></div><a href="#/branches" class="btn b-line">Подробнее о сервисах</a></div>
+      <div class="two">
+        <div class="br">
+          <div class="ph"><img src="https://i0.photo.2gis.com/images/branch/0/30258560113157881_f8d8.jpg" alt="Ресепшен VAGNERline" loading="lazy"></div>
+          <div class="tx"><span class="tag">Сибирский тракт</span><h3>Сибирский тракт, 44а</h3><p>Офис 2.4, 2 этаж. Есть клиентская зона и Wi-Fi.</p><div class="meta"><a href="tel:+78435587870">+7 (843) 558-78-70</a><span>Ежедневно 10:00–20:00</span></div><div class="rt"><b>4,9</b> Яндекс · <b>4,8</b> 2ГИС</div></div>
+        </div>
+        <div class="br">
+          <div class="ph"><img src="https://i1.photo.2gis.com/images/branch/0/30258560097046190_65c4.jpg" alt="Компьютерная диагностика" loading="lazy"></div>
+          <div class="tx"><span class="tag">Азинская</span><h3>2-я Азинская, 7г</h3><p>Электрика, диагностика, установка оборудования — например, систем контроля слепых зон.</p><div class="meta"><a href="tel:+78435587278">+7 (843) 558-72-78</a><span>Ежедневно 10:00–20:00</span></div><div class="rt"><b>5,0</b> 2ГИС · 41 оценка</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="band">
+        <div>
+          <span class="tag">Что делаем</span>
+          <h2>От ТО до капремонта двигателя</h2>
+          <p>Слесарный ремонт, электрика и диагностика, коробки передач, подвеска. На двигателе — шлифовка, расточка, гильзовка и опрессовка.</p>
+          <div class="feat">
+            <div><b>Двигатель</b><span>ГРМ, компрессия, капремонт</span></div>
+            <div><b>Трансмиссия</b><span>ремонт АКПП и МКПП, сцепление</span></div>
+            <div><b>Подвеска</b><span>ремонт пневмоподвески и стоек</span></div>
+            <div><b>Электрика</b><span>проводка, генераторы, стартеры</span></div>
+            <div><b>Рулевые рейки</b><span>ремонт</span></div>
+            <div><b>Выхлоп</b><span>ремонт и тюнинг</span></div>
+          </div>
+        </div>
+        <div class="pics">
+          <div class="ph"><img src="https://i8.photo.2gis.com/images/branch/0/30258560097046384_0eaf.jpg" alt="Механик VAGNERline" loading="lazy"></div>
+          <div class="ph"><img src="https://i5.photo.2gis.com/images/branch/0/30258560097046179_8aac.jpg" alt="Audi на подъёмнике" loading="lazy"></div>
+          <div class="ph"><img src="https://i4.photo.2gis.com/images/branch/0/30258560097046474_f491.jpg" alt="Зона ожидания" loading="lazy"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head"><div><span class="tag">Команда</span><h2>Кого хвалят в отзывах</h2></div></div>
+      <div class="team">
+        <div class="tm"><span>Диагност</span><b>Алмаз</b><p>«Особенно удивило мастерство диагноста Алмаза. Всё детально объяснил без высокомерия» — клиент из Набережных Челнов, Audi A8.</p></div>
+        <div class="tm"><span>Мастер</span><b>Артём</b><p>«Сервис самый честный из всех ваговских в Казани! Мастер Артём — лучший!»</p></div>
+        <div class="tm"><span>Механик</span><b>Камиль</b><p>«Приняли быстро. Сделали хорошо. Отличный мастер Камиль».</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><div><span class="tag">Отзывы</span><h2>Что говорят клиенты</h2></div><a href="#/reviews" class="btn b-line">Все отзывы</a></div>
+      <div class="revs">
+        <blockquote class="rv hl"><p>«Мне как девушке ранее в других сервисах всегда навязывали ненужные услуги. В этом сервисе я спокойна и уверена. При срочной поломке всегда готовы помочь»</p><footer>Лиля · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Я с другого города, Чебоксары, уже второй раз приезжаю. Устанавливали слепые зоны — проводка уложена идеально, штатные функции не пострадали»</p><footer>Андрей Степанов · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Выполнили большое количество работ по моему авто, без косяков и недосказанностей, всегда в срок и по заранее оговорённой цене»</p><footer>Данил · 2ГИС <i>★★★★★</i></footer></blockquote>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ЦЕНЫ -->
+<div class="page" data-page="/prices">
+  <div class="ptop"><div class="wrap"><span class="tag">Прайс</span><h1>Цены на работы</h1><p>Стоимость работ «от» — по прайсу сервиса в 2ГИС (обновлён 8 июня 2026). Итоговую сумму согласуем до начала ремонта.</p></div></div>
+  <section style="padding-top:40px">
+    <div class="wrap">
+      <div class="ptabs" id="ptabs"></div>
+      <div class="plist" id="plist"></div>
+      <p class="pnote">Цены одинаковы для обоих сервисов.</p>
+    </div>
+  </section>
+</div>
+
+<!-- ФИЛИАЛЫ -->
+<div class="page" data-page="/branches">
+  <div class="ptop"><div class="wrap"><span class="tag">Адреса</span><h1>Два сервиса</h1><p>Оба работают ежедневно с 10:00 до 20:00 по предварительной записи.</p></div></div>
+  <section style="padding-top:40px">
+    <div class="wrap bpage">
+      <div class="bcard">
+        <div class="tx">
+          <span class="tag">Сервис №1</span>
+          <h2>Сибирский тракт, 44а</h2>
+          <p style="color:var(--mute)">Офис 2.4, 2 этаж · рядом остановка «Трамвайное депо №1»</p>
+          <ul>
+            <li>Ремонт двигателей, коробок, подвески</li>
+            <li>Тюнинг выхлопной системы</li>
+            <li>Запчасти и масла, доставка</li>
+            <li>Клиентская зона и Wi-Fi</li>
+          </ul>
+          <div class="cta"><a href="tel:+78435587870" class="btn b-blue">+7 (843) 558-78-70</a><a href="https://wa.me/79655888255" target="_blank" rel="noopener" class="btn b-line">WhatsApp</a></div>
+        </div>
+        <div class="map"><iframe src="https://yandex.ru/map-widget/v1/?ll=49.193473%2C55.833294&z=16&pt=49.193473,55.833294,pm2blm" loading="lazy" title="Карта: Сибирский тракт, 44а"></iframe></div>
+      </div>
+      <div class="bcard">
+        <div class="tx">
+          <span class="tag">Сервис №2</span>
+          <h2>2-я Азинская, 7г</h2>
+          <p style="color:var(--mute)">Советский район</p>
+          <ul>
+            <li>Диагностика и ремонт электрики</li>
+            <li>Установка дополнительного оборудования</li>
+            <li>Ремонт АКПП и МКПП, двигателей, подвески</li>
+            <li>Аккумуляторы, автохимия, контрактные запчасти</li>
+          </ul>
+          <div class="cta"><a href="tel:+78435587278" class="btn b-blue">+7 (843) 558-72-78</a><a href="https://wa.me/79372818142" target="_blank" rel="noopener" class="btn b-line">WhatsApp</a></div>
+        </div>
+        <div class="map"><iframe src="https://yandex.ru/map-widget/v1/?ll=49.205705%2C55.802127&z=16&pt=49.205705,55.802127,pm2blm" loading="lazy" title="Карта: 2-я Азинская, 7г"></iframe></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ФОТО -->
+<div class="page" data-page="/photos">
+  <div class="ptop"><div class="wrap"><span class="tag">Фото</span><h1>Внутри сервиса</h1><p>Боксы, диагностика, клиентская зона. Нажмите на фото, чтобы открыть крупнее.</p></div></div>
+  <section style="padding-top:40px"><div class="wrap"><div class="gal" id="gal"></div></div></section>
+</div>
+
+<!-- ОТЗЫВЫ -->
+<div class="page" data-page="/reviews">
+  <div class="ptop"><div class="wrap"><span class="tag">Отзывы</span><h1>Слово клиентам</h1><p>Отзывы о двух сервисах из 2ГИС.</p></div></div>
+  <section style="padding-top:40px">
+    <div class="wrap">
+      <div class="scores">
+        <div class="sc"><div class="big">4,9</div><h3>Яндекс · Сибирский тракт</h3><p>138 оценок · «Хорошее место 2026»</p><a href="https://yandex.ru/maps/org/vagnerline/187841071404/reviews/" target="_blank" rel="noopener">Читать →</a></div>
+        <div class="sc"><div class="big">4,8</div><h3>2ГИС · Сибирский тракт</h3><p>64 оценки</p><a href="https://2gis.ru/kazan/firm/70000001054595877/tab/reviews" target="_blank" rel="noopener">Читать →</a></div>
+        <div class="sc"><div class="big">5,0</div><h3>2ГИС · Азинская</h3><p>41 оценка</p><a href="https://2gis.ru/kazan/firm/70000001100808282/tab/reviews" target="_blank" rel="noopener">Читать →</a></div>
+      </div>
+      <div class="revs">
+        <blockquote class="rv hl"><p>«Не работала мультимедиа — не мог решить в своём городе месяц. Приехал из Набережных Челнов, проблему нашли и решили в течение дня. Удивился порядочности и вежливости всего сервиса»</p><footer>Шамиль Валиев · Audi A8 <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Работа понравилась, никаких дополнительных работ не навязывали. По телефону отвечает специалист, который сразу может подсказать по работам и стоимости»</p><footer>Александр Кирсанов <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Менял тормозные диски и накладки. Комплектующие купил у них же — цены конкурентные, не завышают!»</p><footer>Руслан Назипов <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Была проблема с запотеванием окон изнутри — решили быстро, вошли в ситуацию и приняли машину оперативно»</p><footer>Ренат Мухарлямов <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Замена свечей накала, VW Tiguan 2.0 дизель. Сделали быстро, дали советы, по ценам не кусачие. Приятная и вежливая девушка на ресепшене»</p><footer>2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Менял тормозные барабаны на Polo и тормозную жидкость. Попросил посмотреть подвеску — дали рекомендации»</p><footer>Emil Khabibulin <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Связался, записался на удобное время. Утром привёз — вечером забрал. Спасибо Алмазу за установленный комплект Side Assist»</p><footer>Ildar Shaydullin <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Не грела печка на Polo седан. В других автосервисах не могли решить проблему»</p><footer>Эльвира Шарифуллина <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Надёжный сервис, обслуживаю автомобиль у этой команды специалистов с 2020 года»</p><footer>Klifford Nikabar <i>★★★★★</i></footer></blockquote>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- КОНТАКТЫ -->
+<div class="page" data-page="/contacts">
+  <div class="ptop"><div class="wrap"><span class="tag">Контакты</span><h1>Запись</h1><p>Позвоните или напишите в мессенджер — подберём время в удобном сервисе.</p></div></div>
+  <section style="padding-top:40px">
+    <div class="wrap cgrid">
+      <div class="cb">
+        <span class="tag">Сибирский тракт, 44а</span>
+        <h2>Сервис №1</h2>
+        <div class="kv">
+          <div><span>Телефон</span><a href="tel:+78435587870">+7 (843) 558-78-70</a></div>
+          <div><span>WhatsApp</span><a href="https://wa.me/79655888255" target="_blank" rel="noopener">+7 965 588-82-55</a></div>
+          <div><span>Режим</span><b>Ежедневно 10:00–20:00</b></div>
+        </div>
+      </div>
+      <div class="cb">
+        <span class="tag">2-я Азинская, 7г</span>
+        <h2>Сервис №2</h2>
+        <div class="kv">
+          <div><span>Телефон</span><a href="tel:+78435587278">+7 (843) 558-72-78</a></div>
+          <div><span>WhatsApp и Telegram</span><a href="https://wa.me/79372818142" target="_blank" rel="noopener">+7 937 281-81-42</a></div>
+          <div><span>Режим</span><b>Ежедневно 10:00–20:00</b></div>
+        </div>
+      </div>
+      <div class="cb" style="grid-column:1/-1">
+        <div class="kv"><div><span>Почта</span><a href="mailto:vagnerservice@mail.ru">vagnerservice@mail.ru</a></div></div>
+        <div class="soc"><a href="https://t.me/vagner_line" target="_blank" rel="noopener" class="btn b-dark">Telegram-канал</a><a href="https://vk.com/vagnerservice" target="_blank" rel="noopener" class="btn b-line">ВКонтакте</a><a href="https://max.ru/u/f9LHodD0cOLpV0XGi1qOi2mdFXNiW0M6A9sQUj5IOOT" target="_blank" rel="noopener" class="btn b-line">MAX</a></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="g">
+      <div><a href="#/" class="logo"><b>VAGNER</b><span>line</span></a><p style="margin-top:16px;max-width:320px">Ремонт и обслуживание VAG, Kia и Hyundai в Казани.</p></div>
+      <div><h4>Разделы</h4><a href="#/prices">Цены</a><a href="#/branches">Два сервиса</a><a href="#/photos">Фото</a><a href="#/reviews">Отзывы</a></div>
+      <div><h4>Сибирский тракт, 44а</h4><a href="tel:+78435587870">+7 (843) 558-78-70</a><span>10:00–20:00</span></div>
+      <div><h4>2-я Азинская, 7г</h4><a href="tel:+78435587278">+7 (843) 558-72-78</a><span>10:00–20:00</span></div>
+    </div>
+    <div class="credit"><span>© VAGNERline, Казань</span><span>Демо-сайт · разработка: Сергей Музыченко, Telegram <a href="https://t.me/spectator0011" target="_blank" rel="noopener">@spectator0011</a></span></div>
+  </div>
+</footer>
+
+<div class="callbar"><a href="tel:+78435587870" class="btn b-blue">Позвонить</a><a href="#/branches" class="btn b-white">Адреса</a></div>
+<div class="lb" id="lb"><img alt=""></div>
+
+<script>
+const PRICES={
+ "ТО и масло":[["ТО","замена масла и фильтров, диагностика ходовой, проверка тормозов и освещения",1600],["Замена масла в ДВС","с заменой масляного фильтра",1200],["Замена масла в МКПП","",1200],["Замена масла в АКПП","",6000],["Замена тормозной жидкости","",1500],["Замена топливного фильтра","",1500],["Замена свечей зажигания","",1200]],
+ "Двигатель":[["Замена ремня ГРМ","",7500],["Замена цепи ГРМ","",15000],["Замена помпы","",4500],["Замена приводного ремня","",1200],["Замена радиатора охлаждения","",6000],["Замена маслоотделителя","",3000],["Замер компрессии","",3000],["Замена маслосъёмных колпачков","",60000],["Капитальный ремонт двигателя","",300000]],
+ "Ходовая и тормоза":[["Диагностика ходовой части","при выполнении работ","free"],["Замена шаровой опоры","",1200],["Замена стоек стабилизатора","",3000],["Замена ступичного подшипника","",3000],["Замена тормозных дисков","",3000],["Замена тормозных накладок","",1500],["Замена сцепления","",12000]],
+ "Электрика":[["Компьютерная диагностика","",1000],["Ремонт электропроводки","",1500],["Ремонт генератора","",7000],["Замена катушек зажигания","",300],["Замена ламп","",300]],
+ "Масла":[["Моторное масло Petronas 5W-40","",1000,1],["Моторное масло Petronas 5W-30","",1200,1],["Моторное масло ROWE 5W-40","",1200,1],["Моторное масло ROWE 5W-30","",1600,1]]
+};
+const fmt=n=>n.toLocaleString('ru-RU').replace(/ /g,' ')+' ₽';
+const tabs=document.getElementById('ptabs'),pl=document.getElementById('plist');
+function show(k){[...tabs.children].forEach(b=>b.classList.toggle('on',b.textContent===k));pl.innerHTML=PRICES[k].map(([n,d,p,fix])=>`<div class="pr"><div>${n}${d?`<small>${d}</small>`:''}</div><b class="${p==='free'?'f':''}">${p==='free'?'Бесплатно':(fix?'':'от ')+fmt(p)}</b></div>`).join('')}
+tabs.innerHTML=Object.keys(PRICES).map(k=>`<button type="button">${k}</button>`).join('');
+tabs.addEventListener('click',e=>{if(e.target.tagName==='BUTTON')show(e.target.textContent)});show('ТО и масло');
+
+const PH=[
+ ["i3.photo.2gis.com/images/branch/0/30258560097046210_f39e","w t","Porsche Cayenne в боксе"],
+ ["i0.photo.2gis.com/images/branch/0/30258560113157881_f8d8","","Ресепшен"],
+ ["i4.photo.2gis.com/images/branch/0/30258560097046474_f491","","Зона ожидания"],
+ ["i8.photo.2gis.com/images/branch/0/30258560097046384_0eaf","t","Механик за работой"],
+ ["i5.photo.2gis.com/images/branch/0/30258560097046179_8aac","","Audi на подъёмнике"],
+ ["i1.photo.2gis.com/images/branch/0/30258560097046190_65c4","w","Компьютерная диагностика"],
+ ["i5.photo.2gis.com/images/branch/0/30258560097046364_6c02","","Volkswagen Touareg"],
+ ["i9.photo.2gis.com/images/branch/0/30258560073289334_90ff","","Volkswagen Golf"],
+ ["i8.photo.2gis.com/images/branch/0/30258560096904204_7925","","Подвеска на подъёмнике"],
+ ["i8.photo.2gis.com/photo-gallery/bead9c6b-ceef-4316-900c-38e9d738d605","","Кофемашина для клиентов"],
+ ["i5.photo.2gis.com/photo-gallery/9b5d9350-30f9-44d2-b465-48fd58ec0b2c","w","Бокс"],
+ ["i3.photo.2gis.com/photo-gallery/bf84c000-e13b-4438-988d-c5c3e3b81904","","Работа под капотом"],
+ ["i0.photo.2gis.com/photo-gallery/b1f55c28-13ce-4aa5-a59d-9c41e606fb9d","","Работа на подъёмнике"],
+ ["i9.photo.2gis.com/images/branch/0/30258560087391364_8689","w","Здание сервиса"]
+];
+document.getElementById('gal').innerHTML=PH.map(([s,c,a])=>`<div class="ph ${c}"><img src="https://${s}.jpg" alt="${a}" loading="lazy"></div>`).join('');
+
+const pages=[...document.querySelectorAll('.page')],links=[...document.querySelectorAll('.links a')],nav=document.getElementById('links');
+const titles={'/':'VAGNERline — ремонт VAG, Kia и Hyundai в Казани','/prices':'Цены — VAGNERline','/branches':'Два сервиса — VAGNERline','/photos':'Фото — VAGNERline','/reviews':'Отзывы — VAGNERline','/contacts':'Контакты — VAGNERline'};
+function route(){const p=location.hash.replace(/^#/,'')||'/';const t=pages.find(x=>x.dataset.page===p)||pages[0];pages.forEach(x=>x.classList.toggle('on',x===t));links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+t.dataset.page));nav.classList.remove('open');scrollTo(0,0);document.title=titles[t.dataset.page]}
+addEventListener('hashchange',route);route();
+document.getElementById('burger').onclick=()=>nav.classList.toggle('open');
+const lb=document.getElementById('lb'),li=lb.querySelector('img');
+document.getElementById('gal').addEventListener('click',e=>{const i=e.target.closest('.ph')?.querySelector('img');if(i){li.src=i.src;lb.classList.add('on')}});
+lb.onclick=()=>lb.classList.remove('on');addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+document.querySelectorAll('img').forEach(i=>i.addEventListener('error',()=>{i.style.visibility='hidden'}));
+</script>
+</body>
+</html>

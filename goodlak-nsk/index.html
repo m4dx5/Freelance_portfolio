@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Гудлак — ногтевая студия в Новосибирске</title>
+<meta name="description" content="Гудлак — две ногтевые студии в Новосибирске: Красный проспект, 79 и Геодезическая, 4/1. Маникюр, педикюр, наращивание, дизайн. 5,0 в 2ГИС и Яндекс Картах, более 1 100 отзывов. Ежедневно 9:00–21:00.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400;1,6..96,500&family=Albert+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --milk:#f6f1ec; --nude:#ead9cc; --rose:#d9a8a0; --cocoa:#6b4b3e; --k:#141111; --ink:#141111; --mute:#7a6d66; --line:rgba(20,17,17,.12); --sage:#8fa38a;
+  --max:1240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--milk);color:var(--ink);font:400 17px/1.6 "Albert Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:"Bodoni Moda",Didot,serif;font-weight:400;line-height:1.02;letter-spacing:-.01em}
+h1 i,h2 i{font-style:italic;color:var(--cocoa)}
+.sm{display:inline-block;font-size:12.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--cocoa)}
+.ph{overflow:hidden;background:var(--nude)}
+.ph img{width:100%;height:100%;object-fit:cover}
+
+header{position:sticky;top:0;z-index:40;background:rgba(246,241,236,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:16px}
+.logo{font-family:"Bodoni Moda";font-size:30px;font-style:italic;letter-spacing:-.01em;line-height:1}
+.logo small{font-family:"Albert Sans";font-style:normal;font-size:10.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--mute);display:block;margin-top:4px}
+.links{display:flex;gap:4px}
+.links a{padding:9px 13px;font-weight:500;font-size:15px;color:var(--mute);position:relative}
+.links a:hover{color:var(--ink)}
+.links a.on{color:var(--ink)}
+.links a.on::after{content:"";position:absolute;left:13px;right:13px;bottom:2px;height:1px;background:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 28px;border-radius:999px;font:600 14.5px "Albert Sans";letter-spacing:.06em;text-transform:uppercase;transition:transform .2s,background .2s,color .2s;white-space:nowrap;border:0;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.b-k{background:var(--k);color:#fff}
+.b-k:hover{background:var(--cocoa)}
+.b-out{border:1px solid var(--ink)}
+.b-out:hover{background:var(--ink);color:#fff}
+.b-milk{background:var(--milk);color:var(--ink)}
+.burger{display:none;width:46px;height:46px;border-radius:50%;border:1px solid var(--ink);background:none;font-size:17px;cursor:pointer}
+
+.page{display:none;animation:in .45s ease}
+.page.on{display:block}
+@keyframes in{from{opacity:0}to{opacity:1}}
+section{padding:96px 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:46px;flex-wrap:wrap}
+.head h2{font-size:clamp(40px,5.4vw,72px);margin-top:14px}
+.head p{max-width:400px;color:var(--mute)}
+.ptop{padding:80px 0 24px;text-align:center}
+.ptop h1{font-size:clamp(50px,8vw,112px);margin-top:16px}
+.ptop p{max-width:560px;margin:18px auto 0;color:var(--mute);font-size:18.5px}
+
+/* hero */
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding-top:46px;padding-bottom:30px}
+.hero h1{font-size:clamp(58px,8.4vw,128px);margin:18px 0 0}
+.hero p{font-size:19px;color:var(--mute);max-width:470px;margin:22px 0 32px}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.awards{display:flex;gap:10px;flex-wrap:wrap;margin-top:38px}
+.awards span{border:1px solid var(--line);border-radius:999px;padding:8px 15px;font-size:13.5px;font-weight:500;background:#fff}
+.hcol{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+.hcol .ph{border-radius:999px 999px 18px 18px;aspect-ratio:3/5}
+.hcol .ph:nth-child(2){margin-top:70px;border-radius:18px 18px 999px 999px}
+.hero .wrap.sw{display:block;padding-top:0}
+.score b{white-space:nowrap}
+.score{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:56px}
+.score>div{padding:26px 22px;border-right:1px solid var(--line)}
+.score>div:last-child{border-right:0}
+.score b{display:block;font-family:"Bodoni Moda";font-size:46px;font-weight:400;line-height:1}
+.score span{font-size:14px;color:var(--mute)}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.sc{background:#fff;border-radius:22px;padding:28px 24px;display:flex;flex-direction:column;gap:8px;min-height:230px}
+.sc h3{font-size:28px}
+.sc p{color:var(--mute);font-size:15.5px;flex:1}
+.sc b{font-family:"Bodoni Moda";font-weight:400;font-size:26px}
+.sc.k{background:var(--k);color:#fff}
+.sc.k p{color:#b9adaa}
+
+/* works strip */
+.works{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.works .ph{aspect-ratio:3/4;border-radius:16px;cursor:zoom-in}
+.works .ph img{transition:transform .6s}
+.works .ph:hover img{transform:scale(1.05)}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about .ph{aspect-ratio:4/3;border-radius:24px}
+.about h2{font-size:clamp(38px,4.6vw,62px);margin:14px 0 22px}
+.feat{list-style:none;display:grid;gap:0;border-top:1px solid var(--line)}
+.feat li{padding:15px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px}
+.feat li span{color:var(--mute)}
+
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rv{background:#fff;border-radius:22px;padding:30px;display:flex;flex-direction:column;justify-content:space-between;gap:18px}
+.rv p{font-size:16.5px}
+.rv footer{display:flex;justify-content:space-between;gap:10px;font-size:14px;font-weight:600;color:var(--mute)}
+.rv footer i{font-style:normal;color:var(--cocoa);letter-spacing:2px}
+.rv.hl{background:var(--k);color:#fff}
+.rv.hl p{font-family:"Bodoni Moda";font-style:italic;font-size:24px;line-height:1.3}
+.rv.hl footer{color:#b9adaa}
+.rv.hl footer i{color:var(--rose)}
+
+/* price */
+.ptabs{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:28px}
+.ptabs button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:11px 20px;font:600 14.5px "Albert Sans";cursor:pointer;color:var(--mute)}
+.ptabs button.on{background:var(--k);color:#fff;border-color:var(--k)}
+.plist{max-width:880px;margin:0 auto;background:#fff;border-radius:26px;padding:10px 34px}
+.pr{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:22px;padding:20px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.pr:last-child{border-bottom:0}
+.pr small{display:block;color:var(--mute);font-size:14.5px;margin-top:2px}
+.pr b{font-family:"Bodoni Moda";font-weight:400;font-size:25px;white-space:nowrap}
+.pnote{max-width:880px;margin:22px auto 0;color:var(--mute);font-size:15px;text-align:center}
+
+/* studios */
+.studios{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.st{background:#fff;border-radius:26px;overflow:hidden;display:flex;flex-direction:column}
+.st .ph{aspect-ratio:16/10;border-radius:0}
+.st .tx{padding:32px;display:flex;flex-direction:column;gap:6px;flex:1}
+.st h2{font-size:clamp(30px,3.4vw,42px)}
+.st .meta{color:var(--mute)}
+.st .rate{display:flex;gap:16px;flex-wrap:wrap;margin:12px 0 18px;font-size:14.5px;color:var(--mute)}
+.st .rate b{font-family:"Bodoni Moda";font-weight:600;color:var(--ink);font-size:20px;margin-right:4px}
+.st .map{height:260px;margin-top:auto}
+.st .map iframe{width:100%;height:100%;border:0;display:block}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:280px;gap:10px}
+.gal .ph{border-radius:18px;cursor:zoom-in}
+.gal .t{grid-row:span 2}
+.lb{position:fixed;inset:0;background:rgba(20,17,17,.94);display:none;place-items:center;z-index:80;padding:20px;cursor:zoom-out}
+.lb.on{display:grid}
+.lb img{max-width:92vw;max-height:88vh;border-radius:14px}
+
+/* team */
+.team{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.team .ph{aspect-ratio:4/3;border-radius:24px}
+.names{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 10px}
+.names span{background:#fff;border-radius:999px;padding:9px 16px;font-family:"Bodoni Moda";font-size:18px}
+
+/* contacts */
+.cbig{background:var(--k);color:#fff;border-radius:30px;padding:56px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.cbig h2{font-size:clamp(38px,4.8vw,64px)}
+.cbig h2 i{color:var(--rose)}
+.cbig p{color:#b9adaa;margin:14px 0 26px}
+.kv{display:grid;gap:20px}
+.kv span{display:block;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--rose);margin-bottom:4px}
+.kv a,.kv b{font-family:"Bodoni Moda";font-weight:400;font-size:26px;line-height:1.2}
+.soc{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}
+.soc a{border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:10px 18px;font-weight:600;font-size:14.5px}
+.soc a:hover{border-color:#fff}
+
+.foot{background:var(--k);color:#9d918d;padding:60px 0 28px;margin-top:70px}
+.foot .g{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:28px}
+.foot .logo{color:#fff}
+.foot h4{font-family:"Bodoni Moda";font-weight:400;font-size:19px;color:#fff;margin-bottom:12px}
+.foot .g a:not(.logo){display:block;margin-bottom:6px}
+.foot a:hover{color:#fff}
+.credit{margin-top:40px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13.5px;color:#7d726e}
+.credit a{color:#e8dfdb}
+
+.callbar{display:none}
+
+@media (max-width:1060px){
+  .hero .wrap,.about,.team,.cbig,.studios{grid-template-columns:1fr}
+  .svc,.revs{grid-template-columns:1fr 1fr}
+  .score{grid-template-columns:1fr 1fr}
+  .score>div:nth-child(2){border-right:0}
+  .score>div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .works{grid-template-columns:repeat(3,1fr)}
+  .gal{grid-template-columns:repeat(3,1fr)}
+  .hcol{max-width:560px}
+  .foot .g{grid-template-columns:1fr 1fr}
+}
+@media (max-width:900px){
+  .links{display:none;position:absolute;top:76px;left:0;right:0;flex-direction:column;background:var(--milk);padding:8px 16px 18px;border-bottom:1px solid var(--line)}
+  .links.open{display:flex}
+  .links a{font-size:19px;padding:13px 6px}
+  .links a.on::after{display:none}
+  .nav>.btn{display:none}
+  .burger{display:block}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  section{padding:62px 0}
+  .hero .wrap{padding-top:30px;gap:36px}
+  .hcol .ph:nth-child(2){margin-top:40px}
+  .score b{font-size:36px}
+  .score>div{padding:18px 14px}
+  .svc,.revs{grid-template-columns:1fr}
+  .sc{min-height:0}
+  .works{grid-template-columns:repeat(2,1fr)}
+  .plist{padding:4px 18px}
+  .pr b{font-size:20px}
+  .st .tx{padding:24px}
+  .gal{grid-template-columns:1fr 1fr;grid-auto-rows:190px}
+  .cbig{padding:30px 22px;border-radius:24px}
+  .kv a,.kv b{font-size:22px}
+  .foot .g{grid-template-columns:1fr}
+  .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:50;gap:8px}
+  .callbar .btn{flex:1;padding:15px 10px;box-shadow:0 12px 26px -12px rgba(0,0,0,.5)}
+  .foot{padding-bottom:100px}
+}
+@media (prefers-reduced-motion:reduce){.page{animation:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#/" class="logo" aria-label="Гудлак — на главную">Гудлак<small>ногтевая студия</small></a>
+    <nav class="links" id="links">
+      <a href="#/">Главная</a>
+      <a href="#/prices">Цены</a>
+      <a href="#/studios">Студии</a>
+      <a href="#/works">Работы</a>
+      <a href="#/reviews">Отзывы</a>
+      <a href="#/contacts">Контакты</a>
+    </nav>
+    <a href="https://n820449.yclients.com/" target="_blank" rel="noopener" class="btn b-k">Записаться</a>
+    <button class="burger" id="burger" aria-label="Меню">☰</button>
+  </div>
+</header>
+
+<main>
+
+<!-- ГЛАВНАЯ -->
+<div class="page" data-page="/">
+  <section class="hero" style="padding:0">
+    <div class="wrap">
+      <div>
+        <span class="sm">Ногтевая студия · Новосибирск</span>
+        <h1>Гуд<i>лак</i></h1>
+        <p>Маникюр, педикюр, наращивание и дизайн в двух студиях — на Красном проспекте и на Геодезической. Огромный выбор цветов и кофе, пока мастер работает.</p>
+        <div class="cta">
+          <a href="https://n820449.yclients.com/" target="_blank" rel="noopener" class="btn b-k">Записаться онлайн</a>
+          <a href="#/prices" class="btn b-out">Прайс</a>
+        </div>
+        <div class="awards"><span>Лучшая ногтевая студия 2026 · 2ГИС</span><span>Хорошее место 2026 · Яндекс</span></div>
+      </div>
+      <div class="hcol">
+        <div class="ph"><img src="https://i4.photo.2gis.com/images/branch/0/30258560081239941_5005.jpg" alt="Нюдовый маникюр" loading="eager"></div>
+        <div class="ph"><img src="https://i1.photo.2gis.com/images/branch/0/30258560080821486_6d90.jpg" alt="Маникюр шалфейного цвета" loading="eager"></div>
+      </div>
+    </div>
+    <div class="wrap sw">
+      <div class="score">
+        <div><b>5,0</b><span>2ГИС · более 1 300 оценок</span></div>
+        <div><b>5,0</b><span>Яндекс Карты · 250 оценок</span></div>
+        <div><b>1 175</b><span>отзывов в 2ГИС</span></div>
+        <div><b>9–21</b><span>ежедневно, обе студии</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head"><div><span class="sm">Услуги</span><h2>Руки, стопы, <i>дизайн</i></h2></div><a href="#/prices" class="btn b-out">Весь прайс</a></div>
+      <div class="svc">
+        <div class="sc"><span class="sm">Маникюр</span><h3>С покрытием</h3><p>Женский, мужской, японский и аппаратный маникюр. Покрытие гель-лаком или плёнками.</p><b>2 400 ₽</b></div>
+        <div class="sc"><span class="sm">Педикюр</span><h3>Смарт</h3><p>Обработка стопы и пальчиков с покрытием гель-лаком.</p><b>3 100 ₽</b></div>
+        <div class="sc"><span class="sm">Наращивание</span><h3>Гелем</h3><p>Стоимость зависит от длины, дизайн — по прайсу.</p><b>4 000–5 000 ₽</b></div>
+        <div class="sc k"><span class="sm" style="color:var(--rose)">Дизайн</span><h3>Френч, втирка, рисунки</h3><p>Простые и сложные дизайны, рисунки «от руки», стемпинг.</p><b>от 50 ₽</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><div><span class="sm">Работы мастеров</span><h2>Немного <i>красоты</i></h2></div><a href="#/works" class="btn b-out">Все работы</a></div>
+      <div class="works" id="works6"></div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap about">
+      <div class="ph"><img src="https://i1.photo.2gis.com/video-gallery/b19d3a51-601a-41ea-b8aa-fbec51077ba8.jpg" alt="Студия Гудлак" loading="lazy"></div>
+      <div>
+        <span class="sm">Почему к нам возвращаются</span>
+        <h2>Ходят <i>годами</i></h2>
+        <p style="color:var(--mute);margin-bottom:22px">«Хожу в эту студию более 5 лет! Я считаю, что это показатель качества» — Полина, 2ГИС.</p>
+        <ul class="feat">
+          <li>Большой выбор материалов и цветов<span>«аж теряешься»</span></li>
+          <li>Инструменты открывают при вас<span>стерильность</span></li>
+          <li>Кофе и чай для гостей<span>и кино во время процедуры</span></li>
+          <li>Оплата картой, наличными, по QR<span>есть «Плати частями»</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><div><span class="sm">Отзывы</span><h2>Слово <i>гостьям</i></h2></div><a href="#/reviews" class="btn b-out">Все отзывы</a></div>
+      <div class="revs">
+        <blockquote class="rv hl"><p>«После 13 лет с одним мастером я очень переживала, что найти „своего“ будет сложно. А оказалось — мне просто повезло с Гуд Лаком»</p><footer>Станислава Меркер · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Покрытие держится идеально 3–4 недели без сколов и отслоек, что для меня большой показатель качества»</p><footer>Айсель Андамова · 2ГИС <i>★★★★★</i></footer></blockquote>
+        <blockquote class="rv"><p>«Очень чистая работа с кутикулой, ровное покрытие без единого затёка. Отдельное спасибо за строгое соблюдение стерильности — все инструменты открываются при тебе»</p><footer>Алина Лебедева · 2ГИС <i>★★★★★</i></footer></blockquote>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ЦЕНЫ -->
+<div class="page" data-page="/prices">
+  <div class="ptop"><div class="wrap"><span class="sm">Прайс</span><h1>Цены</h1><p>Прайс студии из 2ГИС, обновлён 15 сентября 2026. Цены одинаковые в обеих студиях.</p></div></div>
+  <section style="padding-top:20px">
+    <div class="wrap">
+      <div class="ptabs" id="ptabs"></div>
+      <div class="plist" id="plist"></div>
+      <p class="pnote">Точную стоимость и свободное время мастеров видно при онлайн-записи.</p>
+      <div style="text-align:center;margin-top:26px"><a href="https://n820449.yclients.com/" target="_blank" rel="noopener" class="btn b-k">Записаться онлайн</a></div>
+    </div>
+  </section>
+</div>
+
+<!-- СТУДИИ -->
+<div class="page" data-page="/studios">
+  <div class="ptop"><div class="wrap"><span class="sm">Адреса</span><h1>Две <i>студии</i></h1><p>Единый номер для записи в обе студии: +7 999 451-96-62. Работаем ежедневно с 9:00 до 21:00 по предварительной записи.</p></div></div>
+  <section style="padding-top:30px">
+    <div class="wrap studios">
+      <div class="st">
+        <div class="ph"><img src="https://i1.photo.2gis.com/video-gallery/81aa39a4-94da-413e-91ff-04d47a355ba1.jpg" alt="Студия на Красном проспекте" loading="lazy"></div>
+        <div class="tx">
+          <span class="sm">Заельцовский район</span>
+          <h2>Красный проспект, 79</h2>
+          <p class="meta">БЦ «Зелёные Купола», 4 этаж, офисы 402–403</p>
+          <div class="rate"><span><b>5,0</b>2ГИС · 666 оценок</span><span><b>5,0</b>Яндекс · 140 оценок</span></div>
+          <div class="cta"><a href="https://n820449.yclients.com/" target="_blank" rel="noopener" class="btn b-k">Записаться</a><a href="https://2gis.ru/novosibirsk/firm/70000001041738507" target="_blank" rel="noopener" class="btn b-out">Маршрут</a></div>
+        </div>
+        <div class="map"><iframe src="https://yandex.ru/map-widget/v1/?ll=82.913654%2C55.049958&z=16&pt=82.913654,55.049958,pm2dbm" loading="lazy" title="Карта: Красный проспект, 79"></iframe></div>
+      </div>
+      <div class="st">
+        <div class="ph"><img src="https://i1.photo.2gis.com/video-gallery/9fae226b-3a8d-4efd-8dda-1b4b90a8a095.jpg" alt="Студия на Геодезической" loading="lazy"></div>
+        <div class="tx">
+          <span class="sm">Ленинский район</span>
+          <h2>Геодезическая, 4/1</h2>
+          <p class="meta">ЖК «Амстердам», 2 этаж, офис 11</p>
+          <div class="rate"><span><b>5,0</b>2ГИС · 649 оценок</span><span><b>5,0</b>Яндекс · 110 оценок · «Хорошее место 2026»</span></div>
+          <div class="cta"><a href="https://n820449.yclients.com/" target="_blank" rel="noopener" class="btn b-k">Записаться</a><a href="https://2gis.ru/novosibirsk/firm/70000001041394552" target="_blank" rel="noopener" class="btn b-out">Маршрут</a></div>
+        </div>
+        <div class="map"><iframe src="https://yandex.ru/map-widget/v1/?ll=82.904149%2C54.989502&z=16&pt=82.904149,54.989502,pm2dbm" loading="lazy" title="Карта: Геодезическая, 4/1"></iframe></div>
+      </div>
+    </div>
+  </section>
+  <section style="padding-top:0">
+    <div class="wrap team">
+      <div class="ph"><img src="https://i9.photo.2gis.com/photo-gallery/b165ee7e-e15c-41aa-b8e8-7b2160e96e3d.jpg" alt="Команда Гудлак" loading="lazy"></div>
+      <div>
+        <span class="sm">Команда</span>
+        <h2 style="font-size:clamp(36px,4.4vw,58px);margin-top:14px">Мастера, которых <i>благодарят</i></h2>
+        <div class="names"><span>Айна</span><span>Александра</span><span>Анастасия</span><span>Алина</span><span>Диана</span><span>Виктория Крючкова</span><span>Виктория Метелева</span><span>Виктория Фащилина</span><span>Виктория Максимова</span></div>
+        <p style="color:var(--mute)">Имена — из отзывов гостей в 2ГИС. Выбрать мастера можно при онлайн-записи.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- РАБОТЫ -->
+<div class="page" data-page="/works">
+  <div class="ptop"><div class="wrap"><span class="sm">Портфолио</span><h1>Работы <i>мастеров</i></h1><p>Нюд, френч, втирка и рисунки «от руки». Нажмите на фото, чтобы открыть крупнее.</p></div></div>
+  <section style="padding-top:30px"><div class="wrap"><div class="gal" id="gal"></div></div></section>
+</div>
+
+<!-- ОТЗЫВЫ -->
+<div class="page" data-page="/reviews">
+  <div class="ptop"><div class="wrap"><span class="sm">Отзывы</span><h1>1 175 <i>отзывов</i></h1><p>5,0 в 2ГИС в обеих студиях и 5,0 в Яндекс Картах.</p></div></div>
+  <section style="padding-top:30px">
+    <div class="wrap revs">
+      <blockquote class="rv hl"><p>«Хожу в эту студию более 5 лет! Цены адекватные, студия прекрасная, кофе и чай. Мастер Айна — моя любовь!»</p><footer>Полина Межуревская <i>★★★★★</i></footer></blockquote>
+      <blockquote class="rv"><p>«Пару раз не получалось попасть к Айне, и я ходила к Виктории и Александре — девочки тоже работают на высшем уровне. Качество услуг у всех действительно отличное»</p><footer>Станислава Меркер <i>★★★★★</i></footer></blockquote>
+      <blockquote class="rv"><p>«Попала в заботливые руки мастера Анастасии — очень аккуратная работа. Нереально большой выбор материалов, аж теряешься. Администратор вежливая и приятная»</p><footer>Елизавета Салыч <i>★★★★★</i></footer></blockquote>
+      <blockquote class="rv"><p>«Перечитав кучу отзывов и пересмотрев множество портфолио, я выбрала мастера Викторию Крючкову. Весь процесс прошёл безукоризненно, комфортно, спокойно и чётко»</p><footer>2ГИС <i>★★★★★</i></footer></blockquote>
+      <blockquote class="rv"><p>«Хожу много лет. Делаю и маникюр, и педикюр. В студии всегда чисто, уютно. Приветливые администраторы! Приятные цены!»</p><footer>Светлана Хихлич <i>★★★★★</i></footer></blockquote>
+      <blockquote class="rv"><p>«Всегда уютно и комфортно, угощают вкусным кофе, и все очень дружелюбные»</p><footer>Яна Акчурина <i>★★★★★</i></footer></blockquote>
+      <blockquote class="rv"><p>«Мастер, к которому хочется возвращаться снова и снова. Никакой спешки, никаких резких движений, рукам действительно хорошо во время процедуры»</p><footer>Анна Гусельникова · о Виктории Максимовой <i>★★★★★</i></footer></blockquote>
+      <blockquote class="rv"><p>«Виктория Метелева — прекрасный мастер, очень понравился маникюр, всё выполнено аккуратно и чисто»</p><footer>Alla Lina <i>★★★★★</i></footer></blockquote>
+      <blockquote class="rv"><p>«Очень комфортная студия с удобным расположением. Советую мастера Диану»</p><footer>Алёна Вайткус <i>★★★★★</i></footer></blockquote>
+    </div>
+    <div class="wrap" style="text-align:center;margin-top:30px"><a href="https://2gis.ru/novosibirsk/firm/70000001041738507/tab/reviews" target="_blank" rel="noopener" class="btn b-out">Читать все отзывы в 2ГИС</a></div>
+  </section>
+</div>
+
+<!-- КОНТАКТЫ -->
+<div class="page" data-page="/contacts">
+  <section>
+    <div class="wrap">
+      <div class="cbig">
+        <div>
+          <span class="sm" style="color:var(--rose)">Контакты</span>
+          <h2 style="margin-top:14px">Запишитесь <i>онлайн</i></h2>
+          <p>Выберите студию, мастера и удобное время — или напишите администратору.</p>
+          <div class="cta"><a href="https://n820449.yclients.com/" target="_blank" rel="noopener" class="btn b-milk">Онлайн-запись</a></div>
+          <div class="soc"><a href="https://wa.me/79994519662" target="_blank" rel="noopener">WhatsApp</a><a href="https://t.me/+79994519662" target="_blank" rel="noopener">Telegram</a><a href="https://max.ru/u/f9LHodD0cOIHlLQbKiNGf_iO2KhbHfx29rfAt5mxnXYvTvBqyiwU3Ih5i9o" target="_blank" rel="noopener">MAX</a><a href="https://vk.com/goodlak_nails_nsk" target="_blank" rel="noopener">ВКонтакте</a></div>
+        </div>
+        <div class="kv">
+          <div><span>Единый номер</span><a href="tel:+79994519662">+7 999 451-96-62</a></div>
+          <div><span>Красный проспект, 79</span><b>БЦ «Зелёные Купола», 4 этаж</b></div>
+          <div><span>Геодезическая, 4/1</span><b>ЖК «Амстердам», 2 этаж</b></div>
+          <div><span>Время работы</span><b>Ежедневно 9:00–21:00</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="g">
+      <div><a href="#/" class="logo">Гудлак<small style="color:#9d918d">ногтевая студия</small></a><p style="margin-top:16px;max-width:300px">Маникюр, педикюр и наращивание в Новосибирске.</p></div>
+      <div><h4>Разделы</h4><a href="#/prices">Цены</a><a href="#/studios">Студии</a><a href="#/works">Работы</a><a href="#/reviews">Отзывы</a></div>
+      <div><h4>Студии</h4><span style="display:block">Красный проспект, 79</span><span style="display:block">Геодезическая, 4/1</span><span style="display:block">9:00–21:00</span></div>
+      <div><h4>Связь</h4><a href="tel:+79994519662">+7 999 451-96-62</a><a href="https://wa.me/79994519662" target="_blank" rel="noopener">WhatsApp</a><a href="https://vk.com/goodlak_nails_nsk" target="_blank" rel="noopener">ВКонтакте</a></div>
+    </div>
+    <div class="credit"><span>© Ногтевая студия «Гудлак», Новосибирск</span><span>Демо-сайт · разработка: Сергей Музыченко, Telegram <a href="https://t.me/spectator0011" target="_blank" rel="noopener">@spectator0011</a></span></div>
+  </div>
+</footer>
+
+<div class="callbar"><a href="https://n820449.yclients.com/" target="_blank" rel="noopener" class="btn b-k">Записаться</a><a href="tel:+79994519662" class="btn b-milk" style="border:1px solid var(--ink)">Позвонить</a></div>
+<div class="lb" id="lb"><img alt=""></div>
+
+<script>
+const PRICES={
+ "Маникюр":[["Маникюр без покрытия","",1700],["Маникюр без покрытия (со снятием)","",1900],["Маникюр с покрытием","",2400],["Маникюр с покрытием (со снятием)","",2500],["Маникюр + покрытие плёнками","",2600],["Моделирование","маникюр + архитектура твёрдым материалом + покрытие гель-лаком",3300],["Мужской маникюр без покрытия","",1900]],
+ "Педикюр":[["Обработка стопы","",1700],["Педикюр мини","обработка пальчиков",2000],["Педикюр общий Смарт","обработка стопы и пальчиков",2300],["Педикюр мини + гель-лак","обработка пальчиков, покрытие",2700],["Педикюр Смарт + гель-лак","обработка стопы, пальчиков, покрытие",3100],["Педикюр мини + плёнки","обработка пальчиков, покрытие плёнками",3200],["Педикюр Смарт + плёнки","обработка стопы, пальчиков, покрытие плёнками",3600],["Мужской педикюр без покрытия","",2500]],
+ "Наращивание":[["Наращивание ногтей + покрытие","зависит от длины, дизайн — дополнительно по прайсу",[4000,5000]],["Коррекция наращивания + покрытие","зависит от длины, дизайн — дополнительно по прайсу",[3700,4700]]],
+ "Дизайн":[["Френч","за все пальчики",400],["Втирка","за все пальчики",400],["Стемпинг","за 1 пальчик",100],["Простые дизайны","за 1 пальчик",[50,100]],["Сложные дизайны, рисунки «от руки»","за 1 пальчик",[100,300]]]
+};
+const f=n=>n.toLocaleString('ru-RU').replace(/ /g,' ');
+const tabs=document.getElementById('ptabs'),pl=document.getElementById('plist');
+function show(k){[...tabs.children].forEach(b=>b.classList.toggle('on',b.textContent===k));pl.innerHTML=PRICES[k].map(([n,d,p])=>`<div class="pr"><div>${n}${d?`<small>${d}</small>`:''}</div><b>${Array.isArray(p)?f(p[0])+'–'+f(p[1]):f(p)} ₽</b></div>`).join('')}
+tabs.innerHTML=Object.keys(PRICES).map(k=>`<button type="button">${k}</button>`).join('');
+tabs.addEventListener('click',e=>{if(e.target.tagName==='BUTTON')show(e.target.textContent)});show('Маникюр');
+
+const W=["i1.photo.2gis.com/photo-gallery/364a1af2-8794-4b33-9169-cf59d30d2261","i7.photo.2gis.com/photo-gallery/d9ea93ae-6215-4fa2-87d6-94d642ca2a69","i2.photo.2gis.com/photo-gallery/8287b31e-e83d-4fdb-8560-9f48515a4746","i8.photo.2gis.com/photo-gallery/96736367-bb41-4c35-bbb8-4c07bcc8e7df","i1.photo.2gis.com/video-gallery/ec81aee9-7066-4614-8695-3c1260fcf1a4","i5.photo.2gis.com/images/branch/0/30258560101822012_6f0e","i6.photo.2gis.com/images/branch/0/30258560085805496_c6e8","i0.photo.2gis.com/photo-gallery/968607ea-af81-46d2-ae1e-eee154d877a9","i9.photo.2gis.com/photo-gallery/9312675b-4989-48eb-8a2e-f50c1259ac5b","i0.photo.2gis.com/images/branch/0/30258560093768020_a296","i9.photo.2gis.com/photo-gallery/5b014f1f-7617-4c87-a823-b56582d863c8","i4.photo.2gis.com/images/branch/0/30258560094179395_8277","i2.photo.2gis.com/images/branch/0/30258560084020875_95e6","i4.photo.2gis.com/images/branch/0/30258560127490908_a5e4","i8.photo.2gis.com/images/branch/0/30258560171757471_c518","i4.photo.2gis.com/photo-gallery/1efdeb42-b9ad-4f83-884c-82334d1f5dea","i2.photo.2gis.com/images/branch/0/30258560081430236_c700","i4.photo.2gis.com/images/branch/0/30258560107741913_2acb","i6.photo.2gis.com/photo-gallery/3a9bdae0-d080-4270-9a81-84fa0e30912c","i8.photo.2gis.com/photo-gallery/1cec648d-1462-4f50-b28d-51b2b6458703","i0.photo.2gis.com/photo-gallery/36f4f0fb-58cf-4222-aa00-78b2d6f22aec"];
+const S=["i4.photo.2gis.com/photo-gallery/6463bb2d-5945-4d41-bea2-5f8c0f661d3b","i1.photo.2gis.com/video-gallery/fcd36274-5340-48b9-863b-b0fd8538ba3f","i1.photo.2gis.com/video-gallery/202681ad-c227-4a89-93bf-a18f662abc2d","i0.photo.2gis.com/photo-gallery/2c08205f-bace-4ce4-9af5-bf757d95ffff"];
+const img=(s,a)=>`<img src="https://${s}.jpg" alt="${a}" loading="lazy">`;
+document.getElementById('works6').innerHTML=[0,9,13,17,6,3].map(i=>`<div class="ph">${img(W[i],'Работа мастера Гудлак')}</div>`).join('');
+const G=[];W.forEach((s,i)=>{G.push(`<div class="ph ${i%5===0?'t':''}">${img(s,'Работа мастера')}</div>`);if(i%6===2&&S.length)G.push(`<div class="ph">${img(S.shift(),'Студия Гудлак')}</div>`)});
+document.getElementById('gal').innerHTML=G.join('');
+
+const pages=[...document.querySelectorAll('.page')],links=[...document.querySelectorAll('.links a')],nav=document.getElementById('links');
+const titles={'/':'Гудлак — ногтевая студия в Новосибирске','/prices':'Цены — Гудлак','/studios':'Студии — Гудлак','/works':'Работы мастеров — Гудлак','/reviews':'Отзывы — Гудлак','/contacts':'Контакты — Гудлак'};
+function route(){const p=location.hash.replace(/^#/,'')||'/';const t=pages.find(x=>x.dataset.page===p)||pages[0];pages.forEach(x=>x.classList.toggle('on',x===t));links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+t.dataset.page));nav.classList.remove('open');scrollTo(0,0);document.title=titles[t.dataset.page]}
+addEventListener('hashchange',route);route();
+document.getElementById('burger').onclick=()=>nav.classList.toggle('open');
+const lb=document.getElementById('lb'),li=lb.querySelector('img');
+document.addEventListener('click',e=>{const b=e.target.closest('#gal .ph,#works6 .ph');if(b){li.src=b.querySelector('img').src;lb.classList.add('on')}});
+lb.onclick=()=>lb.classList.remove('on');addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+document.querySelectorAll('img').forEach(i=>i.addEventListener('error',()=>{i.style.visibility='hidden'}));
+</script>
+</body>
+</html>
