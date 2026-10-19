@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Лаконика — маникюр и педикюр, Краснодар, ул. Репина, 2/к</title>
+<meta name="description" content="Ногтевая студия «Лаконика» в Краснодаре: маникюр, педикюр, наращивание, японский маникюр. Ежедневно 9:00–22:00 по записи. ул. Репина, 2/к, 2 этаж, каб. 206.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Commissioner:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--milk:#fbf9f7;--nude:#efe2da;--nude2:#e2cfc4;--taupe:#a57f71;--esp:#33241f;--esp2:#6b5850;--lemon:#efd24b;--line:#e3d6ce}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:300 17px/1.65 Commissioner,system-ui,sans-serif;color:var(--esp);background:var(--milk);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--taupe);outline-offset:3px}
+h1,h2,h3,.disp{font-family:"Tenor Sans",serif;font-weight:400;line-height:1.1}
+h2{font-size:clamp(32px,4.6vw,54px);margin-bottom:20px}
+h3{font-size:22px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+section{padding:84px 0}
+.lead{font-size:19px;color:var(--esp2);max-width:58ch}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--lemon);margin-right:10px;vertical-align:middle}
+
+header{position:sticky;top:0;z-index:40;background:rgba(251,249,247,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;height:68px;gap:24px}
+.logo{font:400 26px "Tenor Sans";text-decoration:none;letter-spacing:.01em}
+nav{display:flex;gap:2px;margin-left:auto}
+nav a{text-decoration:none;padding:8px 13px;border-radius:999px;font-size:15px;font-weight:400;color:var(--esp2)}
+nav a:hover{background:var(--nude)}
+nav a.on{background:var(--esp);color:var(--milk)}
+.hd .cta{text-decoration:none;font-weight:500;font-size:15px;border:1px solid var(--esp);border-radius:999px;padding:8px 16px}
+.hd .cta:hover{background:var(--esp);color:var(--milk)}
+.burger{display:none;margin-left:auto;background:none;border:0;font:500 15px Commissioner;padding:8px;cursor:pointer;color:var(--esp)}
+
+.page{display:none}.page.on{display:block}
+
+.hero{padding:64px 0 76px}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(64px,10vw,132px);letter-spacing:-.02em;line-height:.95}
+.hero p{font-size:20px;color:var(--esp2);margin:26px 0 30px;max-width:30ch}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;padding:15px 26px;border-radius:999px;font-weight:500;font-size:16px;border:1px solid var(--esp)}
+.btn.f{background:var(--esp);color:var(--milk)}
+.btn.f:hover{background:#4a3730}
+.btn.g:hover{background:var(--nude)}
+.meta{margin-top:30px;font-size:15px;color:var(--esp2);display:grid;gap:4px}
+/* almond nail-shaped frames */
+.tips{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;align-items:end}
+.tip{border-radius:999px 999px 22px 22px;overflow:hidden;background:var(--nude);aspect-ratio:1/2.1}
+.tip img{width:100%;height:100%;object-fit:cover}
+.tip:nth-child(1){transform:translateY(-34px)}.tip:nth-child(2){transform:translateY(-8px)}.tip:nth-child(3){transform:translateY(-52px)}.tip:nth-child(4){transform:translateY(-18px)}.tip:nth-child(5){transform:translateY(-40px)}
+
+.band{background:var(--nude)}
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--nude2);margin-top:30px}
+.svc a{padding:26px 24px 28px 0;border-bottom:1px solid var(--nude2);text-decoration:none;display:block}
+.svc a:not(:nth-child(3n)){border-right:1px solid var(--nude2);}
+.svc a:not(:nth-child(3n+1)){padding-left:24px}
+.svc h3{margin-bottom:8px}
+.svc .pr{font:400 28px "Tenor Sans";color:var(--taupe)}
+.svc p{font-size:15px;color:var(--esp2);margin-top:6px}
+
+.quote{font:400 clamp(26px,3.6vw,40px)/1.3 "Tenor Sans";max-width:24ch}
+.quote+.who{margin-top:18px;color:var(--esp2);font-size:15px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.split img{border-radius:999px 999px 28px 28px;aspect-ratio:3/4;object-fit:cover;width:100%;max-width:420px;justify-self:end}
+.list{list-style:none;margin-top:18px}
+.list li{padding:12px 0;border-bottom:1px solid var(--line)}
+
+/* price page */
+.pcat{margin-top:44px}
+.pcat h3{font-size:30px;padding-bottom:12px;border-bottom:1px solid var(--esp)}
+.prow{display:grid;grid-template-columns:1fr auto;gap:6px 24px;padding:18px 0;border-bottom:1px solid var(--line)}
+.prow b{font-weight:500}
+.prow .p{font:400 22px "Tenor Sans";white-space:nowrap}
+.prow small{grid-column:1/-1;color:var(--esp2);font-size:15px}
+.note{margin-top:30px;padding:18px 22px;background:var(--nude);border-radius:16px;font-size:15px;max-width:720px}
+
+/* gallery */
+.gal{columns:4 220px;column-gap:12px;margin-top:30px}
+.gal figure{break-inside:avoid;margin-bottom:12px;border-radius:18px;overflow:hidden;cursor:zoom-in;background:var(--nude)}
+.gal img{width:100%}
+.lb{position:fixed;inset:0;background:rgba(51,36,31,.94);display:none;align-items:center;justify-content:center;z-index:90;padding:20px}
+.lb.on{display:flex}
+.lb img{max-height:88vh;max-width:94vw;border-radius:14px}
+.lb button{position:absolute;top:14px;right:20px;background:none;border:0;color:#fff;font-size:34px;cursor:pointer}
+
+/* reviews */
+.revs{columns:3 300px;column-gap:22px;margin-top:30px}
+.rev{break-inside:avoid;margin-bottom:22px;padding:24px;background:#fff;border:1px solid var(--line);border-radius:18px}
+.rev p{margin-bottom:12px}
+.rev .who{font-size:14px;color:var(--esp2)}
+.score{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+.score b{font:400 84px/1 "Tenor Sans"}
+.score span{color:var(--esp2)}
+
+.contacts{display:grid;grid-template-columns:1fr 1.3fr;gap:40px;margin-top:30px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:12px 22px;margin-bottom:26px}
+.kv dt{color:var(--esp2)}
+.kv a{font-weight:500;text-decoration:none}
+.map{border-radius:24px;overflow:hidden;min-height:400px;background:var(--nude)}
+.map iframe{width:100%;height:100%;min-height:400px;border:0;display:block}
+
+footer{border-top:1px solid var(--line);padding:40px 0 100px;font-size:15px;color:var(--esp2)}
+.ft{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer .logo{font-size:22px;color:var(--esp);display:block;margin-bottom:6px}
+footer a{text-decoration:none}
+.credit{margin-top:20px;font-size:12px;color:#9a8a83}
+.callbar{display:none}
+
+@media (max-width:900px){
+ nav{display:none;position:absolute;top:68px;left:0;right:0;background:var(--milk);flex-direction:column;padding:10px 18px 18px;border-bottom:1px solid var(--line)}
+ nav.open{display:flex}
+ nav a{padding:12px 14px}
+ .hd .cta{display:none}
+ .burger{display:block}
+ .hero .wrap,.split,.contacts{grid-template-columns:1fr}
+ .hero{padding-top:40px}
+ .tips{margin-top:50px}
+ .svc{grid-template-columns:1fr}
+ .svc a{border-right:0!important;padding-left:0!important}
+ .split img{justify-self:start}
+ .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:50;gap:8px}
+ .callbar a{flex:1;text-align:center;text-decoration:none;padding:14px;border-radius:999px;font-weight:500;background:var(--esp);color:var(--milk);box-shadow:0 6px 20px rgba(51,36,31,.25)}
+ .callbar a+a{background:var(--milk);color:var(--esp);border:1px solid var(--esp)}
+}
+@media (max-width:520px){
+ .wrap{padding:0 16px}
+ section{padding:60px 0}
+ .tips{gap:7px}
+ .gal{columns:2;column-gap:8px}.gal figure{margin-bottom:8px;border-radius:12px}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap hd">
+  <a class="logo" href="#/">лаконика</a>
+  <button class="burger" aria-expanded="false" aria-controls="nav">Меню</button>
+  <nav id="nav">
+   <a href="#/" data-r="">Главная</a>
+   <a href="#/prices" data-r="prices">Услуги и цены</a>
+   <a href="#/works" data-r="works">Работы</a>
+   <a href="#/reviews" data-r="reviews">Отзывы</a>
+   <a href="#/contacts" data-r="contacts">Контакты</a>
+  </nav>
+  <a class="cta" href="https://wa.me/79528758010" target="_blank" rel="noopener">Записаться</a>
+ </div>
+</header>
+
+<main>
+<div class="page" id="p-">
+ <div class="hero">
+  <div class="wrap">
+   <div>
+    <h1>лаконика</h1>
+    <p>Маникюр и педикюр в спокойной студии на Репина. Аккуратно, без спешки, с покрытием, которое держится.</p>
+    <div class="btns">
+     <a class="btn f" href="https://wa.me/79528758010" target="_blank" rel="noopener">Записаться в WhatsApp</a>
+     <a class="btn g" href="tel:+79528758010">Позвонить</a>
+    </div>
+    <div class="meta"><span><span class="dot"></span>Ежедневно 9:00–22:00, по записи</span><span>ул. Репина, 2/к, 2 этаж, кабинет 206</span><span>5,0 в 2ГИС · 30 отзывов</span></div>
+   </div>
+   <div class="tips" aria-hidden="true">
+    <div class="tip"><img src="https://i7.photo.2gis.com/photo-gallery/703a0e70-3e98-439e-a1d7-29e51eaff503.jpg" alt=""></div>
+    <div class="tip"><img src="https://i8.photo.2gis.com/photo-gallery/6ced6f72-4138-4a8b-b09e-a97cddfdc7af.jpg" alt=""></div>
+    <div class="tip"><img src="https://i3.photo.2gis.com/photo-gallery/879c17e4-64a5-41f6-9326-21ec1784c423.jpg" alt=""></div>
+    <div class="tip"><img src="https://i9.photo.2gis.com/photo-gallery/8c5bae10-bfc7-4041-9f5d-4f8f66847c64.jpg" alt=""></div>
+    <div class="tip"><img src="https://i2.photo.2gis.com/photo-gallery/026d554f-c759-4ea0-a20f-669099493d96.jpg" alt=""></div>
+   </div>
+  </div>
+ </div>
+
+ <section class="band">
+  <div class="wrap">
+   <h2>Услуги</h2>
+   <p class="lead">Короткий прайс без мелкого шрифта. Всё, что входит в услугу, написано рядом с ценой.</p>
+   <div class="svc">
+    <a href="#/prices"><h3>Маникюр с покрытием</h3><div class="pr">2 400 ₽</div><p>Маникюр, гель-лак и укрепление</p></a>
+    <a href="#/prices"><h3>Японский маникюр</h3><div class="pr">1 500 ₽</div><p>Блеск натуральных ногтей без покрытия, держится около 10 дней</p></a>
+    <a href="#/prices"><h3>Педикюр с покрытием</h3><div class="pr">2 300 ₽</div><p>С обработкой пяточек — +300 ₽</p></a>
+   </div>
+   <p style="margin-top:28px"><a class="btn g" href="#/prices">Все услуги и цены</a></p>
+  </div>
+ </section>
+
+ <section>
+  <div class="wrap split">
+   <div>
+    <p class="quote">«Работаю на кухне, руки постоянно контактируют с водой. Маникюр держится, несмотря ни на что, более трёх недель».</p>
+    <p class="who">Дарья Светличная, отзыв в 2ГИС</p>
+   </div>
+   <img src="https://i5.photo.2gis.com/photo-gallery/ddc87aca-ce22-4264-842e-a74f3c43977b.jpg" alt="Молочный маникюр, работа студии" loading="lazy">
+  </div>
+ </section>
+
+ <section class="band">
+  <div class="wrap split">
+   <img src="https://i4.photo.2gis.com/photo-gallery/247aa189-dfd1-4f0a-ae29-f1e4235a82cc.jpg" alt="Белый маникюр квадратной формы" loading="lazy" style="justify-self:start">
+   <div>
+    <h2>Мастер — Регина</h2>
+    <p class="lead">Почти в каждом отзыве её благодарят по имени: за аккуратность, за форму и архитектуру ногтя, за то, что слушает пожелания и подсказывает, как ухаживать за руками между визитами.</p>
+    <ul class="list">
+     <li>Классический, аппаратный, японский и пудровый маникюр</li>
+     <li>Гель-лак, наращивание гелем, френч и ручная роспись</li>
+     <li>Мужской и детский маникюр, женский и мужской педикюр</li>
+    </ul>
+   </div>
+  </div>
+ </section>
+
+ <section>
+  <div class="wrap">
+   <h2>Работы</h2>
+   <div class="gal" id="galHome"></div>
+   <p style="margin-top:20px"><a class="btn g" href="#/works">Смотреть все работы</a></p>
+  </div>
+ </section>
+</div>
+
+<div class="page" id="p-prices">
+ <section>
+  <div class="wrap">
+   <h2 style="font-size:clamp(40px,7vw,80px)">Услуги и цены</h2>
+   <p class="lead">Цены из прайса студии в 2ГИС. Записаться можно в WhatsApp или по телефону.</p>
+   <div class="pcat"><h3>Маникюр</h3>
+    <div class="prow"><b>Классический маникюр</b><span class="p">1 500 ₽</span><small>Комбинированный маникюр + лак-стекло</small></div>
+    <div class="prow"><b>Японский маникюр</b><span class="p">1 500 ₽</span><small>Блеск натуральных ногтей, специальная пудра, без покрытия. Держится около 10 дней</small></div>
+    <div class="prow"><b>Маникюр с покрытием гель-лак</b><span class="p">2 400 ₽</span><small>Маникюр, покрытие и укрепление</small></div>
+    <div class="prow"><b>Маникюр с дизайном: френч, роспись</b><span class="p">2 400 ₽</span><small>Маникюр, покрытие, укрепление, ручная роспись или френч на выбор</small></div>
+    <div class="prow"><b>Мужской маникюр</b><span class="p">1 500 ₽</span><small>Классический мужской маникюр</small></div>
+   </div>
+   <div class="pcat"><h3>Наращивание</h3>
+    <div class="prow"><b>Наращивание ногтей</b><span class="p">2 600 ₽</span><small>Наращивание, укрепление, моделирование</small></div>
+   </div>
+   <div class="pcat"><h3>Педикюр</h3>
+    <div class="prow"><b>Классический педикюр</b><span class="p">2 000 ₽</span><small>Комбинированный педикюр. С обработкой пяточек — +300 ₽</small></div>
+    <div class="prow"><b>Педикюр с покрытием гель-лак</b><span class="p">2 300 ₽</span><small>С обработкой пяточек — +300 ₽</small></div>
+    <div class="prow"><b>Мужской педикюр</b><span class="p">2 500 ₽</span><small>Классический мужской педикюр</small></div>
+   </div>
+   <p class="note"><span class="dot"></span>Оплата наличными, переводом или по QR-коду. Детский, аппаратный и пудровый маникюр тоже делают — стоимость уточните при записи.</p>
+  </div>
+ </section>
+</div>
+
+<div class="page" id="p-works">
+ <section>
+  <div class="wrap">
+   <h2 style="font-size:clamp(40px,7vw,80px)">Работы</h2>
+   <p class="lead">Фото студии из 2ГИС: нюд, молочный, френч, тёмные оттенки и яркие летние цвета. Нажмите, чтобы рассмотреть.</p>
+   <div class="gal" id="galAll"></div>
+  </div>
+ </section>
+</div>
+
+<div class="page" id="p-reviews">
+ <section>
+  <div class="wrap">
+   <h2 style="font-size:clamp(40px,7vw,80px)">Отзывы</h2>
+   <div class="score"><b>5,0</b><span>в 2ГИС · 30 отзывов, 33 оценки · <a href="https://2gis.ru/krasnodar/firm/70000001081218095/tab/reviews" target="_blank" rel="noopener">читать в 2ГИС</a></span></div>
+   <div class="revs">
+    <div class="rev"><p>Сказать, что я довольна работой Регины — ничего не сказать. Чистый маникюр, идеальное покрытие, прекрасная архитектура ногтей.</p><div class="who">Татьяна Лапко · 2ГИС</div></div>
+    <div class="rev"><p>Регина — отличный мастер! Работаю на кухне, руки постоянно контактируют с водой. Маникюр держится, несмотря ни на что, более трёх недель.</p><div class="who">Дарья Светличная · 2ГИС</div></div>
+    <div class="rev"><p>К мастеру Регине хожу больше года и на маникюр, и на педикюр. Всегда всё на высшем уровне: услышит, подскажет, порекомендует.</p><div class="who">Анастасия Гусакова · 2ГИС</div></div>
+    <div class="rev"><p>Мастер внимательно выслушала все пожелания и воплотила их в реальность. Покрытие не трескается и не отслаивается! В студии очень уютно, чисто, комфортно.</p><div class="who">Юлия Шубина · 2ГИС</div></div>
+    <div class="rev"><p>Делаю ноготочки у Регины уже давно! Всегда предложит что-то новенькое. Всегда ухожу с хорошим настроением и красивыми ручками.</p><div class="who">Екатерина Киян · 2ГИС</div></div>
+    <div class="rev"><p>Хороший мастер, прислушивается к пожеланиям и приятный собеседник без навязчивости.</p><div class="who">Anatoly Bannov · 2ГИС</div></div>
+   </div>
+  </div>
+ </section>
+</div>
+
+<div class="page" id="p-contacts">
+ <section>
+  <div class="wrap">
+   <h2 style="font-size:clamp(40px,7vw,80px)">Контакты</h2>
+   <div class="contacts">
+    <div>
+     <dl class="kv">
+      <dt>Адрес</dt><dd>Краснодар, ул. Репина, 2/к<br>2 этаж, кабинет 206</dd>
+      <dt>Часы</dt><dd>Ежедневно 9:00–22:00<br>по предварительной записи</dd>
+      <dt>Телефон</dt><dd><a href="tel:+79528758010">+7 952 875-80-10</a></dd>
+      <dt>Почта</dt><dd><a href="mailto:kroxareg@gmail.com">kroxareg@gmail.com</a></dd>
+      <dt>Оплата</dt><dd>Наличные, перевод, QR-код</dd>
+     </dl>
+     <div class="btns"><a class="btn f" href="https://wa.me/79528758010" target="_blank" rel="noopener">Написать в WhatsApp</a><a class="btn g" href="tel:+79528758010">Позвонить</a></div>
+     <p style="margin-top:20px"><a href="https://yandex.ru/maps/?rtext=~45.072683,38.976685" target="_blank" rel="noopener">Построить маршрут</a></p>
+    </div>
+    <div class="map"><iframe title="Лаконика на карте" loading="lazy" src="https://yandex.ru/map-widget/v1/?ll=38.976685%2C45.072683&z=17&pt=38.976685%2C45.072683%2Cpm2rdm"></iframe></div>
+   </div>
+  </div>
+ </section>
+</div>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="ft">
+   <div><a class="logo" href="#/">лаконика</a>Ногтевая студия · Краснодар, ул. Репина, 2/к, каб. 206</div>
+   <div>Ежедневно 9:00–22:00<br><a href="tel:+79528758010">+7 952 875-80-10</a></div>
+  </div>
+  <div class="credit">Демо-сайт · разработка: Сергей Музыченко, Telegram <a href="https://t.me/spectator0011" target="_blank" rel="noopener">@spectator0011</a></div>
+ </div>
+</footer>
+<div class="callbar"><a href="https://wa.me/79528758010" target="_blank" rel="noopener">Записаться</a><a href="tel:+79528758010">Позвонить</a></div>
+<div class="lb" id="lb" role="dialog" aria-label="Фото работы"><button aria-label="Закрыть">×</button><img alt=""></div>
+
+<script>
+const G=['703a0e70-3e98-439e-a1d7-29e51eaff503@7','6ced6f72-4138-4a8b-b09e-a97cddfdc7af@8','879c17e4-64a5-41f6-9326-21ec1784c423@3','8c5bae10-bfc7-4041-9f5d-4f8f66847c64@9','026d554f-c759-4ea0-a20f-669099493d96@2','222a81ef-bdea-483d-a502-9241bfdcee23@9','2e9d283f-c63a-4146-8842-61b38c4c157e@6','1b687ce3-6a0c-4650-86f1-a103157f8000@2','152a5f9a-9e6e-4c09-b751-aff5fff898dd@6','a6af71a0-ac4a-4372-86f2-cfa78ff685bb@5','7ca5ddd6-ef6f-42ef-9e86-2dff2da2149c@5','3efb6e9a-d144-4a79-adaa-05e33c269865@6','0e57aea7-9d22-476f-8190-83ad1a1ea3cb@3','2af3772d-1b32-4dc5-b6ff-234a76bc9798@6','e37a62f3-8cbb-4f99-8eb7-b161af945574@2','54e6bcc0-1216-4cbd-98f8-b42595ef32ee@4','5701b1dc-94b9-4b4f-8552-c8e3a7281cec@9','367357f0-d2cb-41b0-ac3e-e825214e8d65@9','1ed7191b-085c-4f6d-accf-1e4fdbbf08df@8','ad7f8701-3474-442a-9484-8d109a4aefe2@5','8d3ac7b8-32f6-496d-a3b8-a7dc12a1d519@6','ea30052b-724e-48f0-8113-833748f1985f@8','7c47d739-bb7b-4be0-9577-5c38af6f1bd9@9','9825efc0-69b7-4536-965d-df7118ba2a5a@4','c4e68437-5206-4ec9-85fa-620a9d418257@6','c58d7a01-b835-4e05-bd60-91ccb04a1d3c@8'].map(s=>{const[id,n]=s.split('@');return`https://i${n}.photo.2gis.com/photo-gallery/${id}.jpg`});
+const fill=(el,list)=>{el.innerHTML=list.map(u=>`<figure><img src="${u}" alt="Работа студии Лаконика" loading="lazy"></figure>`).join('')};
+fill(document.getElementById('galHome'),G.slice(5,13));fill(document.getElementById('galAll'),G);
+function route(){
+ const r=location.hash.replace(/^#\/?/,'');const id=['','prices','works','reviews','contacts'].includes(r)?r:'';
+ document.querySelectorAll('.page').forEach(p=>p.classList.toggle('on',p.id==='p-'+id));
+ document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.dataset.r===id));
+ document.getElementById('nav').classList.remove('open');scrollTo(0,0);
+}
+addEventListener('hashchange',route);route();
+const bg=document.querySelector('.burger');bg.onclick=()=>{const n=document.getElementById('nav');n.classList.toggle('open');bg.setAttribute('aria-expanded',n.classList.contains('open'))};
+const lb=document.getElementById('lb');
+document.addEventListener('click',e=>{const i=e.target.closest('.gal img');if(!i)return;lb.querySelector('img').src=i.src;lb.classList.add('on')});
+lb.onclick=e=>{if(e.target.tagName!=='IMG')lb.classList.remove('on')};
+addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+document.addEventListener('error',e=>{const t=e.target;if(t.tagName==='IMG'){(t.closest('figure')||t.closest('.tip')||t).style.display='none'}},true);
+</script>
+</body>
+</html>
