@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Бьюти Академия — студия красоты на Думенко, 27 (ЮМР, Краснодар)</title>
+<meta name="description" content="Маникюр, ресницы, брови, перманент, макияж и причёски, косметология и обучение. Краснодар, ЮМР, ул. Думенко, 27, 2 этаж. Ежедневно 9:00–21:00.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oranienbaum&family=Fira+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--cocoa:#2f201c;--cocoa2:#4a3530;--blush:#f3c4cc;--rose:#c9798a;--gold:#c9a36b;--porc:#fdf7f6;--pampas:#efe4da;--muted:#7b6863;--line:#ead9d4}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:300 17px/1.65 "Fira Sans",system-ui,sans-serif;color:var(--cocoa);background:var(--porc);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--rose);outline-offset:3px}
+h1,h2,h3{font-family:Oranienbaum,serif;font-weight:400;line-height:1.02}
+h2{font-size:clamp(36px,5.2vw,64px);margin-bottom:18px}
+h3{font-size:28px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+.lead{font-size:19px;color:var(--muted);max-width:58ch}
+
+header{position:sticky;top:0;z-index:40;background:var(--cocoa);color:var(--porc)}
+.hd{display:flex;align-items:center;gap:22px;height:66px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:400 24px Oranienbaum}
+.logo i{width:30px;height:30px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;font:normal 13px Oranienbaum;color:var(--gold)}
+nav{display:flex;gap:2px;margin-left:auto}
+nav a{text-decoration:none;padding:7px 12px;border-radius:999px;font-size:15px;color:#e5d6d1}
+nav a:hover{color:#fff;background:var(--cocoa2)}
+nav a.on{background:var(--blush);color:var(--cocoa)}
+.hd .cta{text-decoration:none;font-weight:500;font-size:15px;background:var(--blush);color:var(--cocoa);border-radius:999px;padding:8px 16px;white-space:nowrap}
+.burger{display:none;margin-left:auto;background:none;border:0;color:#fff;font:500 15px "Fira Sans";padding:8px;cursor:pointer}
+.page{display:none}.page.on{display:block}
+
+/* hero: dark field with portfolio mosaic */
+.hero{background:var(--cocoa);color:var(--porc);padding:56px 0 0;overflow:hidden}
+.hero .top{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:end;padding-bottom:42px}
+.hero h1{font-size:clamp(64px,10.5vw,148px);color:var(--blush);letter-spacing:-.01em}
+.hero p{font-size:19px;color:#e5d6d1;max-width:36ch;margin-bottom:24px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;padding:14px 24px;border-radius:999px;font-weight:500;font-size:16px;border:1px solid currentColor}
+.btn.b{background:var(--blush);color:var(--cocoa);border-color:var(--blush)}
+.btn.b:hover{background:#f7d4da}
+.btn.c{background:var(--cocoa);color:var(--porc);border-color:var(--cocoa)}
+.mosaic{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr 1.3fr;gap:6px;height:min(46vw,440px)}
+.mosaic div{overflow:hidden;background:var(--cocoa2)}
+.mosaic img{width:100%;height:100%;object-fit:cover}
+.mosaic div:nth-child(2),.mosaic div:nth-child(4){margin-top:48px}
+.facts{display:flex;flex-wrap:wrap;gap:8px 30px;padding:22px 0;font-size:15px;color:#cdbab4;border-top:1px solid var(--cocoa2)}
+.facts b{color:var(--porc);font-weight:500}
+
+/* directions index */
+.idx{border-top:1px solid var(--cocoa);margin-top:26px}
+.idx a{display:grid;grid-template-columns:1fr auto;align-items:baseline;gap:20px;padding:18px 0;border-bottom:1px solid var(--line);text-decoration:none}
+.idx a span:first-child{font:400 clamp(30px,4.4vw,52px)/1 Oranienbaum}
+.idx a span:last-child{color:var(--muted);font-size:16px;text-align:right}
+.idx a:hover span:first-child{color:var(--rose)}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.split img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.ticks{list-style:none;margin-top:16px}
+.ticks li{padding:11px 0 11px 22px;border-bottom:1px solid var(--line);position:relative}
+.ticks li:before{content:"";position:absolute;left:0;top:21px;width:8px;height:8px;border-radius:50%;background:var(--rose)}
+.pampas{background:var(--pampas)}
+
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:28px}
+.team div{border-top:2px solid var(--cocoa);padding-top:16px}
+.team b{display:block;font:400 30px Oranienbaum;margin-bottom:4px}
+.team p{color:var(--muted);font-size:16px}
+
+/* prices */
+.ph{padding:60px 0 20px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:24px 0 10px;position:sticky;top:66px;background:var(--porc);padding:12px 0;z-index:5}
+.tab{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 16px;font:400 15px "Fira Sans";cursor:pointer;color:var(--cocoa)}
+.tab.on{background:var(--cocoa);color:var(--porc);border-color:var(--cocoa)}
+.pcat{margin:30px 0 46px}
+.pcat h3{font-size:40px;padding-bottom:10px;border-bottom:1px solid var(--cocoa)}
+.sub{font:500 13px "Fira Sans";color:var(--muted);margin:22px 0 2px}
+.prow{display:grid;grid-template-columns:1fr auto;gap:2px 24px;padding:14px 0;border-bottom:1px solid var(--line)}
+.prow .p{font:400 24px Oranienbaum;white-space:nowrap;text-align:right}
+.prow .p small{display:block;font:300 13px "Fira Sans";color:var(--muted)}
+.prow .d{grid-column:1;color:var(--muted);font-size:15px}
+.legend{font-size:15px;color:var(--muted);max-width:760px}
+
+/* gallery */
+.gal{columns:4 220px;column-gap:10px;margin-top:26px}
+.gal figure{break-inside:avoid;margin-bottom:10px;cursor:zoom-in;overflow:hidden;background:var(--pampas)}
+.gal img{width:100%}
+.lb{position:fixed;inset:0;background:rgba(47,32,28,.95);display:none;align-items:center;justify-content:center;z-index:90;padding:20px}
+.lb.on{display:flex}
+.lb img{max-height:88vh;max-width:94vw}
+.lb button{position:absolute;top:14px;right:20px;background:none;border:0;color:#fff;font-size:34px;cursor:pointer}
+
+/* courses */
+.course{display:grid;grid-template-columns:1fr 1.2fr;gap:40px;padding:34px 0;border-top:1px solid var(--cocoa)}
+.course .pr{font:400 46px/1 Oranienbaum;color:var(--rose);margin-top:10px}
+
+/* reviews */
+.scores{display:flex;gap:44px;flex-wrap:wrap;margin:10px 0 30px}
+.scores a{text-decoration:none}
+.scores b{display:block;font:400 78px/1 Oranienbaum}
+.scores span{color:var(--muted);font-size:15px}
+.revs{columns:3 300px;column-gap:24px}
+.rev{break-inside:avoid;margin-bottom:24px;padding:26px;background:#fff;border:1px solid var(--line)}
+.rev p{margin-bottom:12px}
+.rev .who{font-size:14px;color:var(--muted)}
+
+.contacts{display:grid;grid-template-columns:1fr 1.3fr;gap:40px;margin-top:26px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:12px 22px;margin-bottom:24px}
+.kv dt{color:var(--muted)}
+.kv a{font-weight:500;text-decoration:none}
+.map{min-height:420px;background:var(--pampas)}
+.map iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+
+footer{background:var(--cocoa);color:#cdbab4;padding:42px 0 100px;font-size:15px}
+.ft{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer a{text-decoration:none;color:var(--porc)}
+.credit{margin-top:20px;font-size:12px;color:#998781}
+.callbar{display:none}
+
+@media (max-width:960px){
+ nav{display:none;position:absolute;top:66px;left:0;right:0;background:var(--cocoa);flex-direction:column;padding:10px 18px 18px}
+ nav.open{display:flex}
+ nav a{padding:12px 14px}
+ .hd .cta{display:none}
+ .burger{display:block}
+ .hero .top,.split,.contacts,.course{grid-template-columns:1fr}
+ .mosaic{grid-template-columns:repeat(3,1fr);height:auto}
+ .mosaic div{aspect-ratio:3/4}
+ .mosaic div:nth-child(n+4){display:none}
+ .mosaic div:nth-child(2){margin-top:30px}.mosaic div:nth-child(4){margin-top:0}
+ .team{grid-template-columns:1fr}
+ .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50}
+ .callbar a{flex:1;text-align:center;text-decoration:none;padding:15px 6px;font-weight:500;background:var(--cocoa);color:var(--porc)}
+ .callbar a:first-child{background:var(--blush);color:var(--cocoa)}
+}
+@media (max-width:540px){
+ .wrap{padding:0 16px}
+ section{padding:62px 0}
+ .idx a{grid-template-columns:1fr}
+ .idx a span:last-child{text-align:left}
+ .gal{columns:2;column-gap:6px}.gal figure{margin-bottom:6px}
+ .tabs{top:66px;flex-wrap:nowrap;overflow-x:auto;margin-left:-16px;margin-right:-16px;padding-left:16px;padding-right:16px}
+ .tab{white-space:nowrap}
+}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap hd">
+  <a class="logo" href="#/"><i>BA</i>Бьюти Академия</a>
+  <button class="burger" aria-expanded="false" aria-controls="nav">Меню</button>
+  <nav id="nav">
+   <a href="#/" data-r="">Главная</a>
+   <a href="#/prices" data-r="prices">Услуги и цены</a>
+   <a href="#/works" data-r="works">Работы</a>
+   <a href="#/courses" data-r="courses">Обучение</a>
+   <a href="#/reviews" data-r="reviews">Отзывы</a>
+   <a href="#/contacts" data-r="contacts">Контакты</a>
+  </nav>
+  <a class="cta" href="https://wa.me/79937636943" target="_blank" rel="noopener">Записаться</a>
+ </div>
+</header>
+
+<main>
+<div class="page" id="p-">
+ <div class="hero">
+  <div class="wrap">
+   <div class="top">
+    <h1>Бьюти Академия</h1>
+    <div>
+     <p>Студия красоты в Юбилейном: ногти, ресницы, брови, перманент, макияж и причёски, косметология. Устройте себе бьюти-день в одном месте.</p>
+     <div class="btns"><a class="btn b" href="https://wa.me/79937636943" target="_blank" rel="noopener">Записаться в WhatsApp</a><a class="btn" href="tel:+79937636943">Позвонить</a></div>
+    </div>
+   </div>
+   <div class="mosaic" aria-hidden="true">
+    <div><img src="https://i4.photo.2gis.com/photo-gallery/3302fef6-ed56-4469-b087-500e1f7291e9.jpg" alt=""></div>
+    <div><img src="https://i2.photo.2gis.com/images/branch/0/30258560104880105_0d00.jpg" alt=""></div>
+    <div><img src="https://i7.photo.2gis.com/photo-gallery/ef2449eb-ee31-4c59-a8dc-09142c314687.jpg" alt=""></div>
+    <div><img src="https://i2.photo.2gis.com/photo-gallery/1b503292-c889-4706-b714-314dbd7afde3.jpg" alt=""></div>
+    <div><img src="https://i9.photo.2gis.com/photo-gallery/31e58011-0828-4350-b4e5-a3060b354c0a.jpg" alt=""></div>
+   </div>
+   <div class="facts"><span><b>Ежедневно</b> 9:00–21:00 по записи</span><span><b>5,0</b> в Яндекс Картах</span><span><b>4,9</b> в 2ГИС</span><span>ул. Думенко, 27, 2 этаж</span></div>
+  </div>
+ </div>
+
+ <section>
+  <div class="wrap">
+   <h2>Направления</h2>
+   <div class="idx">
+    <a href="#/prices?c=nails"><span>Ногти</span><span>маникюр с покрытием от 1 600 ₽</span></a>
+    <a href="#/prices?c=lashes"><span>Ресницы</span><span>наращивание от 1 900 ₽</span></a>
+    <a href="#/prices?c=brows"><span>Брови</span><span>коррекция от 800 ₽</span></a>
+    <a href="#/prices?c=pm"><span>Перманентный макияж</span><span>брови или губы 7 500 ₽</span></a>
+    <a href="#/prices?c=mua"><span>Макияж и причёски</span><span>свадебный образ 7 000 ₽</span></a>
+    <a href="#/prices?c=cosmo"><span>Косметология</span><span>чистка лица от 3 000 ₽</span></a>
+    <a href="#/courses"><span>Обучение</span><span>курс «Бровист PRO» и уроки макияжа</span></a>
+   </div>
+  </div>
+ </section>
+
+ <section class="pampas">
+  <div class="wrap split">
+   <img src="https://i4.photo.2gis.com/photo-gallery/686e35d0-1fd4-4a2e-8f39-b4d633ed38b5.jpg" alt="Визажист делает макияж в студии" loading="lazy">
+   <div>
+    <h2>Чай, кофе и спокойно</h2>
+    <p class="lead">Гости в отзывах пишут, что сюда приходят «навести красоту посреди рабочей суматохи». Администратор встретит, предложит чай или кофе, а мастера не торопят.</p>
+    <ul class="ticks">
+     <li>Несколько услуг за один визит — от бровей до маникюра</li>
+     <li>Мастер и топ-мастер на выбор в ресницах, ногтях и макияже</li>
+     <li>Выезд визажиста и стилиста на дом</li>
+     <li>Wi-Fi, пандус, оплата картой, по QR-коду и переводом</li>
+    </ul>
+   </div>
+  </div>
+ </section>
+
+ <section>
+  <div class="wrap">
+   <h2>Мастера, которых называют в отзывах</h2>
+   <div class="team">
+    <div><b>Алина</b><p>Маникюр. «Ни одного пореза, покрытие держится» — так пишут о ней чаще всего.</p></div>
+    <div><b>Виктория</b><p>Косметология: чистки лица и уходы, подбор домашнего ухода после процедуры.</p></div>
+    <div><b>Анна</b><p>Брови: форма, окрашивание, долговременная укладка — с вниманием к деталям.</p></div>
+   </div>
+  </div>
+ </section>
+</div>
+
+<div class="page" id="p-prices">
+ <div class="wrap ph">
+  <h2 style="font-size:clamp(44px,7vw,86px)">Услуги и цены</h2>
+  <p class="legend">Цены из прайса студии на Яндекс Картах (обновлён 18 сентября) и в 2ГИС. Где указано две цены — первая у мастера, вторая у топ-мастера.</p>
+  <div class="tabs" id="tabs"></div>
+  <div id="plist"></div>
+ </div>
+</div>
+
+<div class="page" id="p-works">
+ <section>
+  <div class="wrap">
+   <h2 style="font-size:clamp(44px,7vw,86px)">Работы</h2>
+   <p class="lead">Макияж, причёски, ресницы, брови и маникюр — фото студии из 2ГИС. Нажмите, чтобы рассмотреть.</p>
+   <div class="gal" id="gal"></div>
+  </div>
+ </section>
+</div>
+
+<div class="page" id="p-courses">
+ <section>
+  <div class="wrap">
+   <h2 style="font-size:clamp(44px,7vw,86px)">Обучение</h2>
+   <p class="lead">Академия в названии не просто так: в студии учат бровистов и проводят уроки макияжа для себя.</p>
+   <div class="course" style="margin-top:34px">
+    <div><h3>Бровист PRO</h3><div class="pr">20 000 ₽</div></div>
+    <div><p>3 дня: теория и практика на 4 моделях. Архитектура, окрашивание, долговременная укладка, ботокс. Инструменты и сертификат входят в стоимость.</p></div>
+   </div>
+   <div class="course">
+    <div><h3>Сам себе визажист</h3><div class="pr">4 500–9 000 ₽</div></div>
+    <div><p>1–3 занятия для себя: дневной, смоки и вечерний макияж. Доступ к онлайн-урокам и рабочая тетрадь.</p></div>
+   </div>
+   <div class="course">
+    <div><h3>Визажист с нуля</h3><div class="pr" style="font-size:30px">по запросу</div></div>
+    <div><p>Программу и стоимость уточните у администратора.</p><p style="margin-top:16px"><a class="btn c" href="https://wa.me/79937636943" target="_blank" rel="noopener">Спросить об обучении</a></p></div>
+   </div>
+  </div>
+ </section>
+</div>
+
+<div class="page" id="p-reviews">
+ <section>
+  <div class="wrap">
+   <h2 style="font-size:clamp(44px,7vw,86px)">Отзывы</h2>
+   <div class="scores">
+    <a href="https://yandex.ru/maps/org/byuti_akademiya/44903346583/reviews/" target="_blank" rel="noopener"><b>5,0</b><span>Яндекс Карты · 135 оценок</span></a>
+    <a href="https://2gis.ru/krasnodar/firm/70000001039198203/tab/reviews" target="_blank" rel="noopener"><b>4,9</b><span>2ГИС · 152 оценки</span></a>
+   </div>
+   <div class="revs">
+    <div class="rev"><p>Являюсь клиенткой Бьюти Академии уже много лет. Профессиональные мастера, приятные бонусы для клиентов, спокойная атмосфера. Это рай для девушек, которые хотят расслабиться и навести красоту посреди рабочей суматохи.</p><div class="who">Нурета Мафагел · 2ГИС</div></div>
+    <div class="rev"><p>Была у мастера Алины на маникюре с покрытием. Фото — вид после двух недель носки. Никаких отслоек, аккуратно. У меня близко сосуды к кутикуле — ни одного пореза.</p><div class="who">Юлия Голубицкая · 2ГИС</div></div>
+    <div class="rev"><p>Делаю ресницы и брови в этом прекрасном месте. Прислушиваются ко всем пожеланиям. Очень чисто, все мастера приветливы, всегда предлагают чай, кофе или воду.</p><div class="who">Алина Натопта · 2ГИС</div></div>
+    <div class="rev"><p>Делала вечерний макияж и причёску. Образ получился именно таким, как я хотела, и продержался до конца мероприятия.</p><div class="who">Татьяна Чирко · 2ГИС</div></div>
+    <div class="rev"><p>Посещаю салон уже несколько лет, очень удобно, что всё есть в одном месте — устраиваю раз в месяц себе бьюти-день.</p><div class="who">Инна Минашкина · 2ГИС</div></div>
+    <div class="rev"><p>Спасибо мастеру Анне за внимание и качественно сделанную работу с моими бровями. Очень чуткое внимание к деталям.</p><div class="who">Елена Бурлуцкая · 2ГИС</div></div>
+   </div>
+  </div>
+ </section>
+</div>
+
+<div class="page" id="p-contacts">
+ <section>
+  <div class="wrap">
+   <h2 style="font-size:clamp(44px,7vw,86px)">Контакты</h2>
+   <div class="contacts">
+    <div>
+     <dl class="kv">
+      <dt>Адрес</dt><dd>Краснодар, мкр. Юбилейный,<br>ул. Думенко, 27, 2 этаж</dd>
+      <dt>Часы</dt><dd>Ежедневно 9:00–21:00, по записи</dd>
+      <dt>Администратор</dt><dd><a href="tel:+79937636943">+7 993 763-69-43</a></dd>
+      <dt>Почта</dt><dd><a href="mailto:viktoriya_95@mail.ru">viktoriya_95@mail.ru</a></dd>
+     </dl>
+     <div class="btns">
+      <a class="btn c" href="https://wa.me/79937636943" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn" href="https://t.me/+79937636943" target="_blank" rel="noopener">Telegram</a>
+      <a class="btn" href="https://vk.com/beautyacademy_vm" target="_blank" rel="noopener">ВКонтакте</a>
+     </div>
+     <p style="margin-top:20px"><a href="https://yandex.ru/maps/?rtext=~45.036704,38.916212" target="_blank" rel="noopener">Построить маршрут</a></p>
+    </div>
+    <div class="map"><iframe title="Бьюти Академия на карте" loading="lazy" src="https://yandex.ru/map-widget/v1/?ll=38.916212%2C45.036704&z=16&pt=38.916212%2C45.036704%2Cpm2rdm"></iframe></div>
+   </div>
+  </div>
+ </section>
+</div>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="ft">
+   <div><div class="logo" style="color:var(--porc);margin-bottom:6px"><i>BA</i>Бьюти Академия</div>Краснодар, ЮМР, ул. Думенко, 27, 2 этаж</div>
+   <div>Ежедневно 9:00–21:00<br><a href="tel:+79937636943">+7 993 763-69-43</a></div>
+  </div>
+  <div class="credit">Демо-сайт · разработка: Сергей Музыченко, Telegram <a href="https://t.me/spectator0011" target="_blank" rel="noopener">@spectator0011</a></div>
+ </div>
+</footer>
+<div class="callbar"><a href="https://wa.me/79937636943" target="_blank" rel="noopener">Записаться</a><a href="tel:+79937636943">Позвонить</a><a href="#/prices">Цены</a></div>
+<div class="lb" id="lb" role="dialog" aria-label="Фото"><button aria-label="Закрыть">×</button><img alt=""></div>
+
+<script>
+// [название, цена, описание] ; цена — строка
+const P=[
+['nails','Ногти',[
+ ['Маникюр комбинированный','1 500 ₽'],
+ ['Маникюр + покрытие гель-лак','1 600 / 1 800 ₽'],
+ ['Маникюр + гель или гелевая коррекция','1 900 ₽','длина до 3'],
+ ['Наращивание ногтей','2 800 ₽','аккуратная форма и прочное покрытие'],
+ ['Снятие чужого материала + маникюр + база','1 500 / 1 800 ₽'],
+ ['Мужской маникюр','1 500 / 1 800 ₽'],
+ ['Дизайн: френч','300 ₽'],
+ ['Поднятие «клюющих» ногтей','300 ₽','коррекция растущих вниз ногтей']]],
+['lashes','Ресницы',[
+ ['#Наращивание'],
+ ['Классическое','1 900 / 2 000 ₽'],
+ ['Уголки','1 900 / 2 000 ₽','акцент на внешних уголках глаз'],
+ ['Объём 1,5D','2 000 ₽'],
+ ['Объём 2D','2 000 / 2 200 ₽'],
+ ['Объём 2,5D','2 100 ₽'],
+ ['Объём 3D','2 200 ₽'],
+ ['Объём 3,5D','2 200 / 2 400 ₽'],
+ ['Объём 4D','2 400 ₽'],
+ ['Объём 5D','2 600 ₽'],
+ ['Экспресс-наращивание за 1 час','3 200 ₽'],
+ ['Эффекты: лучи, мокрый, аниме, арабский, медуза','+250 ₽'],
+ ['Цветные или коричневые ресницы','+250 ₽'],
+ ['Снятие чужой работы с последующим наращиванием','300 ₽'],
+ ['Снятие чужой работы без наращивания','500 ₽'],
+ ['#Ламинирование и окрашивание'],
+ ['Ламинирование ресниц','2 500 ₽','окрашивание входит'],
+ ['Ламинирование + окрашивание + ботокс','2 600 ₽'],
+ ['Ботокс ресниц','500 ₽'],
+ ['Окрашивание ресниц','400 ₽']]],
+['brows','Брови',[
+ ['Коррекция пинцетом или воском','800 ₽'],
+ ['Окрашивание хной или краской','800 ₽','стойкий цвет до 3 недель'],
+ ['Мужская коррекция','1 200 ₽','без окрашивания'],
+ ['Коррекция + окрашивание','1 300 ₽'],
+ ['Коррекция + окрашивание + долговременная укладка','1 600 ₽'],
+ ['Коррекция + окрашивание + ботокс','1 600 ₽'],
+ ['Долговременная укладка + коррекция или окрашивание','1 800 ₽'],
+ ['Архитектура + уход','1 800 ₽','моделирование формы с уходовыми средствами'],
+ ['Полный комплекс: коррекция, окрашивание, укладка, ботокс','2 400 ₽'],
+ ['Ваксинг, 1 зона','400 ₽']]],
+['pm','Перманентный макияж',[
+ ['Брови','7 500 ₽','стойкий пигмент на 1–3 года'],
+ ['Губы','7 500 ₽'],
+ ['Коррекция бровей или губ','5 000 ₽','обновление цвета и формы'],
+ ['Коррекция межресничного пространства','4 500 ₽','коррекция стрелок']]],
+['mua','Макияж и причёски',[
+ ['#Макияж'],
+ ['Экспресс-макияж','1 900 ₽'],
+ ['Дневной макияж','3 000 / 3 500 ₽'],
+ ['Вечерний макияж любой сложности','3 500 ₽','40 минут – 1 час'],
+ ['Свадебный макияж','3 500 ₽'],
+ ['#Причёски и укладки'],
+ ['Локоны, волны — до лопаток','2 500 ₽'],
+ ['Локоны, волны — ниже лопаток','3 500 ₽'],
+ ['Выпрямление утюжком','1 500–2 000 ₽','зависит от длины'],
+ ['Экспресс-укладка','2 000 ₽'],
+ ['Свадебная причёска','3 500 ₽'],
+ ['Пробная свадебная причёска','3 500 ₽'],
+ ['#Образы'],
+ ['Свадебный образ: макияж + причёска','7 000 ₽'],
+ ['Пробный образ','5 000–7 000 ₽'],
+ ['Выезд на дом','3 000 ₽','выездная укладка к мероприятию']]],
+['cosmo','Косметология',[
+ ['Консультация','1 200 ₽'],
+ ['#Чистки'],
+ ['Ультразвуковая чистка','3 000 ₽'],
+ ['Механическая (глубокая) чистка','3 500 ₽'],
+ ['Чистка + пилинг','4 500 ₽'],
+ ['Комбинированное очищение «Сияющая кожа»','4 500 ₽'],
+ ['Гидропилинг: вода и вакуум','4 500 ₽'],
+ ['Чистка спины','7 000 ₽'],
+ ['#Пилинги'],
+ ['Всесезонный','2 500–4 000 ₽'],
+ ['Сезонный','3 500–4 500 ₽'],
+ ['CASMARA','2 500 ₽'],
+ ['Оранж пил MEDI+DERMA','3 500 ₽'],
+ ['Пилинг выходного дня','3 500 ₽'],
+ ['Феруловый MEDI+DERMA','3 900 ₽'],
+ ['Осветляющий MEDI+DERMA','4 000 ₽'],
+ ['БиоРеПил','4 500 ₽'],
+ ['Эльдермафил: омоложение и выравнивание тона','4 900 ₽'],
+ ['#Уходы'],
+ ['CASMARA «Себоконтроль»','3 500 ₽','5 сеансов — 15 000 ₽, 10 — 25 000 ₽'],
+ ['CASMARA «Увлажнение»','3 500 ₽','5 сеансов — 15 000 ₽, 10 — 25 000 ₽'],
+ ['CASMARA обновляющий','3 500 ₽'],
+ ['CASMARA «Чистый кислород»','4 000 ₽'],
+ ['CASMARA «Восстановление и питание»','4 000 ₽'],
+ ['Флэш-уход «Сияние»','4 000 ₽','3 сеанса — 10 500 ₽, 6 — 21 000 ₽'],
+ ['Флэш-уход «Увлажнение и питание» MEDI+DERMA','4 000 ₽'],
+ ['Голливудский 4-ступенчатый уход','5 500 ₽'],
+ ['Альгинатная маска CASMARA','1 200 ₽','только в программе ухода'],
+ ['#Аппаратные программы'],
+ ['Микротоки по контактному гелю','1 500 ₽','5 сеансов — 6 500 ₽, 10 — 12 000 ₽'],
+ ['Микротоки + уход','3 500 ₽','5 сеансов — 15 000 ₽, 10 — 25 000 ₽'],
+ ['RF-лифтинг по контактному гелю','1 500 ₽','5 сеансов — 6 500 ₽, 10 — 12 000 ₽'],
+ ['RF-лифтинг + уход','3 500 ₽','5 сеансов — 15 000 ₽, 10 — 25 000 ₽'],
+ ['Фотоомоложение','7 000 ₽']]]
+];
+let cat='all';
+const tabs=document.getElementById('tabs'),list=document.getElementById('plist');
+tabs.innerHTML='<button class="tab on" data-c="all">Все</button>'+P.map(([k,t])=>`<button class="tab" data-c="${k}">${t}</button>`).join('');
+function render(){list.innerHTML=P.filter(([k])=>cat==='all'||cat===k).map(([k,t,it])=>`<div class="pcat"><h3>${t}</h3>`+it.map(x=>x[0][0]==='#'?`<div class="sub">${x[0].slice(1)}</div>`:`<div class="prow"><span>${x[0]}</span><span class="p">${x[1]}</span>${x[2]?`<span class="d">${x[2]}</span>`:''}</div>`).join('')+'</div>').join('')}
+tabs.onclick=e=>{const b=e.target.closest('.tab');if(!b)return;cat=b.dataset.c;tabs.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x===b));render()};
+const G='c38fa612-ddb6-4341-addd-f983c41ec031@8 b:30258560058296838_46e3@2 3302fef6-ed56-4469-b087-500e1f7291e9@4 46319ddd-8c2a-4820-b04c-4b8de5ba2e4d@7 cf266f18-67dd-4526-96e9-bb110181d8fb@2 a7979e46-ddee-4ff1-93a5-a8f5d6aee7fd@0 46eb0bf9-017d-4719-afe1-f9239c295dc0@2 a05de436-2499-4a0f-a2f4-530035bea2fe@6 572cee5f-7a0f-4815-86cf-df69c0d3f253@7 987c8d2d-9b78-4791-addd-a83357e60479@8 b:30258560168611166_7e70@6 ecca74e5-a358-45f0-89d3-09a829fd3ec4@2 4e7fa983-6c1c-427b-b8f4-689dc6723b46@6 3ac2fbe0-c86e-4b5d-9ab8-9aed579a13ea@3 a67e7db9-e1cb-4e33-b5f7-e8ee00b872ea@6 6a76426b-1812-41a5-a3af-c19cdb2c62e5@4 62441b76-b7b6-4465-8697-9ac5125f7b56@5 c72c3f45-26eb-433b-b79f-014857673baf@3 04c5d45d-fd25-40e2-9043-fad547d44b04@5 4d3e21a7-9f49-45d8-99a0-6388dc4e7536@4 160cdc6a-39b5-4011-bdc9-c405ce7d4bc5@9 a8b9c501-b2b0-43d7-ab72-975264d592d2@9 c5e4b826-e663-4240-820d-0d7237c8a78a@1 f86d2d0b-6c6e-40a6-9f2b-8a2e8ae95cc4@3 fef4b796-03b7-4819-884f-263ec24f3e99@7 7861149b-8bfa-4dad-9c15-7d875f8b88c0@7 df75fc5f-1bdf-4be3-bf8e-8b02bcd0ae1e@4 0b0cc955-c9d9-42e8-8dff-a9267a2a83c9@8'.split(' ').map(s=>{const[id,n]=s.split('@');return id.startsWith('b:')?`https://i${n}.photo.2gis.com/images/branch/0/${id.slice(2)}.jpg`:`https://i${n}.photo.2gis.com/photo-gallery/${id}.jpg`});
+document.getElementById('gal').innerHTML=G.map(u=>`<figure><img src="${u}" alt="Работа мастеров Бьюти Академии" loading="lazy"></figure>`).join('');
+function route(){
+ const h=location.hash.replace(/^#\/?/,'');const [r,qs]=h.split('?');
+ const id=['','prices','works','courses','reviews','contacts'].includes(r)?r:'';
+ document.querySelectorAll('.page').forEach(p=>p.classList.toggle('on',p.id==='p-'+id));
+ document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.dataset.r===id));
+ if(id==='prices'){const c=new URLSearchParams(qs||'').get('c');cat=c&&P.some(x=>x[0]===c)?c:'all';tabs.querySelectorAll('.tab').forEach(b=>b.classList.toggle('on',b.dataset.c===cat));render()}
+ document.getElementById('nav').classList.remove('open');scrollTo(0,0);
+}
+addEventListener('hashchange',route);route();
+const bg=document.querySelector('.burger');bg.onclick=()=>{const n=document.getElementById('nav');n.classList.toggle('open');bg.setAttribute('aria-expanded',n.classList.contains('open'))};
+const lb=document.getElementById('lb');
+document.getElementById('gal').onclick=e=>{const i=e.target.closest('img');if(!i)return;lb.querySelector('img').src=i.src;lb.classList.add('on')};
+lb.onclick=e=>{if(e.target.tagName!=='IMG')lb.classList.remove('on')};
+addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+document.addEventListener('error',e=>{const t=e.target;if(t.tagName==='IMG'){(t.closest('figure')||t).style.display='none'}},true);
+</script>
+</body>
+</html>
