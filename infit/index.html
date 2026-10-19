@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Инфит — фитнес-студия для девушек на Некрасовской, 22 · Самара</title>
+<meta name="description" content="Фитнес-студия для девушек «Инфит» в центре Самары: пилатес на розовых мини-реформерах, ягодицы, жиротоп, сила и растяжка. Первая тренировка бесплатно. Некрасовская ул., 22.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#f4c9d1;--pink2:#fae3e7;--hot:#e2829a;--brick:#9c4a36;--char:#2d2b2b;--wood:#d9bf9a;--off:#f8f4f2;--muted:#6e6563}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:400 17px/1.6 "Golos Text",system-ui,sans-serif;color:var(--char);background:var(--off);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--hot);outline-offset:2px}
+h1,h2,h3,.mono{font-family:"Rubik Mono One",sans-serif;font-weight:400;line-height:1.05}
+h2{font-size:clamp(26px,4.2vw,48px);margin-bottom:20px}
+h3{font-size:18px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+section{padding:80px 0}
+.lead{font-size:18px;color:var(--muted);max-width:58ch}
+
+header{position:sticky;top:0;z-index:40;background:var(--off);border-bottom:1px solid #e7dcd8}
+.hd{display:flex;align-items:center;gap:20px;height:64px}
+.logo{font:400 22px "Rubik Mono One";text-decoration:none;letter-spacing:.02em}
+.logo span{color:var(--hot)}
+nav{display:flex;gap:4px;margin-left:auto}
+nav a{text-decoration:none;padding:8px 13px;border-radius:999px;font-weight:500;font-size:15px}
+nav a:hover{background:var(--pink2)}
+nav a.on{background:var(--char);color:#fff}
+.hd .cta{text-decoration:none;background:var(--pink);font-weight:600;padding:9px 16px;border-radius:999px;white-space:nowrap}
+.burger{display:none;margin-left:auto;background:none;border:1.5px solid var(--char);border-radius:999px;font:600 14px "Golos Text";padding:6px 14px;cursor:pointer}
+.page{display:none}.page.on{display:block}
+
+/* hero */
+.hero{padding:40px 0 70px}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:44px;align-items:center}
+.hero h1{font-size:clamp(64px,11vw,140px);letter-spacing:.01em}
+.hero h1 span{color:var(--hot)}
+.hero .tag{font:400 15px "Rubik Mono One";margin:14px 0 18px}
+.hero p{font-size:19px;color:var(--muted);max-width:32ch;margin-bottom:26px}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;padding:15px 24px;border-radius:999px;font-weight:600;font-size:16px;border:1.5px solid var(--char)}
+.btn.p{background:var(--pink);border-color:var(--pink)}
+.btn.p:hover{background:#efb7c3;border-color:#efb7c3}
+.btn.k{background:var(--char);color:#fff}
+.ph{position:relative}
+.ph img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:28px}
+.free{position:absolute;left:-18px;bottom:28px;background:var(--char);color:#fff;border-radius:22px;padding:16px 20px;max-width:230px}
+.free b{display:block;font:400 30px "Rubik Mono One";color:var(--pink)}
+
+/* programs */
+.progs{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:28px}
+.prog{background:#fff;border-radius:22px;padding:22px 18px;display:flex;flex-direction:column;gap:10px;border:1px solid #eee2de}
+.prog.reformer{background:var(--pink)}
+.prog .n{font:400 15px/1.2 "Rubik Mono One"}
+.prog p{font-size:15px;color:var(--muted)}
+.prog.reformer p{color:var(--char)}
+.prog .k{margin-top:auto;font-size:13px;font-weight:600;color:var(--brick)}
+
+/* fitpass table */
+.pass{width:100%;border-collapse:separate;border-spacing:0;margin-top:26px;background:#fff;border-radius:22px;overflow:hidden;border:1px solid #eee2de}
+.pass th,.pass td{padding:18px 16px;text-align:left;border-bottom:1px solid #f0e6e3}
+.pass thead th{background:var(--char);color:#fff;font:400 14px "Rubik Mono One"}
+.pass thead th small{display:block;font:400 13px "Golos Text";color:#cfc6c3;margin-top:4px}
+.pass tbody th{font-weight:600}
+.pass tbody th small{display:block;font-weight:400;color:var(--muted);font-size:14px}
+.pass td{font:400 19px "Rubik Mono One";white-space:nowrap}
+.pass td small{display:block;font:400 13px "Golos Text";color:var(--muted)}
+.pass tr:last-child th,.pass tr:last-child td{border-bottom:0}
+.pass-wrap{overflow-x:auto}
+.note{margin-top:20px;font-size:15px;color:var(--muted);max-width:760px}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.split img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:28px}
+.ticks{list-style:none;margin-top:18px}
+.ticks li{padding:11px 0 11px 30px;position:relative;border-bottom:1px solid #eadfdb}
+.ticks li:before{content:"";position:absolute;left:0;top:17px;width:16px;height:9px;border-radius:9px;background:var(--hot)}
+
+.coaches{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.coach{background:var(--pink2);border-radius:22px;padding:24px}
+.coach h3{margin-bottom:8px}
+.coach p{color:var(--muted)}
+
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px}
+.gal figure{border-radius:22px;overflow:hidden;cursor:zoom-in;background:var(--pink2)}
+.gal img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.lb{position:fixed;inset:0;background:rgba(45,43,43,.95);display:none;align-items:center;justify-content:center;z-index:90;padding:20px}
+.lb.on{display:flex}
+.lb img{max-height:88vh;max-width:94vw;border-radius:18px}
+.lb button{position:absolute;top:12px;right:20px;background:none;border:0;color:#fff;font-size:36px;cursor:pointer}
+
+.revs{columns:3 280px;column-gap:16px;margin-top:26px}
+.rev{break-inside:avoid;margin-bottom:16px;background:#fff;border-radius:22px;padding:22px;border:1px solid #eee2de}
+.rev p{margin-bottom:10px}
+.rev .who{font-size:14px;color:var(--muted)}
+.score{display:flex;gap:16px;align-items:baseline;flex-wrap:wrap}
+.score b{font:400 64px/1 "Rubik Mono One"}
+.score span{color:var(--muted)}
+
+.contacts{display:grid;grid-template-columns:1fr 1.3fr;gap:30px;margin-top:26px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:12px 20px;margin-bottom:24px}
+.kv dt{color:var(--muted)}
+.kv a{font-weight:600;text-decoration:none}
+.map{border-radius:28px;overflow:hidden;min-height:420px;background:var(--pink2)}
+.map iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+
+footer{background:var(--char);color:#cfc6c3;padding:40px 0 100px;font-size:15px}
+.ft{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer .logo{color:#fff;display:block;margin-bottom:6px}
+footer a{text-decoration:none;color:#fff}
+.credit{margin-top:20px;font-size:12px;color:#8f8784}
+.callbar{display:none}
+
+@media (max-width:960px){
+ nav{display:none;position:absolute;top:64px;left:0;right:0;background:var(--off);flex-direction:column;padding:8px 16px 16px;border-bottom:1px solid #e7dcd8}
+ nav.open{display:flex}
+ nav a{padding:12px 14px}
+ .hd .cta{display:none}
+ .burger{display:block}
+ .hero .wrap,.split,.contacts{grid-template-columns:1fr}
+ .progs{grid-template-columns:1fr 1fr}
+ .gal{grid-template-columns:1fr 1fr}
+ .free{left:12px}
+ .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:50;gap:8px}
+ .callbar a{flex:1;text-align:center;text-decoration:none;padding:14px;border-radius:999px;font-weight:600;background:var(--char);color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.2)}
+ .callbar a:first-child{background:var(--pink);color:var(--char)}
+}
+@media (max-width:560px){
+ .wrap{padding:0 16px}
+ section{padding:58px 0}
+ .progs,.coaches{grid-template-columns:1fr}
+ .pass th,.pass td{padding:14px 10px}
+ .pass td{font-size:15px}
+}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap hd">
+  <a class="logo" href="#/">IN<span>FIT</span></a>
+  <button class="burger" aria-expanded="false" aria-controls="nav">Меню</button>
+  <nav id="nav">
+   <a href="#/" data-r="">Главная</a>
+   <a href="#/prices" data-r="prices">Направления и цены</a>
+   <a href="#/studio" data-r="studio">Студия</a>
+   <a href="#/reviews" data-r="reviews">Отзывы</a>
+   <a href="#/contacts" data-r="contacts">Контакты</a>
+  </nav>
+  <a class="cta" href="tel:+79397107771">Записаться на пробную</a>
+ </div>
+</header>
+
+<main>
+<div class="page" id="p-">
+ <div class="hero">
+  <div class="wrap">
+   <div>
+    <h1>IN<span>FIT</span></h1>
+    <div class="tag">фитнес-студия для девушек</div>
+    <p>Групповые и персональные тренировки в центре Самары, на Некрасовской. Пилатес на розовых мини-реформерах, ягодицы, жиротоп, сила и растяжка.</p>
+    <div class="btns"><a class="btn p" href="tel:+79397107771">Записаться на пробную</a><a class="btn" href="#/prices">Направления</a></div>
+   </div>
+   <div class="ph">
+    <img src="https://i9.photo.2gis.com/photo-gallery/40aee196-bdde-469e-b7f3-2567d129197c.jpg" alt="Девушки в зале студии Инфит у кирпичной стены">
+    <div class="free"><b>0 ₽</b>первая групповая тренировка для новых клиентов</div>
+   </div>
+  </div>
+ </div>
+
+ <section style="background:#fff">
+  <div class="wrap">
+   <h2>Пять направлений</h2>
+   <p class="lead">На любое можно прийти на пробную бесплатно, а потом выбрать фитпас на месяц.</p>
+   <div class="progs">
+    <div class="prog reformer"><div class="n">Pilates детка</div><p>Те самые розовые мини-реформеры. Осанка, глубокие мышцы кора, лёгкая подкачка и сушка.</p><div class="k">реформеры</div></div>
+    <div class="prog"><div class="n">Push-up ягодицы</div><p>Силовая на ягодицы. Никакого кардио — только памп.</p><div class="k">сила</div></div>
+    <div class="prog"><div class="n">Жиротоп</div><p>Высокоинтенсивная тренировка с прыжками и бегом. Около −500 ккал за занятие.</p><div class="k">кардио</div></div>
+    <div class="prog"><div class="n">Сила женственности</div><p>Силовые и функциональные: руки, спина, ноги и пресс — рельеф без утомительного кардио.</p><div class="k">функционал</div></div>
+    <div class="prog"><div class="n">Мисс эластика</div><p>Гибкость по методу INFIT: мобильность, глубокое расслабление, снятие напряжения.</p><div class="k">растяжка</div></div>
+   </div>
+  </div>
+ </section>
+
+ <section>
+  <div class="wrap split">
+   <img src="https://i0.photo.2gis.com/photo-gallery/84ef1aee-045a-44b9-b410-e8d94371cebc.jpg" alt="Раздевалка студии со шкафчиками из светлого дерева" loading="lazy">
+   <div>
+    <h2>Пространство, продуманное до мелочей</h2>
+    <p class="lead">Кирпичные стены, светлое дерево и розовый инвентарь. Раздевалки в отзывах называют «раем для девчонок».</p>
+    <ul class="ticks">
+     <li>Только для девушек</li>
+     <li>Центр города: после тренировки — набережная или Ленинградская</li>
+     <li>Будни 9:00–21:00, суббота 9:00–15:00</li>
+    </ul>
+   </div>
+  </div>
+ </section>
+
+ <section style="background:var(--pink2)">
+  <div class="wrap">
+   <h2>Что пишут девушки</h2>
+   <div class="revs">
+    <div class="rev"><p>Всё продумано до мелочей — сама студия, раздевалки — рай для девчонок. Тренерский состав — супер. Ждала, когда откроется студия на Некрасовской, теперь хожу на тренировки пешком.</p><div class="who">Анастасия Л. · Яндекс Карты</div></div>
+    <div class="rev"><p>Ходим с подругой уже пятый месяц. Восторг от всего — замечательный тренер Елизавета, максимально индивидуальный подход, очень грамотно выстроенные тренировки.</p><div class="who">Кристина Е. · Яндекс Карты</div></div>
+    <div class="rev"><p>Отдельно хочу отметить тренера Лену. Всегда внимательна, следит за техникой, подбирает нагрузку по силам и мягко мотивирует.</p><div class="who">Екатерина Ч. · Яндекс Карты</div></div>
+   </div>
+  </div>
+ </section>
+</div>
+
+<div class="page" id="p-prices">
+ <section>
+  <div class="wrap">
+   <h2 style="font-size:clamp(32px,6vw,68px)">Направления и цены</h2>
+   <p class="lead">Цены из прайса студии на Яндекс Картах (обновлён 5 октября). Фитпас действует один месяц.</p>
+   <div class="pass-wrap">
+   <table class="pass">
+    <thead><tr><th>Фитпас</th><th>Мини</th><th>Про</th><th>Макси</th></tr></thead>
+    <tbody>
+     <tr><th>Групповые тренировки<small>любое направление</small></th><td>5 600 ₽<small>8 посещений</small></td><td>7 400 ₽<small>12 посещений</small></td><td>9 000 ₽<small>16 посещений</small></td></tr>
+     <tr><th>Персональные<small>с тренером один на один</small></th><td>9 200 ₽<small>4 посещения</small></td><td>16 000 ₽<small>8 посещений</small></td><td>21 000 ₽<small>12 посещений</small></td></tr>
+     <tr><th>Сплит-тренировки<small>формат уточняйте у администратора</small></th><td>13 600 ₽<small>4 посещения</small></td><td>25 600 ₽<small>8 посещений</small></td><td>36 000 ₽<small>12 посещений</small></td></tr>
+    </tbody>
+   </table>
+   </div>
+   <p class="note">Пробная групповая тренировка для новых клиентов — бесплатно. Разовое групповое занятие в прайсе 2ГИС — 1 000 ₽. Оплата картой, наличными или по QR-коду.</p>
+
+   <h2 style="margin-top:56px">Направления</h2>
+   <div class="progs">
+    <div class="prog reformer"><div class="n">Pilates детка</div><p>Тренировка как из Pinterest: осанка, мягкая проработка глубоких мышц кора — чтобы и подкачаться, и подсушиться. На розовых мини-реформерах.</p></div>
+    <div class="prog"><div class="n">Push-up ягодицы</div><p>Силовая тренировка, полностью направленная на ягодичные мышцы. Никакого кардио — только памп и кач.</p></div>
+    <div class="prog"><div class="n">Жиротоп</div><p>Высокоинтенсивная тренировка с кардио-элементами: прыжки, бег. Снимает отёчность, работает с проблемными зонами.</p></div>
+    <div class="prog"><div class="n">Сила женственности</div><p>Power women: сочетание силовых и функциональных тренировок для рельефного тела — руки, спина, ноги и пресс.</p></div>
+    <div class="prog"><div class="n">Мисс эластика</div><p>Не просто растяжка: пластичность тела, мобильность, глубокое расслабление мышц. Anti-stress для тела и мыслей.</p></div>
+   </div>
+  </div>
+ </section>
+</div>
+
+<div class="page" id="p-studio">
+ <section>
+  <div class="wrap">
+   <h2 style="font-size:clamp(32px,6vw,68px)">Студия</h2>
+   <p class="lead">Первый этаж дома на Некрасовской, 22 — в самом центре, рядом с набережной.</p>
+   <div class="gal" id="gal">
+    <figure><img src="https://i6.photo.2gis.com/photo-gallery/037cdbb0-bfd5-45a0-a87e-8b053ddd03c2.jpg" alt="Команда студии Инфит" loading="lazy"></figure>
+    <figure><img src="https://i0.photo.2gis.com/photo-gallery/478c3a6e-11b4-4ca6-9960-5d4bb296e0cd.jpg" alt="Тренировка в студии" loading="lazy"></figure>
+    <figure><img src="https://i0.photo.2gis.com/photo-gallery/84ef1aee-045a-44b9-b410-e8d94371cebc.jpg" alt="Раздевалка" loading="lazy"></figure>
+    <figure><img src="https://i9.photo.2gis.com/photo-gallery/40aee196-bdde-469e-b7f3-2567d129197c.jpg" alt="Зал у кирпичной стены" loading="lazy"></figure>
+    <figure><img src="https://i1.photo.2gis.com/photo-gallery/b5509a85-9e72-4e32-804a-2ae45791a6f8.jpg" alt="Тренировка с резинками" loading="lazy"></figure>
+    <figure><img src="https://i2.photo.2gis.com/photo-gallery/9bff6eb7-7608-4c47-8673-88707cbc2ae9.jpg" alt="Девушки с инвентарём для пилатеса" loading="lazy"></figure>
+   </div>
+   <h2 style="margin-top:56px">Тренеры из отзывов</h2>
+   <div class="coaches">
+    <div class="coach"><h3>Елизавета Архиреева</h3><p>«Прекрасный тренер, который помогает идти к телу мечты», «максимально индивидуальный подход, очень грамотно выстроенные тренировки».</p></div>
+    <div class="coach"><h3>Елена Суркова</h3><p>«Профессионал, любящий свою работу», «на групповых тренировках находит к каждой подход, следит за техникой».</p></div>
+   </div>
+  </div>
+ </section>
+</div>
+
+<div class="page" id="p-reviews">
+ <section>
+  <div class="wrap">
+   <h2 style="font-size:clamp(32px,6vw,68px)">Отзывы</h2>
+   <div class="score"><b>4,7</b><span>Яндекс Карты · 12 оценок · <a href="https://yandex.ru/maps/org/115106814681/reviews/" target="_blank" rel="noopener">читать все</a></span></div>
+   <div class="revs">
+    <div class="rev"><p>Красивое и современное пространство, где всё продумано до мелочей — удовольствие от тренировок сразу х100. Лиза Архиреева — прекрасный тренер, который помогает идти к телу мечты.</p><div class="who">Дарья Жиркова · Яндекс Карты</div></div>
+    <div class="rev"><p>Здесь уютно, красиво и по-женски комфортно. Отдельный плюс — расположение в центре города. Хочу отметить тренера Елену Суркову — профессионал, любящий свою работу.</p><div class="who">Юля К. · Яндекс Карты</div></div>
+    <div class="rev"><p>Тренер Елена на групповых тренировках находит к каждой подход, очень наблюдательна и заботлива. Замечаю приятные изменения в теле.</p><div class="who">Елена В. · Яндекс Карты</div></div>
+    <div class="rev"><p>Ходим с подругой уже пятый месяц. Замечательный тренер Елизавета, максимально индивидуальный подход.</p><div class="who">Кристина Е. · Яндекс Карты</div></div>
+    <div class="rev"><p>Лучшая студия в Самаре, потрясающий тренерский состав и отзывчивые администраторы. Сюда хочется возвращаться снова и снова.</p><div class="who">Гульназ Зарипова · Яндекс Карты</div></div>
+    <div class="rev"><p>Самая любимая, эстетичная фитнес-студия для девушек в Самаре. Место трансформаций.</p><div class="who">Елена Кавтасьева · Яндекс Карты</div></div>
+   </div>
+  </div>
+ </section>
+</div>
+
+<div class="page" id="p-contacts">
+ <section>
+  <div class="wrap">
+   <h2 style="font-size:clamp(32px,6vw,68px)">Контакты</h2>
+   <div class="contacts">
+    <div>
+     <dl class="kv">
+      <dt>Адрес</dt><dd>Самара, Некрасовская ул., 22, 1 этаж</dd>
+      <dt>Часы</dt><dd>Пн–пт 9:00–21:00<br>Сб 9:00–15:00, вс — выходной</dd>
+      <dt>Телефон</dt><dd><a href="tel:+79397107771">+7 939 710-77-71</a></dd>
+     </dl>
+     <div class="btns">
+      <a class="btn p" href="tel:+79397107771">Позвонить</a>
+      <a class="btn" href="https://vk.com/infit.studio" target="_blank" rel="noopener">ВКонтакте</a>
+     </div>
+     <p style="margin-top:20px"><a href="https://yandex.ru/maps/?rtext=~53.19076,50.089768" target="_blank" rel="noopener">Построить маршрут</a></p>
+    </div>
+    <div class="map"><iframe title="Инфит на карте" loading="lazy" src="https://yandex.ru/map-widget/v1/?ll=50.089768%2C53.19076&z=17&pt=50.089768%2C53.19076%2Cpm2rdm"></iframe></div>
+   </div>
+  </div>
+ </section>
+</div>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="ft">
+   <div><a class="logo" href="#/">INFIT</a>Фитнес-студия для девушек · Самара, Некрасовская ул., 22</div>
+   <div>Пн–пт 9:00–21:00, сб 9:00–15:00<br><a href="tel:+79397107771">+7 939 710-77-71</a></div>
+  </div>
+  <div class="credit">Демо-сайт · разработка: Сергей Музыченко, Telegram <a href="https://t.me/spectator0011" target="_blank" rel="noopener">@spectator0011</a></div>
+ </div>
+</footer>
+<div class="callbar"><a href="tel:+79397107771">Пробная бесплатно</a><a href="#/prices">Цены</a></div>
+<div class="lb" id="lb" role="dialog" aria-label="Фото"><button aria-label="Закрыть">×</button><img alt=""></div>
+<script>
+function route(){
+ const r=location.hash.replace(/^#\/?/,'');const id=['','prices','studio','reviews','contacts'].includes(r)?r:'';
+ document.querySelectorAll('.page').forEach(p=>p.classList.toggle('on',p.id==='p-'+id));
+ document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.dataset.r===id));
+ document.getElementById('nav').classList.remove('open');scrollTo(0,0);
+}
+addEventListener('hashchange',route);route();
+const bg=document.querySelector('.burger');bg.onclick=()=>{const n=document.getElementById('nav');n.classList.toggle('open');bg.setAttribute('aria-expanded',n.classList.contains('open'))};
+const lb=document.getElementById('lb');
+document.getElementById('gal').onclick=e=>{const i=e.target.closest('img');if(!i)return;lb.querySelector('img').src=i.src;lb.classList.add('on')};
+lb.onclick=e=>{if(e.target.tagName!=='IMG')lb.classList.remove('on')};
+addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+document.addEventListener('error',e=>{const t=e.target;if(t.tagName==='IMG'&&t.closest('figure')){t.closest('figure').style.display='none'}},true);
+</script>
+</body>
+</html>
