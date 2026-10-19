@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>#Соседи — кофейня на Вересаева, 101/1 · Ростов-на-Дону</title>
+<meta name="description" content="Кофейня «#Соседи» на Вересаева: кофе, матча, бабл-ти, лимонады, сырники, сэндвичи и десерты. Пн–Пт 8:00–22:00, Сб–Вс 9:00–22:00. Можно с собакой, есть веранда.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#f8f3e8;--paper:#fffdf7;--sage:#35574a;--sage2:#e3ebe4;--mus:#e8b33a;--berry:#c8384b;--ink:#1f2a25;--muted:#66726b;--line:#e4ddcc}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:400 17px/1.6 Nunito,system-ui,sans-serif;color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--mus);outline-offset:2px}
+h1,h2,h3{font-family:Unbounded,sans-serif;font-weight:700;line-height:1.08;letter-spacing:-.01em}
+h2{font-size:clamp(28px,4.4vw,48px);margin-bottom:16px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+section{padding:76px 0}
+.lead{font-size:18px;color:var(--muted);max-width:56ch}
+.tag{display:inline-block;background:var(--mus);color:var(--ink);font:800 13px Nunito;padding:4px 12px;border-radius:30px;transform:rotate(-2deg);margin-bottom:14px}
+
+header{position:sticky;top:0;z-index:40;background:var(--sage);color:#fff}
+.hd{display:flex;align-items:center;gap:18px;height:64px}
+.logo{text-decoration:none;font:700 22px Unbounded;color:#fff}
+.logo span{color:var(--mus)}
+nav{display:flex;gap:4px;margin-left:auto}
+nav a{text-decoration:none;padding:8px 14px;font-weight:800;font-size:15px;border-radius:30px}
+nav a:hover{background:rgba(255,255,255,.12)}
+nav a.on{background:var(--mus);color:var(--ink)}
+.hd .tel{text-decoration:none;font-weight:800;white-space:nowrap}
+.burger{display:none;margin-left:auto;background:var(--mus);border:0;border-radius:30px;font:800 14px Nunito;padding:7px 14px;cursor:pointer;color:var(--ink)}
+.page{display:none}.page.on{display:block}
+
+.hero{background:var(--sage);color:#fff;padding:40px 0 0;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:end}
+.hero h1{font-size:clamp(52px,8.5vw,108px)}
+.hero h1 span{color:var(--mus)}
+.hero p{font-size:19px;margin:16px 0 24px;max-width:36ch;color:#dfe9e2}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;padding:14px 24px;border-radius:40px;font-weight:800;font-size:16px;border:2px solid currentColor}
+.btn.y{background:var(--mus);border-color:var(--mus);color:var(--ink)}
+.btn.y:hover{background:#f0c255}
+.hero .stats{display:flex;gap:26px;margin:30px 0 50px;flex-wrap:wrap;font-size:14px;color:#cfdcd3}
+.hero .stats b{display:block;font:700 26px Unbounded;color:#fff}
+.polaroids{position:relative;height:460px}
+.pol{position:absolute;background:#fff;padding:10px 10px 34px;box-shadow:0 18px 40px rgba(0,0,0,.25);width:58%}
+.pol img{width:100%;aspect-ratio:1;object-fit:cover}
+.pol.a{left:0;top:30px;transform:rotate(-6deg)}
+.pol.b{right:0;top:0;transform:rotate(5deg)}
+.pol.c{left:22%;top:210px;transform:rotate(-1deg);width:52%}
+
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:26px}
+.card{background:var(--paper);border-radius:20px;overflow:hidden;border:1px solid var(--line)}
+.card img{width:100%;aspect-ratio:1;object-fit:cover}
+.card div{padding:14px 16px 18px}
+.card h3{font-size:17px}
+.card p{color:var(--muted);font-size:15px}
+.card .p{font:700 18px Unbounded;color:var(--sage);margin-top:6px}
+
+.perks{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}
+.perk{background:var(--sage2);border-radius:20px;padding:22px}
+.perk b{font:700 18px Unbounded;display:block;margin-bottom:6px;color:var(--sage)}
+.perk span{color:var(--muted);font-size:15px}
+
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+.quotes blockquote{background:var(--paper);border-radius:20px;padding:22px;border:2px solid var(--ink);box-shadow:5px 5px 0 var(--mus)}
+.quotes cite{display:block;margin-top:10px;font-style:normal;color:var(--muted);font-size:13px}
+
+/* menu */
+.mgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:30px 50px;margin-top:30px}
+.mcat h3{font-size:22px;color:var(--sage);margin-bottom:8px;display:flex;gap:10px;align-items:center}
+.mcat h3:before{content:"";width:12px;height:12px;border-radius:50%;background:var(--mus)}
+.mi{padding:12px 0;border-bottom:1px dashed var(--line)}
+.mi .t{display:flex;justify-content:space-between;gap:14px;font-weight:800}
+.mi .t b{white-space:nowrap;color:var(--sage)}
+.mi p{font-size:15px;color:var(--muted)}
+.note{font-size:14px;color:var(--muted);margin-top:22px}
+
+.gal{columns:3 240px;column-gap:12px;margin-top:24px}
+.gal figure{break-inside:avoid;margin-bottom:12px;cursor:zoom-in;border-radius:16px;overflow:hidden}
+.gal img{width:100%}
+.lb{position:fixed;inset:0;background:rgba(20,30,25,.95);display:none;align-items:center;justify-content:center;z-index:90;padding:20px}
+.lb.on{display:flex}
+.lb img{max-height:88vh;max-width:94vw;border-radius:8px}
+.lb button{position:absolute;top:12px;right:20px;background:none;border:0;color:#fff;font-size:36px;cursor:pointer}
+
+.contacts{display:grid;grid-template-columns:1fr 1.3fr;gap:30px;margin-top:24px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:12px 20px;margin-bottom:24px}
+.kv dt{color:var(--muted)}
+.kv a{font-weight:800;text-decoration:none}
+.map{min-height:420px;border-radius:20px;overflow:hidden;background:var(--sage2)}
+.map iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+
+footer{background:var(--ink);color:#b9c4bd;padding:40px 0 100px;font-size:15px}
+.ft{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer a{text-decoration:none;color:#fff}
+.credit{margin-top:20px;font-size:12px;color:#86928b}
+.callbar{display:none}
+
+@media (max-width:900px){
+ nav{display:none;position:absolute;top:64px;left:0;right:0;background:var(--sage);flex-direction:column;padding:8px 16px 16px}
+ nav.open{display:flex}
+ nav a{padding:12px}
+ .hd .tel{display:none}
+ .burger{display:block}
+ .hero .wrap,.contacts{grid-template-columns:1fr}
+ .polaroids{height:380px;max-width:460px;width:100%;margin:0 auto}
+ .pol.c{top:170px}
+ .cards,.perks{grid-template-columns:1fr 1fr}
+ .quotes,.mgrid{grid-template-columns:1fr}
+ .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50}
+ .callbar a{flex:1;text-align:center;text-decoration:none;padding:15px 6px;font-weight:800;background:var(--sage);color:#fff}
+ .callbar a:first-child{background:var(--mus);color:var(--ink)}
+}
+@media (max-width:560px){
+ .wrap{padding:0 16px}
+ section{padding:56px 0}
+ .cards{gap:10px}
+ .card div{padding:10px 12px 14px}
+ .card h3{font-size:15px}
+ .polaroids{height:320px}
+ .pol.c{top:140px}
+}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap hd">
+  <a class="logo" href="#/"><span>#</span>Соседи</a>
+  <button class="burger" aria-expanded="false" aria-controls="nav">Меню</button>
+  <nav id="nav">
+   <a href="#/" data-r="">Главная</a>
+   <a href="#/menu" data-r="menu">Меню</a>
+   <a href="#/photo" data-r="photo">Фото</a>
+   <a href="#/contacts" data-r="contacts">Контакты</a>
+  </nav>
+  <a class="tel" href="tel:+79011067239">+7 901 106-72-39</a>
+ </div>
+</header>
+
+<main>
+<div class="page" id="p-">
+ <div class="hero">
+  <div class="wrap">
+   <div>
+    <div class="tag">кофейня у дома · Вересаева, 101/1</div>
+    <h1><span>#</span>Соседи</h1>
+    <p>Капучино по дороге на работу, сырники на завтрак, лимонад на веранде. Можно с ноутбуком, можно с собакой.</p>
+    <div class="btns"><a class="btn y" href="#/menu">Смотреть меню</a><a class="btn" href="tel:+79011067239">Позвонить</a></div>
+    <div class="stats"><span><b>5,0</b>Яндекс Карты · 402 оценки</span><span><b>8–22</b>будни</span><span><b>9–22</b>выходные</span></div>
+   </div>
+   <div class="polaroids" aria-hidden="true">
+    <div class="pol a"><img src="https://i9.photo.2gis.com/photo-gallery/f20b104b-655a-43e4-9f85-cd9d81ada96f.jpg" alt=""></div>
+    <div class="pol b"><img src="https://i7.photo.2gis.com/photo-gallery/bab7fded-4dc7-40dc-9f94-b2c94cc74605.jpg" alt=""></div>
+    <div class="pol c"><img src="https://i3.photo.2gis.com/images/branch/0/30258560086574580_e2c1.jpg" alt=""></div>
+   </div>
+  </div>
+ </div>
+
+ <section>
+  <div class="wrap">
+   <div class="tag">заходите попробовать</div>
+   <h2>Любимое у соседей</h2>
+   <div class="cards">
+    <div class="card"><img src="https://i9.photo.2gis.com/photo-gallery/f20b104b-655a-43e4-9f85-cd9d81ada96f.jpg" alt="Капучино" loading="lazy"><div><h3>Капучино</h3><p>300 мл</p><div class="p">225 ₽</div></div></div>
+    <div class="card"><img src="https://i3.photo.2gis.com/images/branch/0/30258560086574580_e2c1.jpg" alt="Сэндвич" loading="lazy"><div><h3>Сэндвичи</h3><p>Курица, сёмга, тунец</p><div class="p">275 ₽</div></div></div>
+    <div class="card"><img src="https://i8.photo.2gis.com/photo-gallery/203a7935-74c7-4b07-b986-832148bb539c.jpg" alt="Лимонад" loading="lazy"><div><h3>Лимонады</h3><p>400 мл</p><div class="p">от 295 ₽</div></div></div>
+    <div class="card"><img src="https://i7.photo.2gis.com/photo-gallery/8e4f1ed2-b549-458f-84c1-32fa49dafa65.jpg" alt="Тарталетка" loading="lazy"><div><h3>Тарталетка</h3><p>Малиновая</p><div class="p">299 ₽</div></div></div>
+   </div>
+  </div>
+ </section>
+
+ <section style="padding-top:0">
+  <div class="wrap">
+   <h2>Почему к нам заходят</h2>
+   <div class="perks">
+    <div class="perk"><b>Веранда</b><span>Летом столики на улице</span></div>
+    <div class="perk"><b>Dog friendly</b><span>Можно с собакой</span></div>
+    <div class="perk"><b>Wi-Fi</b><span>Бесплатный, можно поработать</span></div>
+    <div class="perk"><b>С собой</b><span>Кофе и чай навынос</span></div>
+   </div>
+  </div>
+ </section>
+
+ <section style="padding-top:0">
+  <div class="wrap">
+   <h2>Соседи о нас</h2>
+   <div class="quotes">
+    <blockquote>«Была несколько раз в данной кофейне. Всегда вкусная еда, вкусный интересный кофе и приятный персонал».<cite>2ГИС</cite></blockquote>
+    <blockquote>«Отличная кофейня! Самый вкусный цитрусовый раф на районе».<cite>2ГИС</cite></blockquote>
+    <blockquote>«Отдельный плюс за дог-френдли и мисочку с водой у дверей».<cite>2ГИС</cite></blockquote>
+   </div>
+  </div>
+ </section>
+</div>
+
+<div class="page" id="p-menu">
+ <section>
+  <div class="wrap">
+   <div class="tag">меню</div>
+   <h2 style="font-size:clamp(40px,7vw,80px)">Что у нас есть</h2>
+   <p class="lead">Ещё в кофейне: бабл-ти и бабл-кофе, айс-кофе, какао, горячий шоколад, кофе без кофеина, салаты.</p>
+   <div class="mgrid" id="menu"></div>
+   <p class="note">Цены из меню на Яндекс Картах, давно не обновлялись. Актуальные цены уточняйте в кофейне.</p>
+  </div>
+ </section>
+</div>
+
+<div class="page" id="p-photo">
+ <section>
+  <div class="wrap">
+   <h2 style="font-size:clamp(40px,7vw,80px)">Фото</h2>
+   <div class="gal" id="gal"></div>
+  </div>
+ </section>
+</div>
+
+<div class="page" id="p-contacts">
+ <section>
+  <div class="wrap">
+   <h2 style="font-size:clamp(40px,7vw,80px)">Контакты</h2>
+   <div class="contacts">
+    <div>
+     <dl class="kv">
+      <dt>Адрес</dt><dd>Ростов-на-Дону, ул. Вересаева, 101/1, стр. 1</dd>
+      <dt>Часы</dt><dd>Пн–Пт 8:00–22:00<br>Сб–Вс 9:00–22:00</dd>
+      <dt>Телефоны</dt><dd><a href="tel:+79011067239">+7 901 106-72-39</a><br><a href="tel:+79185081133">+7 918 508-11-33</a></dd>
+      <dt>ВКонтакте</dt><dd><a href="https://vk.com/public211826056" target="_blank" rel="noopener">vk.com/public211826056</a></dd>
+      <dt>Удобства</dt><dd>Веранда, Wi-Fi, пандус, оплата картой и наличными</dd>
+     </dl>
+     <div class="btns"><a class="btn y" href="tel:+79011067239">Позвонить</a><a class="btn" style="color:var(--sage)" href="https://yandex.ru/maps/?rtext=~47.241626,39.800048" target="_blank" rel="noopener">Маршрут</a></div>
+    </div>
+    <div class="map"><iframe title="#Соседи на карте" loading="lazy" src="https://yandex.ru/map-widget/v1/?ll=39.800048%2C47.241626&z=17&pt=39.800048%2C47.241626%2Cpm2rdm"></iframe></div>
+   </div>
+  </div>
+ </section>
+</div>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="ft">
+   <div><b style="color:#fff;font:700 22px Unbounded">#Соседи</b><br>Ростов-на-Дону, ул. Вересаева, 101/1</div>
+   <div>Пн–Пт 8–22, Сб–Вс 9–22<br><a href="tel:+79011067239">+7 901 106-72-39</a></div>
+  </div>
+  <div class="credit">Демо-сайт · разработка: Сергей Музыченко, Telegram <a href="https://t.me/spectator0011" target="_blank" rel="noopener">@spectator0011</a></div>
+ </div>
+</footer>
+<div class="callbar"><a href="#/menu">Меню</a><a href="tel:+79011067239">Позвонить</a></div>
+<div class="lb" id="lb" role="dialog" aria-label="Фото"><button aria-label="Закрыть">×</button><img alt=""></div>
+<script>
+const M=[
+["Кофе",[["Латте","300 мл","225"],["Капучино","300 мл","225"],["Раф","300 мл · эспрессо, сливки, ванильный сахар","295"],["Клубничный мокко","300 мл","375"],["Бамбл-кофе","400 мл · холодный, с цитрусом и карамелью","395"],["Эспрессо-тоник","400 мл","375"]]],
+["Матча",[["Матча латте","300 мл","225"],["Айс матча-латте","400 мл","350"],["Матча-персик","300 мл · айс-матча со сливочно-малиновым кремом","375"]]],
+["Завтраки",[["Сырники","2 шт · запекаются в духовке, со сметаной, джемом или солёной карамелью","279"],["Сэндвичи","с курицей; ветчиной и сыром; сёмгой; тунцом; курицей, чеддером и рукколой","275"]]],
+["Десерты",[["Моти","рисовое тесто, сливочный крем, ягодная начинка","189"],["Трубочка со сгущёнкой","","155"],["Тарталетка малиновая","песочное тесто, крем, свежая малина","299"],["Пончик","шоколад, малина, клубника или карамель","139"]]],
+["Лимонады",[["Апельсиновый спритц","400 мл · безалкогольный","295"],["Тропический","400 мл · манго и маракуйя","325"],["Пряная вишня","400 мл","295"],["Взрывной гранат","400 мл · гранат и виноград","295"]]],
+["Милкшейки и смузи",[["Молочный коктейль","400 мл","295"],["Смузи «Комплекс витаминов»","300 мл · яблоко, шпинат, брокколи, морковь","325"]]]];
+document.getElementById('menu').innerHTML=M.map(c=>`<div class="mcat"><h3>${c[0]}</h3>`+c[1].map(x=>`<div class="mi"><div class="t"><span>${x[0]}</span><b>${x[2]} ₽</b></div>${x[1]?`<p>${x[1]}</p>`:''}</div>`).join('')+'</div>').join('');
+const G=["https://i9.photo.2gis.com/photo-gallery/f20b104b-655a-43e4-9f85-cd9d81ada96f.jpg","https://i1.photo.2gis.com/photo-gallery/01ef90ef-7785-4871-a07e-5f5fc865cf61.jpg","https://i7.photo.2gis.com/photo-gallery/8e4f1ed2-b549-458f-84c1-32fa49dafa65.jpg","https://i0.photo.2gis.com/images/branch/0/30258560068802844_eb95.jpg","https://i3.photo.2gis.com/images/branch/0/30258560086574580_e2c1.jpg","https://i8.photo.2gis.com/photo-gallery/db10f0f9-c52e-43bb-a989-2d91e78b5c35.jpg","https://i4.photo.2gis.com/photo-gallery/7b6aadcd-2995-4fb1-8be5-98e6b3e03431.jpg","https://i7.photo.2gis.com/photo-gallery/bab7fded-4dc7-40dc-9f94-b2c94cc74605.jpg","https://i7.photo.2gis.com/photo-gallery/24253c26-4c9c-424e-b92b-74b20ee758fe.jpg","https://i1.photo.2gis.com/photo-gallery/6ec68ee8-e8b8-467d-9c04-18524c3895a7.jpg","https://i3.photo.2gis.com/images/branch/0/30258560082957868_18ca.jpg","https://i5.photo.2gis.com/photo-gallery/a066043b-66a2-4008-88f1-db10ba4afe37.jpg","https://i0.photo.2gis.com/photo-gallery/eda44c65-367c-4ea1-b0dc-22b1cd4e7ed3.jpg","https://i0.photo.2gis.com/images/branch/0/30258560082633593_6929.jpg","https://i1.photo.2gis.com/photo-gallery/c8485b42-b4d8-45a9-aa97-35934c18a563.jpg","https://i5.photo.2gis.com/photo-gallery/84f32031-c0e2-4546-bba1-cd5ef2d0e9f5.jpg","https://i7.photo.2gis.com/images/branch/0/30258560084995473_b720.jpg","https://i2.photo.2gis.com/photo-gallery/2a106902-0cf3-40d4-9b75-6f97b2ba6095.jpg","https://i1.photo.2gis.com/images/branch/0/30258560084538828_9ec7.jpg","https://i7.photo.2gis.com/photo-gallery/31e4817d-b3b6-45f4-9c0b-f165513ab59c.jpg","https://i8.photo.2gis.com/images/branch/0/30258560083051541_122e.jpg","https://i7.photo.2gis.com/images/branch/0/30258560068802841_0cb2.jpg","https://i6.photo.2gis.com/photo-gallery/9c008ab4-274e-4062-8257-4343ce66a6d1.jpg","https://i1.photo.2gis.com/photo-gallery/06eb8d7e-3763-45d5-97a4-5e4fc26cc473.jpg","https://i5.photo.2gis.com/photo-gallery/6d7db4e6-dfc4-4845-bfea-8e449e92ae64.jpg","https://i5.photo.2gis.com/photo-gallery/554fe3d5-f107-409d-817a-8c067a0cdae7.jpg"];
+document.getElementById('gal').innerHTML=G.map(u=>`<figure><img src="${u}" alt="Кофейня «#Соседи»" loading="lazy"></figure>`).join('');
+function route(){
+ const r=location.hash.replace(/^#\/?/,'');const id=['','menu','photo','contacts'].includes(r)?r:'';
+ document.querySelectorAll('.page').forEach(p=>p.classList.toggle('on',p.id==='p-'+id));
+ document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.dataset.r===id));
+ document.getElementById('nav').classList.remove('open');scrollTo(0,0);
+}
+addEventListener('hashchange',route);route();
+const bg=document.querySelector('.burger');bg.onclick=()=>{const n=document.getElementById('nav');n.classList.toggle('open');bg.setAttribute('aria-expanded',n.classList.contains('open'))};
+const lb=document.getElementById('lb');
+document.getElementById('gal').onclick=e=>{const i=e.target.closest('img');if(!i)return;lb.querySelector('img').src=i.src;lb.classList.add('on')};
+lb.onclick=e=>{if(e.target.tagName!=='IMG')lb.classList.remove('on')};
+addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+document.addEventListener('error',e=>{const t=e.target;if(t.tagName==='IMG'){(t.closest('figure')||t.closest('.card')||t.closest('.pol')||t).style.display='none'}},true);
+</script>
+</body>
+</html>
